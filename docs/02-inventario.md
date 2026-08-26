@@ -263,13 +263,15 @@ Los 3 con rol `administrator`. Sin clientes registrados.
 - Fuentes Google en vivo: **Josefin Sans, Bellefair, Lato, Biryani** (tema) + Lato completo (Elementor).
 - Breakpoints del CSS del tema: 1440, 1280, 1200, 1024/1025, 768, 680, 480 px.
 
-## Componentes recurrentes (parcial, se completa con el rastreo)
+## Componentes recurrentes (rastreo completo)
 
-- Header/footer Elementor (elementor-hf) en el 100 % de las páginas: logo, nav `wpr-nav-menu`, botones, iconos.
-- Barra de título de página (`mkd-title-holder`) en la mayoría de las plantillas.
-- Páginas legacy WPBakery (~15): wpb_row/column, image-carousel, icon-box, raw_html.
-- Blog: `mkd-blog-holder`, related posts, comentarios (cerrados).
-- Woo: plantillas del tema con dropdown-cart en header.
+- **Globales (100 % de páginas):** header/footer Elementor (elementor-hf): logo, nav `wpr-nav-menu` (desktop + móvil), botones, iconos, buscador Ajax (con SKU), mini-carrito `mkd-shopping-cart-holder`, botón WhatsApp (Joinchat), barra de título `mkd-title-holder` + breadcrumbs (hfe).
+- **Ficha de producto:** `mkd-woo-single-page`: galería con lightbox (thumb-below), `mkd-single-product-summary` (título, precio o CTA cotización, add-to-cart), tabs Woo (descripción/atributos), `mkd-related-products`.
+- **Categoría/etiqueta/tienda:** grid `mkd-pl-main-holder` (product list del tema), ordenamiento y conteo Woo, paginación `mkd-woo-pagination-holder`; categorías con contenido enriquecido (Enhanced Category Pages).
+- **Páginas Elementor (sectores, productos, nosotros…):** heros con imagen, headings, tarjetas icon-box, carruseles de imágenes, CTA botón, secciones de testimonios/FAQ según página.
+- **Páginas legacy WPBakery (~15):** wpb_row/column, image-carousel, icon-box, raw_html (aviso/políticas, soluciones, proyectos).
+- **Blog:** `mkd-blog-holder` listado y single con related posts; comentarios cerrados.
+- **noindex correctos:** /cart/, /finalizar-compra/, /mi-cuenta/, búsqueda `/?s=`, 404.
 
 ## Deploy staging (validado 2026-08-26)
 
@@ -279,5 +281,11 @@ Los 3 con rol `administrator`. Sin clientes registrados.
 
 ## Rastreo del sitio vivo
 
-- URLs rastreadas: **148** · 200 OK: 148 · redirigidas: 1 · errores: ver `reference/crawl-errores.json`
+- URLs rastreadas: **533** · 200 OK: 532 · con redirección: 4 · noindex: 5 · errores de rastreo: 0
+- Por tipo: home: 2 · pagina/post: 54 · producto: 368 · marca: 6 · categoria-producto: 52 · etiqueta-producto: 47 · autor: 2 · feed: 2
+- Canonical ≠ URL (excl. query): 0
+- Páginas 200 SIN <h1>: 398 (p. ej. /, /proyecto-a-empacadora-san-francisco/, /proyecto-de-comedores-empresariales/, /proyecto-ddf-mexico-recepciones/, /proyecto-mobiliario-escolar/)
 - Hosts de scripts de terceros: www.googletagmanager.com, googleads.g.doubleclick.net, static.cloudflareinsights.com, www.paypal.com, http2.mlstatic.com, c.paypal.com, cdn.jsdelivr.net
+- Redirecciones observadas: /finalizar-compra/→/cart/ · /elementor-hf/header/→/ · /elementor-hf/footer/→/ · /carrito/→/producto/carrito-industrial-metalico/
+
+Inventario completo por URL: `reference/urls-inventario.csv` (url, tipo, status, canonical, robots, title, h1).

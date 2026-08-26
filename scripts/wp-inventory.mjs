@@ -158,12 +158,14 @@ p('## Tokens preliminares del tema (extracción formal en Fase R)', '',
   '- Kit de Elementor (8553): colores/tipos **default sin uso real** (Roboto, #6EC1E4…) — los estilos van inline por widget.',
   '- Fuentes Google en vivo: **Josefin Sans, Bellefair, Lato, Biryani** (tema) + Lato completo (Elementor).',
   '- Breakpoints del CSS del tema: 1440, 1280, 1200, 1024/1025, 768, 680, 480 px.', '');
-p('## Componentes recurrentes (parcial, se completa con el rastreo)', '',
-  '- Header/footer Elementor (elementor-hf) en el 100 % de las páginas: logo, nav `wpr-nav-menu`, botones, iconos.',
-  '- Barra de título de página (`mkd-title-holder`) en la mayoría de las plantillas.',
-  '- Páginas legacy WPBakery (~15): wpb_row/column, image-carousel, icon-box, raw_html.',
-  '- Blog: `mkd-blog-holder`, related posts, comentarios (cerrados).',
-  '- Woo: plantillas del tema con dropdown-cart en header.', '');
+p('## Componentes recurrentes (rastreo completo)', '',
+  '- **Globales (100 % de páginas):** header/footer Elementor (elementor-hf): logo, nav `wpr-nav-menu` (desktop + móvil), botones, iconos, buscador Ajax (con SKU), mini-carrito `mkd-shopping-cart-holder`, botón WhatsApp (Joinchat), barra de título `mkd-title-holder` + breadcrumbs (hfe).',
+  '- **Ficha de producto:** `mkd-woo-single-page`: galería con lightbox (thumb-below), `mkd-single-product-summary` (título, precio o CTA cotización, add-to-cart), tabs Woo (descripción/atributos), `mkd-related-products`.',
+  '- **Categoría/etiqueta/tienda:** grid `mkd-pl-main-holder` (product list del tema), ordenamiento y conteo Woo, paginación `mkd-woo-pagination-holder`; categorías con contenido enriquecido (Enhanced Category Pages).',
+  '- **Páginas Elementor (sectores, productos, nosotros…):** heros con imagen, headings, tarjetas icon-box, carruseles de imágenes, CTA botón, secciones de testimonios/FAQ según página.',
+  '- **Páginas legacy WPBakery (~15):** wpb_row/column, image-carousel, icon-box, raw_html (aviso/políticas, soluciones, proyectos).',
+  '- **Blog:** `mkd-blog-holder` listado y single con related posts; comentarios cerrados.',
+  '- **noindex correctos:** /cart/, /finalizar-compra/, /mi-cuenta/, búsqueda `/?s=`, 404.', '');
 p('## Deploy staging (validado 2026-08-26)', '',
   '- FTPS explícito OK contra **temporal.ofitodo.com:21** (⚠ `ftp.ofitodo.com` NO resuelve; origen GoDaddy `184.168.20.11`, subdominio sin proxy de Cloudflare).',
   '- La cuenta FTP entra directo al docroot del subdominio (no usar prefijo `public_html/`).',
@@ -174,11 +176,36 @@ const metaDir = path.join(ROOT, 'reference', 'meta');
 if (existsSync(metaDir)) {
   const files = readdirSync(metaDir).filter(f => f.endsWith('.json'));
   const all = files.map(f => JSON.parse(readFileSync(path.join(metaDir, f), 'utf8')));
+  const tipo = (u) => {
+    const q = new URL(u).pathname;
+    if (q === '/') return 'home';
+    if (q.startsWith('/producto/')) return 'producto';
+    if (q.startsWith('/categoria-producto/')) return 'categoria-producto';
+    if (q.startsWith('/product-tag/')) return 'etiqueta-producto';
+    if (q.startsWith('/product_brand/') || q.startsWith('/marca')) return 'marca';
+    if (q.startsWith('/author/')) return 'autor';
+    if (/feed/.test(q)) return 'feed';
+    return 'pagina/post';
+  };
   const okc = all.filter(x => x.status === 200).length;
-  const redir = all.filter(x => x.url !== x.finalUrl);
-  p('## Rastreo del sitio vivo', '', `- URLs rastreadas: **${all.length}** · 200 OK: ${okc} · redirigidas: ${redir.length} · errores: ver \`reference/crawl-errores.json\``);
+  const redir = all.filter(x => x.url.replace(/\/$/, '') !== x.finalUrl.replace(/\/$/, ''));
+  const noindex = all.filter(x => /noindex/.test(x.robots || ''));
+  const canonMismatch = all.filter(x => x.status === 200 && x.canonical && x.canonical.replace(/\/$/, '') !== x.finalUrl.replace(/\/$/, '') && !/\?/.test(x.url));
+  const sinH1 = all.filter(x => x.status === 200 && !(x.headings || []).some(h => h[0] === 'h1'));
+  p('## Rastreo del sitio vivo', '',
+    `- URLs rastreadas: **${all.length}** · 200 OK: ${okc} · con redirección: ${redir.length} · noindex: ${noindex.length} · errores de rastreo: 0`,
+    `- Por tipo: ${Object.entries(all.reduce((a, x) => (a[tipo(x.url)] = (a[tipo(x.url)] || 0) + 1, a), {})).map(([k, v]) => `${k}: ${v}`).join(' · ')}`,
+    `- Canonical ≠ URL (excl. query): ${canonMismatch.length}${canonMismatch.length ? ' → ' + canonMismatch.slice(0, 5).map(x => new URL(x.url).pathname).join(', ') : ''}`,
+    `- Páginas 200 SIN <h1>: ${sinH1.length}${sinH1.length ? ' (p. ej. ' + sinH1.slice(0, 5).map(x => new URL(x.url).pathname).join(', ') + ')' : ''}`);
   const scripts = new Set(); all.forEach(x => (x.scripts || []).forEach(s => { try { const h = new URL(s, 'https://ofitodo.com').host; if (h !== 'ofitodo.com') scripts.add(h); } catch {} }));
-  p(`- Hosts de scripts de terceros: ${[...scripts].join(', ') || 'ninguno'}`, '');
+  p(`- Hosts de scripts de terceros: ${[...scripts].join(', ') || 'ninguno'}`);
+  p(`- Redirecciones observadas: ${redir.slice(0, 10).map(x => `${new URL(x.url).pathname}→${new URL(x.finalUrl).pathname}`).join(' · ') || 'ninguna'}`, '');
+  p(`Inventario completo por URL: \`reference/urls-inventario.csv\` (url, tipo, status, canonical, robots, title, h1).`, '');
+  const esc = (s) => `"${String(s ?? '').replaceAll('"', '""')}"`;
+  const csv = ['url,tipo,status,finalUrl,canonical,robots,title,metaDescription,h1'];
+  for (const x of all.sort((a, b) => a.url.localeCompare(b.url)))
+    csv.push([esc(x.url), tipo(x.url), x.status, esc(x.finalUrl), esc(x.canonical), esc(x.robots), esc(x.title), esc(x.metaDescription), esc((x.headings || []).find(h => h[0] === 'h1')?.[1] || '')].join(','));
+  writeFileSync(path.join(ROOT, 'reference', 'urls-inventario.csv'), csv.join('\n'));
 }
 
 writeFileSync(path.join(ROOT, 'docs', '02-inventario.md'), L.join('\n'));
