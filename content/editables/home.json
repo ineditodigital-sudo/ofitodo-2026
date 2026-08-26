@@ -1,0 +1,783 @@
+{
+ "pagina": "/",
+ "titulo": "Inicio",
+ "key": "home",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "MOBILIARIO PARA OFICINA",
+   "valor": "MOBILIARIO PARA OFICINA"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MOBILIARIO PARA OFICINA",
+   "valor": "Experimenta la combinación perfecta de calidad, confort y diseño. Somos fabricantes de mobiliario que crean espacios de trabajo funcionales y estéticos en Aguascalientes y todo México, inspirando productividad y bienestar."
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "MOBILIARIO PARA OFICINA",
+   "texto": "Cotizar Ahora",
+   "href": "https://wa.me/524493419403",
+   "target": ""
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "MOBILIARIO PARA OFICINA",
+   "texto": "Explorar Catálogo",
+   "href": "https://ofitodo.com/descargar-catalogo/",
+   "target": ""
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Mesas, sillas, estaciones de trabajo y más equipo para ofici",
+   "valor": "Mesas, sillas, estaciones de trabajo y más equipo para oficina"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mesas, sillas, estaciones de trabajo y más equipo para ofici",
+   "valor": "Conoce todos nuestros servicios de mobiliario para oficina en Aguascalientes y México. Ofrecemos soluciones en las siguientes categorías: muebles para oficina modernos, ergonómicos y personalizados. Desde escritorios y sillas hasta soluciones completas de almacenamiento y decoración, en cada categoría encontrarás opciones diseñadas para mejorar la funcionalidad y el estilo de tu espacio de trabajo, garantizando calidad, durabilidad y confort. También brindamos asesoría personalizada para satisfacer todas tus necesidades específicas."
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Productos",
+   "valor": "Productos"
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "ESCRITORIO",
+   "href": "https://ofitodo.com/categoria-producto/escritorios/",
+   "target": "_blank"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "SILLAS Y SILLONES DE OFICINA",
+   "href": "https://ofitodo.com/categoria-producto/sillas/",
+   "target": "_blank"
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "COMEDORES Y RESTAURANTES",
+   "href": "https://ofitodo.com/categoria-producto/restaurantes/",
+   "target": "_blank"
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "EXHIBIDORES",
+   "href": "https://ofitodo.com/categoria-producto/restaurantes/",
+   "target": "_blank"
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "ESTACIONES DE TRABAJO",
+   "href": "https://ofitodo.com/categoria-producto/estaciones-de-trabajo/",
+   "target": "_blank"
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "LIBREROS Y ARCHIVEROS",
+   "href": "https://ofitodo.com/categoria-producto/libreros-y-archiveros/",
+   "target": "_blank"
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "LOCKERS Y VESTIDORES",
+   "href": "https://ofitodo.com/categoria-producto/lockers-y-vestidores/",
+   "target": "_blank"
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "MESAS DE JUNTAS",
+   "href": "https://ofitodo.com/categoria-producto/mesas-de-juntas/",
+   "target": "_blank"
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "MOBILIARIO ESCOLAR",
+   "href": "https://ofitodo.com/categoria-producto/mobiliario-escolar/",
+   "target": "_blank"
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "PANELES ACÚSTICOS",
+   "href": "https://ofitodo.com/categoria-producto/paneles-acusticos/",
+   "target": "_blank"
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "SALA DE ESPERA Y RECEPCIÓN",
+   "href": "https://ofitodo.com/categoria-producto/recepcion/",
+   "target": "_blank"
+  },
+  {
+   "id": "l14",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos",
+   "texto": "BROKERS",
+   "href": "https://ofitodo.com/categoria-producto/brokers/",
+   "target": "_blank"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Mobiliario Personalizado para Tu Empresa",
+   "valor": "Mobiliario Personalizado para Tu Empresa"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario Personalizado para Tu Empresa",
+   "valor": "En OFITODO entendemos que cada empresa es única y tiene necesidades específicas. Por eso, ofrecemos un servicio de diseño y fabricación de mobiliario para oficina completamente personalizado."
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario Personalizado para Tu Empresa",
+   "valor": "Nuestro equipo de expertos trabaja contigo desde la conceptualización hasta la instalación, asegurándose de que cada pieza de mobiliario refleje la identidad de tu empresa y optimice el espacio de trabajo."
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario Personalizado para Tu Empresa",
+   "valor": "✓ Diseños exclusivos adaptados a tu marca"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario Personalizado para Tu Empresa",
+   "valor": "✓ Materiales de alta calidad y durabilidad"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario Personalizado para Tu Empresa",
+   "valor": "✓ Asesoría profesional en cada etapa del proyecto"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario Personalizado para Tu Empresa",
+   "valor": "✓ Instalación profesional incluida"
+  },
+  {
+   "id": "l15",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mobiliario Personalizado para Tu Empresa",
+   "texto": "Solicitar Diseño Personalizado",
+   "href": "https://wa.me/524493419403?",
+   "target": ""
+  },
+  {
+   "id": "l16",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mobiliario Personalizado para Tu Empresa",
+   "texto": "Explorar Catálogo",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/02/Catalogo-Ofitodo.2026_.pdf",
+   "target": ""
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "SECTORES QUE ATENDEMOS",
+   "valor": "SECTORES QUE ATENDEMOS"
+  },
+  {
+   "id": "l17",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SECTORES QUE ATENDEMOS",
+   "texto": "MUEBLES PARA OFICINA",
+   "href": "https://ofitodo.com/muebles-para-oficina/",
+   "target": "_blank"
+  },
+  {
+   "id": "l18",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SECTORES QUE ATENDEMOS",
+   "texto": "MUEBLES PARA BANCOS",
+   "href": "https://ofitodo.com/muebles-para-bancos/",
+   "target": "_blank"
+  },
+  {
+   "id": "l19",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SECTORES QUE ATENDEMOS",
+   "texto": "MUEBLES PARA ESCUELAS",
+   "href": "https://ofitodo.com/muebles-para-escuelas/",
+   "target": "_blank"
+  },
+  {
+   "id": "l20",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SECTORES QUE ATENDEMOS",
+   "texto": "MUEBLES PARA CONSULTORIOS",
+   "href": "https://ofitodo.com/muebles-para-consultorios/",
+   "target": "_blank"
+  },
+  {
+   "id": "l21",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SECTORES QUE ATENDEMOS",
+   "texto": "MUEBLES PARA HOSPITAL",
+   "href": "/muebles-para-hospital/",
+   "target": "_blank"
+  },
+  {
+   "id": "l22",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SECTORES QUE ATENDEMOS",
+   "texto": "MUEBLES PARA INDUSTRIA",
+   "href": "/muebles-para-industria/",
+   "target": "_blank"
+  },
+  {
+   "id": "l23",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SECTORES QUE ATENDEMOS",
+   "texto": "MUEBLES PARA RESTAURANTE",
+   "href": "/muebles-para-restaurante/",
+   "target": "_blank"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "valor": "EXPLORA NUESTROS CATÁLOGOS"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "valor": "Explora nuestra amplia gama de productos y soluciones. Da click en cualquiera de nuestros catálogos en PDF para conocer todos los detalles."
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/imagen_2024-06-21_115558353-1-e1764700495282.webp",
+   "alt": ""
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "valor": "MELAMINA"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "valor": "Catálogo completo de muebles en melamina"
+  },
+  {
+   "id": "l24",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "texto": "Ver más",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/Melaminas-2026-2_compressed.pdf",
+   "target": ""
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/imagen_2024-06-21_120108510-500x500-1-e1764700557215.webp",
+   "alt": ""
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "valor": "CONECTIVIDAD"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "valor": "Sistemas de conectividad para oficinas"
+  },
+  {
+   "id": "l25",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "texto": "Ver más",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/Catalogo-sistemas-de-conectividad-2026.pdf-2_compressed.pdf",
+   "target": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/imagen_2024-06-21_120201876-1-500x500-1-e1764700581963.webp",
+   "alt": ""
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "valor": "EXHIBIDORES"
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "valor": "Soluciones en exhibidores comerciales"
+  },
+  {
+   "id": "l26",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "EXPLORA NUESTROS CATÁLOGOS",
+   "texto": "Ver más",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/Catalogo-de-exhibidores-2026_compressed.pdf",
+   "target": ""
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "valor": "CLIENTES QUE CONFIAN EN NOSOTROS"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__15_-removebg-preview.webp",
+   "alt": "TENNECO"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__14_-removebg-preview.webp",
+   "alt": "Nissan"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__13_-removebg-preview.png",
+   "alt": "sumitomo"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/Frame-6-_1_.webp",
+   "alt": "Frame-6-_1_"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/Group-35.webp",
+   "alt": "Group-35"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__18_-removebg-preview.png",
+   "alt": "Sensata"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__9_-removebg-preview.png",
+   "alt": "COMPAS"
+  },
+  {
+   "id": "i10",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__17_-removebg-preview.webp",
+   "alt": "Yorozu"
+  },
+  {
+   "id": "i11",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__16_-removebg-preview.webp",
+   "alt": "DDF México"
+  },
+  {
+   "id": "i12",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__15_-removebg-preview.webp",
+   "alt": "TENNECO"
+  },
+  {
+   "id": "i13",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__14_-removebg-preview.webp",
+   "alt": "Nissan"
+  },
+  {
+   "id": "i14",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__13_-removebg-preview.png",
+   "alt": "sumitomo"
+  },
+  {
+   "id": "i15",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/Frame-6-_1_.webp",
+   "alt": "Frame-6-_1_"
+  },
+  {
+   "id": "i16",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/Group-35.webp",
+   "alt": "Group-35"
+  },
+  {
+   "id": "i17",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__18_-removebg-preview.png",
+   "alt": "Sensata"
+  },
+  {
+   "id": "i18",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__9_-removebg-preview.png",
+   "alt": "COMPAS"
+  },
+  {
+   "id": "i19",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__17_-removebg-preview.webp",
+   "alt": "Yorozu"
+  },
+  {
+   "id": "i20",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__16_-removebg-preview.webp",
+   "alt": "DDF México"
+  },
+  {
+   "id": "i21",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "CLIENTES QUE CONFIAN EN NOSOTROS",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/Diseno_sin_titulo__15_-removebg-preview.webp",
+   "alt": "TENNECO"
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "proceso de compra",
+   "valor": "proceso de compra"
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "1. Asesoría Personalizada",
+   "valor": "1. Asesoría Personalizada"
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "2. Selección de Mobiliario",
+   "valor": "2. Selección de Mobiliario"
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "3. Cotización Detallada",
+   "valor": "3. Cotización Detallada"
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "4. Toma de Medidas",
+   "valor": "4. Toma de Medidas"
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "5. Fabricación y Preparación",
+   "valor": "5. Fabricación y Preparación"
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6. Entrega yArmado",
+   "valor": "6. Entrega y"
+  },
+  {
+   "id": "t29",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6. Entrega yArmado",
+   "valor": "Armado"
+  },
+  {
+   "id": "t30",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "7. Garantía y Acompañamiento",
+   "valor": "7. Garantía y Acompañamiento"
+  },
+  {
+   "id": "t31",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "NOTAS RELEVANTES",
+   "valor": "NOTAS RELEVANTES"
+  },
+  {
+   "id": "t32",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "NOTAS RELEVANTES",
+   "valor": "Conoce nuestros proyectos recientes, donde transformamos oficinas en espacios funcionales y estéticos. Cada instalación refleja nuestro compromiso con la calidad y el diseño, creando ambientes que impulsan la productividad y el bienestar."
+  },
+  {
+   "id": "t33",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "NOTAS RELEVANTES",
+   "valor": "Fabricante · Aguascalientes Mobiliario..."
+  },
+  {
+   "id": "l27",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "NOTAS RELEVANTES",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/mobiliario-de-oficina-en-aguascalientes/",
+   "target": ""
+  },
+  {
+   "id": "i22",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "NOTAS RELEVANTES",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_26_42.png.webp",
+   "alt": "Mobiliario personalizado de consultorios médicos"
+  },
+  {
+   "id": "t34",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "NOTAS RELEVANTES",
+   "valor": "¿Qué debería ofrecer un..."
+  },
+  {
+   "id": "l28",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "NOTAS RELEVANTES",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/proveedor-confiable-mobiliario-oficina/",
+   "target": ""
+  },
+  {
+   "id": "i23",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "NOTAS RELEVANTES",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-30-jul-2026_-13_47_48.webp",
+   "alt": "Taller de fabricación de mobiliario OFITODO con maquinaria industrial y área de producción organizada"
+  },
+  {
+   "id": "t35",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "NOTAS RELEVANTES",
+   "valor": "OFITODO · Blog Mobiliario..."
+  },
+  {
+   "id": "l29",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "NOTAS RELEVANTES",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/mobiliario-escolar-guia-espacios-educativos/",
+   "target": ""
+  },
+  {
+   "id": "i24",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "NOTAS RELEVANTES",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-15_01_03.webp",
+   "alt": "Salón de clases moderno con mesas modulares, sillas ergonómicas, paneles acústicos, lambrines de madera y mobiliario de almacenamiento."
+  },
+  {
+   "id": "t36",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "NOTAS RELEVANTES",
+   "valor": "OFITODO | Proyecto OFITODO..."
+  },
+  {
+   "id": "l30",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "NOTAS RELEVANTES",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/estaciones-de-trabajo-para-oficina/",
+   "target": ""
+  },
+  {
+   "id": "i25",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "NOTAS RELEVANTES",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-15-jun-2026_-09_47_36.webp",
+   "alt": "estaciones de trabajo para oficina con cubículos modernos y sillas ergonómicas."
+  },
+  {
+   "id": "t37",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "NOTAS RELEVANTES",
+   "valor": "Cargar más"
+  },
+  {
+   "id": "t38",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "NOTAS RELEVANTES",
+   "valor": "¿Listo para Transformar tu Espacio de Trabajo?"
+  },
+  {
+   "id": "t39",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "NOTAS RELEVANTES",
+   "valor": "Contacta con nuestros expertos en mobiliario para oficina y recibe una cotización personalizada sin compromiso. Estamos aquí para ayudarte a crear el espacio perfecto."
+  },
+  {
+   "id": "l31",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "NOTAS RELEVANTES",
+   "texto": "Cotizar por WhatsApp",
+   "href": "https://wa.me/524493419403?",
+   "target": ""
+  },
+  {
+   "id": "l32",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "NOTAS RELEVANTES",
+   "texto": "Email",
+   "href": "mailto:ventasofitodo@hotmail.com",
+   "target": ""
+  }
+ ]
+}

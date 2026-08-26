@@ -7,6 +7,10 @@ import type { Producto, Listado } from './contenido.ts';
 // Resolución absoluta desde cwd (= apps/site): el bundler reubica este módulo en dist/.
 const require = createRequire(path.resolve(process.cwd(), '..', '..', 'scripts', '.deps', 'node_modules', 'cheerio', 'index.js'));
 const { load } = require('cheerio');
+const requireScripts = createRequire(path.resolve(process.cwd(), '..', '..', 'scripts', 'editables-core.cjs'));
+const core = requireScripts('./editables-core.cjs');
+
+export interface Editables { pagina?: Record<string, Record<string, string>>; global?: Record<string, Record<string, string>>; }
 
 const KEEP_ABS = /^https:\/\/ofitodo\.com\/(wp-content|wp-includes|wp-json|xmlrpc|wp-login|wp-admin|feed|comments\/feed|\?)/;
 const PAGO_RE = /paypal\.com|paypalobjects\.com|mlstatic\.com|mercadopago|mercadolibre|woocommerce-paypal-payments/;
@@ -43,8 +47,9 @@ function base(html: string) {
 }
 
 /** Página congelada: referencia + enlaces relativos + islas activas.
- *  El SEO editable (panel → content/es) parcha title/description sobre la referencia. */
-export function congelada(html: string, seo?: { title?: string; description?: string | null }): string {
+ *  Aplica los cambios de contenido del panel (texto/imagen/enlace) sobre el mismo diseño,
+ *  y marca los nodos con data-cms para el editor visual. Paridad intacta si no hay cambios. */
+export function congelada(html: string, seo?: { title?: string; description?: string | null }, ed?: Editables): string {
   const $ = base(html);
   if (seo?.title && $('title').first().text() !== seo.title) $('title').text(seo.title);
   if (seo?.description) {
@@ -52,6 +57,9 @@ export function congelada(html: string, seo?: { title?: string; description?: st
     if (m.length) m.attr('content', seo.description);
     else $('title').after(`<meta name="description" content="${seo.description.replace(/"/g, '&quot;')}">`);
   }
+  // Contenido editable: global (header/footer) + página. Siempre marca data-cms (para el editor).
+  core.inyectar($, core.scopeGlobal($), ed?.global ?? {}, { prefijo: 'g:' });
+  core.inyectar($, core.scopeContenido($), ed?.pagina ?? {}, { saltarHF: true, prefijo: 'c:' });
   return $.html();
 }
 

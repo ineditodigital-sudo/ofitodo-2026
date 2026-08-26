@@ -2,7 +2,7 @@
 // congeladas (páginas/posts/otros 200 del inventario) + catálogo regenerado desde datos
 // + páginas de sistema nuevas. Endpoint .html.ts = control byte a byte del HTML.
 import type { APIRoute } from 'astro';
-import { productos, categorias, etiquetas, marcas, congeladas, refHtml, hayRef, urlKey, urls200 } from '../../lib/contenido.ts';
+import { productos, categorias, etiquetas, marcas, congeladas, refHtml, hayRef, urlKey, urls200, overridesPagina, overridesGlobal } from '../../lib/contenido.ts';
 import * as T from '../../lib/transformar.ts';
 import * as SIS from '../../lib/sistema-paginas.ts';
 
@@ -17,7 +17,8 @@ export function getStaticPaths(): Ruta[] {
     rutas.push({ params: { slug: slug || undefined }, props });
   };
 
-  for (const c of congeladas()) add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef, seo: c.seo });
+  const claveDe = (slug: string) => (slug === '/' ? 'home' : slug.replace(/^\/|\/$/g, '').replace(/\//g, '__'));
+  for (const c of congeladas()) add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef, seo: c.seo, key: claveDe(c.slug) });
 
   const prods = productos();
   for (const p of prods) add(`/producto/${p.slug}/`, { tipo: 'producto', slug: p.slug });
@@ -47,7 +48,8 @@ const porSlugProducto = () => new Map(productos().map((p) => [p.slug, p]));
 export const GET: APIRoute = ({ props }) => {
   let html = '';
   if (props.tipo === 'congelada') {
-    html = T.congelada(refHtml(props.htmlRef as string), props.seo as { title?: string; description?: string | null } | undefined);
+    html = T.congelada(refHtml(props.htmlRef as string), props.seo as { title?: string; description?: string | null } | undefined,
+      { pagina: overridesPagina(props.key as string), global: overridesGlobal() });
   } else if (props.tipo === 'producto') {
     const p = porSlugProducto().get(props.slug as string)!;
     const ref = p.tieneReferencia ? refHtml(`producto__${p.slug}.html`) : refHtml('producto__silla-operativa-modelo-lituania-ofitodo.html');

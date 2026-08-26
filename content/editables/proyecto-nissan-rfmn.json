@@ -1,0 +1,93 @@
+{
+ "pagina": "/proyecto-nissan-rfmn/",
+ "titulo": "Proyecto Nissan RFMN",
+ "key": "proyecto-nissan-rfmn",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto Nissan RFMN",
+   "valor": "Proyecto Nissan RFMN"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto Nissan RFMN",
+   "valor": "Espacios para archivo"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_65_.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-_65_"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_64_.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-_64_"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_63_.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-_63_"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_65_.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-_65_"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_64_.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-_64_"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_63_.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-_63_"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_65_.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-_65_"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_64_.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-_64_"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_63_.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-_63_"
+  }
+ ]
+}

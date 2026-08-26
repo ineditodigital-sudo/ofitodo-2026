@@ -2,7 +2,7 @@
 // imágenes, SEO de páginas) y los aplica a content/ ANTES del build.
 // Forma parte del ciclo de publicación (docs/09-operacion.md).
 // Uso: node scripts/sincronizar-panel.mjs [https://temporal.ofitodo.com]
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -69,4 +69,29 @@ for (const col of ['pages', 'posts']) {
     nS++;
   }
 }
-console.log(`Sincronizado: ${nP} productos con cambios, ${nS} páginas con SEO editado. Ahora: build + deploy.`);
+// contenido editable del CMS → content/editables-overrides/<pagina>.json
+let nC = 0;
+const contenido = data.contenido ?? {};
+if (Object.keys(contenido).length) {
+  const dir = path.join(ROOT, 'content', 'editables-overrides');
+  mkdirSync(dir, { recursive: true });
+  for (const [pagina, campos] of Object.entries(contenido)) {
+    writeFileSync(path.join(dir, `${pagina}.json`), JSON.stringify(campos, null, 1));
+    nC += Object.keys(campos).length;
+  }
+}
+
+// ajustes de marca (tema/sitio) → merge en content/theme.json y site.json
+const set = data.settings ?? {};
+const mergeJson = (rel, patch) => {
+  if (!patch) return false;
+  const fp = path.join(ROOT, 'content', rel);
+  const base = JSON.parse(readFileSync(fp, 'utf8'));
+  const deep = (a, b) => { for (const k of Object.keys(b)) a[k] = (b[k] && typeof b[k] === 'object' && !Array.isArray(b[k])) ? deep(a[k] || {}, b[k]) : b[k]; return a; };
+  writeFileSync(fp, JSON.stringify(deep(base, patch), null, 2));
+  return true;
+};
+const nTema = mergeJson('theme.json', set.tema) ? 1 : 0;
+const nSitio = mergeJson('site.json', set.sitio) ? 1 : 0;
+
+console.log(`Sincronizado: ${nP} productos, ${nS} páginas SEO, ${nC} cambios de contenido, tema:${nTema} sitio:${nSitio}. Ahora: build + deploy.`);

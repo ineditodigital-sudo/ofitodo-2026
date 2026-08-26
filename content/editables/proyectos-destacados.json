@@ -1,0 +1,502 @@
+{
+ "pagina": "/proyectos-destacados/",
+ "titulo": "Proyectos destacados",
+ "key": "proyectos-destacados",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2018/01/blog-list-title-img-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Proyectos destacados",
+   "valor": "Proyectos destacados"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto a Empacadora San Francisco",
+   "valor": "Proyecto a Empacadora San Francisco"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto a Empacadora San Francisco",
+   "valor": "Renovación de sala de juntas, mesa de juntas, sillas, persianas y muro con lambrín."
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto a Empacadora San Francisco",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.28.13-PM-2-scaled.webp",
+   "alt": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto a Empacadora San Francisco",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-09-10-at-6.33.14-PM-scaled.webp",
+   "alt": ""
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto a Empacadora San Francisco",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.28.13-PM-1-scaled.webp",
+   "alt": ""
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto a Empacadora San Francisco",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-09-10-at-6.33.14-PM-1-scaled.webp",
+   "alt": ""
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto de comedores empresariales",
+   "valor": "Proyecto de comedores empresariales"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-4.00.28-PM.webp",
+   "alt": ""
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-3.59.58-PM.webp",
+   "alt": ""
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-3.59.54-PM.webp",
+   "alt": ""
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/image-4-scaled.webp",
+   "alt": ""
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto DDF México Recepciones",
+   "valor": "Proyecto DDF México Recepciones"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.32.07-PM-1-1.webp",
+   "alt": ""
+  },
+  {
+   "id": "i10",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.32.07-PM.webp",
+   "alt": ""
+  },
+  {
+   "id": "i11",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-62.webp",
+   "alt": ""
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto mobiliario escolar",
+   "valor": "Proyecto mobiliario escolar"
+  },
+  {
+   "id": "i12",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto mobiliario escolar",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-8.56.44-AM.webp",
+   "alt": ""
+  },
+  {
+   "id": "i13",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto mobiliario escolar",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-8.56.45-AM.webp",
+   "alt": ""
+  },
+  {
+   "id": "i14",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto mobiliario escolar",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-8.56.46-AM-1.webp",
+   "alt": ""
+  },
+  {
+   "id": "i15",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto mobiliario escolar",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-8.56.46-AM-2.webp",
+   "alt": ""
+  },
+  {
+   "id": "i16",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto mobiliario escolar",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-8.56.46-AM-3.webp",
+   "alt": ""
+  },
+  {
+   "id": "i17",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto mobiliario escolar",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-8.56.46-AM.webp",
+   "alt": ""
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "valor": "Proyecto empresa japonesa zapatero"
+  },
+  {
+   "id": "i18",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.50-PM.webp",
+   "alt": ""
+  },
+  {
+   "id": "i19",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-1.webp",
+   "alt": ""
+  },
+  {
+   "id": "i20",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-2.webp",
+   "alt": ""
+  },
+  {
+   "id": "i21",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-3.webp",
+   "alt": ""
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "valor": "Proyecto Farmacias del Ahorro"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "valor": "Espacios de trabajo"
+  },
+  {
+   "id": "i22",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/pixelcut-export-8.webp",
+   "alt": ""
+  },
+  {
+   "id": "i23",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/pixelcut-export-7.webp",
+   "alt": ""
+  },
+  {
+   "id": "i24",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/pixelcut-export-6.webp",
+   "alt": ""
+  },
+  {
+   "id": "i25",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/41656307532.webp",
+   "alt": ""
+  },
+  {
+   "id": "i26",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/74ea5816-fcdb-41bc-be24-fc65417d39b7.webp",
+   "alt": ""
+  },
+  {
+   "id": "i27",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/180cd0a9-8ec3-4301-9c67-88a460de8a55-1.webp",
+   "alt": ""
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "valor": "Proyecto Gábinetes móviles metálicos y lockers"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "valor": "Espacios de trabajo"
+  },
+  {
+   "id": "i28",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_3_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i29",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-9.29.55-AM-_1_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i30",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_2_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i31",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_1_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i32",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-02-at-2.05.56-PM-_7_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i33",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-02-at-2.05.56-PM-_8_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i34",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-9.29.54-AM.webp",
+   "alt": ""
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto Nissan RFMN",
+   "valor": "Proyecto Nissan RFMN"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto Nissan RFMN",
+   "valor": "Espacios para archivo"
+  },
+  {
+   "id": "i35",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_65_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i36",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_64_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i37",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Nissan RFMN",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-_63_.webp",
+   "alt": ""
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "valor": "Proyecto QMC Aguascalientes"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "valor": "Salas de capacitación, juntas y reuniones."
+  },
+  {
+   "id": "i38",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.09-PM.webp",
+   "alt": ""
+  },
+  {
+   "id": "i39",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.10-PM-1-1.webp",
+   "alt": ""
+  },
+  {
+   "id": "i40",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.08-PM-1.webp",
+   "alt": ""
+  },
+  {
+   "id": "i41",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.11-PM-1.webp",
+   "alt": ""
+  },
+  {
+   "id": "i42",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.10-PM-2.webp",
+   "alt": ""
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto Adient",
+   "valor": "Proyecto Adient"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto Adient",
+   "valor": "Escritorio Completo"
+  },
+  {
+   "id": "i43",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-18-at-9.05.31-AM.webp",
+   "alt": ""
+  },
+  {
+   "id": "i44",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Diseno-sin-titulo-_33_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i45",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Diseno-sin-titulo-_32_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i46",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",
+   "alt": ""
+  }
+ ]
+}

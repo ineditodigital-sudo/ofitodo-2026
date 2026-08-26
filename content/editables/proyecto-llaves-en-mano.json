@@ -1,0 +1,121 @@
+{
+ "pagina": "/proyecto-llaves-en-mano/",
+ "titulo": "Proyecto llaves en mano",
+ "key": "proyecto-llaves-en-mano",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2018/01/blog-list-title-img-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Proyecto llaves en mano",
+   "valor": "Proyecto llaves en mano"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "¿Qué es llave en mano?",
+   "valor": "¿Qué es llave en mano?"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "¿Qué es llave en mano?",
+   "valor": "Todo para tu proyecto"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Qué es llave en mano?",
+   "valor": "El"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Qué es llave en mano?",
+   "valor": "proyecto llave en mano"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Qué es llave en mano?",
+   "valor": "consiste en un servicio integral de acondicionamiento, con el objetivo de que el cliente no se preocupe del mecanismo y gestión, dejando al cargo a un empresa con la experiencia para gestionar todo el proceso."
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "¿Qué es llave en mano?",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/Servicios_especiales2-600x600.png",
+   "alt": "Ofitodo Muebles para Oficina"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "1",
+   "valor": "Diseño"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "2",
+   "valor": "Distribución"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "3",
+   "valor": "Fabricación"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "4",
+   "valor": "Instalación"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "5",
+   "valor": "Electrificación"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6",
+   "valor": "Y más…"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6",
+   "valor": "¿Tienes dudas o te interesaría saber más? Estaremos encantados de contactarte. Envíanos mensaje y nosotros te respondemos."
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Botón",
+   "seccion": "6",
+   "valor": "Mensaje"
+  }
+ ]
+}

@@ -27,6 +27,10 @@ for (const col of ['pages', 'posts']) {
   }
 }
 writeFileSync(path.join(OUT, 'api', 'datos', 'paginas.json'), JSON.stringify(paginas, null, 1));
+// catálogo de contenido editable (para el CMS) + tema y sitio
+cpSync(path.join(ROOT, 'content', 'editables'), path.join(OUT, 'api', 'datos', 'editables'), { recursive: true });
+copyFileSync(path.join(ROOT, 'content', 'theme.json'), path.join(OUT, 'api', 'datos', 'theme.json'));
+copyFileSync(path.join(ROOT, 'content', 'site.json'), path.join(OUT, 'api', 'datos', 'site.json'));
 
 // 3. Panel (si ya está construido)
 const admin = path.join(ROOT, 'apps', 'admin', 'dist');

@@ -1,0 +1,290 @@
+{
+ "pagina": "/muebles-para-restaurante/",
+ "titulo": "Muebles para Restaurante",
+ "key": "muebles-para-restaurante",
+ "campos": [
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Inicio",
+   "href": "https://ofitodo.com",
+   "target": ""
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "Muebles para Restaurante"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "MUEBLES PARA RESTAURANTE",
+   "valor": "MUEBLES PARA RESTAURANTE"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MUEBLES PARA RESTAURANTE",
+   "valor": "Mobiliario robusto y funcional para entornos industriales. Diseñado para resistir condiciones exigentes y optimizar la productividad."
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "MUEBLES PARA RESTAURANTE",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/render-barra-y-contra-barra-1024x576.webp",
+   "alt": ""
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Ofitodo: Tu Solución Integral de Mobiliario",
+   "valor": "Ofitodo: Tu Solución Integral de Mobiliario"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Ofitodo: Tu Solución Integral de Mobiliario",
+   "valor": "En Ofitodo te ayudamos a crear espacios gastronómicos atractivos y funcionales. Nuestro mobiliario para restaurantes combina diseño, confort y durabilidad. Desde mesas y sillas para comensales hasta mobiliario para barra y terraza, ofrecemos soluciones versátiles que se adaptan a diferentes estilos y necesidades, con materiales resistentes y de fácil mantenimiento."
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Productos Relacionados",
+   "valor": "Productos Relacionados"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/2-4-convertido-de-png-1-1024x1024.webp",
+   "alt": "silla multiusos"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Silla multiusos modelo AR-2017",
+   "href": "https://ofitodo.com/producto/silla-multiusos-para-exteriores/",
+   "target": ""
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/silla-multiusos-para-exteriores/",
+   "target": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/2-convertido-de-png-1-1024x1024.webp",
+   "alt": "Silla multiusos"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Silla Multiusos Modelo Sensilla OHV-97",
+   "href": "https://ofitodo.com/producto/silla-multiusos-modelo-sensilla-ohv-97/",
+   "target": ""
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/silla-multiusos-modelo-sensilla-ohv-97/",
+   "target": ""
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/2-9-convertido-de-png-1024x1024.webp",
+   "alt": "Silla multiusos"
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Silla multiusos modelo Origami",
+   "href": "https://ofitodo.com/producto/silla-multiusos-modelo-origami/",
+   "target": ""
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/silla-multiusos-modelo-origami/",
+   "target": ""
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/2-1-convertido-de-png-1024x1024.webp",
+   "alt": "Silla multiusos"
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Silla multiusos modelo Rue OHV-72",
+   "href": "https://ofitodo.com/producto/silla-multiusos-modelo-rue/",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/silla-multiusos-modelo-rue/",
+   "target": ""
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Load More",
+   "href": "#load_next_page",
+   "target": ""
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Productos Relacionados",
+   "valor": "Cargar más"
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Catálogo Completo",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/Catalogo-para-Restaurantes-2026-_compressed.pdf",
+   "target": ""
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Por Qué Elegir OFITODO?",
+   "valor": "¿Por Qué Elegir OFITODO?"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Experiencia Comprobada"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Años de experiencia equipando espacios"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Calidad Garantizada"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Mobiliario de alta calidad con garantía y soporte"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Asesoría Personalizada"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Expertos que te ayudan a elegir las mejores soluciones"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Entrega e Instalación"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Servicio completo de entrega e instalación profesional"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "¿Listo para Transformar tu Espacio de Trabajo?"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "Contacta con nuestros expertos en mobiliario para oficina y recibe una cotización personalizada sin compromiso. Estamos aquí para ayudarte a crear el espacio perfecto."
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Cotizar por WhatsApp",
+   "href": "https://wa.me/524493419403?",
+   "target": ""
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Email",
+   "href": "mailto:ventasofitodo@hotmail.com",
+   "target": ""
+  }
+ ]
+}

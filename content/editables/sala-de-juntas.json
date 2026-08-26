@@ -1,0 +1,179 @@
+{
+ "pagina": "/sala-de-juntas/",
+ "titulo": "Sala de Juntas",
+ "key": "sala-de-juntas",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "OFITODO | Proyecto"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "OFITODO"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Sala de juntas",
+   "valor": "Sala de juntas"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sala de juntas",
+   "valor": "Un espacio listo para cerrar negocios"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Sala de juntas",
+   "texto": "Ver galería",
+   "href": "#gallery",
+   "target": ""
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Sala de juntas",
+   "texto": "Cotizar",
+   "href": "https://wa.me/524493419403?text=¡Hola!%20👋%0A%0AVi%20su%20blog%20y%20me%20interesa%20cotizar%20mi%20propio%20proyecto.%20Me%20gustaría%20recibir%20más%20información%20sobre%20sus%20servicios%20y%20mobiliario.%20✨",
+   "target": "_blank"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sala de juntas",
+   "valor": "01"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sala de juntas",
+   "valor": "Sobre el proyecto"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "El valor de una sala de juntas",
+   "valor": "El valor de una sala de juntas"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El valor de una sala de juntas",
+   "valor": "Una sala de juntas bien diseñada es clave para mejorar la productividad, la comunicación y la imagen profesional de una empresa. No se trata solo de colocar una mesa y sillas, sino de crear un espacio cómodo, funcional y adecuado para tomar decisiones, presentar proyectos y cerrar acuerdos importantes."
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El valor de una sala de juntas",
+   "valor": "En OFITODO diseñamos y personalizamos salas de juntas de acuerdo con las necesidades de cada cliente, considerando el espacio disponible, el número de usuarios, el estilo de la empresa y el uso que se le dará. Creamos soluciones a la medida que combinan diseño, ergonomía y funcionalidad para transformar cada reunión en una experiencia más profesional."
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El valor de una sala de juntas",
+   "valor": "Galería"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "valor": "IMÁGENES DEL PROYECTO"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "valor": "03"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/ChatGPT-Image-29-may-2026_-12_11_41.webp",
+   "alt": ""
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/3.2-_1_.webp",
+   "alt": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/ChatGPT-Image-29-may-2026_-13_12_14.webp",
+   "alt": ""
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "CREA TU SALA DE JUNTAS A la MEDIDA",
+   "valor": "CREA TU"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CREA TU SALA DE JUNTAS A la MEDIDA",
+   "valor": "SALA DE JUNTAS"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "CREA TU SALA DE JUNTAS A la MEDIDA",
+   "valor": "A la MEDIDA"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Botón",
+   "seccion": "CREA TU SALA DE JUNTAS A la MEDIDA",
+   "valor": "Cotizamos sin compromiso. Nuestro equipo te asesora en distribución de espacios, mobiliario e instalación."
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "CREA TU SALA DE JUNTAS A la MEDIDA",
+   "texto": "Cotizar AHORA",
+   "href": "https://wa.me/524493419403?text=¡Hola!%20👋%0A%0AVi%20su%20blog%20y%20me%20interesa%20cotizar%20mi%20propio%20proyecto.%20Me%20gustaría%20recibir%20más%20información%20sobre%20sus%20servicios%20y%20mobiliario.%20✨",
+   "target": "_blank"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "CREA TU SALA DE JUNTAS A la MEDIDA",
+   "texto": "Ver Catálogo",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/02/Catalogo-Ofitodo.2026_.pdf",
+   "target": "_blank"
+  }
+ ]
+}

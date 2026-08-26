@@ -1,0 +1,337 @@
+{
+ "pagina": "/politica-de-seguridad/",
+ "titulo": "Politica de seguridad",
+ "key": "politica-de-seguridad",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/03/logo-azul-1-800x150.webp",
+   "alt": "logo azul (1)"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "POLÍTICA DE SEGURIDAD DE LA INFORMACIÓN",
+   "valor": "POLÍTICA DE SEGURIDAD DE LA INFORMACIÓN"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "COMERCIALIZADORA OFITODO SA DE CV",
+   "valor": "COMERCIALIZADORA OFITODO SA DE CV"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "1. Objetivo",
+   "valor": "1. Objetivo"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "1. Objetivo",
+   "valor": "La presente Política de Seguridad de la Información tiene como objetivo establecer los lineamientos y controles necesarios para proteger la información de Comercializadora Ofitodo SA de CV sus clientes, proveedores, empleados y demás partes interesadas, asegurando su confidencialidad, integridad y disponibilidad."
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "2. Alcance",
+   "valor": "2. Alcance"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "2. Alcance",
+   "valor": "Esta política aplica a todos los colaboradores, contratistas, proveedores y terceros que tengan acceso a los sistemas de información, equipos o datos de la Empresa, independientemente de su forma de contratación o ubicación geográfica."
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "3. Principios",
+   "valor": "3. Principios"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "3. Principios",
+   "valor": "La seguridad de la información se basa en los siguientes principios fundamentales:"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Principios",
+   "valor": "Confidencialidad: Garantizar que la información solo sea accesible a personas autorizadas."
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Principios",
+   "valor": "Integridad: Mantener la exactitud y completitud de la información."
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Principios",
+   "valor": "Disponibilidad: Asegurar que la información y los sistemas estén disponibles cuando se requieran."
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "4. Clasificación de la Información",
+   "valor": "4. Clasificación de la Información"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "4. Clasificación de la Información",
+   "valor": "Toda la información manejada por la Empresa será clasificada en niveles, de acuerdo con su sensibilidad:"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "4. Clasificación de la Información",
+   "valor": "Pública: Información que puede ser divulgada sin restricciones."
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "4. Clasificación de la Información",
+   "valor": "Interna: Información de uso exclusivo dentro de la empresa."
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "4. Clasificación de la Información",
+   "valor": "Confidencial: Información que podría causar daño a la empresa o a terceros si es divulgada."
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "4. Clasificación de la Información",
+   "valor": "Privada: Información personal o sensible de empleados, clientes o proveedores."
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "5. Responsabilidades",
+   "valor": "5. Responsabilidades"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "5. Responsabilidades",
+   "valor": "Dirección General: Aprobar y respaldar la implementación de esta política."
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "5. Responsabilidades",
+   "valor": "Área de TI o responsable designado: Implementar y mantener los controles de seguridad necesarios."
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "5. Responsabilidades",
+   "valor": "Empleados y usuarios: Cumplir con esta política y reportar cualquier incidente de seguridad."
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "6. Controles y buenas prácticas",
+   "valor": "6. Controles y buenas prácticas"
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "6. Controles y buenas prácticas",
+   "valor": "Uso de contraseñas robustas y cambio periódico."
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "6. Controles y buenas prácticas",
+   "valor": "Restricción de acceso a sistemas y datos según el rol del usuario."
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "6. Controles y buenas prácticas",
+   "valor": "Respaldos regulares de la información crítica."
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "6. Controles y buenas prácticas",
+   "valor": "Actualización y parches de software y antivirus."
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "6. Controles y buenas prácticas",
+   "valor": "Uso responsable del correo electrónico y navegación en internet."
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "6. Controles y buenas prácticas",
+   "valor": "Política de escritorio limpio y bloqueo de pantalla en ausencia."
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "7. Dispositivos y medios de almacenamiento",
+   "valor": "7. Dispositivos y medios de almacenamiento"
+  },
+  {
+   "id": "t29",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "7. Dispositivos y medios de almacenamiento",
+   "valor": "Solo se permite el uso de dispositivos autorizados por la Empresa."
+  },
+  {
+   "id": "t30",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "7. Dispositivos y medios de almacenamiento",
+   "valor": "La información almacenada en medios extraíbles debe estar cifrada y protegida."
+  },
+  {
+   "id": "t31",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "7. Dispositivos y medios de almacenamiento",
+   "valor": "Está prohibido compartir contraseñas o prestar equipos de trabajo sin autorización."
+  },
+  {
+   "id": "t32",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "8. Manejo de incidentes",
+   "valor": "8. Manejo de incidentes"
+  },
+  {
+   "id": "t33",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "8. Manejo de incidentes",
+   "valor": "Todo incidente de seguridad (pérdida de información, acceso no autorizado, virus, etc.) debe ser reportado de inmediato al responsable de TI o a la dirección correspondiente, para su análisis y resolución oportuna."
+  },
+  {
+   "id": "t34",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "9. Sanciones",
+   "valor": "9. Sanciones"
+  },
+  {
+   "id": "t35",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "9. Sanciones",
+   "valor": "El incumplimiento de esta política puede dar lugar a sanciones disciplinarias, incluyendo la terminación de la relación laboral o contractual, además de las acciones legales que correspondan."
+  },
+  {
+   "id": "t36",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "10. Revisión y actualización",
+   "valor": "10. Revisión y actualización"
+  },
+  {
+   "id": "t37",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Revisión y actualización",
+   "valor": "Esta política será revisada y, en su caso, actualizada al menos una vez al año o cuando se produzcan cambios significativos en los sistemas, procesos o riesgos de seguridad."
+  },
+  {
+   "id": "t38",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Revisión y actualización",
+   "valor": "Fecha de emisión: 01/01/2024"
+  },
+  {
+   "id": "t39",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Revisión y actualización",
+   "valor": "Versión: 1.0"
+  },
+  {
+   "id": "t40",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Revisión y actualización",
+   "valor": "Responsable de la política: Gerencia Administrativa"
+  },
+  {
+   "id": "t41",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Revisión y actualización",
+   "valor": "Jorge Reynoso 1703-15, Desarrollo Especial Galerías, 20124 Aguascalientes, Ags."
+  },
+  {
+   "id": "t42",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Revisión y actualización",
+   "valor": "TEL (449) 918 40 80 Cel (449) 341 94 03"
+  },
+  {
+   "id": "t43",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Revisión y actualización",
+   "valor": "ventasofitodo@hotmail.com"
+  },
+  {
+   "id": "t44",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Revisión y actualización",
+   "valor": "AGUASCALIENTES, AGS"
+  },
+  {
+   "id": "t45",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Revisión y actualización",
+   "valor": "www.ofitodo.com"
+  }
+ ]
+}

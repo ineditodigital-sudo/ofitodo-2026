@@ -1,0 +1,49 @@
+{
+ "pagina": "/sala-espera-recepcion/",
+ "titulo": "SALA DE ESPERA Y RECEPCIÓN",
+ "key": "sala-espera-recepcion",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/banner-productos-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "SALA DE ESPERA Y RECEPCIÓN",
+   "valor": "SALA DE ESPERA Y RECEPCIÓN"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SALA DE ESPERA Y RECEPCIÓN",
+   "texto": "RECEPCIÓN",
+   "href": "https://ofitodo.com/tipo/escritorios/recepcion/recepciones-modernas/",
+   "target": "_blank"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SALA DE ESPERA Y RECEPCIÓN",
+   "texto": "BANCAS DE ESPERA",
+   "href": "https://ofitodo.com/tipo/escritorios/recepcion/bancas-de-espera/",
+   "target": "_blank"
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "SALA DE ESPERA Y RECEPCIÓN",
+   "texto": "SALAS DE ESPERA",
+   "href": "https://ofitodo.com/tipo/escritorios/recepcion/salas-de-espera/",
+   "target": "_blank"
+  }
+ ]
+}

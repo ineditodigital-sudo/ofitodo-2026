@@ -1,0 +1,290 @@
+{
+ "pagina": "/muebles-para-oficina/",
+ "titulo": "Muebles para oficina",
+ "key": "muebles-para-oficina",
+ "campos": [
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Inicio",
+   "href": "https://ofitodo.com",
+   "target": ""
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "Muebles para oficina"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "MUEBLES PARA OFICINA",
+   "valor": "MUEBLES PARA OFICINA"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MUEBLES PARA OFICINA",
+   "valor": "Soluciones completas de mobiliario para crear espacios de trabajo corporativos productivos, funcionales y estéticos. Desde startups hasta grandes corporativos, tenemos la experiencia y los productos para transformar tu oficina."
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "MUEBLES PARA OFICINA",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/escritoriosmodulo-recepcion-para-oficina-hotel-a-pedido-D_NQ_NP_926526-MPE27334580585_052018-F.jpg",
+   "alt": ""
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Tu Solución Integral de Mobiliario",
+   "valor": "Tu Solución Integral de Mobiliario"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tu Solución Integral de Mobiliario",
+   "valor": "En Ofitodo, sabemos que la comodidad y la funcionalidad de tu espacio de trabajo son esenciales para el éxito de tu negocio. Nos especializamos en mobiliario para oficina que combina ergonomía, diseño y durabilidad. Desde escritorios ejecutivos hasta estaciones de trabajo colaborativas, ofrecemos soluciones integrales para crear espacios de trabajo que inspiran productividad y profesionalismo."
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Productos Relacionados",
+   "valor": "Productos Relacionados"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/2-6-convertido-de-png-1-1024x1024.webp",
+   "alt": "Silla de visita"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Silla de visita modelo Cerdeña",
+   "href": "https://ofitodo.com/producto/silla-de-visita-de-oficina/",
+   "target": ""
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/silla-de-visita-de-oficina/",
+   "target": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/2-5-convertido-de-png-1-1024x1024.webp",
+   "alt": "Silla opeartiva"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Silla Operativa Modelo ROLY OHE-403 Negra",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-roly-ergonomica/",
+   "target": ""
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-roly-ergonomica/",
+   "target": ""
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/2-3-convertido-de-png-1024x1024.webp",
+   "alt": "Silla ejecutiva"
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Silla ejecutiva modelo Economalla Blanca",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-modelo-economalla/",
+   "target": ""
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-modelo-economalla/",
+   "target": ""
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/PLANTILLA-DE-PROUDCTOS-7-convertido-de-png-1024x1024.webp",
+   "alt": "Silla de visita"
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Silla de visita modelo A-135 CRL",
+   "href": "https://ofitodo.com/producto/silla-de-visita-modelo-a-135-crl/",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/silla-de-visita-modelo-a-135-crl/",
+   "target": ""
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Load More",
+   "href": "#load_next_page",
+   "target": ""
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Productos Relacionados",
+   "valor": "Cargar más"
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Catálogo Completo",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/02/Catalogo-Ofitodo.2026_.pdf",
+   "target": ""
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Por Qué Elegir OFITODO?",
+   "valor": "¿Por Qué Elegir OFITODO?"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Experiencia Comprobada"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Años de experiencia equipando espacios"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Calidad Garantizada"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Mobiliario de alta calidad con garantía y soporte"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Asesoría Personalizada"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Expertos que te ayudan a elegir las mejores soluciones"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Entrega e Instalación"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Servicio completo de entrega e instalación profesional"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "¿Listo para Transformar tu Espacio de Trabajo?"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "Contacta con nuestros expertos en mobiliario para oficina y recibe una cotización personalizada sin compromiso. Estamos aquí para ayudarte a crear el espacio perfecto."
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Cotizar por WhatsApp",
+   "href": "https://wa.me/524493419403?",
+   "target": ""
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Email",
+   "href": "mailto:ventasofitodo@hotmail.com",
+   "target": ""
+  }
+ ]
+}

@@ -1,0 +1,193 @@
+{
+ "pagina": "/interior-design/",
+ "titulo": "Interior Design(posibles cambios)",
+ "key": "interior-design",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "new collection",
+   "valor": "new collection"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Encabezado pequeño",
+   "seccion": "new collection",
+   "valor": "armchair & sofa"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "new collection",
+   "valor": "Per oportere conceptam cu, impedit oportere argumentum ea nec. Eum ex imperdiet sententiae vituperata, eius eirmod volumus cu usu, mea esse partem epicurei no. Eam cu eos te."
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "new collection",
+   "texto": "see more",
+   "href": "#",
+   "target": "_self"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Our team",
+   "valor": "Our team"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Encabezado pequeño",
+   "seccion": "Our team",
+   "valor": "interior design"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Our team",
+   "valor": "Per oportere conceptam cu, impedit oportere argumentum ea nec. Eum ex imperdiet sententiae vituperata"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Our team",
+   "texto": "see more",
+   "href": "#",
+   "target": "_self"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i10",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "i11",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Our team",
+   "src": "",
+   "alt": ""
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Clients",
+   "valor": "Clients"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Encabezado pequeño",
+   "seccion": "Clients",
+   "valor": "interior design"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Clients",
+   "valor": "Per oportere conceptam cu, impedit oportere argumentum ea nec. Eum ex imperdiet sententiae vituperata, eius."
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Clients",
+   "texto": "see more",
+   "href": "#",
+   "target": "_self"
+  }
+ ]
+}

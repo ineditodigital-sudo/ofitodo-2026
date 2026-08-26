@@ -1,0 +1,141 @@
+{
+ "pagina": "/proyecto-adient/",
+ "titulo": "Proyecto Adient",
+ "key": "proyecto-adient",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto Adient",
+   "valor": "Proyecto Adient"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto Adient",
+   "valor": "Escritorio Completo"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Post-de-RRSS-FOTOGRAFIAS-2025-11-21T131012.684.jpg",
+   "alt": "Post de RRSS FOTOGRAFÍAS - 2025-11-21T131012.684"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Diseno-sin-titulo-_33_.webp",
+   "alt": "Escritorio completo"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Diseno-sin-titulo-_32_.webp",
+   "alt": "Escritorio completo"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-18-at-9.05.31-AM.webp",
+   "alt": "Escritorio completo"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Post-de-RRSS-FOTOGRAFIAS-2025-11-21T131036.188.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-2025-11-21T131036.188"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Post-de-RRSS-FOTOGRAFIAS-2025-11-21T131026.337.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-2025-11-21T131026.337"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Post-de-RRSS-FOTOGRAFIAS-2025-11-21T131012.684.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-2025-11-21T131012.684"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Post-de-RRSS-FOTOGRAFIAS-2025-11-21T131036.188.jpg",
+   "alt": "Post de RRSS FOTOGRAFÍAS - 2025-11-21T131036.188"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Post-de-RRSS-FOTOGRAFIAS-2025-11-21T131026.337.jpg",
+   "alt": "Post de RRSS FOTOGRAFÍAS - 2025-11-21T131026.337"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Post-de-RRSS-FOTOGRAFIAS-2025-11-21T131012.684.jpg",
+   "alt": "Post de RRSS FOTOGRAFÍAS - 2025-11-21T131012.684"
+  },
+  {
+   "id": "i10",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Diseno-sin-titulo-_33_.webp",
+   "alt": "Escritorio completo"
+  },
+  {
+   "id": "i11",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Diseno-sin-titulo-_32_.webp",
+   "alt": "Escritorio completo"
+  },
+  {
+   "id": "i12",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-18-at-9.05.31-AM.webp",
+   "alt": "Escritorio completo"
+  },
+  {
+   "id": "i13",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Post-de-RRSS-FOTOGRAFIAS-2025-11-21T131036.188.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-2025-11-21T131036.188"
+  },
+  {
+   "id": "i14",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Adient",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/11/Post-de-RRSS-FOTOGRAFIAS-2025-11-21T131026.337.webp",
+   "alt": "Post-de-RRSS-FOTOGRAFÍAS-2025-11-21T131026.337"
+  }
+ ]
+}

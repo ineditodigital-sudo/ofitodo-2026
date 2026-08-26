@@ -1,0 +1,421 @@
+{
+ "pagina": "/politica-de-privacidad/",
+ "titulo": "Politica de privacidad",
+ "key": "politica-de-privacidad",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/03/logo-azul-1-800x150.webp",
+   "alt": "logo azul (1)"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "POLÍTICA DE PRIVACIDAD",
+   "valor": "POLÍTICA DE PRIVACIDAD"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "1. Introducción",
+   "valor": "1. Introducción"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "1. Introducción",
+   "valor": "En"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "1. Introducción",
+   "valor": "Comercializadora Ofitodo SA de CV (en lo sucesivo, \"la Empresa\"),"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "1. Introducción",
+   "valor": "con domicilio en Jorge Reynoso #1703 Interior 15 Col Galerías CP 20124, reconocemos la importancia de proteger los datos personales de nuestros clientes, empleados, proveedores y usuarios. Esta Política de Privacidad establece cómo recopilamos, usamos, almacenamos, compartimos y protegemos dicha información conforme a lo dispuesto en la Ley Federal"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "1. Introducción",
+   "valor": "de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su reglamento."
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "2. Datos personales que recopilamos"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "Recopilamos los siguientes tipos de datos personales, según la relación que se tenga con la Empresa:"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "Nombre completo"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "Dirección"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "Número de teléfono"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "Correo electrónico"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "RFC y razón social"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "Datos bancarios (para pagos y facturación)"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "Historial de compras y preferencias"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "2. Datos personales que recopilamos",
+   "valor": "Datos laborales (en el caso de empleados o candidatos)"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "3. Finalidades del tratamiento"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Los datos personales son utilizados para las siguientes finalidades primarias:"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Proveer productos y servicios."
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Elaborar cotizaciones y órdenes de compra."
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Procesar pagos y emitir facturación."
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Realizar entregas y servicios postventa."
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Atender solicitudes de servicio al cliente."
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Cumplir con obligaciones legales y contractuales."
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Y las siguientes finalidades secundarias (opcionales):"
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Enviar promociones, boletines y comunicaciones comerciales."
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Realizar encuestas de satisfacción."
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "3. Finalidades del tratamiento",
+   "valor": "Invitar a eventos organizados por la Empresa."
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "4. Consentimiento",
+   "valor": "4. Consentimiento"
+  },
+  {
+   "id": "t29",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "4. Consentimiento",
+   "valor": "Para las finalidades secundarias, solicitamos su consentimiento explícito. En caso de no desear recibir este tipo de comunicaciones, podrá solicitarlo en cualquier momento al correo ventasofitodo@hotmail.com."
+  },
+  {
+   "id": "t30",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "5. Transferencia de datos personales",
+   "valor": "5. Transferencia de datos personales"
+  },
+  {
+   "id": "t31",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "5. Transferencia de datos personales",
+   "valor": "Los datos personales podrán ser compartidos con:"
+  },
+  {
+   "id": "t32",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "5. Transferencia de datos personales",
+   "valor": "Proveedores de servicios logísticos o de mensajería."
+  },
+  {
+   "id": "t33",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "5. Transferencia de datos personales",
+   "valor": "Empresas que prestan servicios contables o fiscales."
+  },
+  {
+   "id": "t34",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "5. Transferencia de datos personales",
+   "valor": "Autoridades competentes, cuando sea legalmente requerido."
+  },
+  {
+   "id": "t35",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "5. Transferencia de datos personales",
+   "valor": "En todos los casos, se firmarán convenios de confidencialidad y se exigirá el cumplimiento de esta Política."
+  },
+  {
+   "id": "t36",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "6. Derechos ARCO",
+   "valor": "6. Derechos ARCO"
+  },
+  {
+   "id": "t37",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6. Derechos ARCO",
+   "valor": "Usted tiene derecho a:"
+  },
+  {
+   "id": "t38",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6. Derechos ARCO",
+   "valor": "Acceder a sus datos personales."
+  },
+  {
+   "id": "t39",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6. Derechos ARCO",
+   "valor": "Rectificarlos si son inexactos o incompletos."
+  },
+  {
+   "id": "t40",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6. Derechos ARCO",
+   "valor": "Cancelarlos cuando considere que no son necesarios para las"
+  },
+  {
+   "id": "t41",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "6. Derechos ARCO",
+   "valor": "finalidades señaladas."
+  },
+  {
+   "id": "t42",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6. Derechos ARCO",
+   "valor": "Oponerse al uso de sus datos para fines específicos."
+  },
+  {
+   "id": "t43",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6. Derechos ARCO",
+   "valor": "Para ejercer estos derechos, deberá enviar una solicitud al correo electrónico: ventasofitodo@hotmail.com acompañada de una copia de su identificación oficial y datos de contacto."
+  },
+  {
+   "id": "t44",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "7. Seguridad de los datos",
+   "valor": "7. Seguridad de los datos"
+  },
+  {
+   "id": "t45",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "7. Seguridad de los datos",
+   "valor": "La Empresa ha implementado medidas administrativas, técnicas y físicas para proteger los datos personales contra daño, pérdida, alteración, destrucción o el uso, acceso o tratamiento no autorizado."
+  },
+  {
+   "id": "t46",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "8. Uso de cookies y tecnologías similares",
+   "valor": "8. Uso de cookies y tecnologías similares"
+  },
+  {
+   "id": "t47",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "8. Uso de cookies y tecnologías similares",
+   "valor": "Nuestro sitio web puede utilizar cookies u otras tecnologías para mejorar la experiencia del usuario y ofrecer contenido personalizado. El usuario puede desactivar las cookies en su navegador si así lo desea."
+  },
+  {
+   "id": "t48",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "9. Cambios a la Política de Privacidad",
+   "valor": "9. Cambios a la Política de Privacidad"
+  },
+  {
+   "id": "t49",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "9. Cambios a la Política de Privacidad",
+   "valor": "Esta Política de Privacidad puede ser modificada en cualquier momento. Las actualizaciones serán publicadas en nuestro sitio web: www.ofitodo.com, y tendrán efecto a partir de su publicación."
+  },
+  {
+   "id": "t50",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "10. Contacto",
+   "valor": "10. Contacto"
+  },
+  {
+   "id": "t51",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Contacto",
+   "valor": "Para cualquier duda o comentario relacionado con esta Política, puede comunicarse con nuestro Responsable de Protección de Datos al correo electrónico: ventasofitodo@hotmail.com o al teléfono 449 918 4080."
+  },
+  {
+   "id": "t52",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Contacto",
+   "valor": "Fecha de última actualización: [01/01/2025]"
+  },
+  {
+   "id": "t53",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Contacto",
+   "valor": "Jorge Reynoso 1703-15, Desarrollo Especial Galerías, 20124 Aguascalientes, Ags."
+  },
+  {
+   "id": "t54",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Contacto",
+   "valor": "TEL (449) 918 40 80 Cel (449) 341 94 03"
+  },
+  {
+   "id": "t55",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Contacto",
+   "valor": "ventasofitodo@hotmail.com"
+  },
+  {
+   "id": "t56",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Contacto",
+   "valor": "AGUASCALIENTES, AGS"
+  },
+  {
+   "id": "t57",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "10. Contacto",
+   "valor": "www.ofitodo.com"
+  }
+ ]
+}

@@ -50,6 +50,16 @@ export function congeladas(): Congelada[] {
 export const refHtml = (file: string): string => readFileSync(R('html', file), 'utf8');
 export const hayRef = (file: string): boolean => existsSync(R('html', file));
 
+// Cambios de contenido publicados desde el panel (por página + global)
+export function overridesPagina(key: string): Record<string, Record<string, string>> {
+  const f = C('editables-overrides', `${key}.json`);
+  return existsSync(f) ? j(f) : {};
+}
+export function overridesGlobal(): Record<string, Record<string, string>> {
+  const f = C('editables-overrides', '_global.json');
+  return existsSync(f) ? j(f) : {};
+}
+
 export const urlKey = (u: string): string => {
   const { pathname, search } = new URL(u, 'https://ofitodo.com');
   const k = decodeURIComponent(pathname + search).replace(/\/$/, '') || '__home';

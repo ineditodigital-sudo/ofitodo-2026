@@ -1,0 +1,630 @@
+{
+ "pagina": "_global",
+ "titulo": "Encabezado y pie de página",
+ "key": "_global",
+ "campos": [
+  {
+   "id": "l0",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Ofitodo",
+   "href": "https://ofitodo.com/",
+   "target": ""
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/logo-azul-3.webp",
+   "alt": ""
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Inicio",
+   "href": "/inicio",
+   "target": ""
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Nosotros",
+   "href": "/nosotros",
+   "target": ""
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Productos",
+   "href": "https://ofitodo.com/productos/",
+   "target": ""
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Escritorios",
+   "href": "https://ofitodo.com/categoria-producto/escritorios/",
+   "target": ""
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Sillas y sillones de oficina",
+   "href": "https://ofitodo.com/categoria-producto/sillas/",
+   "target": ""
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Comedores y restaurantes",
+   "href": "https://ofitodo.com/categoria-producto/restaurantes/",
+   "target": ""
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Exhibidores",
+   "href": "https://ofitodo.com/categoria-producto/exhibidores/",
+   "target": ""
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Estaciones de trabajo",
+   "href": "https://ofitodo.com/categoria-producto/estaciones-de-trabajo/",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Libreros y archiveros",
+   "href": "https://ofitodo.com/categoria-producto/libreros-y-archiveros/",
+   "target": ""
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Lockers y vestidores",
+   "href": "https://ofitodo.com/categoria-producto/lockers-y-vestidores/",
+   "target": ""
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Mesa de juntas",
+   "href": "https://ofitodo.com/categoria-producto/mesas-de-juntas/",
+   "target": ""
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Paneles acústicos",
+   "href": "https://ofitodo.com/categoria-producto/paneles-acusticos/",
+   "target": ""
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Salas de espera y recepción",
+   "href": "https://ofitodo.com/categoria-producto/recepcion/",
+   "target": ""
+  },
+  {
+   "id": "l14",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Tienda",
+   "href": "https://ofitodo.com/tienda/",
+   "target": ""
+  },
+  {
+   "id": "l15",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Mobiliario",
+   "href": "https://ofitodo.com/mobiliario/",
+   "target": ""
+  },
+  {
+   "id": "l16",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "MRO",
+   "href": "https://ofitodo.com/categoria-producto/mro/",
+   "target": ""
+  },
+  {
+   "id": "l17",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Sectores",
+   "href": "/sectores",
+   "target": ""
+  },
+  {
+   "id": "l18",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Oficina",
+   "href": "https://ofitodo.com/muebles-para-oficina/",
+   "target": ""
+  },
+  {
+   "id": "l19",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Bancos",
+   "href": "https://ofitodo.com/muebles-para-bancos/",
+   "target": ""
+  },
+  {
+   "id": "l20",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Escuelas",
+   "href": "https://ofitodo.com/muebles-para-escuelas/",
+   "target": ""
+  },
+  {
+   "id": "l21",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Consultorios",
+   "href": "https://ofitodo.com/muebles-para-consultorios/",
+   "target": ""
+  },
+  {
+   "id": "l22",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Hospital",
+   "href": "https://ofitodo.com/muebles-para-hospital/",
+   "target": ""
+  },
+  {
+   "id": "l23",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Industria",
+   "href": "https://ofitodo.com/muebles-para-industria/",
+   "target": ""
+  },
+  {
+   "id": "l24",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Restaurante",
+   "href": "https://ofitodo.com/muebles-para-restaurante/",
+   "target": ""
+  },
+  {
+   "id": "l25",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Blog",
+   "href": "https://ofitodo.com/blog/",
+   "target": ""
+  },
+  {
+   "id": "l26",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Inicio",
+   "href": "/inicio",
+   "target": ""
+  },
+  {
+   "id": "l27",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Nosotros",
+   "href": "/nosotros",
+   "target": ""
+  },
+  {
+   "id": "l28",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Productos",
+   "href": "https://ofitodo.com/productos/",
+   "target": ""
+  },
+  {
+   "id": "l29",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Escritorios",
+   "href": "https://ofitodo.com/categoria-producto/escritorios/",
+   "target": ""
+  },
+  {
+   "id": "l30",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Sillas y sillones de oficina",
+   "href": "https://ofitodo.com/categoria-producto/sillas/",
+   "target": ""
+  },
+  {
+   "id": "l31",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Comedores y restaurantes",
+   "href": "https://ofitodo.com/categoria-producto/restaurantes/",
+   "target": ""
+  },
+  {
+   "id": "l32",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Exhibidores",
+   "href": "https://ofitodo.com/categoria-producto/exhibidores/",
+   "target": ""
+  },
+  {
+   "id": "l33",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Estaciones de trabajo",
+   "href": "https://ofitodo.com/categoria-producto/estaciones-de-trabajo/",
+   "target": ""
+  },
+  {
+   "id": "l34",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Libreros y archiveros",
+   "href": "https://ofitodo.com/categoria-producto/libreros-y-archiveros/",
+   "target": ""
+  },
+  {
+   "id": "l35",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Lockers y vestidores",
+   "href": "https://ofitodo.com/categoria-producto/lockers-y-vestidores/",
+   "target": ""
+  },
+  {
+   "id": "l36",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Mesa de juntas",
+   "href": "https://ofitodo.com/categoria-producto/mesas-de-juntas/",
+   "target": ""
+  },
+  {
+   "id": "l37",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Paneles acústicos",
+   "href": "https://ofitodo.com/categoria-producto/paneles-acusticos/",
+   "target": ""
+  },
+  {
+   "id": "l38",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Salas de espera y recepción",
+   "href": "https://ofitodo.com/categoria-producto/recepcion/",
+   "target": ""
+  },
+  {
+   "id": "l39",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Tienda",
+   "href": "https://ofitodo.com/tienda/",
+   "target": ""
+  },
+  {
+   "id": "l40",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Mobiliario",
+   "href": "https://ofitodo.com/mobiliario/",
+   "target": ""
+  },
+  {
+   "id": "l41",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "MRO",
+   "href": "https://ofitodo.com/categoria-producto/mro/",
+   "target": ""
+  },
+  {
+   "id": "l42",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Sectores",
+   "href": "/sectores",
+   "target": ""
+  },
+  {
+   "id": "l43",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Oficina",
+   "href": "https://ofitodo.com/muebles-para-oficina/",
+   "target": ""
+  },
+  {
+   "id": "l44",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Bancos",
+   "href": "https://ofitodo.com/muebles-para-bancos/",
+   "target": ""
+  },
+  {
+   "id": "l45",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Escuelas",
+   "href": "https://ofitodo.com/muebles-para-escuelas/",
+   "target": ""
+  },
+  {
+   "id": "l46",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Consultorios",
+   "href": "https://ofitodo.com/muebles-para-consultorios/",
+   "target": ""
+  },
+  {
+   "id": "l47",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Hospital",
+   "href": "https://ofitodo.com/muebles-para-hospital/",
+   "target": ""
+  },
+  {
+   "id": "l48",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Industria",
+   "href": "https://ofitodo.com/muebles-para-industria/",
+   "target": ""
+  },
+  {
+   "id": "l49",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Muebles para Restaurante",
+   "href": "https://ofitodo.com/muebles-para-restaurante/",
+   "target": ""
+  },
+  {
+   "id": "l50",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Blog",
+   "href": "https://ofitodo.com/blog/",
+   "target": ""
+  },
+  {
+   "id": "l51",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Contacto",
+   "href": "https://wa.me/524493419403",
+   "target": ""
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/logo-azul-3.webp",
+   "alt": ""
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "Mobiliario para oficina de la más alta calidad en Aguascalientes y todo México."
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Mapa del Sitio",
+   "valor": "Mapa del Sitio"
+  },
+  {
+   "id": "l52",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mapa del Sitio",
+   "texto": "Inicio",
+   "href": "/inicio",
+   "target": ""
+  },
+  {
+   "id": "l53",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mapa del Sitio",
+   "texto": "Nosotros",
+   "href": "/nosotros",
+   "target": ""
+  },
+  {
+   "id": "l54",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mapa del Sitio",
+   "texto": "Productos",
+   "href": "/productos",
+   "target": ""
+  },
+  {
+   "id": "l55",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mapa del Sitio",
+   "texto": "Tienda",
+   "href": "/tienda",
+   "target": ""
+  },
+  {
+   "id": "l56",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mapa del Sitio",
+   "texto": "Sectores",
+   "href": "/sectores",
+   "target": ""
+  },
+  {
+   "id": "l57",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mapa del Sitio",
+   "texto": "Blog",
+   "href": "/blog",
+   "target": ""
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "CONTACTO",
+   "valor": "CONTACTO"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Botón",
+   "seccion": "CONTACTO",
+   "valor": "(449) 918.40.80"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CONTACTO",
+   "valor": "(449) 136.79.26"
+  },
+  {
+   "id": "l58",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "CONTACTO",
+   "texto": "(449) 341 94 03",
+   "href": "https://api.whatsapp.com/send/?phone=5214493419403&text=Hola%2C+he+visto+su+página+de+Ofitodo+y+me+gustaría+solicitar+más+información.&type=phone_number&app_absent=0",
+   "target": ""
+  },
+  {
+   "id": "l59",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "CONTACTO",
+   "texto": "ventasofitodo@hotmail.com",
+   "href": "mailto:ventasofitodo@hotmail.com",
+   "target": ""
+  },
+  {
+   "id": "l60",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "CONTACTO",
+   "texto": "Aguascalientes, México",
+   "href": "https://maps.app.goo.gl/KG5Y9yzXqoy7tn9e7",
+   "target": ""
+  },
+  {
+   "id": "l61",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "CONTACTO",
+   "texto": "Aviso de Privacidad",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/02/AVISO-DE-PRIVACIDAD-DE-COMERCIALIZADORA-OFITODO-1.pdf",
+   "target": ""
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Síguenos",
+   "valor": "Síguenos"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Síguenos",
+   "valor": "© 2025 OFITODO. Todos los derechos reservados."
+  }
+ ]
+}

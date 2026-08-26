@@ -38,6 +38,12 @@ function of_db(): PDO {
   // Cambios de slug hechos desde el panel → generan 301 automático (§7.2, §14)
   $pdo->exec('CREATE TABLE IF NOT EXISTS slug_changes (slug_actual TEXT PRIMARY KEY, slug_nuevo TEXT, tipo TEXT, creado TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS redirects_panel (origen TEXT PRIMARY KEY, destino TEXT, creado TEXT)');
+  // CMS: contenido editable por página (texto/imagen/enlace). estado: borrador | publicado
+  $pdo->exec('CREATE TABLE IF NOT EXISTS content_overrides (pagina TEXT, campo TEXT, datos TEXT, estado TEXT, modificado TEXT, PRIMARY KEY (pagina, campo, estado))');
+  // CMS: historial de versiones (snapshot de lo publicado por página)
+  $pdo->exec('CREATE TABLE IF NOT EXISTS content_versions (id INTEGER PRIMARY KEY, pagina TEXT, etiqueta TEXT, snapshot TEXT, autor TEXT, creado TEXT)');
+  // CMS: ajustes globales de marca (tema, sitio, menús) como JSON con override sobre los archivos
+  $pdo->exec('CREATE TABLE IF NOT EXISTS settings (clave TEXT PRIMARY KEY, valor TEXT, modificado TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS admins (id INTEGER PRIMARY KEY, login TEXT UNIQUE, email TEXT, display_name TEXT, hash_legacy TEXT, hash_nuevo TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY, admin_id INTEGER, expira TEXT)');
   // Semilla: los 6 pedidos históricos de WooCommerce (§6.2, totales al centavo desde postmeta)

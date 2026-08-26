@@ -1,0 +1,589 @@
+{
+ "pagina": "/proveedor-confiable-mobiliario-oficina/",
+ "titulo": "¿Cómo elegir un buen proveedor de mobiliario?",
+ "key": "proveedor-confiable-mobiliario-oficina",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/banner-productos-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Ofitodo",
+   "valor": "Ofitodo"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Ofitodo",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-30-jul-2026_-13_47_48.webp",
+   "alt": "Taller de fabricación de mobiliario OFITODO con maquinaria industrial y área de producción organizada"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Ofitodo",
+   "texto": "30/07/2026",
+   "href": "https://ofitodo.com/2026/07/",
+   "target": ""
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Ofitodo",
+   "valor": "By"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Ofitodo",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "¿Cómo elegir un buen proveedor de mobiliario?",
+   "valor": "¿Cómo elegir un buen proveedor de mobiliario?"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Cómo elegir un buen proveedor de mobiliario?",
+   "valor": "¿Qué debería ofrecer un proveedor confiable? | OFITODO"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Cómo elegir un buen proveedor de mobiliario?",
+   "valor": "Guía para compradores B2B"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "¿Qué debería ofrecer unproveedor confiable de mobiliario?",
+   "valor": "¿Qué debería ofrecer un"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Qué debería ofrecer unproveedor confiable de mobiliario?",
+   "valor": "proveedor confiable"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "¿Qué debería ofrecer unproveedor confiable de mobiliario?",
+   "valor": "de mobiliario?"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Qué debería ofrecer unproveedor confiable de mobiliario?",
+   "valor": "Antes de aprobar un proveedor, hay preguntas que tu área de compras necesita responder. Aquí están."
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "¿Qué debería ofrecer unproveedor confiable de mobiliario?",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-29-jul-2026_-13_42_54.webp",
+   "alt": ""
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Qué debería ofrecer unproveedor confiable de mobiliario?",
+   "valor": "Lo que importa"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Cuatro criterios que no puedes ignorar",
+   "valor": "Cuatro criterios que no puedes ignorar"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cuatro criterios que no puedes ignorar",
+   "valor": "Un proveedor calificado cumple esto. Si alguno falla, el proyecto corre riesgo."
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Solución adaptada al proyecto",
+   "valor": "Solución adaptada al proyecto"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Solución adaptada al proyecto",
+   "valor": "Analiza las necesidades reales: espacio disponible, número de usuarios y crecimiento futuro. No vende lo que tiene en catálogo; propone lo que funciona para tu empresa."
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Capacidad de fabricación y suministro",
+   "valor": "Capacidad de fabricación y suministro"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Capacidad de fabricación y suministro",
+   "valor": "Con fabricación propia puede desarrollar muebles a medida y personalizar acabados. Complementada con mobiliario de marcas especializadas, ofrece una solución completa con un solo punto de contacto."
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Claridad y cumplimiento",
+   "valor": "Claridad y cumplimiento"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Claridad y cumplimiento",
+   "valor": "Especifica productos, medidas, materiales, cantidades, tiempos de entrega, instalación y garantía. La propuesta escrita protege a tu área de Compras y evita sorpresas al final del proyecto."
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Seguimiento después de la entrega",
+   "valor": "Seguimiento después de la entrega"
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Seguimiento después de la entrega",
+   "valor": "La relación no termina con la instalación. Garantía, disponibilidad de refacciones, atención postventa y capacidad para futuras ampliaciones protegen la inversión de tu empresa a largo plazo."
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Seguimiento después de la entrega",
+   "valor": "Dentro del proyecto"
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Cómo trabaja un proveedor integral",
+   "valor": "Cómo trabaja un proveedor integral"
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo trabaja un proveedor integral",
+   "valor": "Desde el análisis hasta la postventa, sin depender de terceros ni transferir el problema."
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Cómo trabaja un proveedor integral",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-30-jul-2026_-13_47_48.webp",
+   "alt": ""
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Cómo trabaja un proveedor integral",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-15-jun-2026_-09_47_36.webp",
+   "alt": ""
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo trabaja un proveedor integral",
+   "valor": "Un solo proveedor"
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Todas las etapas, sin cambiar de manos"
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Centralizar estas etapas mantiene la coordinación, la línea visual y el presupuesto bajo control."
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Análisis de necesidades"
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Revisión del espacio, usuarios, procesos y objetivo del proyecto."
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Revisión de medidas y planos"
+  },
+  {
+   "id": "t29",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Trabajo directo con la información disponible: planos, fotografías o medidas en campo."
+  },
+  {
+   "id": "t30",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Propuesta de distribución y renders"
+  },
+  {
+   "id": "t31",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Visualización del espacio antes de fabricar para validar con el equipo."
+  },
+  {
+   "id": "t32",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Fabricación a medida y suministro"
+  },
+  {
+   "id": "t33",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Producción propia de mobiliario personalizado más complementos de línea."
+  },
+  {
+   "id": "t34",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Entrega e instalación"
+  },
+  {
+   "id": "t35",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Logística, montaje y verificación en el espacio del cliente."
+  },
+  {
+   "id": "t36",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Garantía y servicio postventa"
+  },
+  {
+   "id": "t37",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Todas las etapas, sin cambiar de manos",
+   "valor": "Respaldo activo para ampliaciones, refacciones y seguimiento posterior."
+  },
+  {
+   "id": "t38",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "¿Tu empresa"
+  },
+  {
+   "id": "t39",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "busca proveedor"
+  },
+  {
+   "id": "t40",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "de mobiliario?"
+  },
+  {
+   "id": "t41",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "Podemos participar como proveedores en proyectos actuales, futuras ampliaciones o procesos de evaluación y alta de proveedores."
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "Solicitar cotización",
+   "href": "https://wa.me/52443419403?text=Hola%2C%20me%20gustar%C3%ADa%20que%20OFITODO%20fuera%20proveedor%20de%20nuestra%20empresa.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n.",
+   "target": "_blank"
+  },
+  {
+   "id": "t42",
+   "tipo": "texto",
+   "etiqueta": "Botón",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "Comparte tus requerimientos, formatos de alta de proveedor o información del proyecto."
+  },
+  {
+   "id": "t43",
+   "tipo": "texto",
+   "etiqueta": "Botón",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "Nuestro equipo dará seguimiento."
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "Uncategorized",
+   "href": "https://ofitodo.com/tipo/uncategorized/",
+   "target": ""
+  },
+  {
+   "id": "t44",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "RELATED POSTS"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_26_42.png.webp",
+   "alt": "Mobiliario personalizado de consultorios médicos"
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "Muebles de oficina en Aguascalientes",
+   "href": "https://ofitodo.com/mobiliario-de-oficina-en-aguascalientes/",
+   "target": ""
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "05/08/2026",
+   "href": "https://ofitodo.com/2026/08/",
+   "target": ""
+  },
+  {
+   "id": "t45",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "By"
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-15_01_03.webp",
+   "alt": "Salón de clases moderno con mesas modulares, sillas ergonómicas, paneles acústicos, lambrines de madera y mobiliario de almacenamiento."
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "El mobiliario correcto cambia la forma de aprender",
+   "href": "https://ofitodo.com/mobiliario-escolar-guia-espacios-educativos/",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "10/07/2026",
+   "href": "https://ofitodo.com/2026/07/",
+   "target": ""
+  },
+  {
+   "id": "t46",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "By"
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-18-130259.webp",
+   "alt": "Stand de Madrid en la FNSM 2026 diseñado por OFITODO con mobiliario contemporáneo"
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "Stand Madrid FNSM 2026",
+   "href": "https://ofitodo.com/stand-madrid-fnsm-2026/",
+   "target": ""
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "21/05/2026",
+   "href": "https://ofitodo.com/2026/05/",
+   "target": ""
+  },
+  {
+   "id": "t47",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "By"
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/pexels-heyho-7195796-3.webp",
+   "alt": ""
+  },
+  {
+   "id": "l14",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "Proyecto a Empacadora San Francisco",
+   "href": "https://ofitodo.com/proyecto-a-empacadora-san-francisco/",
+   "target": ""
+  },
+  {
+   "id": "l15",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "26/01/2026",
+   "href": "https://ofitodo.com/2026/01/",
+   "target": ""
+  },
+  {
+   "id": "t48",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "valor": "By"
+  },
+  {
+   "id": "l16",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Tu empresa busca proveedor de mobiliario?",
+   "texto": "developer",
+   "href": "https://ofitodo.com/author/developer/",
+   "target": ""
+  },
+  {
+   "id": "t49",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Post a Comment cancel reply",
+   "valor": "Post a Comment"
+  },
+  {
+   "id": "l17",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Post a Comment cancel reply",
+   "texto": "cancel reply",
+   "href": "/proveedor-confiable-mobiliario-oficina/#respond",
+   "target": ""
+  },
+  {
+   "id": "t50",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Post a Comment cancel reply",
+   "valor": "Save my name, email, and website in this browser for the next time I comment."
+  }
+ ]
+}

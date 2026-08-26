@@ -103,11 +103,18 @@ try {
   // Exportación de cambios del panel para el ciclo de publicación (scripts/sincronizar-panel.mjs)
   if ($ruta === '/exportar-cambios' && $metodo === 'GET') {
     if (($_GET['clave'] ?? '') !== 'ofsync_7c1f4a9e2b8d4e63a5f0c9d21b7e8a44') fallar('Clave inválida.', 401);
+    $co = $pdo->query("SELECT pagina, campo, datos FROM content_overrides WHERE estado='publicado'");
+    $contenido = [];
+    foreach ($co as $r) $contenido[$r['pagina']][$r['campo']] = json_decode($r['datos'], true);
+    $set = [];
+    foreach ($pdo->query('SELECT clave, valor FROM settings') as $r) $set[$r['clave']] = json_decode($r['valor'], true);
     responder(['ok' => true,
       'productos' => $pdo->query('SELECT * FROM product_overrides')->fetchAll(PDO::FETCH_ASSOC),
       'paginas' => $pdo->query('SELECT * FROM pages_seo')->fetchAll(PDO::FETCH_ASSOC),
       'slugs' => $pdo->query('SELECT * FROM slug_changes')->fetchAll(PDO::FETCH_ASSOC),
       'redirects' => $pdo->query('SELECT * FROM redirects_panel')->fetchAll(PDO::FETCH_ASSOC),
+      'contenido' => $contenido,
+      'settings' => $set,
     ]);
   }
 
@@ -215,6 +222,124 @@ try {
     $pdo->prepare('UPDATE form_submissions SET leido = ? WHERE id = ?')->execute([(int)($cuerpo['leido'] ?? 1), (int)($cuerpo['id'] ?? 0)]);
     responder(['ok' => true]);
   }
+  /* ---------- CMS: contenido editable de páginas ---------- */
+  if ($ruta === '/admin/paginas-editables' && $metodo === 'GET') {
+    $dir = __DIR__ . '/datos/editables';
+    $lista = [];
+    foreach (glob($dir . '/*.json') as $f) {
+      $d = json_decode((string)file_get_contents($f), true);
+      if (!$d) continue;
+      $key = basename($f, '.json');
+      $pub = $pdo->prepare("SELECT COUNT(*) FROM content_overrides WHERE pagina=? AND estado='borrador'");
+      $pub->execute([$key]);
+      $lista[] = ['key' => $key, 'titulo' => $d['titulo'] ?? $key, 'slug' => $d['pagina'] ?? '', 'campos' => count($d['campos'] ?? []), 'borrador' => (int)$pub->fetchColumn() > 0];
+    }
+    usort($lista, fn($a, $b) => $a['key'] === '_global' ? -1 : ($b['key'] === '_global' ? 1 : strcmp($a['titulo'], $b['titulo'])));
+    responder(['ok' => true, 'paginas' => $lista]);
+  }
+  if ($ruta === '/admin/pagina' && $metodo === 'GET') {
+    $key = preg_replace('/[^a-z0-9_-]/i', '', (string)($_GET['key'] ?? ''));
+    $f = __DIR__ . '/datos/editables/' . $key . '.json';
+    if (!is_file($f)) fallar('Página no encontrada.', 404);
+    $d = json_decode((string)file_get_contents($f), true);
+    // aplicar borrador (o publicado) sobre los valores originales
+    foreach (['publicado', 'borrador'] as $est) {
+      $q = $pdo->prepare('SELECT campo, datos FROM content_overrides WHERE pagina=? AND estado=?');
+      $q->execute([$key, $est]);
+      $ov = [];
+      foreach ($q as $r) $ov[$r['campo']] = json_decode($r['datos'], true);
+      foreach ($d['campos'] as &$c) if (isset($ov[$c['id']])) foreach ($ov[$c['id']] as $k => $v) $c[$k] = $v;
+      unset($c);
+    }
+    responder(['ok' => true, 'pagina' => $d]);
+  }
+  if ($ruta === '/admin/pagina' && $metodo === 'PUT') {
+    $key = preg_replace('/[^a-z0-9_-]/i', '', (string)($cuerpo['key'] ?? ''));
+    $cambios = $cuerpo['cambios'] ?? [];
+    $publicar = !empty($cuerpo['publicar']);
+    if ($key === '' || !is_array($cambios)) fallar('Datos incompletos.');
+    $estados = $publicar ? ['borrador', 'publicado'] : ['borrador'];
+    $ins = $pdo->prepare('INSERT INTO content_overrides (pagina, campo, datos, estado, modificado) VALUES (?,?,?,?,datetime("now"))
+                          ON CONFLICT(pagina, campo, estado) DO UPDATE SET datos=excluded.datos, modificado=excluded.modificado');
+    foreach ($cambios as $campo => $datos) {
+      $campo = preg_replace('/[^a-z0-9:_-]/i', '', (string)$campo);
+      $j = json_encode($datos, JSON_UNESCAPED_UNICODE);
+      foreach ($estados as $e) $ins->execute([$key, $campo, $j, $e]);
+    }
+    if ($publicar) {
+      // snapshot de versión
+      $snap = $pdo->prepare("SELECT campo, datos FROM content_overrides WHERE pagina=? AND estado='publicado'");
+      $snap->execute([$key]);
+      $all = [];
+      foreach ($snap as $r) $all[$r['campo']] = json_decode($r['datos'], true);
+      $adm = of_sesion($pdo);
+      $pdo->prepare('INSERT INTO content_versions (pagina, etiqueta, snapshot, autor, creado) VALUES (?,?,?,?,datetime("now"))')
+          ->execute([$key, count($cambios) . ' cambio(s)', json_encode($all, JSON_UNESCAPED_UNICODE), $adm['display_name'] ?? 'panel']);
+    }
+    responder(['ok' => true, 'publicado' => $publicar,
+      'mensaje' => $publicar ? 'Publicado. Se ve en el sitio en la próxima actualización (unos minutos).' : 'Borrador guardado.']);
+  }
+  if ($ruta === '/admin/versiones' && $metodo === 'GET') {
+    $key = preg_replace('/[^a-z0-9_-]/i', '', (string)($_GET['key'] ?? ''));
+    $q = $pdo->prepare('SELECT id, etiqueta, autor, creado FROM content_versions WHERE pagina=? ORDER BY id DESC LIMIT 30');
+    $q->execute([$key]);
+    responder(['ok' => true, 'versiones' => $q->fetchAll(PDO::FETCH_ASSOC)]);
+  }
+  if ($ruta === '/admin/restaurar' && $metodo === 'POST') {
+    $id = (int)($cuerpo['id'] ?? 0);
+    $v = $pdo->prepare('SELECT * FROM content_versions WHERE id=?'); $v->execute([$id]);
+    $ver = $v->fetch(PDO::FETCH_ASSOC);
+    if (!$ver) fallar('Versión no encontrada.', 404);
+    $snap = json_decode($ver['snapshot'], true) ?: [];
+    $pdo->prepare('DELETE FROM content_overrides WHERE pagina=?')->execute([$ver['pagina']]);
+    $ins = $pdo->prepare('INSERT INTO content_overrides (pagina, campo, datos, estado, modificado) VALUES (?,?,?,?,datetime("now"))');
+    foreach ($snap as $campo => $datos) foreach (['borrador', 'publicado'] as $e) $ins->execute([$ver['pagina'], $campo, json_encode($datos, JSON_UNESCAPED_UNICODE), $e]);
+    responder(['ok' => true, 'mensaje' => 'Versión restaurada. Se aplica en la próxima actualización del sitio.']);
+  }
+
+  /* ---------- CMS: tema, sitio, medios ---------- */
+  if ($ruta === '/admin/ajustes' && $metodo === 'GET') {
+    $tema = json_decode((string)file_get_contents(__DIR__ . '/datos/theme.json'), true) ?? [];
+    $sitio = json_decode((string)file_get_contents(__DIR__ . '/datos/site.json'), true) ?? [];
+    foreach ($pdo->query("SELECT clave, valor FROM settings") as $r) {
+      if ($r['clave'] === 'tema') $tema = array_replace_recursive($tema, json_decode($r['valor'], true) ?: []);
+      if ($r['clave'] === 'sitio') $sitio = array_replace_recursive($sitio, json_decode($r['valor'], true) ?: []);
+    }
+    responder(['ok' => true, 'tema' => $tema, 'sitio' => $sitio]);
+  }
+  if ($ruta === '/admin/ajustes' && $metodo === 'PUT') {
+    $clave = in_array($cuerpo['clave'] ?? '', ['tema', 'sitio'], true) ? $cuerpo['clave'] : null;
+    if (!$clave || !is_array($cuerpo['valor'] ?? null)) fallar('Datos inválidos.');
+    $pdo->prepare('INSERT INTO settings (clave, valor, modificado) VALUES (?,?,datetime("now")) ON CONFLICT(clave) DO UPDATE SET valor=excluded.valor, modificado=excluded.modificado')
+        ->execute([$clave, json_encode($cuerpo['valor'], JSON_UNESCAPED_UNICODE)]);
+    responder(['ok' => true, 'mensaje' => 'Guardado. Se aplica en la próxima actualización del sitio.']);
+  }
+  if ($ruta === '/admin/media' && $metodo === 'POST') {
+    $data = (string)($cuerpo['archivo'] ?? '');
+    $nombre = preg_replace('/[^a-z0-9._-]/i', '-', (string)($cuerpo['nombre'] ?? 'imagen'));
+    if (!preg_match('#^data:image/(jpeg|jpg|png|webp|gif|svg\+xml);base64,#', $data, $m)) fallar('Formato de imagen no válido.');
+    $bin = base64_decode(substr($data, strpos($data, ',') + 1));
+    if ($bin === false || strlen($bin) > 12 * 1024 * 1024) fallar('Imagen inválida o muy grande (máx 12 MB).');
+    $ext = str_replace(['jpeg', 'svg+xml'], ['jpg', 'svg'], $m[1]);
+    $dir = dirname(__DIR__) . '/media';
+    if (!is_dir($dir)) mkdir($dir, 0755, true);
+    $base = pathinfo($nombre, PATHINFO_FILENAME);
+    $file = $base . '-' . substr(md5($bin), 0, 8) . '.' . $ext;
+    // optimización simple con GD (redimensiona si es enorme y recomprime)
+    if ($ext !== 'svg' && function_exists('imagecreatefromstring') && strlen($bin) > 300 * 1024) {
+      $img = @imagecreatefromstring($bin);
+      if ($img) {
+        $w = imagesx($img); $h = imagesy($img);
+        if ($w > 1600) { $nh = (int)($h * 1600 / $w); $tmp = imagecreatetruecolor(1600, $nh); imagecopyresampled($tmp, $img, 0, 0, 0, 0, 1600, $nh, $w, $h); imagedestroy($img); $img = $tmp; }
+        ob_start();
+        if ($ext === 'png') imagepng($img, null, 8); elseif ($ext === 'webp') imagewebp($img, null, 82); else imagejpeg($img, null, 82);
+        $bin = ob_get_clean(); imagedestroy($img);
+      }
+    }
+    file_put_contents($dir . '/' . $file, $bin);
+    responder(['ok' => true, 'url' => '/media/' . $file, 'peso' => strlen($bin)]);
+  }
+
   if ($ruta === '/admin/resumen' && $metodo === 'GET') {
     responder(['ok' => true,
       'pedidosPendientes' => (int)$pdo->query("SELECT COUNT(*) FROM orders WHERE estado IN ('pendiente','wc-processing')")->fetchColumn(),

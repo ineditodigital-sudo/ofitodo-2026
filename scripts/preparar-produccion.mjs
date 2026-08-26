@@ -21,6 +21,9 @@ for (const col of ['pages', 'posts']) {
   }
 }
 writeFileSync(path.join(OUT, 'api', 'datos', 'paginas.json'), JSON.stringify(paginas, null, 1));
+cpSync(path.join(ROOT, 'content', 'editables'), path.join(OUT, 'api', 'datos', 'editables'), { recursive: true });
+copyFileSync(path.join(ROOT, 'content', 'theme.json'), path.join(OUT, 'api', 'datos', 'theme.json'));
+copyFileSync(path.join(ROOT, 'content', 'site.json'), path.join(OUT, 'api', 'datos', 'site.json'));
 const admin = path.join(ROOT, 'apps', 'admin', 'dist');
 if (existsSync(admin)) cpSync(admin, path.join(OUT, 'admin'), { recursive: true });
 

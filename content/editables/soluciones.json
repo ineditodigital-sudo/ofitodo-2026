@@ -1,0 +1,180 @@
+{
+ "pagina": "/soluciones/",
+ "titulo": "Soluciones",
+ "key": "soluciones",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/banner-productos-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Soluciones",
+   "valor": "Soluciones"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Encabezado pequeño",
+   "seccion": "Soluciones",
+   "valor": "¿Tienes un pedido personalizado? Esta opción es para ti"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyectos personalizados",
+   "valor": "Proyectos personalizados"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyectos personalizados",
+   "valor": "Primero te escuchamos, después te proponemos soluciones personalizadas: En las que los puestos de trabajo se adaptan a las personas y no al contrario."
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyectos personalizados",
+   "valor": "Además de que respetamos y potenciamos tu imagen corporativa con propuestas versátiles y flexibles, que mejoran la productividad en la oficina."
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Proyectos personalizados",
+   "texto": "Más información",
+   "href": "#",
+   "target": "_blank"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyectos personalizados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/Silla-500x600-1.png",
+   "alt": "Ofitodo Muebles para Oficina"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyectos personalizados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/Servicios_especiales-1-500x600-1.png",
+   "alt": "Ofitodo Muebles para Oficina"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyectos personalizados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/Ofitodocategorias-20-500x600-1.png",
+   "alt": "Ofitodo Muebles para Oficina"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyectos personalizados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/lockers-500x600-1.png",
+   "alt": "Ofitodo Muebles para Oficina"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyectos personalizados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/Ofitodocategorias-17-500x600-1.png",
+   "alt": "Ofitodo Muebles para Oficina"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyectos personalizados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/Servicios_especiales2-500x600-1.png",
+   "alt": "Ofitodo Muebles para Oficina"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyectos personalizados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/Ofitodocategorias-13-500x600-1.png",
+   "alt": "Ofitodo Muebles para Oficina"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Encabezado pequeño",
+   "seccion": "Proyectos personalizados",
+   "valor": "¿Quieres iniciar un negocio/empresa? Nosotros nos encargamos de todo"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Llaves en mano",
+   "valor": "Llaves en mano"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Llaves en mano",
+   "valor": "Nos dedicamos a la venta, reparación, retapizado, mantenimiento (preventivo y correctivo), lubricación, modificación, adaptación y remodelación de sillas y sillones de oficina y sillas fijas."
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Llaves en mano",
+   "valor": "Contamos con un gran porcentaje de refacciones, componentes y accesorios necesarios para arreglar cualquier tipo de silla de oficina."
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Llaves en mano",
+   "texto": "Más información",
+   "href": "https://ofitodo.com/soluciones/proyecto-llaves-en-mano",
+   "target": "_self"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Tienes una empresa?",
+   "valor": "¿Tienes una empresa?"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Conoce nuestro servicio de mantenimiento",
+   "valor": "Conoce nuestro servicio de mantenimiento"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Conoce nuestro servicio de mantenimiento",
+   "valor": "Damos mantenimiento, cuidado y soporte de sillas y sillones de oficina."
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Botón",
+   "seccion": "Conoce nuestro servicio de mantenimiento",
+   "valor": "Contáctanos"
+  }
+ ]
+}

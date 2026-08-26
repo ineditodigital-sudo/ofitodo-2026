@@ -1,0 +1,168 @@
+{
+ "pagina": "/productos/",
+ "titulo": "Productos",
+ "key": "productos",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Nuestros Productos",
+   "valor": "Nuestros Productos"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Nuestros Productos",
+   "valor": "Descubre nuestra amplia gama de mobiliario para oficina de alta calidad"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "productos",
+   "valor": "productos"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "ESCRITORIO",
+   "href": "https://ofitodo.com/categoria-producto/escritorios/",
+   "target": "_blank"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "SILLAS Y SILLONES DE OFICINA",
+   "href": "https://ofitodo.com/categoria-producto/sillas/",
+   "target": "_blank"
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "COMEDORES Y RESTAURANTES",
+   "href": "https://ofitodo.com/categoria-producto/restaurantes/",
+   "target": "_blank"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "EXHIBIDORES",
+   "href": "https://ofitodo.com/categoria-producto/restaurantes/",
+   "target": "_blank"
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "ESTACIONES DE TRABAJO",
+   "href": "https://ofitodo.com/categoria-producto/estaciones-de-trabajo/",
+   "target": "_blank"
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "LIBREROS Y ARCHIVEROS",
+   "href": "https://ofitodo.com/categoria-producto/libreros-y-archiveros/",
+   "target": "_blank"
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "LOCKERS Y VESTIDORES",
+   "href": "https://ofitodo.com/categoria-producto/lockers-y-vestidores/",
+   "target": "_blank"
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "MESAS DE JUNTAS",
+   "href": "https://ofitodo.com/categoria-producto/mesas-de-juntas/",
+   "target": "_blank"
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "MOBILIARIO ESCOLAR",
+   "href": "https://ofitodo.com/categoria-producto/mobiliario-escolar/",
+   "target": "_blank"
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "PANELES ACÚSTICOS",
+   "href": "https://ofitodo.com/categoria-producto/paneles-acusticos/",
+   "target": "_blank"
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "SALA DE ESPERA Y RECEPCIÓN",
+   "href": "https://ofitodo.com/categoria-producto/recepcion/",
+   "target": "_blank"
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "productos",
+   "texto": "BROKERS",
+   "href": "https://ofitodo.com/categoria-producto/brokers/",
+   "target": "_blank"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Necesitas Asesoría Personalizada?",
+   "valor": "¿Necesitas Asesoría Personalizada?"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Necesitas Asesoría Personalizada?",
+   "valor": "Nuestro equipo de expertos está listo para ayudarte a encontrar el mobiliario perfecto para tu espacio. Contáctanos para una cotización sin compromiso."
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Necesitas Asesoría Personalizada?",
+   "texto": "Ver Catálogo Completo",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l14",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Necesitas Asesoría Personalizada?",
+   "texto": "Solicitar Cotización",
+   "href": "https://wa.me/524493419403?",
+   "target": ""
+  }
+ ]
+}

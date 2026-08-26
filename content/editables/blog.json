@@ -1,0 +1,268 @@
+{
+ "pagina": "/blog/",
+ "titulo": "Blog",
+ "key": "blog",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Blog OFITODO",
+   "valor": "Blog OFITODO"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "Consejos, tendencias y novedades sobre mobiliario para oficina y espacios de trabajo"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Blog OFITODO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_26_42.png-225x300.webp",
+   "alt": "Mobiliario personalizado de consultorios médicos"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "Fabricante · Aguascalientes Mobiliario de Oficina: Ventajas de Comprar al Fabricante Diseño, asesoría y fabricación..."
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/mobiliario-de-oficina-en-aguascalientes/",
+   "target": ""
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "05/08/2026"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Uncategorized",
+   "href": "https://ofitodo.com/tipo/uncategorized/",
+   "target": ""
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Blog OFITODO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-30-jul-2026_-13_47_48-300x225.webp",
+   "alt": "Taller de fabricación de mobiliario OFITODO con maquinaria industrial y área de producción organizada"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "¿Qué debería ofrecer un proveedor confiable? | OFITODO Guía para compradores B2B ¿Qué debería ofrecer..."
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/proveedor-confiable-mobiliario-oficina/",
+   "target": ""
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "30/07/2026"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Uncategorized",
+   "href": "https://ofitodo.com/tipo/uncategorized/",
+   "target": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Blog OFITODO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-15_01_03-300x200.webp",
+   "alt": "Salón de clases moderno con mesas modulares, sillas ergonómicas, paneles acústicos, lambrines de madera y mobiliario de almacenamiento."
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "OFITODO · Blog Mobiliario escolar Tu solución en mobiliario Introducción El mobiliario correcto cambia la..."
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/mobiliario-escolar-guia-espacios-educativos/",
+   "target": ""
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "10/07/2026"
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Blog",
+   "href": "https://ofitodo.com/tipo/blog/",
+   "target": ""
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Blog OFITODO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-15-jun-2026_-09_47_36-300x225.webp",
+   "alt": "estaciones de trabajo para oficina con cubículos modernos y sillas ergonómicas."
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "OFITODO | Proyecto OFITODO Estaciones de Trabajo Espacios de trabajo que se adaptan al ritmo..."
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/estaciones-de-trabajo-para-oficina/",
+   "target": ""
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "17/06/2026"
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Blog",
+   "href": "https://ofitodo.com/tipo/blog/",
+   "target": ""
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Blog OFITODO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_13_41-200x300.webp",
+   "alt": "Recepción de consultorio médico con diseño moderno, mostrador en acabado tipo mármol, iluminación cálida y sillas de espera"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "OFITODO | Proyecto OFITODO CONSULTORIOS MÉDICOS Consultorios médicos diseñados para cuidar mejor Ver galeria Solicitar..."
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/consultorios-medicos-a-medida/",
+   "target": ""
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "01/06/2026"
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Blog",
+   "href": "https://ofitodo.com/tipo/blog/",
+   "target": ""
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Blog OFITODO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/3.2-_1_-300x300.webp",
+   "alt": ""
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "OFITODO | Proyecto OFITODO Sala de juntas Un espacio listo para cerrar negocios Ver galería..."
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/sala-de-juntas/",
+   "target": ""
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "29/05/2026"
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Blog OFITODO",
+   "texto": "Blog",
+   "href": "https://ofitodo.com/tipo/blog/",
+   "target": ""
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Blog OFITODO",
+   "valor": "Cargar más"
+  }
+ ]
+}

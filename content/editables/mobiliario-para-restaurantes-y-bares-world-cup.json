@@ -1,0 +1,648 @@
+{
+ "pagina": "/mobiliario-para-restaurantes-y-bares-world-cup/",
+ "titulo": "Especial World Cup",
+ "key": "mobiliario-para-restaurantes-y-bares-world-cup",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "Equipa tu Bar o Restaurante para el Mundial FIFA 2026 | Ofitodo"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "OFITODO Comercializadora",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Solicitar Cotización",
+   "href": "#contacto",
+   "target": ""
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "OFITODO"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Cada partido es una oportunidad de negocio. ¿Estas preparado",
+   "valor": "Cada partido es una oportunidad de negocio. ¿Estas preparado?"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cada partido es una oportunidad de negocio. ¿Estas preparado",
+   "valor": "El Mundial FIFA 2026 traerá millones de aficionados a bares y restaurantes de todo México. La diferencia entre un establecimiento lleno y uno vacío no siempre está en la pantalla: está en el"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cada partido es una oportunidad de negocio. ¿Estas preparado",
+   "valor": "mobiliario"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cada partido es una oportunidad de negocio. ¿Estas preparado",
+   "valor": ". Un cliente cómodo permanece más tiempo, consume más y regresa. Un cliente incómodo se va al medio tiempo y no vuelve."
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Soluciones de mobiliario para cada espacio",
+   "valor": "Soluciones de mobiliario"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Soluciones de mobiliario para cada espacio",
+   "valor": "para cada espacio"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Soluciones de mobiliario para cada espacio",
+   "valor": "Diseñados para uso intensivo en bares, restaurantes y espacios de entretenimiento."
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Soluciones de mobiliario para cada espacio",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-12-at-1.09.44-PM_1.webp",
+   "alt": ""
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Sillas para Restaurante",
+   "valor": "Sillas para Restaurante"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sillas para Restaurante",
+   "valor": "Ergonómicas, resistentes y de fácil mantenimiento. Diseñadas para jornadas largas de partido sin comprometer la comodidad. Disponibles en múltiples colores."
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sillas para Restaurante",
+   "valor": "Uso intensivo"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Sillas para Restaurante",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/MESABLOG5-e1778693893795.webp",
+   "alt": ""
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Mesas Comerciales",
+   "valor": "Mesas Comerciales"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mesas Comerciales",
+   "valor": "Superficies amplias y estables para grupos. Dimensiones óptimas para maximizar la capacidad de tu local sin sacrificar espacio ni comodidad."
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mesas Comerciales",
+   "valor": "Para grupos"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Mesas Comerciales",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/mesasblog.webp",
+   "alt": ""
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Mobiliario de Exteriores",
+   "valor": "Mobiliario de Exteriores"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Exteriores",
+   "valor": "Terrazas y espacios al aire libre que se convierten en zonas premium durante el Mundial. Materiales resistentes a rayos UV e intemperie."
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Exteriores",
+   "valor": "Exterior"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Exteriores",
+   "valor": "Mundial FIFA 2026"
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "La mayor oportunidad"
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "comercial de la"
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "década"
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "México será sede del torneo más visto del planeta. Los aficionados buscarán espacios donde vivir la experiencia del partido con comodidad, buena atmósfera y servicio rápido."
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Tu mobiliario es parte de esa experiencia."
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Un local bien equipado no solo retiene clientes durante el partido, también genera reseñas positivas, publicaciones en redes sociales y clientes que regresan en cada jornada."
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "El tiempo de actuar es ahora. Instalar mobiliario nuevo durante el torneo genera fricciones operativas."
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Planifica con anticipación y llega listo al primer partido."
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "48"
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "partidos"
+  },
+  {
+   "id": "t29",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Jornadas de alto consumo"
+  },
+  {
+   "id": "t30",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Cada partido es una oportunidad para llenar tu establecimiento."
+  },
+  {
+   "id": "t31",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "+40"
+  },
+  {
+   "id": "t32",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Incremento en ventas"
+  },
+  {
+   "id": "t33",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Promedio registrado en bares durante torneos mundiales anteriores."
+  },
+  {
+   "id": "t34",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Mayor consumo por mesa"
+  },
+  {
+   "id": "t35",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Los clientes que ven un partido en vivo consumen significativamente más."
+  },
+  {
+   "id": "t36",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "90"
+  },
+  {
+   "id": "t37",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "+ min"
+  },
+  {
+   "id": "t38",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "Permanencia por partido"
+  },
+  {
+   "id": "t39",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "El mobiliario adecuado determina si tus clientes se quedan todo el partido."
+  },
+  {
+   "id": "t40",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "La mayor oportunidad comercial de la década",
+   "valor": "¿Por QUÉ importa?"
+  },
+  {
+   "id": "t41",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Señales de que tu mobiliario está"
+  },
+  {
+   "id": "t42",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "frenando tus ventas"
+  },
+  {
+   "id": "t43",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Antes de que comience el Mundial, revisa si tu establecimiento presenta alguna de estas señales. Si identificas dos o más, el momento de actuar es ahora."
+  },
+  {
+   "id": "t44",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Sillas inestables o con tapizado deteriorado"
+  },
+  {
+   "id": "t45",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Proyectan descuido ante el cliente y reducen el tiempo de permanencia."
+  },
+  {
+   "id": "t46",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Mesas con superficies dañadas o tambaleantes"
+  },
+  {
+   "id": "t47",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Generan inseguridad y dificultan el consumo durante el partido."
+  },
+  {
+   "id": "t48",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Espacio desaprovechado o mala distribución"
+  },
+  {
+   "id": "t49",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Un layout inadecuado puede reducir tu capacidad hasta en un 30%."
+  },
+  {
+   "id": "t50",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Sin zona de barra o espacio exterior habilitado"
+  },
+  {
+   "id": "t51",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Estás perdiendo clientes que buscan una experiencia de bar deportivo completa."
+  },
+  {
+   "id": "t52",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Imagen visual desactualizada o inconsistente"
+  },
+  {
+   "id": "t53",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Los clientes comparan y eligen el local que mejor experiencia ofrece visualmente."
+  },
+  {
+   "id": "t54",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Clientes que se van antes de que termine el partido"
+  },
+  {
+   "id": "t55",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "La incomodidad es la causa número uno de abandono temprano en transmisiones deportivas."
+  },
+  {
+   "id": "t56",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "El mobiliario de un bar o restaurante no es decoración: es la infraestructura que determina cuánto tiempo permanece cada cliente y cuánto genera tu negocio en cada jornada."
+  },
+  {
+   "id": "t57",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "— Principio de diseño en hostelería rentable"
+  },
+  {
+   "id": "t58",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Señales de que tu mobiliario está frenando tus ventas",
+   "valor": "Estrategia para el Mundial"
+  },
+  {
+   "id": "t59",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "6 claves para convertir cada partido en una jornada rentable"
+  },
+  {
+   "id": "t60",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Principios que los establecimientos más exitosos aplican durante eventos deportivos masivos."
+  },
+  {
+   "id": "t61",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "01"
+  },
+  {
+   "id": "t62",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Diseña zonas por tipo de cliente"
+  },
+  {
+   "id": "t63",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Grupos grandes, parejas y clientes individuales tienen necesidades distintas. Segmenta tu espacio con mobiliario adecuado a cada perfil."
+  },
+  {
+   "id": "t64",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "02"
+  },
+  {
+   "id": "t65",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Prioriza la visibilidad a las pantallas"
+  },
+  {
+   "id": "t66",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "El layout del mobiliario define qué mesas tienen visión directa. Cada cliente debe ver el partido desde su asiento sin obstáculos."
+  },
+  {
+   "id": "t67",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "03"
+  },
+  {
+   "id": "t68",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Facilita el servicio rápido"
+  },
+  {
+   "id": "t69",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Mesas bien ubicadas permiten a tu personal atender más pedidos durante el partido y aumentar el ticket promedio por mesa."
+  },
+  {
+   "id": "t70",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "04"
+  },
+  {
+   "id": "t71",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Elige materiales de alto tráfico"
+  },
+  {
+   "id": "t72",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Durante el Mundial la intensidad del ambiente sube. El mobiliario debe resistir uso frecuente, derrames y limpieza constante."
+  },
+  {
+   "id": "t73",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "05"
+  },
+  {
+   "id": "t74",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Renueva antes, no durante el torneo"
+  },
+  {
+   "id": "t75",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Instalar mobiliario en pleno Mundial genera fricciones operativas. Planifica tu compra con al menos tres semanas de anticipación."
+  },
+  {
+   "id": "t76",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "06"
+  },
+  {
+   "id": "t77",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "No descuides la terraza o el exterior"
+  },
+  {
+   "id": "t78",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "6 claves para convertir cada partido en una jornada rentable",
+   "valor": "Los espacios exteriores se convierten en zonas premium durante el Mundial. Habilítalos con mobiliario resistente a la intemperie."
+  },
+  {
+   "id": "t79",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "El Mundial ya está cerca. ¿Tu negocio está listo?",
+   "valor": "El Mundial"
+  },
+  {
+   "id": "t80",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El Mundial ya está cerca. ¿Tu negocio está listo?",
+   "valor": "ya está cerca."
+  },
+  {
+   "id": "t81",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "El Mundial ya está cerca. ¿Tu negocio está listo?",
+   "valor": "¿Tu negocio está listo?"
+  },
+  {
+   "id": "t82",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El Mundial ya está cerca. ¿Tu negocio está listo?",
+   "valor": "Solicita hoy tu cotización de sillas, mesas y mobiliario de exterior. Entrega e instalación rápida en toda la República Mexicana. Nuestro equipo te asesora sin compromiso."
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "El Mundial ya está cerca. ¿Tu negocio está listo?",
+   "texto": "Cotizar por WhatsApp",
+   "href": "https://wa.me/524493419403?text=¡Hola!%20%0AVi%20su%20blog%20de%20Especial%20de%20Mundial%20y%20me%20interesó%20mucho%20el%20mobiliario%20para%20terrazas%20y%20restaurantes.%20%0AMe%20gustaría%20solicitar%20más%20información%20y%20cotizar%20un%20proyecto%20para%20mi%20espacio.%20¿Podrían%20apoyarme%20con%20opciones%20y%20catálogo%3F",
+   "target": "_blank"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "El Mundial ya está cerca. ¿Tu negocio está listo?",
+   "texto": "Ver catálogo completo →",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/Catalogo-Digital-Mobiliario-para-Intemperie._compressed-1.pdf",
+   "target": ""
+  }
+ ]
+}

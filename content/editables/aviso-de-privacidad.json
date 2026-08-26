@@ -1,0 +1,330 @@
+{
+ "pagina": "/aviso-de-privacidad/",
+ "titulo": "Aviso de privacidad",
+ "key": "aviso-de-privacidad",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/03/logo-azul-1-800x150.webp",
+   "alt": "logo azul (1)"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "AVISO DE PRIVACIDAD DE COMERCIALIZADORA OFITODO.",
+   "valor": "AVISO DE PRIVACIDAD DE COMERCIALIZADORA OFITODO."
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "AVISO DE PRIVACIDAD DE COMERCIALIZADORA OFITODO.",
+   "valor": "De conformidad en lo dispuesto por la Ley Federal de Protección de Datos Personales, se emite el presente Aviso de Privacidad en los siguientes términos:"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "IDENTIDAD Y DOMICILIO DEL RESPONSABLE DE LOS DATOS PERSONALE",
+   "valor": "IDENTIDAD Y DOMICILIO DEL RESPONSABLE DE LOS DATOS PERSONALES:"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "IDENTIDAD Y DOMICILIO DEL RESPONSABLE DE LOS DATOS PERSONALE",
+   "valor": "Para efectos del presente Aviso de Privacidad, COMERCIALIZADORA OFITODO SA DE CV., en adelante el “EL RESPONSABLE”, señalan como encargado de la obtención, divulgación, almacenamiento, uso, incluido acción de acceso, manejo, aprovechamiento, transferencia o disposición de datos personales, al Encargado designado por EL RESPONSABLE, en lo sucesivo el “Encargado”, con domicilio en Jorge Reynoso 1703 Int 15, Cp. 20124 Galerías, Aguascalientes, Ags."
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "INFORMACIÓN A RECABAR Y FINALIDADES DEL TRATAMIENTO DE DATOS",
+   "valor": "INFORMACIÓN A RECABAR Y FINALIDADES DEL TRATAMIENTO DE DATOS PERSONALES:"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "INFORMACIÓN A RECABAR Y FINALIDADES DEL TRATAMIENTO DE DATOS",
+   "valor": "Le informamos que EL RESPONSABLE podrá recopilar su información a través de diferentes fuentes, ya sea Personal y/o Directamente proporcionados por el Titular o Indirectamente por cualquier otra fuente de información comercialmente disponibles o que sean permitidas por la Ley. La colecta y Tratamiento de datos personales del Titular, incluyendo los datos personales sensibles que en su caso de que lleguemos a recabar, y salvo que el Titular disponga lo contrario mediante el medio descrito en el presente Aviso de Privacidad, tiene como finalidad, la evaluación de solicitudes de empleo, contratación de empleados, evaluación de contratistas, propuestas y contratación con proveedores de servicios y productos, elaboración y manejo de contratos comerciales, procesos de pago, así como para el cumplimiento con nuestras obligaciones laborales, administrativas, comerciales y fiscales establecimiento de bases de datos de proveedores, desarrollo de nuevos productos y servicios, asesoría, comercialización, promoción, contratación y colocación de todo tipo de servicios y productos y/o mejora de nuestros productos y servicios y otras obligaciones derivadas de cualquier relación jurídica entre el titular de datos personales y EL RESPONSABLE o las empresas afiliadas y subsidiarias de EL RESPONSABLE. Sus datos personales, también podrán tener, entre otras, las siguientes finalidades:"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "INFORMACIÓN A RECABAR Y FINALIDADES DEL TRATAMIENTO DE DATOS",
+   "valor": "(i) Atender requerimientos legales de autoridades competentes;"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "INFORMACIÓN A RECABAR Y FINALIDADES DEL TRATAMIENTO DE DATOS",
+   "valor": "(ii) Hacer de su conocimiento, la gama de nuevos productos y servicios, así como beneficios, descuentos, promociones, estudios de mercado, promociones, notificaciones sobre cambio en condiciones y en general toda la publicidad derivada de los productos y servicios que ofrece EL RESPONSABLE y/o las empresas afiliadas y subsidiarias de EL RESPONSABLE;"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "INFORMACIÓN A RECABAR Y FINALIDADES DEL TRATAMIENTO DE DATOS",
+   "valor": "(iii) Análisis y desarrollo de productos y de proveedores así como el uso de nuestros productos y servicios;"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "INFORMACIÓN A RECABAR Y FINALIDADES DEL TRATAMIENTO DE DATOS",
+   "valor": "(iv) Para el cumplimiento de nuestros términos y condiciones con relación a nuestras obligaciones, convenios, contratos, así como para el desarrollo de productos, venta de productos o la prestación de nuestros servicios;"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "INFORMACIÓN A RECABAR Y FINALIDADES DEL TRATAMIENTO DE DATOS",
+   "valor": "(v) en su caso, para el uso de nuestras áreas de recursos humanos y compras, de conformidad a las políticas de estas últimas."
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "INFORMACIÓN A RECABAR Y FINALIDADES DEL TRATAMIENTO DE DATOS",
+   "valor": "*Los datos sensibles que se pudieran recabar podrán ser utilizados para el mejor cumplimiento de nuestros objetivos legales, fiscales o comerciales."
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "OPCIONES Y MEDIOS QUE EL RESPONSABLE, OFRECE A LOS TITULARES",
+   "valor": "OPCIONES Y MEDIOS QUE EL RESPONSABLE, OFRECE A LOS TITULARES DE DATOS PERSONALES PARA LIMITAR EL USO O DIVULGACIÓN DE SU INFORMACIÓN:"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "OPCIONES Y MEDIOS QUE EL RESPONSABLE, OFRECE A LOS TITULARES",
+   "valor": "Los datos personales del titular, serán mantenidos en estricta confidencialidad, de conformidad con las medidas de seguridad, administrativas, técnicas y físicas que al efecto EL RESPONSABLE ha implementado y las que en el futuro implemente en sus políticas y procedimientos de seguridad, quedando prohibido su divulgación ilícita y limitando su uso a terceros, conforme a lo previsto en el presente Aviso de Privacidad."
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "MEDIOS PARA EL EJERCICIO DE DERECHOS DEL TITULAR:",
+   "valor": "MEDIOS PARA EL EJERCICIO DE DERECHOS DEL TITULAR:"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MEDIOS PARA EL EJERCICIO DE DERECHOS DEL TITULAR:",
+   "valor": "El titular de datos personales, podrá ejercer sus derechos de acceso, rectificación, cancelación, posición, limitación de uso, divulgación o revocación, mediante solicitud por escrito enviada vía correo postal o correo electrónico dirigidos a: El encargado como representante de EL RESPONSABLE Por correo electrónico a: privacidad@ofitodo.com.mx, ventas.ofitodo@hotmail.com."
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MEDIOS PARA EL EJERCICIO DE DERECHOS DEL TITULAR:",
+   "valor": "Mediante solicitud por escrito que contenga la siguiente información:"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MEDIOS PARA EL EJERCICIO DE DERECHOS DEL TITULAR:",
+   "valor": "(i) El nombre completo del titular de los datos personales, domicilio y cuenta de correo electrónico, para poder comunicarle la respuesta a su solicitud;"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MEDIOS PARA EL EJERCICIO DE DERECHOS DEL TITULAR:",
+   "valor": "(ii) Los documentos que acrediten la identidad y en su caso la representación legal del titular de los datos personales;"
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MEDIOS PARA EL EJERCICIO DE DERECHOS DEL TITULAR:",
+   "valor": "(iii) La descripción clara y precisa de los datos personales respecto de los que se busca ejercer alguno de los derechos antes mencionados;"
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MEDIOS PARA EL EJERCICIO DE DERECHOS DEL TITULAR:",
+   "valor": "(iv) Cualquier otro elemento o documento que facilite la localización de los datos personales;"
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MEDIOS PARA EL EJERCICIO DE DERECHOS DEL TITULAR:",
+   "valor": "(v) En el caso de solicitudes de rectificación de datos personales, el titular, deberá indicar, las modificaciones a realizarse y aportar la documentación que sustente su petición."
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "TRANSFERENCIA DE DATOS PERSONALES:"
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "EL RESPONSABLE podrá realizar la transferencia de datos a:"
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "(i) Las empresas afiliadas y subsidiarias de EL RESPONSABLE , empresas nacionales;"
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "(ii) Terceros proveedores de servicios para el cumplimiento de las obligaciones legales adquiridas por EL RESPONSABLE o por cualquiera de las empresas afiliadas y subsidiarias de EL RESPONSABLE;"
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "(iii) Terceros derivado de un reestructura corporativa, incluyendo, la fusión, consolidación, venta, liquidación o transferencia de activos;"
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "(iv) Otras transmisiones previstas en la Ley citada y su Reglamento."
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "(v) Efectuar transferencias con sus datos personales a terceros en términos del aviso de privacidad. Por lo que requerimos obtener los siguientes datos personales, que son enunciativos más no limitativos:"
+  },
+  {
+   "id": "t29",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "• Denominación o razón social, domicilio, teléfono, correo electrónico, firma, RFC, fecha de constitución, nacionalidad, poder notarial con el que represente a su sociedad, constitutiva de la sociedad (del cliente), RFC (del cliente), domicilio (del cliente) registro de propiedad, registro patronal del IMSS, nombre del contacto, teléfono del contacto, correo electrónico del contacto, descripción del servicio contratado y condiciones comerciales, nombre, domicilio y teléfonos del solicitante, reportes del servicio, reportes de asesoría, sector, giro y; los siguientes datos financieros o patrimoniales: principales instituciones de crédito en las cuales tenga cuentas bancarias, sucursales, números de cuenta, y números de cuenta CLABE. Dichos datos podrán ser recabados directa y personalmente con usted, o bien, a través de medios de comunicación tales como: vía telefónica, correo electrónico, directorio laboral y otras fuentes permitidas por la ley."
+  },
+  {
+   "id": "t30",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "*Los terceros y las entidades receptores de datos personales, asumen las mismas obligaciones y/o responsabilidades de EL RESPONSABLE, de conformidad con lo descrito en el presente Aviso de Privacidad."
+  },
+  {
+   "id": "t31",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "TRANSFERENCIA DE DATOS PERSONALES:",
+   "valor": "*El titular de datos personales que presenta cualquier solicitud para entablar una relación jurídica con EL RESPONSABLE o por cualquiera de las empresas de EL RESPONSABLE, acepta la transferencia de sus datos personales, en los términos descritos en el presente Aviso de Privacidad."
+  },
+  {
+   "id": "t32",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "CAMBIOS AL AVISO DE PRIVACIDAD:"
+  },
+  {
+   "id": "t33",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "Cualquier cambio al presente aviso de privacidad, le será informado a través de cualquiera de los siguientes medios:"
+  },
+  {
+   "id": "t34",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "(i) Avisos en las oficinas de EL RESPONSABLE;"
+  },
+  {
+   "id": "t35",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "(ii) un mensaje a su correo electrónico;"
+  },
+  {
+   "id": "t36",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "(iii) la página web http://www.ofitodo.com"
+  },
+  {
+   "id": "t37",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "(iv) cualquier otro medio de comunicación público o privado previstos en los contratos que amparan las operaciones celebradas entre EL RESPONSABLE o por cualquiera de las empresas de EL RESPONSABLE."
+  },
+  {
+   "id": "t38",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "FECHA DE EMISIÓN O ÚLTIMA ACTUALIZACIÓN: 01/01/2025"
+  },
+  {
+   "id": "t39",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "El Encargado será en todo tiempo designado por el representante legal de la empresa COMERCIALIZADORA OFITODO SA DE CV."
+  },
+  {
+   "id": "t40",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "Jorge Reynoso 1703-15, Desarrollo Especial Galerías, 20124 Aguascalientes, Ags."
+  },
+  {
+   "id": "t41",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "TEL (449) 918 40 80 Cel (449) 341 94 03"
+  },
+  {
+   "id": "t42",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "ventasofitodo@hotmail.com"
+  },
+  {
+   "id": "t43",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "AGUASCALIENTES, AGS"
+  },
+  {
+   "id": "t44",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CAMBIOS AL AVISO DE PRIVACIDAD:",
+   "valor": "www.ofitodo.com"
+  }
+ ]
+}

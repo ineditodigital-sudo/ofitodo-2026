@@ -1,0 +1,94 @@
+{
+ "pagina": "/proyecto-empresa-japonesa-zapatero/",
+ "titulo": "Proyecto empresa japonesa zapatero",
+ "key": "proyecto-empresa-japonesa-zapatero",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "valor": "Proyecto empresa japonesa zapatero"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-2.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.51 PM (2)"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-1.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.51 PM (1)"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.50-PM.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.50 PM"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-3.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.51 PM (3)"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-2.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.51 PM (2)"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-1.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.51 PM (1)"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.50-PM.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.50 PM"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-3.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.51 PM (3)"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-2.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.51 PM (2)"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto empresa japonesa zapatero",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-25-at-2.36.51-PM-1.webp",
+   "alt": "WhatsApp Image 2024-07-25 at 2.36.51 PM (1)"
+  }
+ ]
+}

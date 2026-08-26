@@ -1,295 +1,338 @@
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent, type ReactNode } from 'react';
+import { api, fmtDinero, fmtFecha, subirImagen } from './api.ts';
+import { PageEditor } from './PageEditor.tsx';
 
-/* Panel de Ofitodo v2 — CMS operativo en lenguaje humano:
-   Inicio (resumen) · Pedidos · Mensajes · Productos (editor completo) · Páginas y SEO · Ayuda.
-   Precio/stock actúan al instante; nombre/descripción/imagen/SEO se aplican en la
-   siguiente publicación del sitio (ciclo en docs/09-operacion.md). */
+/* Panel de Ofitodo — CMS a la medida. Todo en lenguaje humano, imposible de romper.
+   Módulos: Inicio · Páginas · Encabezado y pie · Tienda · Blog · Menús · Marca · Contacto · Mensajes · Pedidos · Medios · Ayuda */
 
-type Json = Record<string, unknown>;
-async function api(ruta: string, metodo = 'GET', cuerpo?: Json) {
-  const url = '/api' + ruta + (metodo === 'GET' ? (ruta.includes('?') ? '&' : '?') + 'cb=' + Date.now() : '');
-  const r = await fetch(url, {
-    method: metodo,
-    headers: cuerpo ? { 'Content-Type': 'application/json' } : undefined,
-    body: cuerpo ? JSON.stringify(cuerpo) : undefined,
-    credentials: 'same-origin',
-  });
-  const j = await r.json();
-  if (!r.ok || j.ok === false) throw new Error(j.mensaje ?? 'Error');
-  return j;
+type Tab = 'inicio' | 'paginas' | 'global' | 'tienda' | 'blog' | 'menus' | 'marca' | 'contacto' | 'mensajes' | 'pedidos' | 'medios' | 'ayuda';
+const ESTADOS: Record<string, string> = { pendiente: 'Pendiente', confirmado: 'Confirmado', entregado: 'Entregado', cancelado: 'Cancelado', 'wc-processing': 'En proceso', 'wc-failed': 'Fallido' };
+
+const ICON: Record<Tab, string> = {
+  inicio: '◧', paginas: '▤', global: '⌂', tienda: '🛍', blog: '✎', menus: '☰',
+  marca: '🎨', contacto: '☏', mensajes: '✉', pedidos: '📦', medios: '🖼', ayuda: '?',
+};
+const NOMBRE: Record<Tab, string> = {
+  inicio: 'Inicio', paginas: 'Páginas', global: 'Encabezado y pie', tienda: 'Tienda', blog: 'Blog',
+  menus: 'Menús', marca: 'Marca y colores', contacto: 'Contacto y redes', mensajes: 'Mensajes',
+  pedidos: 'Pedidos', medios: 'Imágenes', ayuda: 'Ayuda',
+};
+
+export function App() {
+  const [nombre, setNombre] = useState<string | null>(null);
+  const [listo, setListo] = useState(false);
+  const [tab, setTab] = useState<Tab>('inicio');
+  useEffect(() => { api('/admin/yo').then((r) => setNombre(r.nombre)).catch(() => {}).finally(() => setListo(true)); }, []);
+  if (!listo) return null;
+  if (!nombre) return <Login onOk={setNombre} />;
+  const grupos: [string, Tab[]][] = [
+    ['Sitio', ['inicio', 'paginas', 'global', 'blog', 'menus']],
+    ['Marca', ['marca', 'contacto', 'medios']],
+    ['Tienda', ['tienda', 'pedidos', 'mensajes']],
+    ['', ['ayuda']],
+  ];
+  return (
+    <div className="app">
+      <aside className="lateral">
+        <div className="marca-logo"><span className="logo-cuadro">O</span> Ofitodo</div>
+        {grupos.map(([g, tabs]) => (
+          <nav key={g} className="nav-grupo">
+            {g && <div className="nav-grupo-tit">{g}</div>}
+            {tabs.map((t) => (
+              <button key={t} className={'nav-item' + (tab === t ? ' activo' : '')} onClick={() => setTab(t)}>
+                <span className="nav-ico">{ICON[t]}</span>{NOMBRE[t]}
+              </button>
+            ))}
+          </nav>
+        ))}
+        <div className="lateral-pie">
+          <div className="usuario"><span className="usuario-ini">{(nombre[0] || 'A').toUpperCase()}</span><div><strong>{nombre}</strong><span>Administrador</span></div></div>
+          <button className="btn-salir" onClick={async () => { await api('/admin/salir', 'POST'); location.reload(); }}>Salir</button>
+        </div>
+      </aside>
+      <main className="principal">
+        {tab === 'inicio' && <Inicio irA={setTab} />}
+        {tab === 'paginas' && <Paginas soloGlobal={false} />}
+        {tab === 'global' && <Paginas soloGlobal />}
+        {tab === 'blog' && <Paginas soloBlog />}
+        {tab === 'tienda' && <Tienda />}
+        {tab === 'pedidos' && <Pedidos />}
+        {tab === 'mensajes' && <Mensajes />}
+        {tab === 'marca' && <Marca />}
+        {tab === 'contacto' && <Contacto />}
+        {tab === 'menus' && <Placeholder titulo="Menús" texto="El menú principal y el pie se editan hoy desde «Encabezado y pie» (cada enlace del menú es un botón editable). Un organizador de menú con arrastrar-y-soltar llega en la próxima versión." />}
+        {tab === 'medios' && <Medios />}
+        {tab === 'ayuda' && <Ayuda />}
+      </main>
+    </div>
+  );
 }
-const fmt = (n: number | null) => (n == null ? 'por cotización' : '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2 }));
-const fecha = (s: string) => new Date(s.replace(' ', 'T') + 'Z').toLocaleString('es-MX', { dateStyle: 'medium', timeStyle: 'short' });
-const ESTADOS: Record<string, string> = { pendiente: 'Pendiente', confirmado: 'Confirmado', entregado: 'Entregado', cancelado: 'Cancelado', 'wc-processing': 'En proceso (WP)', 'wc-failed': 'Fallido (WP)' };
 
-function Login({ onOk }: { onOk: (nombre: string) => void }) {
-  const [usuario, setUsuario] = useState('');
-  const [contrasena, setContrasena] = useState('');
-  const [error, setError] = useState<string | null>(null);
-  const [cargando, setCargando] = useState(false);
+function Encabezado({ titulo, sub, extra }: { titulo: string; sub?: string; extra?: ReactNode }) {
+  return <header className="cab"><div><h1>{titulo}</h1>{sub && <p>{sub}</p>}</div>{extra}</header>;
+}
+
+function Login({ onOk }: { onOk: (n: string) => void }) {
+  const [u, setU] = useState(''); const [c, setC] = useState('');
+  const [err, setErr] = useState<string | null>(null); const [load, setLoad] = useState(false);
   async function entrar(e: FormEvent) {
-    e.preventDefault();
-    setCargando(true); setError(null);
-    try { const r = await api('/admin/login', 'POST', { usuario, contrasena }); onOk(r.nombre as string); }
-    catch (err) { setError((err as Error).message); }
-    finally { setCargando(false); }
+    e.preventDefault(); setLoad(true); setErr(null);
+    try { const r = await api('/admin/login', 'POST', { usuario: u, contrasena: c }); onOk(r.nombre); }
+    catch (x) { setErr((x as Error).message); } finally { setLoad(false); }
   }
   return (
     <main className="acceso">
       <form onSubmit={entrar} className="acceso-tarjeta">
-        <h1>Panel de Ofitodo</h1>
+        <div className="marca-logo grande"><span className="logo-cuadro">O</span> Ofitodo</div>
         <p className="acceso-sub">Administra tu sitio web</p>
-        <label>Usuario o correo<input value={usuario} onChange={(e) => setUsuario(e.target.value)} autoComplete="username" required /></label>
-        <label>Contraseña<input type="password" value={contrasena} onChange={(e) => setContrasena(e.target.value)} autoComplete="current-password" required /></label>
-        <button disabled={cargando}>{cargando ? 'Entrando…' : 'Entrar'}</button>
-        {error && <p role="alert" className="acceso-error">{error}</p>}
-        <p className="acceso-sub">Usa tu mismo usuario y contraseña de siempre.</p>
+        <label>Usuario o correo<input value={u} onChange={(e) => setU(e.target.value)} autoComplete="username" required /></label>
+        <label>Contraseña<input type="password" value={c} onChange={(e) => setC(e.target.value)} autoComplete="current-password" required /></label>
+        <button disabled={load}>{load ? 'Entrando…' : 'Entrar'}</button>
+        {err && <p role="alert" className="acceso-error">{err}</p>}
+        <p className="acceso-sub chico">Usa tu mismo usuario y contraseña de siempre.</p>
       </form>
     </main>
   );
 }
 
 function Inicio({ irA }: { irA: (t: Tab) => void }) {
-  const [r, setR] = useState<Json | null>(null);
+  const [r, setR] = useState<any>(null);
   useEffect(() => { api('/admin/resumen').then(setR).catch(() => setR({})); }, []);
-  if (!r) return <p>Cargando…</p>;
+  if (!r) return <Cargando />;
   return (
     <div>
+      <Encabezado titulo="Hola de nuevo 👋" sub="Un vistazo rápido a tu sitio y tu tienda" />
       <div className="kpis">
-        <button className="kpi" onClick={() => irA('pedidos')}><strong>{String(r.pedidosPendientes ?? 0)}</strong><span>pedidos por atender</span></button>
-        <button className="kpi" onClick={() => irA('mensajes')}><strong>{String(r.mensajesNoLeidos ?? 0)}</strong><span>mensajes sin leer</span></button>
-        <button className="kpi" onClick={() => irA('productos')}><strong>{String(r.cambiosPendientes ?? 0)}</strong><span>cambios por publicar</span></button>
+        <button className="kpi" onClick={() => irA('pedidos')}><span className="kpi-ico azul">📦</span><strong>{r.pedidosPendientes ?? 0}</strong><span>pedidos por atender</span></button>
+        <button className="kpi" onClick={() => irA('mensajes')}><span className="kpi-ico verde">✉</span><strong>{r.mensajesNoLeidos ?? 0}</strong><span>mensajes sin leer</span></button>
+        <button className="kpi" onClick={() => irA('paginas')}><span className="kpi-ico morado">▤</span><strong>{r.cambiosPendientes ?? 0}</strong><span>cambios por publicar</span></button>
+        <button className="kpi" onClick={() => irA('tienda')}><span className="kpi-ico naranja">🛍</span><strong>—</strong><span>administrar tienda</span></button>
       </div>
       <div className="dos-col">
-        <section className="tarjeta">
-          <h3>Últimos pedidos</h3>
-          {(r.ultimosPedidos as Json[] | undefined)?.length
-            ? <ul className="lista-simple">{(r.ultimosPedidos as Json[]).map((p) => <li key={String(p.numero)}>#{String(p.numero)} · {fmt(p.total as number)} · {ESTADOS[String(p.estado)] ?? String(p.estado)} · {fecha(String(p.creado))}</li>)}</ul>
-            : <p className="suave">Aún no hay pedidos.</p>}
-        </section>
-        <section className="tarjeta">
-          <h3>Últimos mensajes</h3>
-          {(r.ultimosMensajes as Json[] | undefined)?.length
-            ? <ul className="lista-simple">{(r.ultimosMensajes as Json[]).map((m) => <li key={String(m.id)}>{Number(m.leido) ? '' : '🔵 '}{String(m.formulario)} · {fecha(String(m.creado))}</li>)}</ul>
-            : <p className="suave">Aún no hay mensajes.</p>}
-        </section>
+        <Card titulo="Últimos pedidos">
+          {r.ultimosPedidos?.length ? <ul className="lista-simple">{r.ultimosPedidos.map((p: any) => <li key={p.numero}>#{p.numero} · {fmtDinero(p.total)} · {ESTADOS[p.estado] ?? p.estado} · {fmtFecha(p.creado)}</li>)}</ul> : <Vacio texto="Aún no hay pedidos." />}
+        </Card>
+        <Card titulo="Últimos mensajes">
+          {r.ultimosMensajes?.length ? <ul className="lista-simple">{r.ultimosMensajes.map((m: any) => <li key={m.id}>{Number(m.leido) ? '' : '🔵 '}{m.formulario} · {fmtFecha(m.creado)}</li>)}</ul> : <Vacio texto="Aún no hay mensajes." />}
+        </Card>
       </div>
-      <section className="tarjeta">
-        <h3>¿Cómo funciona tu sitio?</h3>
-        <p><strong>Al instante</strong>: precios y disponibilidad de productos, estados de pedidos y mensajes — se guardan y aplican de inmediato.</p>
-        <p><strong>Con publicación</strong>: nombres, descripciones e imágenes de productos, y los títulos/descripciones de Google de cada página — quedan guardados aquí y se aplican al sitio en la siguiente publicación (la hace tu equipo técnico o el asistente; tarda unos minutos).</p>
-      </section>
+      <Card titulo="¿Cómo funciona tu sitio?">
+        <p><strong>Al instante:</strong> precios y disponibilidad de productos, estados de pedidos y mensajes.</p>
+        <p><strong>Con «Publicar»:</strong> textos, imágenes, botones, colores y SEO — quedan guardados y se ven en el sitio en la siguiente actualización (unos minutos).</p>
+      </Card>
     </div>
   );
 }
 
-function Mensajes() {
-  const [filas, setFilas] = useState<Json[] | null>(null);
-  useEffect(() => { api('/admin/mensajes').then((r) => setFilas(r.mensajes as Json[])); }, []);
-  async function leer(m: Json) {
-    if (Number(m.leido)) return;
-    m.leido = 1; setFilas((f) => [...(f ?? [])]);
-    await api('/admin/mensajes', 'PUT', { id: m.id, leido: 1 }).catch(() => {});
-  }
-  if (!filas) return <p>Cargando…</p>;
-  if (!filas.length) return <p>Aún no hay mensajes de los formularios del sitio.</p>;
+function Paginas({ soloGlobal, soloBlog }: { soloGlobal?: boolean; soloBlog?: boolean }) {
+  const [lista, setLista] = useState<any[] | null>(null);
+  const [abierta, setAbierta] = useState<string | null>(soloGlobal ? '_global' : null);
+  useEffect(() => { api('/admin/paginas-editables').then((r) => setLista(r.paginas)); }, []);
+  if (soloGlobal) return <div className="editor-full"><PageEditor pageKey="_global" onSalir={() => { }} /></div>;
+  if (abierta) return <div className="editor-full"><PageEditor pageKey={abierta} onSalir={() => setAbierta(null)} /></div>;
+  if (!lista) return <Cargando />;
+  const esBlog = (p: any) => p.slug && /^\/(mobiliario|proyecto|estaciones|consultorios|sala|bancas|stand|manuel)/.test(p.slug);
+  const items = lista.filter((p) => p.key !== '_global').filter((p) => (soloBlog ? esBlog(p) : true));
   return (
-    <div className="lista">
-      {filas.map((m) => (
-        <details key={String(m.id)} className="tarjeta" onToggle={(e) => (e.target as HTMLDetailsElement).open && leer(m)}>
-          <summary>{Number(m.leido) ? '' : '🔵 '}<strong>{String(m.formulario)}</strong> · {fecha(String(m.creado))} <span className="suave">desde {String(m.pagina || 'el sitio')}</span></summary>
-          <dl>{Object.entries(JSON.parse(String(m.datos)) as Json).map(([k, v]) => (<div key={k}><dt>{k}</dt><dd>{String(v) || '—'}</dd></div>))}</dl>
-        </details>
-      ))}
+    <div>
+      <Encabezado titulo={soloBlog ? 'Blog' : 'Páginas'} sub="Elige una página para editar sus textos, imágenes, botones y enlaces con vista previa en vivo" />
+      <div className="grid-paginas">
+        {items.map((p) => (
+          <button key={p.key} className="pagina-card" onClick={() => setAbierta(p.key)}>
+            <div className="pagina-card-tit">{p.titulo}</div>
+            <div className="pagina-card-slug">{p.slug}</div>
+            <div className="pagina-card-pie"><span>{p.campos} elementos editables</span>{p.borrador && <span className="pill-borrador">borrador</span>}</div>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Tienda() {
+  const [filas, setFilas] = useState<any[] | null>(null);
+  const [filtro, setFiltro] = useState(''); const [aviso, setAviso] = useState<string | null>(null);
+  const cargar = () => api('/admin/productos').then((r) => setFilas(r.productos));
+  useEffect(() => { cargar(); }, []);
+  if (!filas) return <Cargando />;
+  const vis = filas.filter((p) => (p.nombre + ' ' + (p.sku ?? '')).toLowerCase().includes(filtro.toLowerCase())).slice(0, 60);
+  async function guardar(p: any, precio: string, stock: string) {
+    await api('/admin/productos', 'PUT', { slug: p.slug, precio: precio === '' ? null : +precio, stock });
+    setAviso('Guardado. Precio y disponibilidad ya están activos.'); setTimeout(() => setAviso(null), 5000); cargar();
+  }
+  return (
+    <div>
+      <Encabezado titulo="Tienda" sub="Precio y disponibilidad se aplican al instante" />
+      <div className="barra-buscar"><input placeholder="Busca un producto por nombre o SKU…" value={filtro} onChange={(e) => setFiltro(e.target.value)} /></div>
+      {aviso && <p className="aviso">{aviso}</p>}
+      <div className="lista">
+        {vis.map((p) => <FilaProducto key={p.slug} p={p} onGuardar={guardar} />)}
+      </div>
+      {vis.length === 60 && <p className="suave">Mostrando 60 — usa el buscador (hay {filas.length}).</p>}
+    </div>
+  );
+}
+function FilaProducto({ p, onGuardar }: { p: any; onGuardar: (p: any, pr: string, st: string) => Promise<void> }) {
+  const [precio, setPrecio] = useState(p.precio == null ? '' : String(p.precio));
+  const [stock, setStock] = useState(p.stock ?? 'instock'); const [g, setG] = useState(false);
+  return (
+    <div className="card fila-prod">
+      {p.imagen && <img src={String(p.imagen).replace(/(\.\w+)$/, '-150x150$1')} alt="" width={48} height={48} />}
+      <div className="fila-prod-info"><strong>{p.nombre}</strong><span className="suave">{p.sku ?? ''}</span></div>
+      <input className="in-precio" inputMode="decimal" value={precio} onChange={(e) => setPrecio(e.target.value)} placeholder="cotización" />
+      <select value={stock} onChange={(e) => setStock(e.target.value)}><option value="instock">Disponible</option><option value="outofstock">Agotado</option></select>
+      <a className="ver" href={`/producto/${p.slug}/`} target="_blank" rel="noreferrer">ver ↗</a>
+      <button className="btn-pri chico" disabled={g} onClick={async () => { setG(true); await onGuardar(p, precio, stock); setG(false); }}>{g ? '…' : 'Guardar'}</button>
     </div>
   );
 }
 
 function Pedidos() {
-  const [filas, setFilas] = useState<Json[] | null>(null);
-  const cargar = () => api('/admin/pedidos').then((r) => setFilas(r.pedidos as Json[]));
+  const [filas, setFilas] = useState<any[] | null>(null);
+  const cargar = () => api('/admin/pedidos').then((r) => setFilas(r.pedidos));
   useEffect(() => { cargar(); }, []);
-  async function cambiar(id: number, estado: string) { await api('/admin/pedidos', 'PUT', { id, estado }); cargar(); }
-  if (!filas) return <p>Cargando…</p>;
-  if (!filas.length) return <p>Todavía no hay pedidos. Cuando un cliente compre contra entrega, aparecerá aquí.</p>;
+  if (!filas) return <Cargando />;
+  if (!filas.length) return <><Encabezado titulo="Pedidos" /><Vacio texto="Todavía no hay pedidos. Cuando alguien compre contra entrega, aparecerá aquí." /></>;
   return (
-    <div className="lista">
-      {filas.map((p) => {
-        const cli = JSON.parse(String(p.cliente)) as Json;
-        const items = JSON.parse(String(p.items)) as Json[];
-        return (
-          <details key={String(p.id)} className="tarjeta">
-            <summary>
-              <strong>Pedido #{String(p.numero)}</strong> · {fmt(p.total as number)} · {fecha(String(p.creado))}
-              <select value={String(p.estado)} onChange={(e) => cambiar(p.id as number, e.target.value)} onClick={(e) => e.stopPropagation()}>
-                {Object.entries(ESTADOS).map(([v, t]) => <option key={v} value={v}>{t}</option>)}
-              </select>
-            </summary>
-            <p><strong>{String(cli.billing_first_name)} {String(cli.billing_last_name)}</strong> · {String(cli.billing_phone)} · {String(cli.billing_email)}</p>
-            <p>{String(cli.billing_address_1)} {String(cli.billing_address_2 || '')}, {String(cli.billing_city)}, {String(cli.billing_state)}, CP {String(cli.billing_postcode)}</p>
-            {Boolean(cli.order_comments) && <p>Notas: {String(cli.order_comments)}</p>}
-            <ul>{items.map((it, i) => <li key={i}>{String(it.nombre)} × {String(it.qty)} = {fmt((it.subtotal ?? null) as number | null)}</li>)}</ul>
-          </details>
-        );
-      })}
+    <div>
+      <Encabezado titulo="Pedidos" sub="Pago contra entrega" />
+      <div className="lista">
+        {filas.map((p) => {
+          const cli = JSON.parse(p.cliente); const items = JSON.parse(p.items);
+          return (
+            <details key={p.id} className="card">
+              <summary><strong>Pedido #{p.numero}</strong> · {fmtDinero(p.total)} · {fmtFecha(p.creado)}
+                <select value={p.estado} onClick={(e) => e.stopPropagation()} onChange={async (e) => { await api('/admin/pedidos', 'PUT', { id: p.id, estado: e.target.value }); cargar(); }}>
+                  {Object.entries(ESTADOS).map(([v, t]) => <option key={v} value={v}>{t}</option>)}
+                </select>
+              </summary>
+              <p><strong>{cli.billing_first_name} {cli.billing_last_name}</strong> · {cli.billing_phone} · {cli.billing_email}</p>
+              <p>{cli.billing_address_1} {cli.billing_address_2 || ''}, {cli.billing_city}, {cli.billing_state}, CP {cli.billing_postcode}</p>
+              {cli.order_comments && <p>Notas: {cli.order_comments}</p>}
+              <ul>{items.map((it: any, i: number) => <li key={i}>{it.nombre} × {it.qty} = {fmtDinero(it.subtotal)}</li>)}</ul>
+            </details>
+          );
+        })}
+      </div>
     </div>
   );
 }
 
-function Productos() {
-  const [filas, setFilas] = useState<Json[] | null>(null);
-  const [filtro, setFiltro] = useState('');
-  const [abierto, setAbierto] = useState<string | null>(null);
-  const [aviso, setAviso] = useState<string | null>(null);
-  useEffect(() => { api('/admin/productos').then((r) => setFilas(r.productos as Json[])); }, []);
-  if (!filas) return <p>Cargando…</p>;
-  const vis = filas.filter((p) => (String(p.nombre) + ' ' + String(p.sku ?? '')).toLowerCase().includes(filtro.toLowerCase())).slice(0, 40);
+function Mensajes() {
+  const [filas, setFilas] = useState<any[] | null>(null);
+  useEffect(() => { api('/admin/mensajes').then((r) => setFilas(r.mensajes)); }, []);
+  if (!filas) return <Cargando />;
+  if (!filas.length) return <><Encabezado titulo="Mensajes" /><Vacio texto="Aún no hay mensajes de los formularios del sitio." /></>;
   return (
     <div>
-      <p><input className="buscar" placeholder="Busca un producto por nombre o SKU…" value={filtro} onChange={(e) => setFiltro(e.target.value)} /></p>
-      {aviso && <p className="aviso">{aviso}</p>}
+      <Encabezado titulo="Mensajes recibidos" sub="Lo que llega por los formularios del sitio (también te llega por correo)" />
       <div className="lista">
-        {vis.map((p) => (
-          <div className="tarjeta" key={String(p.slug)}>
-            <div className="fila-prod" onClick={() => setAbierto(abierto === p.slug ? null : String(p.slug))}>
-              {typeof p.imagen === 'string' && p.imagen && <img src={String(p.imagen).replace(/(\.\w+)$/, '-150x150$1')} alt="" width={44} height={44} />}
-              <strong>{String(p.nombre)}</strong>
-              <span className="suave">{String(p.sku ?? '')}</span>
-              <span className="precio">{fmt(p.precio as number | null)}</span>
-              {Boolean(p.pendiente) && <span className="pill">por publicar</span>}
-              <a href={`/producto/${String(p.slug)}/`} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>ver página ↗</a>
-            </div>
-            {abierto === p.slug && <EditorProducto p={p} onListo={(msj) => { setAviso(msj); setAbierto(null); setTimeout(() => setAviso(null), 7000); api('/admin/productos').then((r) => setFilas(r.productos as Json[])); }} />}
-          </div>
+        {filas.map((m) => (
+          <details key={m.id} className="card" onToggle={(e) => (e.target as HTMLDetailsElement).open && !Number(m.leido) && (m.leido = 1, api('/admin/mensajes', 'PUT', { id: m.id, leido: 1 }).catch(() => {}))}>
+            <summary>{Number(m.leido) ? '' : '🔵 '}<strong>{m.formulario}</strong> · {fmtFecha(m.creado)} <span className="suave">desde {m.pagina || 'el sitio'}</span></summary>
+            <dl>{Object.entries(JSON.parse(m.datos)).map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{String(v) || '—'}</dd></div>)}</dl>
+          </details>
         ))}
       </div>
-      {vis.length === 40 && <p className="suave">Mostrando 40 — usa el buscador para encontrar el resto (hay {filas.length}).</p>}
     </div>
   );
 }
-function EditorProducto({ p, onListo }: { p: Json; onListo: (msj: string) => void }) {
-  const [nombre, setNombre] = useState(String(p.nombre ?? ''));
-  const [precio, setPrecio] = useState(p.precio == null ? '' : String(p.precio));
-  const [stock, setStock] = useState(String(p.stock ?? 'instock'));
-  const [descripcion, setDescripcion] = useState(String(p.descripcion ?? ''));
-  const [imagen, setImagen] = useState(String(p.imagen ?? ''));
-  const [slug, setSlug] = useState(String(p.slug ?? ''));
-  const [guardando, setGuardando] = useState(false);
-  const slugCambia = slug !== String(p.slug) && slug.trim() !== '';
-  async function guardar() {
-    setGuardando(true);
-    try {
-      const r = await api('/admin/productos', 'PUT', {
-        slug: p.slug,
-        precio: precio === '' ? null : +precio,
-        stock,
-        nombre: nombre !== String(p.nombre) ? nombre : null,
-        descripcion: descripcion || null,
-        imagen: imagen !== String(p.imagen ?? '') ? imagen : null,
-        slug_nuevo: slugCambia ? slug : null,
-      });
-      onListo((r.aviso ? r.aviso + ' ' : '') + 'Guardado. Precio y disponibilidad ya están activos; nombre, descripción, imagen y dirección se aplican en la próxima publicación del sitio.');
-    } finally { setGuardando(false); }
+
+function Marca() {
+  const [aj, setAj] = useState<any>(null); const [aviso, setAviso] = useState<string | null>(null);
+  useEffect(() => { api('/admin/ajustes').then((r) => setAj({ tema: r.tema, sitio: r.sitio })); }, []);
+  if (!aj) return <Cargando />;
+  const t = aj.tema; const setColor = (k: string, v: string) => setAj((a: any) => ({ ...a, tema: { ...a.tema, colores: { ...a.tema.colores, [k]: v } } }));
+  async function guardar() { await api('/admin/ajustes', 'PUT', { clave: 'tema', valor: aj.tema }); setAviso('Guardado. Se aplica en la próxima actualización del sitio.'); setTimeout(() => setAviso(null), 6000); }
+  const nombresColor: Record<string, string> = { primario: 'Color principal', primarioOscuro: 'Principal oscuro', primarioClaro: 'Principal claro', acento: 'Acento', acentoAlterno: 'Acento alterno', textoFuerte: 'Texto fuerte', texto: 'Texto', textoSuave: 'Texto suave', fondo: 'Fondo', borde: 'Bordes' };
+  return (
+    <div>
+      <Encabezado titulo="Marca y colores" sub="Los colores de tu sitio. Toca un color para cambiarlo." extra={<button className="btn-pri" onClick={guardar}>Guardar cambios</button>} />
+      {aviso && <p className="aviso">{aviso}</p>}
+      <Card titulo="Colores de marca">
+        <div className="colores-grid">
+          {Object.entries(t.colores).map(([k, v]) => (
+            <label key={k} className="color-item">
+              <input type="color" value={String(v)} onChange={(e) => setColor(k, e.target.value)} />
+              <div><strong>{nombresColor[k] ?? k}</strong><span>{String(v)}</span></div>
+            </label>
+          ))}
+        </div>
+      </Card>
+      <Card titulo="Tipografías">
+        <p className="suave">Títulos: <strong>{t.tipografias?.titulos}</strong> · Cuerpo: <strong>{t.tipografias?.cuerpo}</strong></p>
+        <p className="suave">El cambio de tipografías desde el panel llega en la próxima versión (hoy se ajusta con el equipo para garantizar que el sitio siga viéndose bien).</p>
+      </Card>
+    </div>
+  );
+}
+
+function Contacto() {
+  const [aj, setAj] = useState<any>(null); const [aviso, setAviso] = useState<string | null>(null);
+  useEffect(() => { api('/admin/ajustes').then((r) => setAj(r.sitio)); }, []);
+  if (!aj) return <Cargando />;
+  const c = aj.contacto || {}; const redes = aj.redes || {};
+  const setC = (k: string, v: string) => setAj((a: any) => ({ ...a, contacto: { ...a.contacto, [k]: v } }));
+  const setRed = (k: string, v: string) => setAj((a: any) => ({ ...a, redes: { ...a.redes, [k]: v } }));
+  async function guardar() { await api('/admin/ajustes', 'PUT', { clave: 'sitio', valor: aj }); setAviso('Guardado. Se aplica en la próxima actualización del sitio.'); setTimeout(() => setAviso(null), 6000); }
+  return (
+    <div>
+      <Encabezado titulo="Contacto y redes" sub="Teléfonos, correo, WhatsApp y redes sociales" extra={<button className="btn-pri" onClick={guardar}>Guardar cambios</button>} />
+      {aviso && <p className="aviso">{aviso}</p>}
+      <Card titulo="Contacto">
+        <Campo lbl="WhatsApp (con lada, ej. +52449…)" v={c.whatsapp || ''} on={(v) => setC('whatsapp', v)} />
+        <Campo lbl="Correo de ventas" v={c.correoVentas || ''} on={(v) => setC('correoVentas', v)} />
+        <Campo lbl="Teléfonos (separados por coma)" v={(c.telefonos || []).join(', ')} on={(v) => setAj((a: any) => ({ ...a, contacto: { ...a.contacto, telefonos: v.split(',').map((s) => s.trim()).filter(Boolean) } }))} />
+      </Card>
+      <Card titulo="Redes sociales">
+        {['facebook', 'instagram', 'linkedin', 'tiktok'].map((r) => <Campo key={r} lbl={r[0].toUpperCase() + r.slice(1)} v={redes[r] || ''} on={(v) => setRed(r, v)} />)}
+      </Card>
+    </div>
+  );
+}
+
+function Medios() {
+  const [subida, setSubida] = useState<{ url: string; peso: number } | null>(null);
+  const [subiendo, setSubiendo] = useState(false);
+  async function onFile(e: React.ChangeEvent<HTMLInputElement>) {
+    const f = e.target.files?.[0]; if (!f) return; setSubiendo(true);
+    try { setSubida(await subirImagen(f)); } catch (x) { alert((x as Error).message); } finally { setSubiendo(false); }
   }
   return (
-    <div className="editor">
-      <label>Nombre del producto<input value={nombre} onChange={(e) => setNombre(e.target.value)} /></label>
-      <div className="fila2">
-        <label>Precio (vacío = por cotización) <em>al instante</em><input inputMode="decimal" value={precio} onChange={(e) => setPrecio(e.target.value)} placeholder="por cotización" /></label>
-        <label>Disponibilidad <em>al instante</em><select value={stock} onChange={(e) => setStock(e.target.value)}><option value="instock">Disponible</option><option value="outofstock">Agotado</option></select></label>
-      </div>
-      <label>Descripción (se muestra en la página del producto) <em>con publicación</em><textarea rows={4} value={descripcion} onChange={(e) => setDescripcion(e.target.value)} placeholder="Escribe la nueva descripción solo si quieres cambiarla" /></label>
-      <label>Foto principal (dirección de la imagen) <em>con publicación</em><input value={imagen} onChange={(e) => setImagen(e.target.value)} /></label>
-      <label>Dirección web del producto <em>con publicación</em>
-        <input value={slug} onChange={(e) => setSlug(e.target.value)} />
-        <small className="suave">tudominio.com/producto/<strong>{slug || '…'}</strong>/</small>
-        {slugCambia && <small className="aviso-inline">Al cambiarla, la dirección anterior enviará sola a la nueva (redirección 301) — no se pierde el posicionamiento en Google.</small>}
-      </label>
-      <button disabled={guardando} onClick={guardar}>{guardando ? 'Guardando…' : 'Guardar cambios'}</button>
-    </div>
-  );
-}
-
-function Paginas() {
-  const [filas, setFilas] = useState<Json[] | null>(null);
-  const [abierta, setAbierta] = useState<string | null>(null);
-  const [aviso, setAviso] = useState<string | null>(null);
-  useEffect(() => { api('/admin/paginas').then((r) => setFilas(r.paginas as Json[])); }, []);
-  if (!filas) return <p>Cargando…</p>;
-  return (
     <div>
-      <p className="suave">Así se ve cada página en Google. Los cambios se aplican en la próxima publicación del sitio.</p>
-      {aviso && <p className="aviso">{aviso}</p>}
-      <div className="lista">
-        {filas.map((pg) => (
-          <div className="tarjeta" key={String(pg.slug)}>
-            <div className="fila-prod" onClick={() => setAbierta(abierta === pg.slug ? null : String(pg.slug))}>
-              <strong>{String(pg.slug)}</strong>
-              <span className="suave">{String(pg.title).slice(0, 60)}</span>
-              {Boolean(pg.pendiente) && <span className="pill">por publicar</span>}
-              <a href={String(pg.slug)} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>ver ↗</a>
-            </div>
-            {abierta === pg.slug && <EditorPagina pg={pg} onListo={(m) => { setAviso(m); setAbierta(null); setTimeout(() => setAviso(null), 7000); api('/admin/paginas').then((r) => setFilas(r.paginas as Json[])); }} />}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-function EditorPagina({ pg, onListo }: { pg: Json; onListo: (m: string) => void }) {
-  const [title, setTitle] = useState(String(pg.title ?? ''));
-  const [description, setDescription] = useState(String(pg.description ?? ''));
-  const [guardando, setGuardando] = useState(false);
-  return (
-    <div className="editor">
-      <label>Título en Google ({title.length} caracteres; ideal 50-60)<input value={title} onChange={(e) => setTitle(e.target.value)} /></label>
-      <label>Descripción en Google ({description.length} caracteres; ideal 120-155)<textarea rows={3} value={description} onChange={(e) => setDescription(e.target.value)} /></label>
-      <button disabled={guardando} onClick={async () => { setGuardando(true); try { await api('/admin/paginas', 'PUT', { slug: pg.slug, title, description }); onListo('Guardado. Se aplica en la próxima publicación del sitio.'); } finally { setGuardando(false); } }}>{guardando ? 'Guardando…' : 'Guardar cambios'}</button>
+      <Encabezado titulo="Imágenes" sub="Sube una imagen y copia su dirección para usarla donde quieras" />
+      <Card titulo="Subir imagen">
+        <label className="btn-file grande">{subiendo ? 'Subiendo y optimizando…' : 'Elegir imagen'}<input type="file" accept="image/*" hidden onChange={onFile} /></label>
+        {subida && <div className="subida-ok"><img src={subida.url} alt="" /><div><p>Lista ✔ ({Math.round(subida.peso / 1024)} KB)</p><input readOnly value={subida.url} onFocus={(e) => e.target.select()} /></div></div>}
+        <p className="suave">Las imágenes se optimizan solas para que el sitio cargue rápido.</p>
+      </Card>
     </div>
   );
 }
 
 function Ayuda() {
   return (
-    <div className="lista">
-      <section className="tarjeta"><h3>¿Qué puedo hacer desde aquí?</h3>
-        <p>· <strong>Pedidos</strong>: ver cada pedido contra entrega con los datos del cliente y cambiar su estado.</p>
-        <p>· <strong>Mensajes</strong>: leer lo que llega por los formularios del sitio (también te llega por correo).</p>
-        <p>· <strong>Productos</strong>: cambiar precio y disponibilidad (al instante), y nombre, descripción o foto (se aplican al publicar).</p>
-        <p>· <strong>Páginas y SEO</strong>: editar cómo se ve cada página en Google.</p></section>
-      <section className="tarjeta"><h3>¿Y si quiero cambiar textos o fotos de las páginas?</h3>
-        <p>Los textos y fotos de las páginas (Inicio, Nosotros, Sectores…) se cambian hoy con ayuda del equipo técnico, y muy pronto también desde aquí: es la siguiente etapa del panel, ya planeada.</p></section>
-      <section className="tarjeta"><h3>¿Necesitas ayuda?</h3>
-        <p>Escríbenos: cristian.castaneda@maindsoft.net</p></section>
+    <div>
+      <Encabezado titulo="Ayuda" />
+      <Card titulo="¿Qué puedo hacer desde aquí?">
+        <p>· <strong>Páginas</strong>: edita textos, imágenes, botones y enlaces de cada página, viendo el cambio en vivo.</p>
+        <p>· <strong>Encabezado y pie</strong>: el logo, el menú, los datos del pie y las redes que salen en todas las páginas.</p>
+        <p>· <strong>Marca y colores</strong>: los colores de tu sitio con un selector visual.</p>
+        <p>· <strong>Contacto y redes</strong>: teléfonos, WhatsApp, correo y redes sociales.</p>
+        <p>· <strong>Tienda</strong>: precios y disponibilidad (al instante) y datos de productos.</p>
+        <p>· <strong>Pedidos y Mensajes</strong>: lo que llega de tus clientes.</p>
+      </Card>
+      <Card titulo="Sobre «Guardar borrador» y «Publicar»">
+        <p><strong>Guardar borrador</strong> reserva tus cambios sin mostrarlos todavía. <strong>Publicar</strong> los aplica al sitio (se ven en unos minutos). Nunca se pierde nada y el sitio no se puede romper: solo editas contenido.</p>
+      </Card>
+      <Card titulo="¿Necesitas ayuda?"><p>Escríbenos: cristian.castaneda@maindsoft.net</p></Card>
     </div>
   );
 }
 
-type Tab = 'inicio' | 'pedidos' | 'mensajes' | 'productos' | 'paginas' | 'ayuda';
-const TABS: [Tab, string][] = [['inicio', 'Inicio'], ['pedidos', 'Pedidos'], ['mensajes', 'Mensajes'], ['productos', 'Productos'], ['paginas', 'Páginas y SEO'], ['ayuda', 'Ayuda']];
-
-export function App() {
-  const [nombre, setNombre] = useState<string | null>(null);
-  const [listo, setListo] = useState(false);
-  const [tab, setTab] = useState<Tab>('inicio');
-  useEffect(() => { api('/admin/yo').then((r) => setNombre(r.nombre as string)).catch(() => {}).finally(() => setListo(true)); }, []);
-  if (!listo) return null;
-  if (!nombre) return <Login onOk={setNombre} />;
-  return (
-    <div className="panel">
-      <header className="barra">
-        <strong>Panel de Ofitodo</strong>
-        <nav>{TABS.map(([t, titulo]) => <button key={t} className={tab === t ? 'activa' : ''} onClick={() => setTab(t)}>{titulo}</button>)}</nav>
-        <span className="suave">Hola, {nombre} · <a href="#salir" onClick={async (e) => { e.preventDefault(); await api('/admin/salir', 'POST'); location.reload(); }}>Salir</a></span>
-      </header>
-      <main className="contenido">
-        {tab === 'inicio' && <Inicio irA={setTab} />}
-        {tab === 'pedidos' && <Pedidos />}
-        {tab === 'mensajes' && <Mensajes />}
-        {tab === 'productos' && <Productos />}
-        {tab === 'paginas' && <Paginas />}
-        {tab === 'ayuda' && <Ayuda />}
-      </main>
-    </div>
-  );
-}
+/* --- piezas reutilizables --- */
+function Card({ titulo, children }: { titulo?: string; children: ReactNode }) { return <section className="card bloque">{titulo && <h3>{titulo}</h3>}{children}</section>; }
+function Campo({ lbl, v, on }: { lbl: string; v: string; on: (v: string) => void }) { return <label className="campo2"><span>{lbl}</span><input value={v} onChange={(e) => on(e.target.value)} /></label>; }
+function Cargando() { return <div className="cargando">Cargando…</div>; }
+function Vacio({ texto }: { texto: string }) { return <p className="vacio">{texto}</p>; }
+function Placeholder({ titulo, texto }: { titulo: string; texto: string }) { return <div><Encabezado titulo={titulo} /><Card>{<p>{texto}</p>}</Card></div>; }

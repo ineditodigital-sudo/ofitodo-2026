@@ -1,0 +1,66 @@
+{
+ "pagina": "/contactanos/",
+ "titulo": "Contáctanos",
+ "key": "contactanos",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/banner-productos-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Contáctanos",
+   "valor": "Contáctanos"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Contáctanos",
+   "valor": "Contáctanos"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Contáctanos",
+   "valor": "[contact-form-7 id=»1911″ html_class=»cf7_custom_style_3″ title=»Contáctanos»]"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Contáctanos",
+   "valor": "Ofitodo"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Contáctanos",
+   "valor": "Jorge Reynoso 1703-15, Desarrollo Especial Galerías, 20124 Aguascalientes, Ags."
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Contáctanos",
+   "valor": "Aguascalientes (449) 341 9403 | (449) 136 79 26 | (449) 918 40 80"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Contáctanos",
+   "texto": "ventasofitodo@hotmail.com",
+   "href": "mailto:ventasofitodo@hotmail.com",
+   "target": ""
+  }
+ ]
+}

@@ -1,0 +1,485 @@
+{
+ "pagina": "/mobiliario-escolar-guia-espacios-educativos/",
+ "titulo": "El mobiliario correcto cambia la forma de aprender",
+ "key": "mobiliario-escolar-guia-espacios-educativos",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/banner-productos-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Ofitodo",
+   "valor": "Ofitodo"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Ofitodo",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-15_01_03.webp",
+   "alt": "Salón de clases moderno con mesas modulares, sillas ergonómicas, paneles acústicos, lambrines de madera y mobiliario de almacenamiento."
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Ofitodo",
+   "texto": "10/07/2026",
+   "href": "https://ofitodo.com/2026/07/",
+   "target": ""
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Ofitodo",
+   "valor": "By"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Ofitodo",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": "El mobiliario correcto cambia la forma de aprender"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": "Introducción"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": "El mobiliario correcto cambia la forma de aprender"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": "Un aula bien equipada no es solo un espacio con sillas y mesas: es una herramienta pedagógica. La postura, la comodidad y la disposición del mobiliario influyen directamente en la concentración y el bienestar de los estudiantes."
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": "En OFITODO trabajamos con instituciones educativas para diseñar espacios que acompañen distintas edades y metodologías de enseñanza, combinando durabilidad, seguridad y diseño."
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": "Además"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": "somos fabricantes y distribuidores autorizados"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": "de mobiliario para oficinas, escuelas, comercios e instituciones."
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": "Contamos con alcance y envíos a nivel nacional"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "valor": ", además de entrega e instalación gratis en Aguascalientes. Diseñamos, fabricamos y equipamos cada espacio con soluciones funcionales, resistentes y adaptadas a tus necesidades."
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "El mobiliario correcto cambia la forma de aprender",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-15_01_03.webp",
+   "alt": "Aula equipada con mobiliario escolar OFITODO"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Galería de proyectos",
+   "valor": "Galería de proyectos"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Galería de proyectos",
+   "valor": "Algunas soluciones de mobiliario escolar recomendadas por OFITODO"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Galería de proyectos",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-15_01_03.webp",
+   "alt": "Pupitres escolares"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Galería de proyectos",
+   "valor": "Pupitres individuales"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Galería de proyectos",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-13_44_31.webp",
+   "alt": "Sillas ergonómicas escolares"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Galería de proyectos",
+   "valor": "Mobiliario infantil"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Galería de proyectos",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-13_52_35.webp",
+   "alt": "Biblioteca escolar"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Galería de proyectos",
+   "valor": "Mobiliario para bibliotecas"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Galería de proyectos",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-13_57_21.webp",
+   "alt": "Laboratorio escolar"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Galería de proyectos",
+   "valor": "Mobiliario para laboratorio"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Galería de proyectos",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-14_01_07.webp",
+   "alt": "Mobiliario para preescolar"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Galería de proyectos",
+   "valor": "Espacios de Oficina"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Galería de proyectos",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-14_06_24.webp",
+   "alt": "Auditorio escolar"
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Galería de proyectos",
+   "valor": "Butacas para auditorio"
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "valor": "Equipa tu institución con mobiliario que acompaña el aprendizaje"
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "valor": "Conoce nuestro catálogo completo o escríbenos directamente y te asesoramos según el espacio y presupuesto de tu colegio."
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "Ver catálogo",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/CATALOGO-ESCOLAR.pdf-2_compressed.pdf",
+   "target": "_blank"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "Escríbenos por WhatsApp",
+   "href": "https://wa.me/524493419403?text=Hola%2C%20quiero%20información%20sobre%20mobiliario%20escolar.",
+   "target": "_blank"
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "Blog",
+   "href": "https://ofitodo.com/tipo/blog/",
+   "target": ""
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "Uncategorized",
+   "href": "https://ofitodo.com/tipo/uncategorized/",
+   "target": ""
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "valor": "RELATED POSTS"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_26_42.png.webp",
+   "alt": "Mobiliario personalizado de consultorios médicos"
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "Muebles de oficina en Aguascalientes",
+   "href": "https://ofitodo.com/mobiliario-de-oficina-en-aguascalientes/",
+   "target": ""
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "05/08/2026",
+   "href": "https://ofitodo.com/2026/08/",
+   "target": ""
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "valor": "By"
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i10",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-30-jul-2026_-13_47_48.webp",
+   "alt": "Taller de fabricación de mobiliario OFITODO con maquinaria industrial y área de producción organizada"
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "¿Cómo elegir un buen proveedor de mobiliario?",
+   "href": "https://ofitodo.com/proveedor-confiable-mobiliario-oficina/",
+   "target": ""
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "30/07/2026",
+   "href": "https://ofitodo.com/2026/07/",
+   "target": ""
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "valor": "By"
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i11",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-15-jun-2026_-09_47_36.webp",
+   "alt": "estaciones de trabajo para oficina con cubículos modernos y sillas ergonómicas."
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "Estaciones de trabajo",
+   "href": "https://ofitodo.com/estaciones-de-trabajo-para-oficina/",
+   "target": ""
+  },
+  {
+   "id": "l14",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "17/06/2026",
+   "href": "https://ofitodo.com/2026/06/",
+   "target": ""
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "valor": "By"
+  },
+  {
+   "id": "l15",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i12",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_13_41.webp",
+   "alt": "Recepción de consultorio médico con diseño moderno, mostrador en acabado tipo mármol, iluminación cálida y sillas de espera"
+  },
+  {
+   "id": "l16",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "Consultorios Médicos",
+   "href": "https://ofitodo.com/consultorios-medicos-a-medida/",
+   "target": ""
+  },
+  {
+   "id": "l17",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "01/06/2026",
+   "href": "https://ofitodo.com/2026/06/",
+   "target": ""
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "valor": "By"
+  },
+  {
+   "id": "l18",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Equipa tu institución con mobiliario que acompaña el aprendi",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Post a Comment cancel reply",
+   "valor": "Post a Comment"
+  },
+  {
+   "id": "l19",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Post a Comment cancel reply",
+   "texto": "cancel reply",
+   "href": "/mobiliario-escolar-guia-espacios-educativos/#respond",
+   "target": ""
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Post a Comment cancel reply",
+   "valor": "Save my name, email, and website in this browser for the next time I comment."
+  }
+ ]
+}

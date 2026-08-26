@@ -1,0 +1,188 @@
+{
+ "pagina": "/consultorios-medicos-a-medida/",
+ "titulo": "Consultorios Médicos",
+ "key": "consultorios-medicos-a-medida",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "OFITODO | Proyecto"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "OFITODO"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "CONSULTORIOS MÉDICOS",
+   "valor": "CONSULTORIOS MÉDICOS"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CONSULTORIOS MÉDICOS",
+   "valor": "Consultorios médicos diseñados para cuidar mejor"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "CONSULTORIOS MÉDICOS",
+   "texto": "Ver galeria",
+   "href": "#gallery",
+   "target": ""
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "CONSULTORIOS MÉDICOS",
+   "texto": "Solicitar cotización",
+   "href": "#cta",
+   "target": ""
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CONSULTORIOS MÉDICOS",
+   "valor": "01"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CONSULTORIOS MÉDICOS",
+   "valor": "Sobre el proyecto"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Diseño médico a tu medida",
+   "valor": "Diseño médico a tu medida"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Diseño médico a tu medida",
+   "valor": "Un consultorio médico bien diseñado es fundamental para brindar una atención cómoda, segura y profesional. Este espacio no solo debe verse ordenado y agradable, también debe facilitar el trabajo del personal médico, permitir una buena circulación y generar confianza en los pacientes desde el primer momento."
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Diseño médico a tu medida",
+   "valor": "En OFITODO y ESSENTO diseñamos consultorios médicos pensados para brindar comodidad, funcionalidad y confianza. Integramos mobiliario personalizado, diseño interior y soluciones a medida para crear espacios profesionales que mejoran la experiencia de pacientes y personal médico."
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Diseño médico a tu medida",
+   "valor": "Galería"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "valor": "IMÁGENES DEL PROYECTO"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "valor": "03"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_26_42.png.webp",
+   "alt": ""
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_13_41.webp",
+   "alt": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "IMÁGENES DEL PROYECTO",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_35_38.webp",
+   "alt": ""
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "HAGAMOS TU PROYECTO REALIDAD",
+   "valor": "HAGAMOS TU"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "HAGAMOS TU PROYECTO REALIDAD",
+   "valor": "PROYECTO"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "HAGAMOS TU PROYECTO REALIDAD",
+   "valor": "REALIDAD"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Botón",
+   "seccion": "HAGAMOS TU PROYECTO REALIDAD",
+   "valor": "Cotizamos sin compromiso. Nuestro equipo te asesora en distribución de espacios, mobiliario e instalación."
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "HAGAMOS TU PROYECTO REALIDAD",
+   "texto": "Cotizar AHORA",
+   "href": "https://wa.me/524493419403?text=¡Hola!%20👋%0A%0AMe%20interesa%20cotizar%20mi%20propio%20proyecto%20y%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20servicios%20y%20mobiliario.%20✨",
+   "target": "_blank"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "HAGAMOS TU PROYECTO REALIDAD",
+   "texto": "Ver Catálogo",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/Consultorios-medicos-y-Hospitales_compressed.pdf",
+   "target": "_blank"
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "HAGAMOS TU PROYECTO REALIDAD",
+   "texto": "Inspírate con ESSENTO",
+   "href": "https://essento.mx/",
+   "target": "_blank"
+  }
+ ]
+}

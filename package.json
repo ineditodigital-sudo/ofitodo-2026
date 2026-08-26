@@ -14,6 +14,8 @@
     "wp:crawl": "node scripts/wp-crawl.mjs",
     "wp:inventory": "node scripts/wp-inventory.mjs",
     "wp:convert": "node scripts/wp-convert.mjs",
+    "editables": "node scripts/extraer-editables.mjs",
+    "publicar": "node scripts/publicar-produccion.mjs",
     "deploy:staging": "node scripts/deploy-ftps.mjs apps/site/dist"
   }
 }

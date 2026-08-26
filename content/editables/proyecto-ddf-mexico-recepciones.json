@@ -1,0 +1,86 @@
+{
+ "pagina": "/proyecto-ddf-mexico-recepciones/",
+ "titulo": "Proyecto DDF México Recepciones",
+ "key": "proyecto-ddf-mexico-recepciones",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto DDF México Recepciones",
+   "valor": "Proyecto DDF México Recepciones"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.32.07-PM-1-1.webp",
+   "alt": "WhatsApp Image 2024-10-16 at 3.32.07 PM (1) (1)"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.32.07-PM.webp",
+   "alt": "WhatsApp Image 2024-10-16 at 3.32.07 PM"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-62.webp",
+   "alt": "Post de RRSS FOTOGRAFÍAS (62)"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.32.07-PM-1-1.webp",
+   "alt": "WhatsApp Image 2024-10-16 at 3.32.07 PM (1) (1)"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.32.07-PM.webp",
+   "alt": "WhatsApp Image 2024-10-16 at 3.32.07 PM"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-62.webp",
+   "alt": "Post de RRSS FOTOGRAFÍAS (62)"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.32.07-PM-1-1.webp",
+   "alt": "WhatsApp Image 2024-10-16 at 3.32.07 PM (1) (1)"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-16-at-3.32.07-PM.webp",
+   "alt": "WhatsApp Image 2024-10-16 at 3.32.07 PM"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto DDF México Recepciones",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/Post-de-RRSS-FOTOGRAFIAS-62.webp",
+   "alt": "Post de RRSS FOTOGRAFÍAS (62)"
+  }
+ ]
+}
