@@ -41,6 +41,15 @@ function of_db(): PDO {
     $ins->execute(['developer', 'oscar.camarillo@maindsoft.net', 'developer', '$wp$2y$10$3HTnvJuoxRbrym9iNzqrQecCKudnut7KcyUGWBq6GQ/lMZNLq4Z9y']);
     $ins->execute(['Marketing', 'ventas.online@ofitodo.com', 'marketing ofitodo', '$wp$2y$10$F6FySwAKmtjykZ3P/NP4bOo7tRpqmHmpLMewiQmKp3D2wNRKmS22C']);
   }
+  // SOLO STAGING: cuenta de prueba del panel (se elimina en el cutover, docs/06-cutover.md)
+  if (defined('EN_STAGING') && EN_STAGING) {
+    $q = $pdo->prepare('SELECT COUNT(*) FROM admins WHERE login = ?');
+    $q->execute(['panel-prueba']);
+    if (!(int)$q->fetchColumn()) {
+      $pdo->prepare('INSERT INTO admins (login, email, display_name, hash_legacy, hash_nuevo) VALUES (?,?,?,?,?)')
+          ->execute(['panel-prueba', 'cristian.castaneda@maindsoft.net', 'Cuenta de prueba', '', password_hash('Ofitodo!Prueba26', PASSWORD_DEFAULT)]);
+    }
+  }
   return $pdo;
 }
 

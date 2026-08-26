@@ -18,9 +18,16 @@ const REMITENTE = 'formularios@ofitodo.com';
 $destino = EN_STAGING ? DESTINO_STAGING : DESTINO_PRODUCCION;
 
 header('Content-Type: application/json; charset=utf-8');
+header('Cache-Control: no-store'); // el nginx del hosting cachea GETs sin esta cabecera
 $ruta = preg_replace('#^/api#', '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '/');
 $metodo = $_SERVER['REQUEST_METHOD'];
-$cuerpo = json_decode(file_get_contents('php://input') ?: 'null', true);
+$crudo = file_get_contents('php://input');
+if ($crudo === '' && (int)($_SERVER['CONTENT_LENGTH'] ?? 0) > 0) {
+  // php-cgi vía puente CGI no siempre expone php://input: leer stdin directamente
+  $fh = fopen('php://stdin', 'rb');
+  $crudo = $fh ? (string)stream_get_contents($fh, (int)$_SERVER['CONTENT_LENGTH']) : '';
+}
+$cuerpo = json_decode($crudo !== '' ? $crudo : 'null', true);
 
 $pdo = of_db();
 

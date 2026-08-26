@@ -13,7 +13,9 @@ mkdirSync(OUT, { recursive: true });
 cpSync(path.join(ROOT, 'apps', 'site', 'dist'), OUT, { recursive: true });
 
 // 2. API PHP + catálogo de precios (verdad del servidor para pedidos)
+//    + puente CGI (el vhost del subdominio no tiene pool PHP-FPM: /api corre vía cgi-bin)
 cpSync(path.join(ROOT, 'apps', 'api-php', 'api'), path.join(OUT, 'api'), { recursive: true });
+cpSync(path.join(ROOT, 'apps', 'api-php', 'cgi-bin'), path.join(OUT, 'cgi-bin'), { recursive: true });
 copyFileSync(path.join(ROOT, 'content', 'catalogo', 'indice-busqueda.json'), path.join(OUT, 'api', 'datos', 'precios.json'));
 
 // 3. Panel (si ya está construido)
@@ -29,8 +31,8 @@ AddDefaultCharset UTF-8
 ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
-# API dinámica (PHP)
-RewriteRule ^api(/.*)?$ /api/index.php [L,QSA]
+# API dinámica (PHP vía puente CGI: el subdominio no tiene pool PHP-FPM)
+RewriteRule ^api(/.*)?$ /cgi-bin/api.cgi [L,QSA]
 # Panel SPA
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^admin(/.*)?$ /admin/index.html [L]

@@ -4,12 +4,14 @@
 
 | Campo | Valor |
 |---|---|
-| Fase actual | **TODAS LAS FASES EJECUTADAS hasta staging** (S 99.6 % paridad · M1 ✔ · M2 medida · A/A2 runbooks listos) |
-| % avance global | 95 % (resta: toggle PHP del subdominio, pruebas E2E de envío, cutover a producción) |
-| Siguiente paso | 1) Cristian: cPanel → MultiPHP Manager → asignar PHP 8.x a temporal.ofitodo.com (activa /api, formularios, pedidos y panel) · 2) probar /api/salud, un formulario, un pedido y el login del panel · 3) firmar excepciones #4/#7/#8 · 4) cutover (docs/06-cutover.md) |
-| Bloqueos | (a) pool PHP del subdominio (cPanel, 1 min, solo Cristian) · (b) FTP del docroot de ofitodo.com para el cutover · (c) opcional ADR: token CF + Neon para migrar la API de PHP a Workers |
+| Fase actual | **TODAS LAS FASES EJECUTADAS Y PROBADAS E2E EN STAGING** — sitio, API, panel y correos funcionando |
+| % avance global | 98 % (resta solo: firma de excepciones y cutover a producción) |
+| Siguiente paso | 1) Cristian: probar panel en temporal.ofitodo.com/admin/ (cuenta de prueba: `panel-prueba` / `Ofitodo!Prueba26`, o su usuario WP de siempre) y revisar los 2 correos E2E que le llegaron · 2) firmar excepciones #4/#7/#8 · 3) dar FTP del docroot de ofitodo.com + ventana → ejecutar docs/06-cutover.md |
+| Bloqueos | Solo el cutover: FTP/cPanel del docroot de producción (no existe en mis credenciales). Opcional post-cutover: token CF + Neon para migrar la API PHP a Workers (ADR) |
 
 ## Bitácora
+
+- **2026-08-26 (E2E)** — **API DESBLOQUEADA SIN cPanel**: el subdominio no tiene pool PHP-FPM, pero cgi-bin sí ejecuta → puente `cgi-bin/api.cgi` (sh → php-cgi ea-php81 con REDIRECT_STATUS/SCRIPT_FILENAME) + lectura de body por stdin + `Cache-Control: no-store` (el nginx del hosting cacheaba GETs). **E2E completo verde:** formulario real guardado y enviado por correo ✔ · pedido real #10054/#10055 con precio calculado en servidor y numeración continua tras 10053 ✔ · login del panel, sesión, mensajes, 8 pedidos listados (6 históricos + 2 de prueba canceladas), edición de precio con reflejo inmediato y restauración ✔. Cuenta de prueba del panel (solo staging): `panel-prueba`. CGIs de diagnóstico eliminados.
 
 - **2026-08-26 (cierre)** — Deploy COMPLETO del sitio nuevo a temporal (547 archivos, 0 fallos): 528 páginas Astro, sitemaps y robots idénticos, redirects y 410 verificados en vivo, panel y API subidos. Pedidos históricos (6, $13,127.04 al centavo) sembrados. M2 medido: BP 61→75, CLS ficha 0.715→0 (SDKs de pago fuera); Performance queda para la componetización (plan en 05-rendimiento.md). **Hallazgo bloqueante menor: el subdominio no tiene pool PHP → /api/* da 500 hasta activar MultiPHP en cPanel (solo Cristian)**; mientras, formularios/checkout degradan con fallback a WhatsApp y el resto del sitio es 100 % funcional. Docs 05/05b/06/07/08/09 completos; excepciones #4-#8 registradas.
 

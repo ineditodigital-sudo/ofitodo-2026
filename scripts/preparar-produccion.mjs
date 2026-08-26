@@ -10,6 +10,7 @@ rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 cpSync(path.join(ROOT, 'apps', 'site', 'dist'), OUT, { recursive: true });
 cpSync(path.join(ROOT, 'apps', 'api-php', 'api'), path.join(OUT, 'api'), { recursive: true });
+cpSync(path.join(ROOT, 'apps', 'api-php', 'cgi-bin'), path.join(OUT, 'cgi-bin'), { recursive: true });
 copyFileSync(path.join(ROOT, 'content', 'catalogo', 'indice-busqueda.json'), path.join(OUT, 'api', 'datos', 'precios.json'));
 const admin = path.join(ROOT, 'apps', 'admin', 'dist');
 if (existsSync(admin)) cpSync(admin, path.join(OUT, 'admin'), { recursive: true });
@@ -25,6 +26,8 @@ AddDefaultCharset UTF-8
 ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
+# En producción el dominio principal SÍ tiene PHP-FPM (WordPress corría ahí):
+# se usa index.php directo; el puente CGI queda de respaldo (/cgi-bin/api.cgi)
 RewriteRule ^api(/.*)?$ /api/index.php [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^admin(/.*)?$ /admin/index.html [L]

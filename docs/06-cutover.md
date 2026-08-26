@@ -14,7 +14,7 @@ Exactamente lo que hoy corre en `https://temporal.ofitodo.com`:
    - Export de la base `ofitodo_wp1` (phpMyAdmin → Exportar → SQL).
    - Ya existe además el backup local `app_ofitodo-com_Ofitodo_2026-08-25` (este repo).
 2. **Verificación en staging** (checklist §7 del prompt maestro): paridad ≥ objetivo, formulario real enviado y recibido, pedido real de prueba, login del panel con contraseña original, prueba de usuario no técnico en el panel.
-3. **Preparar artefacto de producción**: `node scripts/preparar-produccion.mjs` → `dist-prod/` (igual que staging pero: `.htaccess` de producción SIN noindex y SIN soft-404*, `robots.txt` real con sitemap, `EN_STAGING=false` en `api/index.php` → correos a ventasofitodo@hotmail.com).
+3. **Preparar artefacto de producción**: `node scripts/preparar-produccion.mjs` → `dist-prod/` (igual que staging pero: `.htaccess` de producción SIN noindex y SIN soft-404*, `robots.txt` real con sitemap, `EN_STAGING=false` en `api/index.php` → correos a ventasofitodo@hotmail.com **y desaparece la cuenta "panel-prueba"**; borrar además su fila de `api/datos/ofitodo.sqlite` si se migra la DB de staging). En producción `/api` va directo a PHP-FPM (el puente `cgi-bin/api.cgi` queda de respaldo por si el vhost repite la falta de pool del subdominio).
    - *El fallback soft-404 se prueba primero en el vhost principal: si `ofitodo.com/ruta-inexistente` da 404 real con `ErrorDocument`, se usa 404 real (requisito M1). El 500-en-404 observado es del vhost del subdominio.
 4. **Ventana** (≤ 30 min, tráfico bajo):
    a. cPanel → activar "índice de mantenimiento" o subir `index.html` temporal (opcional; el sync es rápido).
