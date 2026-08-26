@@ -4,12 +4,14 @@
 
 | Campo | Valor |
 |---|---|
-| Fase actual | **R — Arquitectura y scaffold: EN CURSO** (C2 y ADR aprobados 2026-08-26) |
-| % avance global | 35 % |
-| Siguiente paso | Scaffold compilando (site Astro + api Hono + admin React + schema/ui) en rama `fase-r-scaffold` → PR → compuerta R |
-| Bloqueos | Para Fase S (no urgente hoy): API token de Cloudflare, credenciales SMTP de formularios@ofitodo.com, cuenta Neon (DB) |
+| Fase actual | **R en curso + PREVIEW EN LÍNEA en temporal.ofitodo.com** |
+| % avance global | 40 % |
+| Siguiente paso | PR de `fase-r-scaffold` (CI verifica en Linux) → compuerta R → Fase S: conversión de contenido y reconstrucción Astro plantilla por plantilla contra el preview |
+| Bloqueos | Local: disco E: es exFAT → npm workspaces no instala (symlinks); el build local del monorepo requiere mover el repo a NTFS o verificar solo en CI. Para Fase S: token Cloudflare, SMTP formularios@, cuenta Neon |
 
 ## Bitácora
+
+- **2026-08-26 (tarde)** — **PREVIEW COMPLETO EN LÍNEA: https://temporal.ofitodo.com** (orden de Cristian /goal). Export estático de la referencia C2 (525 páginas + 404 real) desplegado por FTPS reanudable (527 archivos, 0 fallidos), verificado por tipo y visualmente. Staging noindex (X-Robots-Tag + robots.txt Disallow). Peculiaridad del vhost: soft-404 en staging (ver 04-preview-staging.md). Rama `fase-r-scaffold` pusheada (PR pendiente de abrir). Hallazgo de entorno: E: es exFAT → sin symlinks → npm workspaces falla local; verificación del monorepo va por CI.
 
 - **2026-08-26** — **Compuertas C2 y ADR APROBADAS** por Cristian. Fase R iniciada en rama `fase-r-scaffold`: monorepo npm workspaces (apps/site Astro 7 + apps/api Hono/Workers con esquema Drizzle completo + apps/admin React/Vite con login + packages/schema zod + packages/ui), content/ con site.json/theme.json/redirects.json reales, validador de contenido, CI y deploy-staging por FTPS, CLAUDE.md/AGENTS.md.
 

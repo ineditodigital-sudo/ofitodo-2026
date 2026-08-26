@@ -23,6 +23,11 @@ Export estático 1:1 de la **referencia congelada de C2** (el HTML renderizado r
 
 El preview es la **línea base visual** sobre la que la reconstrucción Astro se compara (diff visual ≤0.5 %). Cada plantilla reconstruida va sustituyendo su versión estática en staging.
 
+## Desplegado (2026-08-26)
+
+- **527 archivos en línea, 0 fallidos**; verificación por tipo: home, páginas, blog, productos, categorías, etiquetas, marcas, cart, mi-cuenta → 200; visual de home confirmada idéntica.
+- Nota del vhost de staging: el subdominio devuelve 500 en rutas inexistentes ANTES de llegar al manejo 404 de Apache (peculiaridad cPanel/GoDaddy; en producción no ocurre porque WordPress atrapa todo). Mitigación en staging: fallback mod_rewrite → se muestra la página 404 real del sitio (status 200, soft-404 — aceptable solo en staging, que además es noindex). **Para el cutover de producción M1 exige status 404 real: resolver ahí con el vhost del dominio principal.**
+
 ## Cómo re-desplegar
 
 ```

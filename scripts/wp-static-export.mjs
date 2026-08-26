@@ -66,12 +66,19 @@ for (const f of readdirSync(META)) {
   ok++;
 }
 
+// Página 404 real del original (rastreada) → /404.html
+try {
+  const h404 = restaurarCanonicos(procesar(readFileSync(path.join(HTML, 'url-inexistente-para-404-xyz.html'), 'utf8')));
+  writeFileSync(path.join(OUT, '404.html'), h404);
+} catch { console.warn('sin html de 404 en la referencia'); }
+
 // .htaccess de staging: noindex duro + index + 404 del tema
 writeFileSync(path.join(OUT, '.htaccess'), [
   '# STAGING temporal.ofitodo.com — no indexar nunca',
   'Header set X-Robots-Tag "noindex, nofollow"',
   'DirectoryIndex index.html',
   'AddDefaultCharset UTF-8',
+  'ErrorDocument 404 /404.html',
   '',
 ].join('\n'));
 writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
