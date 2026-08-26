@@ -18,7 +18,8 @@ HOSTING_ESTATICO:    cPanel GoDaddy/secureserver · FTPS explícito ftp.ofitodo.
                      ruta staging: public_html/temporal.ofitodo.com  (credenciales SOLO en .env local)
 API_HOSTING:         PENDIENTE (propuesta en Fase R; default Replit Autoscale o Cloudflare Workers)
 BACKEND:             Node/TypeScript + PostgreSQL + Drizzle (default)
-CLOUDFLARE:          por confirmar (plugin Cloudflare activo en WP; falta confirmar acceso a la zona)
+CLOUDFLARE:          sí — beacon de Cloudflare Insights activo en el sitio vivo (falta acceso a la zona
+                     para configurar rutas /api/* y /admin/* en Fase R)
 IDIOMAS:             es (único; restos de TranslatePress inactivos)
 MODULOS:             comercio (WooCommerce: 418 productos simples, 55 cat, 170 reseñas, 6 pedidos);
                      formularios (Ninja Forms ×3, 120 envíos); búsqueda ajax; WhatsApp (joinchat);
