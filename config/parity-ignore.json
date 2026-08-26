@@ -1,0 +1,15 @@
+{
+  "comentario": "Zonas dinámicas que se enmascaran en el diff visual y se ignoran en paridad de contenido.",
+  "selectores": [
+    ".mkd-woocommerce-dropdown-cart",
+    ".widget_shopping_cart_content",
+    ".joinchat",
+    "#wpadminbar",
+    ".cart-contents-count"
+  ],
+  "textoIgnorar": [
+    "\\b20\\d{2}\\b(?=.*derechos)",
+    "carrito.*\\$[\\d,.]+"
+  ],
+  "parametrosUrlIgnorar": ["add-to-cart", "utm_", "gclid"]
+}

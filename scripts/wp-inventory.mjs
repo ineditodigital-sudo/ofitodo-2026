@@ -152,6 +152,23 @@ p(`- WP Mail SMTP: ${(() => { try { const w = un(opt('wp_mail_smtp') || ''); ret
 p(`- Correo admin: ${opt('admin_email')} · Zona horaria: ${opt('timezone_string') || 'UTC' + (opt('gmt_offset') || 0)}`);
 p('');
 
+// ---- Tokens, breakpoints, deploy (hallazgos C2 estáticos) ----
+p('## Tokens preliminares del tema (extracción formal en Fase R)', '',
+  '- Paleta real (opciones Mikado `mkd_options_entre`): azules corporativos `#153a67 #114a84 #124775 #00548d #134e84 #0b4163`, acentos `#186e7a #186fa5`, grises `#383838 #474747 #5b5b5b`, blanco.',
+  '- Kit de Elementor (8553): colores/tipos **default sin uso real** (Roboto, #6EC1E4…) — los estilos van inline por widget.',
+  '- Fuentes Google en vivo: **Josefin Sans, Bellefair, Lato, Biryani** (tema) + Lato completo (Elementor).',
+  '- Breakpoints del CSS del tema: 1440, 1280, 1200, 1024/1025, 768, 680, 480 px.', '');
+p('## Componentes recurrentes (parcial, se completa con el rastreo)', '',
+  '- Header/footer Elementor (elementor-hf) en el 100 % de las páginas: logo, nav `wpr-nav-menu`, botones, iconos.',
+  '- Barra de título de página (`mkd-title-holder`) en la mayoría de las plantillas.',
+  '- Páginas legacy WPBakery (~15): wpb_row/column, image-carousel, icon-box, raw_html.',
+  '- Blog: `mkd-blog-holder`, related posts, comentarios (cerrados).',
+  '- Woo: plantillas del tema con dropdown-cart en header.', '');
+p('## Deploy staging (validado 2026-08-26)', '',
+  '- FTPS explícito OK contra **temporal.ofitodo.com:21** (⚠ `ftp.ofitodo.com` NO resuelve; origen GoDaddy `184.168.20.11`, subdominio sin proxy de Cloudflare).',
+  '- La cuenta FTP entra directo al docroot del subdominio (no usar prefijo `public_html/`).',
+  '- `http(s)://temporal.ofitodo.com/` responde 200 (docroot vacío, creado 2026-08-26). Credenciales solo en `.env`.', '');
+
 // ---- Crawl (si ya existe) ----
 const metaDir = path.join(ROOT, 'reference', 'meta');
 if (existsSync(metaDir)) {

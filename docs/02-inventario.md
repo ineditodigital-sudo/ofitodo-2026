@@ -256,7 +256,28 @@ Los 3 con rol `administrator`. Sin clientes registrados.
 - WP Mail SMTP: mailer smtp, from formularios@ofitodo.com
 - Correo admin: ofitodo@ip-72-167-32-121.ip.secureserver.net · Zona horaria: UTC0
 
+## Tokens preliminares del tema (extracción formal en Fase R)
+
+- Paleta real (opciones Mikado `mkd_options_entre`): azules corporativos `#153a67 #114a84 #124775 #00548d #134e84 #0b4163`, acentos `#186e7a #186fa5`, grises `#383838 #474747 #5b5b5b`, blanco.
+- Kit de Elementor (8553): colores/tipos **default sin uso real** (Roboto, #6EC1E4…) — los estilos van inline por widget.
+- Fuentes Google en vivo: **Josefin Sans, Bellefair, Lato, Biryani** (tema) + Lato completo (Elementor).
+- Breakpoints del CSS del tema: 1440, 1280, 1200, 1024/1025, 768, 680, 480 px.
+
+## Componentes recurrentes (parcial, se completa con el rastreo)
+
+- Header/footer Elementor (elementor-hf) en el 100 % de las páginas: logo, nav `wpr-nav-menu`, botones, iconos.
+- Barra de título de página (`mkd-title-holder`) en la mayoría de las plantillas.
+- Páginas legacy WPBakery (~15): wpb_row/column, image-carousel, icon-box, raw_html.
+- Blog: `mkd-blog-holder`, related posts, comentarios (cerrados).
+- Woo: plantillas del tema con dropdown-cart en header.
+
+## Deploy staging (validado 2026-08-26)
+
+- FTPS explícito OK contra **temporal.ofitodo.com:21** (⚠ `ftp.ofitodo.com` NO resuelve; origen GoDaddy `184.168.20.11`, subdominio sin proxy de Cloudflare).
+- La cuenta FTP entra directo al docroot del subdominio (no usar prefijo `public_html/`).
+- `http(s)://temporal.ofitodo.com/` responde 200 (docroot vacío, creado 2026-08-26). Credenciales solo en `.env`.
+
 ## Rastreo del sitio vivo
 
-- URLs rastreadas: **4** · 200 OK: 4 · redirigidas: 0 · errores: ver `reference/crawl-errores.json`
-- Hosts de scripts de terceros: www.googletagmanager.com, googleads.g.doubleclick.net, static.cloudflareinsights.com
+- URLs rastreadas: **148** · 200 OK: 148 · redirigidas: 1 · errores: ver `reference/crawl-errores.json`
+- Hosts de scripts de terceros: www.googletagmanager.com, googleads.g.doubleclick.net, static.cloudflareinsights.com, www.paypal.com, http2.mlstatic.com, c.paypal.com, cdn.jsdelivr.net
