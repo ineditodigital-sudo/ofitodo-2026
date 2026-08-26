@@ -28,6 +28,28 @@ Exactamente lo que hoy corre en `https://temporal.ofitodo.com`:
 7. **Monitoreo 14 días**: GSC (cobertura y 404s), analítica (GTM/GA4 siguen con los mismos IDs), pedidos/formularios por día vs semanas previas, correos.
 8. **Cierre**: apagar la base MySQL de WordPress; retirar PHP restante de WP; archivar este runbook con resultados.
 
+## Ejecución turnkey (cuando lleguen las credenciales de producción)
+
+El cutover está automatizado en `scripts/cutover-produccion.mjs`. Un solo requisito: crear `.env.prod` (git-ignored) con las credenciales del docroot de `ofitodo.com`:
+
+```
+FTP_HOST=ftp.ofitodo.com        # o la IP/host que dé cPanel para la cuenta principal
+FTP_USER=<usuario del docroot principal>
+FTP_PASS=<contraseña>
+FTP_PATH=/public_html           # docroot de ofitodo.com (confirmar en cPanel)
+```
+
+> Nota verificada 2026-08-26: la cuenta FTP `inedito@ofitodo.com` está **enjaulada en el docroot de `temporal`** y NO alcanza producción. Se necesita la cuenta FTP del docroot principal (o el usuario cPanel).
+
+Luego, en orden:
+```
+node scripts/preparar-produccion.mjs          # arma dist-prod/ (ya hecho)
+node scripts/cutover-produccion.mjs           # 1) RESPALDO obligatorio  2) deploy  3) smoke test  (NO destructivo)
+# — revisar el sitio con calma; WordPress y el sitio nuevo conviven —
+node scripts/cutover-produccion.mjs --purge   # borra los restos de WordPress (solo si el smoke pasó 100 %)
+```
+El script **aborta si el respaldo falla** (regla dura #11) y **no purga** si el smoke test no está verde. Conserva `wp-content/uploads/` y deja `wp-config.php` + la DB para el final (paso 8).
+
 ## Rollback
 
-Ver [07-rollback.md](07-rollback.md) — restaurar el backup `wp-final-<fecha>` de cPanel devuelve WordPress íntegro en minutos.
+Ver [07-rollback.md](07-rollback.md) — restaurar el backup `wp-final-<fecha>` de cPanel (o el `backups/prod-<fecha>/` que baja este script) devuelve WordPress íntegro en minutos.

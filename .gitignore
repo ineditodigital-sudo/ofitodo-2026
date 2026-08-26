@@ -28,3 +28,6 @@ created.tmp
 # Reportes generados
 reports/
 dist-staging/
+.env.prod
+dist-prod/
+backups/
