@@ -11,7 +11,10 @@ SITIO WEB OLD OFITODO/
 reference/screenshots/
 reference/assets/
 reference/html/
+reference/meta/
+reference/db-export/
 reference/flows/**/*.png
+scripts/.deps/node_modules/
 
 # Dependencias y builds
 node_modules/
