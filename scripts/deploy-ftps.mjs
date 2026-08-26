@@ -1,8 +1,12 @@
 // deploy-ftps: sube un directorio al staging por FTPS explícito. Credenciales desde .env.
 // Uso: node scripts/deploy-ftps.mjs <dirLocal> [rutaRemota]
-import { Client } from 'basic-ftp';
+// basic-ftp vive en scripts/.deps (instalación standalone: el disco exFAT no soporta
+// los symlinks de npm workspaces, ver docs/estado.md).
+import { createRequire } from 'node:module';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
+const require = createRequire(import.meta.url);
+const { Client } = require('./.deps/node_modules/basic-ftp');
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const env = Object.fromEntries(
