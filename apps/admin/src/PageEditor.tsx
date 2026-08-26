@@ -18,7 +18,9 @@ export function PageEditor({ pageKey, onSalir }: { pageKey: string; onSalir: () 
 
   useEffect(() => { api(`/admin/pagina?key=${pageKey}`).then((r) => setPag(r.pagina)); }, [pageKey]);
 
-  const slugPreview = pag ? (pageKey === '_global' ? '/nosotros/' : pag.pagina) : '/';
+  const [nonce] = useState(() => Date.now());
+  const slugBase = pag ? (pageKey === '_global' ? '/nosotros/' : pag.pagina) : '/';
+  const slugPreview = slugBase + (slugBase.includes('?') ? '&' : '?') + '_e=' + nonce;
 
   const valorActual = useCallback((c: Campo, campo: keyof Campo): string => {
     const ch = cambios[c.id];
