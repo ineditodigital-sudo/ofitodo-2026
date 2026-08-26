@@ -1,43 +1,56 @@
-# Guía del Panel de Ofitodo
+# Guía del Panel de Ofitodo (CMS)
 
-**Dónde:** `tudominio.com/admin/` (hoy: temporal.ofitodo.com/admin/)
-**Cómo entrar:** con tu usuario y contraseña de siempre (los mismos de WordPress).
+**Dónde:** `ofitodo.com/admin/` · **Entrar:** tu usuario y contraseña de siempre (los mismos de WordPress).
 
-## Lo que ves al entrar (Inicio)
+El panel está hecho para que administres tu sitio sin conocimientos técnicos. Nunca vas a ver código, y **no puedes romper el sitio**: solo editas contenido.
 
-Tres números grandes: **pedidos por atender**, **mensajes sin leer** y **cambios por publicar**. Tócalos para ir directo a cada sección. Abajo, los últimos pedidos y mensajes.
+## Menú del panel
 
-## Pedidos
+- **Inicio** — un vistazo rápido: pedidos por atender, mensajes sin leer, cambios por publicar.
+- **Páginas** — el corazón del CMS. Elige una página (Inicio, Nosotros, Sectores…) y edítala con **vista previa en vivo**.
+- **Encabezado y pie** — lo que sale en TODAS las páginas: logo, menú, datos del pie, redes, copyright.
+- **Blog** — tus entradas del blog, se editan igual que las páginas.
+- **Marca y colores** — los colores de tu sitio con un selector visual.
+- **Contacto y redes** — teléfonos, WhatsApp, correo y redes sociales.
+- **Imágenes** — sube una foto y copia su dirección para usarla donde quieras (se optimizan solas).
+- **Tienda** — precio y disponibilidad de cada producto (se aplican al instante).
+- **Pedidos** — cada pedido contra entrega con los datos del cliente; cambia su estado.
+- **Mensajes** — lo que llega por los formularios del sitio.
 
-Cada pedido contra entrega llega aquí (y también a tu correo). Al abrirlo ves quién compró, su teléfono, dirección y los productos. Con el selector cambias el estado: **Pendiente → Confirmado → Entregado** (o Cancelado). El cambio se guarda solo.
+## Cómo editar una página (lo más importante)
 
-## Mensajes
+1. Entra a **Páginas** y elige la que quieras.
+2. Verás la página a la izquierda y sus elementos editables a la derecha.
+3. **Haz clic en cualquier texto, imagen o botón** de la vista previa: se selecciona su campo.
+4. Cámbialo en el panel de la derecha. El cambio se ve **al instante** en la vista previa.
+   - **Textos**: escribe el nuevo texto.
+   - **Imágenes**: «Cambiar imagen» (arrastra o elige un archivo) y escribe su texto alternativo.
+   - **Botones y enlaces**: cambia el texto, a dónde llevan, y si abren en otra pestaña.
+5. Cuando termines:
+   - **Guardar borrador**: reserva tus cambios sin mostrarlos todavía.
+   - **Publicar**: los aplica al sitio (se ven en unos minutos).
 
-Todo lo que la gente escribe en los formularios del sitio (contacto, cotizaciones, catálogo). El punto azul 🔵 marca los que no has leído; se marcan como leídos al abrirlos.
+## ¿Qué se aplica al instante y qué al publicar?
 
-## Productos
-
-Busca por nombre o SKU y toca un producto para editarlo:
-
-| Qué cambias | Cuándo se aplica |
+| Al instante | Al publicar (unos minutos) |
 |---|---|
-| **Precio** y **disponibilidad** | **Al instante** (en pedidos y búsqueda) |
-| Nombre, descripción, foto | En la **siguiente publicación** del sitio (queda guardado y marcado "por publicar") |
+| Precios y disponibilidad de productos | Textos, imágenes, botones y enlaces de las páginas |
+| Estado de pedidos, marcar mensajes leídos | Colores de marca, datos de contacto y redes |
 
-Si dejas el precio vacío, el producto se muestra "por cotización" (como la mayoría del catálogo).
+## Preguntas frecuentes
 
-## Páginas y SEO
+**¿Puedo deshacer un cambio?** Sí. Cada publicación queda en el historial de esa página y se puede restaurar.
 
-Cómo se ve cada página en Google: su **título** y su **descripción**. El contador te dice el largo ideal. Se aplican en la siguiente publicación.
+**¿Se puede romper el sitio?** No. Solo editas contenido controlado; el diseño está protegido.
 
-## ¿Qué es "la publicación"?
+**¿Necesito ayuda?** Escríbenos: cristian.castaneda@maindsoft.net
 
-Tu sitio es súper rápido porque las páginas están "impresas" de antemano. Publicar = volver a imprimirlas con tus cambios. Lo hace el equipo técnico (o el asistente) en unos minutos; tus cambios nunca se pierden mientras tanto.
+---
 
-## ¿Cambiar textos o fotos de Inicio, Nosotros, Sectores…?
+### Nota técnica (para el equipo)
 
-Es la siguiente etapa del panel (ya planeada). Por ahora pídelo al equipo y queda el mismo día.
-
-## Si algo no funciona
-
-Escríbenos: cristian.castaneda@maindsoft.net · El sitio nunca se rompe por usar el panel: todo cambio es reversible.
+«Publicar» guarda los cambios en el servidor. Para reflejarlos en el sitio estático se ejecuta una vez:
+```
+npm run publicar
+```
+Esto baja los cambios publicados, reconstruye el sitio y lo sube a `ofitodo.com` (sin tocar la base de datos ni las imágenes). Es la razón por la que los cambios de contenido tardan «unos minutos». Automatizarlo con un webhook es la siguiente mejora opcional.
