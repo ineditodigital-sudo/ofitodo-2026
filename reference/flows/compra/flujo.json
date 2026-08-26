@@ -1,0 +1,146 @@
+[
+  {
+    "paso": 1,
+    "nombre": "producto",
+    "url": "https://ofitodo.com/producto/silla-operativa-modelo-lituania-ofitodo/",
+    "title": "Silla operativa de oficina | Ofitodo",
+    "precio": "$1,849.00"
+  },
+  {
+    "paso": 2,
+    "nombre": "agregado",
+    "url": "https://ofitodo.com/cart/",
+    "title": "Carrito | Ofitodo",
+    "aviso": "“Silla operativa modelo lituania” se ha añadido a tu carrito.\nseguir comprando"
+  },
+  {
+    "paso": 3,
+    "nombre": "carrito",
+    "url": "https://ofitodo.com/cart/",
+    "title": "Carrito | Ofitodo",
+    "totales": "TOTALES DEL CARRITO Subtotal $1,849.00 Total $1,849.00 finalizar compra"
+  },
+  {
+    "paso": 4,
+    "nombre": "checkout",
+    "url": "https://ofitodo.com/finalizar-compra/",
+    "title": "finalizar compra | Ofitodo",
+    "campos": [
+      {
+        "name": "billing_first_name",
+        "type": "text",
+        "required": true,
+        "label": "Nombre *"
+      },
+      {
+        "name": "billing_last_name",
+        "type": "text",
+        "required": true,
+        "label": "Apellidos *"
+      },
+      {
+        "name": "billing_company",
+        "type": "text",
+        "required": false,
+        "label": "Nombre de la empresa (opcional)"
+      },
+      {
+        "name": "billing_country",
+        "type": "select-one",
+        "required": true,
+        "label": "País / Región *"
+      },
+      {
+        "name": "billing_address_1",
+        "type": "text",
+        "required": true,
+        "label": "Dirección de la calle *"
+      },
+      {
+        "name": "billing_address_2",
+        "type": "text",
+        "required": false,
+        "label": "Apartamento, habitación, escalera, etc. (opcional)"
+      },
+      {
+        "name": "billing_city",
+        "type": "text",
+        "required": true,
+        "label": "Población *"
+      },
+      {
+        "name": "billing_state",
+        "type": "select-one",
+        "required": true,
+        "label": "Región / Provincia *"
+      },
+      {
+        "name": "billing_postcode",
+        "type": "text",
+        "required": true,
+        "label": "Código postal / ZIP *"
+      },
+      {
+        "name": "billing_phone",
+        "type": "tel",
+        "required": true,
+        "label": "Teléfono *"
+      },
+      {
+        "name": "billing_email",
+        "type": "email",
+        "required": true,
+        "label": "Dirección de correo electrónico *"
+      },
+      {
+        "name": "order_comments",
+        "type": "textarea",
+        "required": false,
+        "label": "Notas del pedido (opcional)"
+      },
+      {
+        "name": "payment_method",
+        "type": "radio",
+        "required": false,
+        "label": null
+      },
+      {
+        "name": "payment_method",
+        "type": "radio",
+        "required": false,
+        "label": null
+      },
+      {
+        "name": "payment_method",
+        "type": "radio",
+        "required": false,
+        "label": null
+      },
+      {
+        "name": "payment_method",
+        "type": "radio",
+        "required": false,
+        "label": null
+      },
+      {
+        "name": "woocommerce-process-checkout-nonce",
+        "type": "hidden",
+        "required": false,
+        "label": null
+      },
+      {
+        "name": "_wp_http_referer",
+        "type": "hidden",
+        "required": false,
+        "label": null
+      }
+    ],
+    "metodosPago": [
+      "Transferencia bancaria directa Realiza tu pago directamente en nuestra cuenta bancaria. Por favor, u",
+      "PayPal",
+      "Tarjetas de débito y crédito",
+      "OXXO"
+    ],
+    "metodosEnvio": []
+  }
+]

@@ -11,6 +11,7 @@ SITIO WEB OLD OFITODO/
 reference/screenshots/
 reference/assets/
 reference/html/
+reference/flows/**/*.png
 
 # Dependencias y builds
 node_modules/
