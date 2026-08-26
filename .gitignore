@@ -1,0 +1,22 @@
+# Secretos
+.env
+.env.*
+!.env.example
+
+# Backup WordPress original (2.8 GB) y su extracción — nunca al repo
+app_ofitodo-com_*.tar.gz
+SITIO WEB OLD OFITODO/
+
+# Binarios de referencia (van a S3/LFS según §5.2)
+reference/screenshots/
+reference/assets/
+reference/html/
+
+# Dependencias y builds
+node_modules/
+dist/
+.astro/
+*.log
+
+# Reportes generados
+reports/
