@@ -1,6 +1,6 @@
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
-import { SiteConfig, ThemeTokens, Redirects, PageContent } from '../packages/schema/src/index.ts';
+import { SiteConfig, ThemeTokens, Redirects, FrozenPage } from '../packages/schema/src/index.ts';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const C = (p: string) => path.join(ROOT, 'content', p);
@@ -26,7 +26,7 @@ for (const col of ['es/pages', 'es/posts']) {
   if (!existsSync(dir)) continue;
   for (const f of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     const data = JSON.parse(readFileSync(path.join(dir, f), 'utf8'));
-    validar(`${col}/${f}`, PageContent, data);
+    validar(`${col}/${f}`, FrozenPage, data);
     if (slugs.has(data.slug)) { errores++; console.error(`✘ slug duplicado: ${data.slug} (${col}/${f})`); }
     slugs.add(data.slug);
   }

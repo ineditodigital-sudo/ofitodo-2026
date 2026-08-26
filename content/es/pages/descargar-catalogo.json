@@ -1,0 +1,16 @@
+{
+ "slug": "/descargar-catalogo/",
+ "locale": "es",
+ "title": "Descargar catálogo",
+ "template": "frozen",
+ "htmlRef": "descargar-catalogo.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 12467,
+ "date": "2026-03-13 19:53:22",
+ "modified": "2026-03-13 19:57:05",
+ "seo": {
+  "title": "Descargar catálogo | Ofitodo",
+  "description": "Contáctanos para soluciones personalizadas en mobiliario y equipamiento de oficina. Diseño, calidad y servicio a tu alcance. ¡Hagamos realidad tus proyectos!"
+ }
+}

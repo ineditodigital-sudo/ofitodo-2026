@@ -1,0 +1,1901 @@
+[
+ {
+  "legacyId": 15,
+  "slug": "uncategorized",
+  "ruta": "uncategorized",
+  "nombre": "Uncategorized",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": null,
+  "orden": 27,
+  "conteo": 3,
+  "seo": {
+   "title": "Uncategorized | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "test-3"
+    },
+    {
+     "tipo": "producto",
+     "slug": "test-2"
+    },
+    {
+     "tipo": "producto",
+     "slug": "test-1"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 242,
+  "slug": "sillas",
+  "ruta": "restaurantes/sillas-restaurantes/sillas",
+  "nombre": "Sillas y sillones de oficina",
+  "descripcion": "",
+  "parentSlug": "sillas-restaurantes",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2025/07/Categoria-de-sillones-.webp",
+  "orden": 20,
+  "conteo": 141,
+  "seo": {
+   "title": "Sillas y sillones de oficina | Ofitodo",
+   "description": "Descubre toda la variedad de sillas de oficina que tenemos para ti. Elegancia y confort en tu oficina con nuestras sillas. Diseño y Personalización. "
+  },
+  "grid": {
+   "modo": "subcategorias",
+   "items": [
+    {
+     "tipo": "categoria",
+     "slug": "sillas-directivas-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "sillas-ejecutivas-de-oficina-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "sillas-operativas-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "sillas-de-visita-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "sillas-multiusos-para-oficina-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "sillas-industriales-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 243,
+  "slug": "estaciones-de-trabajo",
+  "ruta": "estaciones-de-trabajo",
+  "nombre": "Estaciones de trabajo",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/05/estacionesdetrabajo.png",
+  "orden": 32,
+  "conteo": 9,
+  "seo": {
+   "title": "Estaciones de trabajo | Ofitodo",
+   "description": "Estaciones de trabajo y módulos para oficina a tu medida, con diseños ideales y funcionales para tus colaboradores. Elaborados con materiales duraderos."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "modular-de-trabajo-para-call-center"
+    },
+    {
+     "tipo": "producto",
+     "slug": "estacion-de-trabajo-para-4-personas"
+    },
+    {
+     "tipo": "producto",
+     "slug": "modular-para-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "cubiculos-para-call-center"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 244,
+  "slug": "mesas-de-juntas",
+  "ruta": "mesas-de-juntas",
+  "nombre": "Mesas de juntas",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/mesa-de-juntas-1.webp",
+  "orden": 39,
+  "conteo": 16,
+  "seo": {
+   "title": "Mesas de juntas | Ofitodo",
+   "description": "En ofitodo ¡fabricamos mesas de juntas a tu medida!, fabricadas con materiales de alta calidad, diseños modernos y ultra resistentes. ¡Somos fabricantes!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-reuniones-modelo-asia"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-conferencias-modelo-quadrio"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-conferencias-modelo-triangel"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-juntas-en-u-modelo-mjof-1014"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 245,
+  "slug": "libreros-y-archiveros",
+  "ruta": "libreros-y-archiveros",
+  "nombre": "Libreros y archiveros",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/Ofitodocategorias-14-732x1024-1-1.webp",
+  "orden": 33,
+  "conteo": 23,
+  "seo": {
+   "title": "Libreros y archiveros | Ofitodo",
+   "description": "En ofitodo contamos con archiveros y libreros fabricados a tu medida con materiales de calidad, ideales para mantener cualquier espacio organizado."
+  },
+  "grid": {
+   "modo": "subcategorias",
+   "items": [
+    {
+     "tipo": "categoria",
+     "slug": "archiveros-de-melamina"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "archiveros-metalicos"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "libreros"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "credenzas"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 246,
+  "slug": "lockers-y-vestidores",
+  "ruta": "lockers-y-vestidores",
+  "nombre": "Lockers y vestidores",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/05/lockers-1.png",
+  "orden": 38,
+  "conteo": 10,
+  "seo": {
+   "title": "Lockers y vestidores | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "gabinete-metalico-universal-modelo-lg1008"
+    },
+    {
+     "tipo": "producto",
+     "slug": "gabinete-metalico-universal"
+    },
+    {
+     "tipo": "producto",
+     "slug": "locker-metalico-para-celulares"
+    },
+    {
+     "tipo": "producto",
+     "slug": "locker-metalico-de-3-puertas-con-malla"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 247,
+  "slug": "recepcion",
+  "ruta": "recepcion",
+  "nombre": "Sala de espera y recepción",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/05/Ofitodocategorias-15-731x1024-1.png",
+  "orden": 50,
+  "conteo": 27,
+  "seo": {
+   "title": "Sala de espera y recepción | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "subcategorias",
+   "items": [
+    {
+     "tipo": "categoria",
+     "slug": "recepciones-modernas"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "bancas-de-espera"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "salas-de-espera"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 248,
+  "slug": "paneles-acusticos",
+  "ruta": "paneles-acusticos",
+  "nombre": "Paneles acústicos",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/05/Ofitodocategorias-19-732x1024-1.png",
+  "orden": 48,
+  "conteo": 4,
+  "seo": {
+   "title": "Paneles acústicos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "panel-tipo-lambrin"
+    },
+    {
+     "tipo": "producto",
+     "slug": "paneles-acusticos-suspendidos"
+    },
+    {
+     "tipo": "producto",
+     "slug": "paneles-acusticos-corte-celosia"
+    },
+    {
+     "tipo": "producto",
+     "slug": "paneles-acusticos-ejemplo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 249,
+  "slug": "pintarrones",
+  "ruta": "pintarrones",
+  "nombre": "Pintarrones",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/05/pizarrones.png",
+  "orden": 49,
+  "conteo": 4,
+  "seo": {
+   "title": "Pintarrones | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "rotafolio-telescopico"
+    },
+    {
+     "tipo": "producto",
+     "slug": "rotafolio-giratorio"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pizarron-giratorio"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pintarrones-ejemplo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 250,
+  "slug": "mobiliario-escolar",
+  "ruta": "mobiliario-escolar",
+  "nombre": "Mobiliario escolar",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/05/Ofitodocategorias-16-731x1024-1.png",
+  "orden": 43,
+  "conteo": 12,
+  "seo": {
+   "title": "Mobiliario escolar | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "subcategorias",
+   "items": [
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-metalicos"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "pupitres"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 251,
+  "slug": "restaurantes",
+  "ruta": "restaurantes",
+  "nombre": "Comedores y restaurantes",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2025/07/Categoria-de-sillones-_1_-1.webp",
+  "orden": 28,
+  "conteo": 32,
+  "seo": {
+   "title": "Comedores y restaurantes | Ofitodo",
+   "description": "Diseño, fabricación e instalación de mobiliario para bares y restaurantes. Creamos espacios únicos, funcionales y con estilo 100% personalizados."
+  },
+  "grid": {
+   "modo": "subcategorias",
+   "items": [
+    {
+     "tipo": "categoria",
+     "slug": "mesas"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "sillas-restaurantes"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 252,
+  "slug": "exhibidores",
+  "ruta": "exhibidores",
+  "nombre": "Exhibidores",
+  "descripcion": "<p style=\"text-align: center\">Descubre nuestros exhibidores comerciales.</p>\r\n<p style=\"text-align: center\">Diseñados para destacar y resaltar tus productos o servicios. Impulsa tu presencia en ferias, comercios, negocios y eventos con nuestras soluciones visuales.\r\n¡Deja que tu marca brille con nuestros exhibidores!</p>",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2024/03/1-_1_.webp",
+  "orden": 31,
+  "conteo": 3,
+  "seo": {
+   "title": "Exhibidores | Ofitodo",
+   "description": "Fabricados en melamina. Diseñados para destacar tus productos y promover tu marca, ¡Optimiza tu espacio comercial y atrae a más clientes con nuestros exhibidores!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "exhibidor-esquinero-curvo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "exhibidor-esquinero-modelo-exh102"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mueble-exhibidor"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 253,
+  "slug": "brokers",
+  "ruta": "brokers",
+  "nombre": "Brokers",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/05/Ofitodocategorias-18-731x1024-1.png",
+  "orden": 54,
+  "conteo": 1,
+  "seo": {
+   "title": "Brokers | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "brokers-ejemplo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 257,
+  "slug": "mobiliario",
+  "ruta": "mobiliario",
+  "nombre": "Mobiliario",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": null,
+  "orden": 40,
+  "conteo": 8,
+  "seo": {
+   "title": "Mobiliario | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-kolbe"
+    },
+    {
+     "tipo": "producto",
+     "slug": "sillon-moderno-individual-giratorio"
+    },
+    {
+     "tipo": "producto",
+     "slug": "banco-acojinable-modelo-magdiel"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-melamina-ofitodo-2"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 258,
+  "slug": "mro",
+  "ruta": "mro",
+  "nombre": "MRO",
+  "descripcion": "",
+  "parentSlug": null,
+  "imagen": null,
+  "orden": 46,
+  "conteo": 2,
+  "seo": {
+   "title": "MRO | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-trabajo-industrial-modelo-mti1003"
+    },
+    {
+     "tipo": "producto",
+     "slug": "cubiculos-para-call-center"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 271,
+  "slug": "escritorio-mob",
+  "ruta": "mobiliario/escritorio-mob",
+  "nombre": "escritorio",
+  "descripcion": "",
+  "parentSlug": "mobiliario",
+  "imagen": null,
+  "orden": 41,
+  "conteo": 0,
+  "seo": {
+   "title": "escritorio",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 272,
+  "slug": "sillas-mob",
+  "ruta": "mobiliario/sillas-mob",
+  "nombre": "Tienda sillas",
+  "descripcion": "",
+  "parentSlug": "mobiliario",
+  "imagen": null,
+  "orden": 42,
+  "conteo": 0,
+  "seo": {
+   "title": "Tienda sillas",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 273,
+  "slug": "test-mro",
+  "ruta": "mro/test-mro",
+  "nombre": "test",
+  "descripcion": "",
+  "parentSlug": "mro",
+  "imagen": null,
+  "orden": 47,
+  "conteo": 0,
+  "seo": {
+   "title": "test",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 294,
+  "slug": "sillas-directivas-ofitodo",
+  "ruta": "restaurantes/sillas-restaurantes/sillas/sillas-directivas-ofitodo",
+  "nombre": "Sillas Directivas",
+  "descripcion": "Descubra nuestra amplia variedad de Sillas Directivas: Sillas de escritorio para oficina, con asientos y respaldos con diseño ergonómico, mecanismos de múltiples funciones, cabeceras ajustables y soportes lumbar. Para hogar, negocio o cualquier espacio donde lo necesite.",
+  "parentSlug": "sillas",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/07/1.png",
+  "orden": 21,
+  "conteo": 29,
+  "seo": {
+   "title": "Sillas Directivas | Ofitodo",
+   "description": "Descubra nuestra amplia variedad de Sillas Directivas: Sillas de escritorio para oficina, con asientos y respaldos con diseño ergonómico, mecanismos de múltiples funciones, cabeceras ajustables y soportes lumbar. Para hogar, negocio o cualquier espacio donde lo necesite."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-modelo-dream-respaldo-alto"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-respaldo-alto"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-modelo-moldavia-cc"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 295,
+  "slug": "sillas-ejecutivas-de-oficina-ofitodo",
+  "ruta": "restaurantes/sillas-restaurantes/sillas/sillas-ejecutivas-de-oficina-ofitodo",
+  "nombre": "Sillas Ejecutivas",
+  "descripcion": "Conoce la variedad de sillas ejecutivas modernas cómodas y durables.",
+  "parentSlug": "sillas",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/07/Diseno-sin-titulo.png",
+  "orden": 22,
+  "conteo": 56,
+  "seo": {
+   "title": "Sillas Ejecutivas | Ofitodo",
+   "description": "Conoce la variedad de nuestras sillas ejecutivas, con diseños modernos, ergonómicos y ultra cómodas."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-economalla"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-fly-rb"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-athenas"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-spirit"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 296,
+  "slug": "sillas-de-visita-ofitodo",
+  "ruta": "restaurantes/sillas-restaurantes/sillas/sillas-de-visita-ofitodo",
+  "nombre": "Sillas visita",
+  "descripcion": "Conoce la variedad de diseños y modelos de sillas y sillones de visita que ofrecemos, ultra cómodos y elegantes.",
+  "parentSlug": "sillas",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/07/Diseno-sin-titulo-4.png",
+  "orden": 24,
+  "conteo": 38,
+  "seo": {
+   "title": "Sillas visita | Ofitodo",
+   "description": "Conoce la variedad de diseños y modelos de sillas y sillones de visita que ofrecemos, ultra cómodos y elegantes."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-multiusos-para-comedor-creta"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-a-135-crl"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina-modelo-vanto-ohv-78"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 297,
+  "slug": "sillas-operativas-ofitodo",
+  "ruta": "restaurantes/sillas-restaurantes/sillas/sillas-operativas-ofitodo",
+  "nombre": "Sillas Operativas",
+  "descripcion": "Te presentamos alternativas en sillas y sillones operativos que mezclan, diseño, calidad y confort. Elige entre nuestras opciones.",
+  "parentSlug": "sillas",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/07/Diseno-sin-titulo-1.png",
+  "orden": 23,
+  "conteo": 38,
+  "seo": {
+   "title": "Sillas Operativas | Ofitodo",
+   "description": "Te presentamos alternativas en sillas y sillones operativos que mezclan, diseño, calidad y confort. Elige entre nuestras opciones."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-modelo-roly-ergonomica"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-ergonomica-modelo-black-jack"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-para-oficina-modelo-sling"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-moderna-travis"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 300,
+  "slug": "sillas-multiusos-para-oficina-ofitodo",
+  "ruta": "restaurantes/sillas-restaurantes/sillas/sillas-multiusos-para-oficina-ofitodo",
+  "nombre": "Sillas Multiusos",
+  "descripcion": "sillas y sillones para diferentes propósitos y áreas de la empresa con múltiples acabados en sillería y sillones. Ideales para exteriores, comedores, bibliotecas, salas de juntas etc.",
+  "parentSlug": "sillas",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/Linea-Alpha-2.png",
+  "orden": 25,
+  "conteo": 27,
+  "seo": {
+   "title": "Sillas Multiusos | Ofitodo",
+   "description": "sillas para diferentes propósitos y áreas de la empresa con múltiples acabados en sillería y sillones. Ideales para exteriores."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-multiusos-para-comedor-creta"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-para-exteriores"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-sensilla-ohv-97"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-origami"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 302,
+  "slug": "sillas-industriales-ofitodo",
+  "ruta": "restaurantes/sillas-restaurantes/sillas/sillas-industriales-ofitodo",
+  "nombre": "Sillas Industriales",
+  "descripcion": "Sillas ergonómicas para plantas industriales, sillas y bancos para fabricas, áreas de control de calidad, áreas y líneas de producción. Brinda ergonomía a tus colaboradores evitando que se lastimen por su postura.",
+  "parentSlug": "sillas",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/07/Diseno-sin-titulo-7.png",
+  "orden": 26,
+  "conteo": 5,
+  "seo": {
+   "title": "Sillas Industriales | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "banco-ergonomico-cajero-industrial"
+    },
+    {
+     "tipo": "producto",
+     "slug": "banco-redondo-cajero"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-industrial-modelo-tulip-cajero"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-industrial-tulip-secretarial"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 305,
+  "slug": "bancas-de-espera",
+  "ruta": "recepcion/bancas-de-espera",
+  "nombre": "Bancas de espera",
+  "descripcion": "En Ofitodo contamos con una amplia selección de muebles para oficina: bancas de espera, banca de espera 3 plazas, banca de espera 4 plazas en diferentes estilos.",
+  "parentSlug": "recepcion",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/07/banca-1-1.png",
+  "orden": 52,
+  "conteo": 7,
+  "seo": {
+   "title": "Bancas de espera | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "banca-modelo-kyos-ohr-329-3p-cr-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "banca-de-espera-modelo-kyos-ohr-365-3-plazas-en-malla-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "banca-kyos-ohr-310-3-plazas-malla"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 309,
+  "slug": "salas-de-espera",
+  "ruta": "recepcion/salas-de-espera",
+  "nombre": "Salas de espera",
+  "descripcion": "Muebles para el área de recepción y sala de espera. Recepciones, sofás de espera y sillones.",
+  "parentSlug": "recepcion",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/07/banca-1.png",
+  "orden": 53,
+  "conteo": 11,
+  "seo": {
+   "title": "Salas de espera | Ofitodo",
+   "description": "Conozca la variedad de sillones y sofás para el área de recepción y sala de espera."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "sillon-moderno-individual-jade-spider"
+    },
+    {
+     "tipo": "producto",
+     "slug": "sillon-moderno-individual-giratorio"
+    },
+    {
+     "tipo": "producto",
+     "slug": "sofa-fabric-switch-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 311,
+  "slug": "pupitres",
+  "ruta": "mobiliario-escolar/pupitres",
+  "nombre": "Pupitres",
+  "descripcion": "Conozca los diferentes pupitres y bancas escolares. Variedad de modelos y diseños para todos los espacios educativos y de capacitación.",
+  "parentSlug": "mobiliario-escolar",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/07/banca-2.png",
+  "orden": 45,
+  "conteo": 10,
+  "seo": {
+   "title": "Pupitres | Ofitodo",
+   "description": "Conozca los diferentes pupitres y bancas escolares. Variedad de modelos y diseños para todos los espacios educativos y de capacitación."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-360"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-think"
+    },
+    {
+     "tipo": "producto",
+     "slug": "butaca-modelo-re-981"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-modelo-rm-9026-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 315,
+  "slug": "escritorios-linea-grap",
+  "ruta": "escritorios/escritorios-linea-grap",
+  "nombre": "Línea Grap",
+  "descripcion": "Escritorios con estructuras importadas con diseño moderno y minimalista en forma de grapa.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/Linea-Grap-150x150-1.webp",
+  "orden": 15,
+  "conteo": 3,
+  "seo": {
+   "title": "Escritorios para oficina | Ofitodo",
+   "description": "Conoce la variedad de escritorios para oficina, escuela, home office y más que tenemos para ti, fabricados con materiales de la mejor calidad. ¡Elige el tuyo!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-operativo-grap-modelo-of-ego1007"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-grap-modelo-of-egs1003"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-grap-modelo-of-egs"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 316,
+  "slug": "escritorios-linea-cubic-ofitodo",
+  "ruta": "escritorios/escritorios-linea-cubic-ofitodo",
+  "nombre": "Línea Cubic",
+  "descripcion": "Estructuras metálicas en forma de cubo que añaden un toque vanguardista a tu espacio de trabajo.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/Linea-Cubic-150x150-1.png",
+  "orden": 13,
+  "conteo": 6,
+  "seo": {
+   "title": "Escritorios con patas cubicas | Ofitodo",
+   "description": "Escritorios con estructura metálica en forma de cubo, con diseños de vanguardia, fabricados con materiales de alta calidad. ¡Somos fabricantes!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-multiusos-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-cubic-modelo-of-ecd1084-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-modelo-of-ece1079-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-cubic-ofitodo-2"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 317,
+  "slug": "escritorios-linea-alpha-ofitodo",
+  "ruta": "escritorios/escritorios-linea-alpha-ofitodo",
+  "nombre": "Línea Alpha",
+  "descripcion": "Mobiliario con estructuras importadas con diseño\r\nelegante y vanguardista.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2024/09/Linea-Alpha-_3_-_1_.webp",
+  "orden": 8,
+  "conteo": 5,
+  "seo": {
+   "title": "Línea Alpha | Ofitodo",
+   "description": "Escritorios con diseños modernos, elaborados con excelentes materiales. ¡Elige el ideal para tu espacio!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "conjunto-ejecutivo-alpha-modelo-of-ealo1120"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-alpha-modelo-of-eale1116"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-alpha-modelo-of-eale1108-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-operativo-alpha-modelo-of-ealo1104-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 325,
+  "slug": "escritorios",
+  "ruta": "escritorios",
+  "nombre": "Escritorios",
+  "descripcion": "Descubre la elegancia y versatilidad de nuestros escritorios modernos ¡Transforma tu espacio de trabajo con estilo! Nos adecuamos a tus Necesidades.",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2024/09/pixelcut-export-_3_.webp",
+  "orden": 7,
+  "conteo": 54,
+  "seo": {
+   "title": "Venta y Fabricación de Escritorios",
+   "description": "Renueva tu oficina con nuestros escritorios, fabricamos muebles a tu medida elaborados con materiales altamente resistentes y duraderos. ¡Somos fabricantes!"
+  },
+  "grid": {
+   "modo": "subcategorias",
+   "items": [
+    {
+     "tipo": "categoria",
+     "slug": "linea-directiva"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-alpha-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-altezza-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-chrome-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-conic-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-cristal-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-cubic-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-elegant-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-grap"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-legna-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-llamara-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "escritorios-linea-panel-ofitodo"
+    },
+    {
+     "tipo": "categoria",
+     "slug": "linea-home-office-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 326,
+  "slug": "escritorios-linea-conic-ofitodo",
+  "ruta": "escritorios/escritorios-linea-conic-ofitodo",
+  "nombre": "Línea Conic",
+  "descripcion": "Escritorios modernos con estructuras metálicas de base tipo cónica oblicua con terminación en cromo. Alta calidad y diseño de vanguardia.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2024/09/Linea-Conic.webp",
+  "orden": 11,
+  "conteo": 2,
+  "seo": {
+   "title": "Línea de escritorios Conic | Ofitodo",
+   "description": "Escritorios para entornos ejecutivos y secretariales, ¡Dale un toque de elegancia a tu espacio de trabajo! fabricados con materiales de alta calidad."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-conic-modelo-of-coe1213"
+    },
+    {
+     "tipo": "producto",
+     "slug": "conjunto-de-escritorios-operativos-conic-modelo-of-coo1210-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 327,
+  "slug": "escritorios-linea-llamara-ofitodo",
+  "ruta": "escritorios/escritorios-linea-llamara-ofitodo",
+  "nombre": "Línea llamara",
+  "descripcion": "Escritorios con patas en Forma de 'LL' la combinación perfecta de diseño moderno y estabilidad.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/imagenes-para-categorias-2-1-150x150-2.webp",
+  "orden": 17,
+  "conteo": 2,
+  "seo": {
+   "title": "Escritorios en \"L\" | Ofitodo",
+   "description": "Ya sea que busques un escritorios gamer o para oficina, encuentra gran variedad de diseños modernos, de madera, en L y más. ¡Elige el ideal para tu espacio!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-operativo-llamara-modelo-of-ello1195-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-llamara-modelo-of-ells1191"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 328,
+  "slug": "escritorios-linea-elegant-ofitodo",
+  "ruta": "escritorios/escritorios-linea-elegant-ofitodo",
+  "nombre": "Línea Elegant",
+  "descripcion": "Escritorios en melamina con diseños sofisticados con funcionalidad absoluta, crean un espacio de trabajo de alto nivel.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/imagenes-para-categorias-3-1-150x150-1.webp",
+  "orden": 14,
+  "conteo": 3,
+  "seo": {
+   "title": "Escritorios elegantes | Ofitodo",
+   "description": "Escritorios Elegant, aportan estilo, funcionalidad y elegancia a tus actividades laborales o personales. ¡Elige el tuyo! nos adecuamos a tus necesidades."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-elegant-modelo-of-elgd1202-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-elegant-modelo-of-elgd1207-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-elegant-modelo-of-elgd1204-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 329,
+  "slug": "escritorios-linea-altezza-ofitodo",
+  "ruta": "escritorios/escritorios-linea-altezza-ofitodo",
+  "nombre": "Línea Altezza",
+  "descripcion": "Ergonomía personalizada. Escritorios con mecanismo de altura ajustable, ¡Diseña tu espacio de trabajo ideal con la versatilidad que necesitas!",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2024/09/imagenes-para-categorias-2024-09-23T121200.898-_2_.webp",
+  "orden": 9,
+  "conteo": 4,
+  "seo": {
+   "title": "Línea Altezza | Ofitodo",
+   "description": "Escritorios de altura ajustable línea Altezza, encuentra aquí los diseños más modernos, versátiles, resistentes y de la mejor calidad. ¡Elige el tuyo!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-altezza-modelo-of-eazd1140"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-altezza-modelo-of-eazd1136-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-altezza-modelo-of-eaze1132-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-operativo-altezza-modelo-of-eazo1128"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 330,
+  "slug": "escritorios-linea-panel-ofitodo",
+  "ruta": "escritorios/escritorios-linea-panel-ofitodo",
+  "nombre": "Línea Panel",
+  "descripcion": "Escritorios con patas tipo panel para ocultar cableado. Mantén un espacio de trabajo limpio y organizado mientras disfrutas de la elegancia del diseño.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/08/imagenes-para-categorias-8.png",
+  "orden": 18,
+  "conteo": 2,
+  "seo": {
+   "title": "Línea Panel | Ofitodo",
+   "description": "Escritorios de oficina línea Panel, patas compuestas por columnas con rejillas pasacables. Calidad y diseño en mobiliario para oficina. ¡Elige el tuyo!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-panel-of-pae221-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-panel-modelo-of-pas218-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 331,
+  "slug": "escritorios-linea-legna-ofitodo",
+  "ruta": "escritorios/escritorios-linea-legna-ofitodo",
+  "nombre": "Línea Legna",
+  "descripcion": "Escritorios de una pieza en melamina. La combinación perfecta de estilo, durabilidad y elegancia para tu espacio de trabajo.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/08/imagenes-para-categorias-10.png",
+  "orden": 16,
+  "conteo": 8,
+  "seo": {
+   "title": "Escritorios para oficina | Ofitodo",
+   "description": "Si buscas un escritorio moderno, estás en el sitio correcto. Escritorios para oficina fabricados en melamina. ¡Diseño y funcionalidad absoluta!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-modular-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-modelo-slim"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-legna-modelo-of-eld1183"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-diretivo-legna-modelo-of-eld1179"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 332,
+  "slug": "escritorios-linea-cristal-ofitodo",
+  "ruta": "escritorios/escritorios-linea-cristal-ofitodo",
+  "nombre": "Línea Cristal",
+  "descripcion": "Escritorios con cubierta de cristal templado que reflejan transparencia y elegancia combinando durabilidad con sus bases y estructuras de diferentes materiales. ¡Crea un espacio de trabajo con un toque de distinción!",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/imagenes-para-categorias-59-150x150-1.webp",
+  "orden": 12,
+  "conteo": 2,
+  "seo": {
+   "title": "Escritorios de cristal | Ofitodo",
+   "description": "Línea de escritorios de cristal templado perfectos para decorar tu espacio con funcionalidad, elegancia y minimalismo. ¡Elige tu escritorio ideal!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-cristal-modelo-of-cre230"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-cristal-modelo-of-cr226"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 333,
+  "slug": "escritorios-linea-chrome-ofitodo",
+  "ruta": "escritorios/escritorios-linea-chrome-ofitodo",
+  "nombre": "Línea Chrome",
+  "descripcion": "Escritorios con estructura metálica con terminación en cromo. Crea un espacio de trabajo que realza tu estilo.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2024/09/imagenes-para-categorias-2024-09-23T122141.515-_1_.webp",
+  "orden": 10,
+  "conteo": 2,
+  "seo": {
+   "title": "Línea Chrome | Ofitodo",
+   "description": "Escritorios con estructura metálica línea chrome, encuentra variedad de diseños y colores. Modernos, cómodos y durables. ¡Nos adecuamos a tus necesidades!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-chrome-modelo-of-choe217-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-chrome-modelo-of-choe216"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 335,
+  "slug": "linea-home-office-ofitodo",
+  "ruta": "escritorios/linea-home-office-ofitodo",
+  "nombre": "Línea Home office",
+  "descripcion": "Escritorios diseñados para el trabajo desde casa. Combinan comodidad y estilo en un entorno de oficina que se adapta a tu hogar.",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/09/sub.-cubic-3.png",
+  "orden": 19,
+  "conteo": 14,
+  "seo": {
+   "title": "Escritorios para home office | Ofitodo",
+   "description": "Te presentamos los mejores escritorios para home office. Fabricamos modelos diversos que mejor se adapten a tu espacio, nos adecuamos a tus necesidades."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-con-cajones-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-modular-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-home-office-orlando-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-home-office-modelo-duna"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 337,
+  "slug": "archiveros-metalicos",
+  "ruta": "libreros-y-archiveros/archiveros-metalicos",
+  "nombre": "Archiveros Metálicos",
+  "descripcion": "",
+  "parentSlug": "libreros-y-archiveros",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/09/imagenes-para-categorias-76.png",
+  "orden": 35,
+  "conteo": 10,
+  "seo": {
+   "title": "Archiveros Metálicos | Ofitodo",
+   "description": "Encuentra los mejores archiveros metálicos elaborados con materiales de alta calidad, que los hace altamente resistentes y duraderos. ¡En ofitodo nos adecuamos a tus proyectos!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "archivero-metalico-vertical"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-metalico-de-linea-corta-de-56-cm"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-metalico-vertical-serie-3000"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-oficio-vertical-serie-3000"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 338,
+  "slug": "archiveros-de-melamina",
+  "ruta": "libreros-y-archiveros/archiveros-de-melamina",
+  "nombre": "Archiveros De Melamina",
+  "descripcion": "",
+  "parentSlug": "libreros-y-archiveros",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/09/imagenes-para-categorias-77.png",
+  "orden": 34,
+  "conteo": 6,
+  "seo": {
+   "title": "Archiveros De Melamina | Ofitodo",
+   "description": "En ofitodo, contamos con una gran variedad de modelos, tamaños y colores de archiveros fabricados en melamina, nos adecuamos a tus necesidades."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "archivero-vertical-movil-yaris-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-vertical-yaris-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-vertical-modelo-panama"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-movil-o-pedestal-modelo-trevis"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 344,
+  "slug": "credenzas",
+  "ruta": "libreros-y-archiveros/credenzas",
+  "nombre": "Credenzas",
+  "descripcion": "",
+  "parentSlug": "libreros-y-archiveros",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/sub.-linea-grap-1.png",
+  "orden": 37,
+  "conteo": 13,
+  "seo": {
+   "title": "Credenzas | Ofitodo",
+   "description": "En ofitodo encontrarás una gran variedad de muebles de guardado y credenzas para tu espacio de trabajo, ¡dale un toque especial! En ofitodo hacemos de todo."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-melamina-ofitodo-2"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-moderna-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-con-cajones"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-melamina-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 345,
+  "slug": "escritorios-metalicos",
+  "ruta": "mobiliario-escolar/escritorios-metalicos",
+  "nombre": "Escritorios Metálicos",
+  "descripcion": "",
+  "parentSlug": "mobiliario-escolar",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/10/sub.-linea-grap-2.png",
+  "orden": 44,
+  "conteo": 2,
+  "seo": {
+   "title": "Escritorios Metálicos | Ofitodo",
+   "description": "En ofitodo contamos con variedad de escritorios metálicos escolares ultra duraderos y resistentes. ¡Elige el tuyo!"
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-1-pedestal-120cm"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-1-pedestal-150-cm"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 348,
+  "slug": "recepciones-modernas",
+  "ruta": "recepcion/recepciones-modernas",
+  "nombre": "Recepciones",
+  "descripcion": "",
+  "parentSlug": "recepcion",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/11/imagenes-para-categorias-2023-11-01T142945.154.webp",
+  "orden": 51,
+  "conteo": 11,
+  "seo": {
+   "title": "Recepciones Modernas | Ofitodo",
+   "description": "Transforma la bienvenida en tu negocio con nuestra línea de recepciones."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "recepcion-de-melamina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "recepcion-modelo-elegance"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mueble-recepcion-modelo-chic"
+    },
+    {
+     "tipo": "producto",
+     "slug": "recepcion-modelo-esencial"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 351,
+  "slug": "libreros",
+  "ruta": "libreros-y-archiveros/libreros",
+  "nombre": "Libreros",
+  "descripcion": "",
+  "parentSlug": "libreros-y-archiveros",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/11/Linea-Legna.webp",
+  "orden": 36,
+  "conteo": 3,
+  "seo": {
+   "title": "Libreros | Ofitodo",
+   "description": "Encuentra una gran variedad de libreros que dan un toque de estilo y organización para cada rincón. Encuentra el librero perfecto para tu necesidad."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "librero-sobre-credenza-modelo-danya"
+    },
+    {
+     "tipo": "producto",
+     "slug": "librero-modelo-valencia"
+    },
+    {
+     "tipo": "producto",
+     "slug": "librero-modelo-yaris"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 354,
+  "slug": "mesas",
+  "ruta": "restaurantes/mesas",
+  "nombre": "Mesas",
+  "descripcion": "",
+  "parentSlug": "restaurantes",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/12/silla-ejecutiva-1.webp",
+  "orden": 29,
+  "conteo": 14,
+  "seo": {
+   "title": "Mesas para restaurantes | Ofitodo",
+   "description": "Mesas que no solo son funcionales sino también estéticamente atractivas. Asegura el éxito de tu negocio con mobiliario diseñado para impresionar."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "mesa-comedor-circular"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-para-restaurante-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-baja-cuadrada-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-cuadrada-mediana-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 357,
+  "slug": "sillas-restaurantes",
+  "ruta": "restaurantes/sillas-restaurantes",
+  "nombre": "Sillas",
+  "descripcion": "",
+  "parentSlug": "restaurantes",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/12/silla-ejecutiva.webp",
+  "orden": 30,
+  "conteo": 51,
+  "seo": {
+   "title": "Sillas para interior o exterior | Ofitodo",
+   "description": "Cada silla está pensada para crear un ambiente agradable y acogedor, asegurando que tus clientes disfruten de cada momento en tu establecimiento."
+  },
+  "grid": {
+   "modo": "subcategorias",
+   "items": [
+    {
+     "tipo": "categoria",
+     "slug": "sillas"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 366,
+  "slug": "mobiliario-industrial",
+  "ruta": "mobiliario-industrial",
+  "nombre": "Mobiliario Industrial",
+  "descripcion": "Conoce nuestro mobiliario diseñado para el entorno industrial. Ofrecemos mesas de trabajo, estanterías, hasta soluciones de almacenamiento y más.",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2024/08/imagenes-para-categorias-2024-08-06T134031.034.webp",
+  "orden": 1,
+  "conteo": 4,
+  "seo": {
+   "title": "Mobiliario Industrial | Ofitodo",
+   "description": "Conoce nuestro mobiliario diseñado para el entorno industrial. Ofrecemos mesas de trabajo, estanterías, hasta soluciones de almacenamiento y más."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "rack-para-tarimas-y-carga-pesada-inr1000"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-trabajo-industrial-modelo-mti1003"
+    },
+    {
+     "tipo": "producto",
+     "slug": "carrito-industrial-metalico"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-industrial-modelo-tulip-cajero"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 369,
+  "slug": "mobiliario-para-consultorios-medicos",
+  "ruta": "mobiliario-para-consultorios-medicos",
+  "nombre": "Mobiliario Para Consultorios Médicos",
+  "descripcion": "Mobiliario de calidad para consultorios y hospitales. Soluciones ergonómicas y funcionales que mejoran la eficiencia y el confort en entornos médicos.",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2024/08/imagenes-para-categorias-2024-08-06T140538.944.webp",
+  "orden": 2,
+  "conteo": 14,
+  "seo": {
+   "title": "Mobiliario Para Consultorios Médicos | Ofitodo",
+   "description": "Mobiliario de calidad para consultorios y hospitales. Soluciones ergonómicas y funcionales que mejoran la eficiencia y el confort en entornos médicos."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-melamina-ofitodo-2"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-moderna-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-con-cajones"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-melamina-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 374,
+  "slug": "mobiliario-para-oficina",
+  "ruta": "mobiliario-para-oficina",
+  "nombre": "Mobiliario para oficina",
+  "descripcion": "Conoce nuestro mobiliario diseñado para oficinas. Ofrecemos mesas de trabajo, estanterías, hasta soluciones de almacenamiento y más.\r\n\r\n",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/05/Ofitodocategorias-13-500x600-1.png",
+  "orden": 3,
+  "conteo": 46,
+  "seo": {
+   "title": "Mobiliario para oficina | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-modelo-roly-ergonomica"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-economalla"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-a-135-crl"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 375,
+  "slug": "muebles-para-hospital",
+  "ruta": "muebles-para-hospital",
+  "nombre": "Muebles para hospital",
+  "descripcion": "Mobiliario de calidad para consultorios y hospitales. Soluciones ergonómicas y funcionales que mejoran la eficiencia y el confort en entornos médicos.\r\n\r\n",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2024/08/imagenes-para-categorias-2024-08-06T140538.944.webp",
+  "orden": 5,
+  "conteo": 7,
+  "seo": {
+   "title": "Muebles para hospital | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "credenza-dos-puertas"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-melamina-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-dos-puertas"
+    },
+    {
+     "tipo": "producto",
+     "slug": "bajo-mesada-para-consultorio"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 376,
+  "slug": "muebles-para-bancos",
+  "ruta": "muebles-para-bancos",
+  "nombre": "Muebles para bancos",
+  "descripcion": "Equipa tus sucursales con nuestro mobiliario para bancos diseñado para brindar eficiencia y una experiencia excepcional a tus clientes. ",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/11/imagenes-para-categorias-2023-11-24T124802.809.webp",
+  "orden": 4,
+  "conteo": 4,
+  "seo": {
+   "title": "Muebles para bancos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "modular-de-trabajo-para-call-center"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-chrome-modelo-of-choe216"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-vision-respaldo-bajo-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-visita-iso-sin-brazos-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 378,
+  "slug": "muebles-para-restaurantes",
+  "ruta": "muebles-para-restaurantes",
+  "nombre": "Muebles para restaurantes",
+  "descripcion": "Crea un ambiente acogedor y sofisticado con nuestros muebles para restaurante para deleitar a tus clientes. Ofrecemos una amplia variedad de opciones para cada área de tu establecimiento, desde mesas y sillas cómodas hasta barras elegantes y mobiliario para terrazas. ",
+  "parentSlug": null,
+  "imagen": "https://ofitodo.com/wp-content/uploads/2023/12/silla-ejecutiva.webp",
+  "orden": 6,
+  "conteo": 14,
+  "seo": {
+   "title": "Muebles para restaurantes | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-para-exteriores"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-sensilla-ohv-97"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-origami"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-rue"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 407,
+  "slug": "linea-directiva",
+  "ruta": "escritorios/linea-directiva",
+  "nombre": "Línea Directiva",
+  "descripcion": "",
+  "parentSlug": "escritorios",
+  "imagen": "https://ofitodo.com/wp-content/uploads/2025/08/sub.-cubic-_4_-1.webp",
+  "orden": 0,
+  "conteo": 4,
+  "seo": {
+   "title": "Línea Directiva | Ofitodo",
+   "description": "Escritorios directivos de diseño moderno y funcionalidad premium. Mobiliario que refleja liderazgo, elegancia y profesionalismo en tu oficina."
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-modelo-niayao"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-modelo-niayao-dd"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-modelo-arpa"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escrotorio-directivo-modelo-niayao-d"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ }
+]

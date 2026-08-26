@@ -65,6 +65,24 @@ export const Section = z.discriminatedUnion('tipo', [
 ]);
 export type Section = z.infer<typeof Section>;
 
+// ---------- Página congelada (enfoque híbrido Fase S) ----------
+// El HTML renderizado de la referencia ES la página (paridad por construcción);
+// se sirve transformado (islas activas, SDKs de pago retirados). Se componetiza después.
+export const FrozenPage = z.object({
+  slug: z.string().startsWith('/'),
+  locale: z.literal('es'),
+  title: z.string(),
+  template: z.literal('frozen'),
+  htmlRef: z.string(),              // archivo en reference/html/
+  tipo: z.enum(['page', 'post', 'system']),
+  status: z.enum(['publish']),
+  legacyId: z.number().int().optional(),
+  date: z.string().optional(),
+  modified: z.string().optional(),
+  seo: z.object({ title: z.string(), description: z.string().nullable() }),
+});
+export type FrozenPage = z.infer<typeof FrozenPage>;
+
 export const PageContent = z.object({
   slug: z.string().startsWith('/'),
   locale: z.literal('es'),

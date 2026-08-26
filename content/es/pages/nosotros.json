@@ -1,0 +1,16 @@
+{
+ "slug": "/nosotros/",
+ "locale": "es",
+ "title": "Nosotros",
+ "template": "frozen",
+ "htmlRef": "nosotros.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 10733,
+ "date": "2025-12-02 19:05:12",
+ "modified": "2026-01-21 16:24:16",
+ "seo": {
+  "title": "Nosotros | Ofitodo",
+  "description": "Ofitodo, especialistas en mobiliario para oficina en Aguascalientes. Calidad, diseño y soluciones funcionales para tu empresa."
+ }
+}

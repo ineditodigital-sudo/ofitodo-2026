@@ -1,0 +1,16 @@
+{
+ "slug": "/tienda/",
+ "locale": "es",
+ "title": "Tienda",
+ "template": "frozen",
+ "htmlRef": "tienda.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 5444,
+ "date": "2023-05-06 04:30:31",
+ "modified": "2025-11-27 18:39:15",
+ "seo": {
+  "title": "Tienda | Ofitodo",
+  "description": "Conoce nuestra tienda con nuestro mobiliario para oficinas y soluciones integrales, fabricados con orgullo en Aguascalientes y México."
+ }
+}

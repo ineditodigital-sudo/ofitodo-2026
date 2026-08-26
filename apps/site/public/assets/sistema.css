@@ -1,0 +1,52 @@
+/* Páginas de sistema reconstruidas (carrito, checkout, cuenta, gracias) + islas.
+   Tokens del tema (content/theme.json): azules corporativos + Josefin Sans/Lato. */
+.of-sis { max-width: 1100px; margin: 40px auto 80px; padding: 0 20px; font-family: Lato, sans-serif; color: #474747; }
+.of-sis h3 { font-family: 'Josefin Sans', sans-serif; color: #153a67; font-size: 24px; margin: 0 0 18px; }
+.of-sis h4 { font-family: 'Josefin Sans', sans-serif; color: #153a67; margin: 0 0 10px; }
+.of-btn { display: inline-block; background: #153a67; color: #fff !important; border: 0; padding: 13px 28px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background .2s; border-radius: 2px; }
+.of-btn:hover { background: #186fa5; }
+.of-vacio { font-size: 17px; }
+.of-error { color: #b91c1c; }
+.of-nota { color: #5b5b5b; font-size: 14px; }
+
+/* tabla carrito */
+.of-tabla { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+.of-tabla th { text-align: left; font-family: 'Josefin Sans', sans-serif; color: #153a67; border-bottom: 2px solid #153a67; padding: 10px 8px; }
+.of-tabla td { border-bottom: 1px solid #e0e0e0; padding: 12px 8px; vertical-align: middle; }
+.of-tabla a { color: #153a67; text-decoration: none; font-weight: 600; }
+.of-td-img img { display: block; border-radius: 2px; }
+.of-qty { display: inline-flex; align-items: center; gap: 10px; border: 1px solid #d6d6d6; padding: 4px 10px; }
+.of-qty button { border: 0; background: none; font-size: 17px; cursor: pointer; color: #153a67; }
+.of-x { border: 0; background: none; font-size: 20px; color: #b91c1c; cursor: pointer; }
+.of-totales { max-width: 380px; margin-left: auto; border: 1px solid #e0e0e0; padding: 22px; }
+.of-totales p { display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 8px 0; }
+.of-totales .of-btn { width: 100%; text-align: center; margin-top: 12px; box-sizing: border-box; }
+
+/* checkout */
+.of-cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 44px; }
+@media (max-width: 900px) { .of-cols { grid-template-columns: 1fr; } }
+.of-fila2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+.of-checkout label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+.of-checkout input, .of-checkout select, .of-checkout textarea { width: 100%; box-sizing: border-box; border: 1px solid #d6d6d6; padding: 10px 12px; font-size: 15px; font-family: inherit; margin-top: 4px; }
+.of-checkout input:focus, .of-checkout select:focus, .of-checkout textarea:focus { outline: 2px solid #186fa5; border-color: transparent; }
+.of-checkout .required { color: #b91c1c; text-decoration: none; }
+.of-pago { background: #f4f6f8; border-left: 3px solid #153a67; padding: 16px 18px; margin: 18px 0; }
+.of-mini td:last-child, .of-mini .of-total td { text-align: right; }
+.of-mini .of-total td { font-weight: 700; color: #153a67; border-top: 2px solid #153a67; }
+.of-visualmente-oculto { position: absolute; clip: rect(0 0 0 0); }
+
+/* búsqueda */
+.of-busqueda-res { position: absolute; top: 100%; left: 0; right: 0; z-index: 9999; background: #fff; border: 1px solid #e0e0e0; box-shadow: 0 10px 30px rgb(0 0 0 / .12); max-height: 420px; overflow: auto; }
+.of-busqueda-res a { display: flex; align-items: center; gap: 12px; padding: 10px 14px; color: #383838; text-decoration: none; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+.of-busqueda-res a:hover { background: #f4f6f8; }
+.of-busqueda-res img { object-fit: cover; border-radius: 2px; flex: none; }
+.of-busqueda-res .of-sinres { padding: 12px 14px; margin: 0; color: #5b5b5b; font-size: 14px; }
+
+/* listados: cargar más */
+.of-cargar-mas-holder { text-align: center; margin: 24px 0 8px; }
+ul.products > li[hidden] { display: none !important; }
+
+/* formularios NF re-renderizados */
+.of-nf label { display: block; font-weight: 600; font-size: 14px; }
+.of-nf input, .of-nf textarea { width: 100%; box-sizing: border-box; border: 1px solid #d6d6d6; padding: 10px 12px; font-size: 15px; font-family: inherit; margin-top: 4px; }
+.of-nf .of-nf-msj { background: #ecf7ef; border-left: 3px solid #2e7d46; padding: 12px 14px; }

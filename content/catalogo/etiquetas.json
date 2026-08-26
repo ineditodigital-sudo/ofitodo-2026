@@ -1,0 +1,1734 @@
+[
+ {
+  "legacyId": 274,
+  "slug": "gamer",
+  "nombre": "Gamer",
+  "conteo": 0,
+  "seo": {
+   "title": "Gamer",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 275,
+  "slug": "sillas",
+  "nombre": "Sillas",
+  "conteo": 166,
+  "seo": {
+   "title": "Sillas | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-multiusos-para-comedor-creta"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-modelo-roly-ergonomica"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-para-exteriores"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 276,
+  "slug": "ajustable",
+  "nombre": "Ajustable",
+  "conteo": 0,
+  "seo": {
+   "title": "Ajustable",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 277,
+  "slug": "oficina",
+  "nombre": "Oficina",
+  "conteo": 0,
+  "seo": {
+   "title": "Oficina",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 278,
+  "slug": "ergonomico",
+  "nombre": "Ergonomico",
+  "conteo": 0,
+  "seo": {
+   "title": "Ergonomico",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 279,
+  "slug": "a-la-medida",
+  "nombre": "A la medida",
+  "conteo": 0,
+  "seo": {
+   "title": "A la medida",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 280,
+  "slug": "elegante",
+  "nombre": "Elegante",
+  "conteo": 0,
+  "seo": {
+   "title": "Elegante",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 281,
+  "slug": "hogar",
+  "nombre": "Hogar",
+  "conteo": 0,
+  "seo": {
+   "title": "Hogar",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 282,
+  "slug": "silla-ergonomica",
+  "nombre": "Silla ergonómica",
+  "conteo": 83,
+  "seo": {
+   "title": "Silla ergonómica | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-modelo-roly-ergonomica"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-economalla"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-ergonomica-modelo-black-jack"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-para-oficina-modelo-sling"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 283,
+  "slug": "silla-directiva",
+  "nombre": "silla directiva",
+  "conteo": 29,
+  "seo": {
+   "title": "silla directiva | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-modelo-dream-respaldo-alto"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-respaldo-alto"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-modelo-moldavia-cc"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 284,
+  "slug": "silla-para-oficina",
+  "nombre": "silla para oficina",
+  "conteo": 0,
+  "seo": {
+   "title": "silla para oficina",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 285,
+  "slug": "silla-para-escritorio",
+  "nombre": "silla para escritorio",
+  "conteo": 0,
+  "seo": {
+   "title": "silla para escritorio",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 286,
+  "slug": "silla-de-oficina",
+  "nombre": "silla de oficina",
+  "conteo": 127,
+  "seo": {
+   "title": "silla de oficina | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-modelo-roly-ergonomica"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-economalla"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-a-135-crl"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-ergonomica-modelo-black-jack"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 287,
+  "slug": "mobiliario-de-oficina",
+  "nombre": "mobiliario de oficina",
+  "conteo": 0,
+  "seo": {
+   "title": "mobiliario de oficina",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 288,
+  "slug": "silla-con-cabecera",
+  "nombre": "silla con cabecera",
+  "conteo": 29,
+  "seo": {
+   "title": "silla con cabecera | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-para-oficina-ejecutiva-delta"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-dreco"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-athelier"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-modelo-moldavia-cc"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 289,
+  "slug": "ergonomica",
+  "nombre": "ergonómica",
+  "conteo": 0,
+  "seo": {
+   "title": "ergonómica",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 290,
+  "slug": "silla-ejecutiva",
+  "nombre": "silla ejecutiva",
+  "conteo": 53,
+  "seo": {
+   "title": "silla ejecutiva | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-economalla"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-athenas"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-spirit"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-londres-para-oficina"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 291,
+  "slug": "silla-de-visita",
+  "nombre": "silla de visita",
+  "conteo": 37,
+  "seo": {
+   "title": "silla de visita | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-multiusos-para-comedor-creta"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-a-135-crl"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina-modelo-vanto-ohv-78"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 292,
+  "slug": "base-de-trineo",
+  "nombre": "base de trineo",
+  "conteo": 11,
+  "seo": {
+   "title": "base de trineo | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-croma-ohv-198"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-vision-gray"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-visita-modelo-loop"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-alufsen-ohv-408-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 298,
+  "slug": "silla-semi-ejecutiva",
+  "nombre": "silla semi ejecutiva",
+  "conteo": 0,
+  "seo": {
+   "title": "silla semi ejecutiva",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 299,
+  "slug": "silla-operativa",
+  "nombre": "Silla operativa",
+  "conteo": 38,
+  "seo": {
+   "title": "Silla operativa | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-modelo-roly-ergonomica"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-ergonomica-modelo-black-jack"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-para-oficina-modelo-sling"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-moderna-travis"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 301,
+  "slug": "silla-para-exteriores",
+  "nombre": "Silla para exteriores",
+  "conteo": 14,
+  "seo": {
+   "title": "Silla para exteriores | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-para-exteriores"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-sensilla-ohv-97"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-rue"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-para-exterior-modelo-plus"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 303,
+  "slug": "sillas-industriales",
+  "nombre": "Sillas Industriales",
+  "conteo": 5,
+  "seo": {
+   "title": "Sillas Industriales | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "banco-ergonomico-cajero-industrial"
+    },
+    {
+     "tipo": "producto",
+     "slug": "banco-redondo-cajero"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-industrial-modelo-tulip-cajero"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-industrial-tulip-secretarial"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 304,
+  "slug": "silla-multiusos",
+  "nombre": "Silla multiusos",
+  "conteo": 25,
+  "seo": {
+   "title": "Silla multiusos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-multiusos-para-comedor-creta"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-para-exteriores"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-sensilla-ohv-97"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-origami"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 306,
+  "slug": "bancas-de-espera",
+  "nombre": "bancas de espera",
+  "conteo": 6,
+  "seo": {
+   "title": "bancas de espera | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "banca-modelo-kyos-ohr-329-3p-cr-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "banca-de-espera-modelo-kyos-ohr-365-3-plazas-en-malla-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "banca-kyos-ohr-310-3-plazas-malla"
+    },
+    {
+     "tipo": "producto",
+     "slug": "kyos-ohr-347-3p-combinado-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 307,
+  "slug": "recepcion",
+  "nombre": "Recepción",
+  "conteo": 23,
+  "seo": {
+   "title": "Recepción | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "recepcion-de-melamina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "recepcion-modelo-elegance"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mueble-recepcion-modelo-chic"
+    },
+    {
+     "tipo": "producto",
+     "slug": "recepcion-modelo-esencial"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 308,
+  "slug": "sala-de-espera",
+  "nombre": "Sala de espera",
+  "conteo": 18,
+  "seo": {
+   "title": "Sala de espera | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-a-135-crl"
+    },
+    {
+     "tipo": "producto",
+     "slug": "sillon-moderno-individual-jade-spider"
+    },
+    {
+     "tipo": "producto",
+     "slug": "sillon-moderno-individual-giratorio"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 310,
+  "slug": "sillones",
+  "nombre": "Sillones",
+  "conteo": 20,
+  "seo": {
+   "title": "Sillones | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "sillon-moderno-individual-jade-spider"
+    },
+    {
+     "tipo": "producto",
+     "slug": "sillon-moderno-individual-giratorio"
+    },
+    {
+     "tipo": "producto",
+     "slug": "sillon-multiusos-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "sillon-directivo-modelo-stark-negro"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 312,
+  "slug": "pupitres",
+  "nombre": "Pupitres",
+  "conteo": 10,
+  "seo": {
+   "title": "Pupitres | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-360"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-think"
+    },
+    {
+     "tipo": "producto",
+     "slug": "butaca-modelo-re-981"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-modelo-rm-9026-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 313,
+  "slug": "mobiliario-escolar",
+  "nombre": "mobiliario escolar",
+  "conteo": 20,
+  "seo": {
+   "title": "mobiliario escolar | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-360"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-think"
+    },
+    {
+     "tipo": "producto",
+     "slug": "locker-metalico-de-3-puertas-con-malla"
+    },
+    {
+     "tipo": "producto",
+     "slug": "locker-metalico-modelo-of-mgces102"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 314,
+  "slug": "pupitres-para-capacitacion",
+  "nombre": "Pupitres para capacitación",
+  "conteo": 9,
+  "seo": {
+   "title": "Pupitres para capacitación | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-360"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-think"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-modelo-rm-9026-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-re-722-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 319,
+  "slug": "escritorios-secretariales",
+  "nombre": "escritorios secretariales",
+  "conteo": 11,
+  "seo": {
+   "title": "escritorios secretariales | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-1-pedestal-120cm"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-1-pedestal-150-cm"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-cristal-modelo-of-cr226"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-secretarial-panel-modelo-of-pas218-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 322,
+  "slug": "escritorios-ejecutivos",
+  "nombre": "escritorios ejecutivos",
+  "conteo": 12,
+  "seo": {
+   "title": "escritorios ejecutivos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-con-cajones-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-modular-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-modelo-slim"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-cristal-modelo-of-cre230"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 324,
+  "slug": "escritorios-operativos",
+  "nombre": "escritorios operativos",
+  "conteo": 7,
+  "seo": {
+   "title": "escritorios operativos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "conjunto-de-escritorios-operativos-conic-modelo-of-coo1210-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-operativo-llamara-modelo-of-ello1195-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-operativo-legna-modelo-of-elo1155"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-operativo-altezza-modelo-of-eazo1128"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 334,
+  "slug": "escritorios-directivos",
+  "nombre": "escritorios directivos",
+  "conteo": 13,
+  "seo": {
+   "title": "escritorios directivos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-modelo-niayao"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-modelo-niayao-dd"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-directivo-modelo-arpa"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escrotorio-directivo-modelo-niayao-d"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 336,
+  "slug": "escritorios-home-office",
+  "nombre": "escritorios home office",
+  "conteo": 13,
+  "seo": {
+   "title": "escritorios home office | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "escritorio-ejecutivo-modelo-slim"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-home-office-orlando-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-home-office-modelo-duna"
+    },
+    {
+     "tipo": "producto",
+     "slug": "escritorio-home-office-modelo-duke-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 339,
+  "slug": "muebles-de-guardado",
+  "nombre": "muebles de guardado",
+  "conteo": 38,
+  "seo": {
+   "title": "muebles de guardado | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-melamina-ofitodo-2"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-moderna-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-con-cajones"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-melamina-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 340,
+  "slug": "archiveros",
+  "nombre": "archiveros",
+  "conteo": 16,
+  "seo": {
+   "title": "archiveros | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "archivero-vertical-movil-yaris-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-vertical-yaris-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-vertical-modelo-panama"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-movil-o-pedestal-modelo-trevis"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 341,
+  "slug": "pedestales",
+  "nombre": "pedestales",
+  "conteo": 3,
+  "seo": {
+   "title": "pedestales | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "archivero-movil-o-pedestal-modelo-trevis"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pedestal-metalico-serie-hl10000"
+    },
+    {
+     "tipo": "producto",
+     "slug": "archivero-fijo-o-pedestal-serie-hl10000-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 342,
+  "slug": "locker",
+  "nombre": "locker",
+  "conteo": 6,
+  "seo": {
+   "title": "locker | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "locker-metalico-para-celulares"
+    },
+    {
+     "tipo": "producto",
+     "slug": "locker-metalico-de-3-puertas-con-malla"
+    },
+    {
+     "tipo": "producto",
+     "slug": "locker-metalico-modelo-of-mgces102"
+    },
+    {
+     "tipo": "producto",
+     "slug": "locker-metalico-con-3-gavetas-modelo-lg1004"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 343,
+  "slug": "gabinetes",
+  "nombre": "gabinetes",
+  "conteo": 4,
+  "seo": {
+   "title": "gabinetes | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "gabinete-metalico-universal-modelo-lg1008"
+    },
+    {
+     "tipo": "producto",
+     "slug": "gabinete-metalico-universal"
+    },
+    {
+     "tipo": "producto",
+     "slug": "gabinete-para-productos-de-limpieza"
+    },
+    {
+     "tipo": "producto",
+     "slug": "gabinete-metalico-of-lgli1001"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 346,
+  "slug": "mesas-de-juntas",
+  "nombre": "mesas de juntas",
+  "conteo": 16,
+  "seo": {
+   "title": "mesas de juntas | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-reuniones-modelo-asia"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-conferencias-modelo-quadrio"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-conferencias-modelo-triangel"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-juntas-en-u-modelo-mjof-1014"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 347,
+  "slug": "estaciones-de-trabajo",
+  "nombre": "estaciones de trabajo",
+  "conteo": 10,
+  "seo": {
+   "title": "estaciones de trabajo | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "modular-de-trabajo-para-call-center"
+    },
+    {
+     "tipo": "producto",
+     "slug": "estacion-de-trabajo-para-4-personas"
+    },
+    {
+     "tipo": "producto",
+     "slug": "modular-para-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "cubiculos-para-call-center"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 349,
+  "slug": "paneles-acusticos",
+  "nombre": "paneles acústicos",
+  "conteo": 4,
+  "seo": {
+   "title": "paneles acústicos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "panel-tipo-lambrin"
+    },
+    {
+     "tipo": "producto",
+     "slug": "paneles-acusticos-suspendidos"
+    },
+    {
+     "tipo": "producto",
+     "slug": "paneles-acusticos-corte-celosia"
+    },
+    {
+     "tipo": "producto",
+     "slug": "paneles-acusticos-ejemplo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 350,
+  "slug": "credenzas",
+  "nombre": "credenzas",
+  "conteo": 13,
+  "seo": {
+   "title": "credenzas | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-melamina-ofitodo-2"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-moderna-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-con-cajones"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-melamina-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 352,
+  "slug": "libreros",
+  "nombre": "libreros",
+  "conteo": 3,
+  "seo": {
+   "title": "libreros | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "librero-sobre-credenza-modelo-danya"
+    },
+    {
+     "tipo": "producto",
+     "slug": "librero-modelo-valencia"
+    },
+    {
+     "tipo": "producto",
+     "slug": "librero-modelo-yaris"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 353,
+  "slug": "pizarrones",
+  "nombre": "pizarrones",
+  "conteo": 4,
+  "seo": {
+   "title": "pizarrones | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "rotafolio-telescopico"
+    },
+    {
+     "tipo": "producto",
+     "slug": "rotafolio-giratorio"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pizarron-giratorio"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pintarrones-ejemplo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 355,
+  "slug": "mesas",
+  "nombre": "mesas",
+  "conteo": 14,
+  "seo": {
+   "title": "mesas | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "mesa-comedor-circular"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-para-restaurante-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-baja-cuadrada-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-cuadrada-mediana-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 356,
+  "slug": "mesas-para-restaurantes-y-negocios",
+  "nombre": "mesas para restaurantes y negocios",
+  "conteo": 14,
+  "seo": {
+   "title": "mesas para restaurantes y negocios | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "mesa-comedor-circular"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-para-restaurante-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-baja-cuadrada-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-cuadrada-mediana-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 358,
+  "slug": "mobiliario-comercial",
+  "nombre": "mobiliario comercial",
+  "conteo": 5,
+  "seo": {
+   "title": "mobiliario comercial | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-para-exterior-multiutos-lavie"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mesa-para-restaurante-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "exhibidor-esquinero-curvo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "exhibidor-esquinero-modelo-exh102"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 359,
+  "slug": "exhibidores",
+  "nombre": "Exhibidores",
+  "conteo": 3,
+  "seo": {
+   "title": "Exhibidores | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "exhibidor-esquinero-curvo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "exhibidor-esquinero-modelo-exh102"
+    },
+    {
+     "tipo": "producto",
+     "slug": "mueble-exhibidor"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 364,
+  "slug": "mobiliario-para-consultorios-y-hospitales",
+  "nombre": "Mobiliario para consultorios y hospitales",
+  "conteo": 11,
+  "seo": {
+   "title": "Mobiliario para consultorios y hospitales | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "credenza-con-cajones"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-dos-puertas"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-melamina-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-dos-puertas"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 365,
+  "slug": "mesas-de-trabajo-y-estaciones-industriales",
+  "nombre": "mesas de trabajo y estaciones industriales",
+  "conteo": 1,
+  "seo": {
+   "title": "mesas de trabajo y estaciones industriales | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "mesa-de-trabajo-industrial-modelo-mti1003"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 367,
+  "slug": "carritos-industriales",
+  "nombre": "carritos industriales",
+  "conteo": 1,
+  "seo": {
+   "title": "carritos industriales | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "carrito-industrial-metalico"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 368,
+  "slug": "racks-y-estanteria",
+  "nombre": "racks y estantería",
+  "conteo": 1,
+  "seo": {
+   "title": "racks y estantería | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "rack-para-tarimas-y-carga-pesada-inr1000"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 370,
+  "slug": "mobiliario-para-consultorios-medicos",
+  "nombre": "mobiliario para consultorios médicos",
+  "conteo": 11,
+  "seo": {
+   "title": "mobiliario para consultorios médicos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "credenza-de-melamina-ofitodo-2"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-moderna-ofitodo"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-con-cajones"
+    },
+    {
+     "tipo": "producto",
+     "slug": "credenza-melamina-ofitodo"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 371,
+  "slug": "bajo-mesadas",
+  "nombre": "bajo mesadas",
+  "conteo": 1,
+  "seo": {
+   "title": "bajo mesadas | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "bajo-mesada-para-consultorio"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 372,
+  "slug": "lavamanos",
+  "nombre": "lavamanos",
+  "conteo": 1,
+  "seo": {
+   "title": "lavamanos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "bajo-mesada-para-consultorio"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 390,
+  "slug": "silla-para-home-office",
+  "nombre": "Silla para home office",
+  "conteo": 0,
+  "seo": {
+   "title": "Silla para home office",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 391,
+  "slug": "respaldo-ejecutivo",
+  "nombre": "respaldo ejecutivo",
+  "conteo": 0,
+  "seo": {
+   "title": "respaldo ejecutivo",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 392,
+  "slug": "asiento-de-trabajo",
+  "nombre": "asiento de trabajo",
+  "conteo": 0,
+  "seo": {
+   "title": "asiento de trabajo",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 393,
+  "slug": "silla-ejecutiva-con-ruedas",
+  "nombre": "silla ejecutiva con ruedas",
+  "conteo": 0,
+  "seo": {
+   "title": "silla ejecutiva con ruedas",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 394,
+  "slug": "travis-ohe-295",
+  "nombre": "Travis Ohe-295",
+  "conteo": 1,
+  "seo": {
+   "title": "Travis Ohe-295 | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-para-oficina"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 395,
+  "slug": "vanto",
+  "nombre": "vanto",
+  "conteo": 0,
+  "seo": {
+   "title": "vanto",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 396,
+  "slug": "ciani-ohe-303",
+  "nombre": "ciani ohe-303",
+  "conteo": 0,
+  "seo": {
+   "title": "ciani ohe-303",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 397,
+  "slug": "respaldo-moderno",
+  "nombre": "respaldo moderno",
+  "conteo": 0,
+  "seo": {
+   "title": "respaldo moderno",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 398,
+  "slug": "silla-operativa-travis-ohe-293",
+  "nombre": "silla operativa \"Travis ohe-293\"",
+  "conteo": 0,
+  "seo": {
+   "title": "silla operativa \"Travis ohe-293\"",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 410,
+  "slug": "silla-ergonmica",
+  "nombre": "Silla ergon?mica",
+  "conteo": 0,
+  "seo": {
+   "title": "Silla ergon?mica",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 411,
+  "slug": "recepcin",
+  "nombre": "Recepci?n",
+  "conteo": 0,
+  "seo": {
+   "title": "Recepci?n",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 412,
+  "slug": "pupitres-para-capacitacin",
+  "nombre": "Pupitres para capacitaci?n",
+  "conteo": 0,
+  "seo": {
+   "title": "Pupitres para capacitaci?n",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 413,
+  "slug": "paneles-acsticos",
+  "nombre": "paneles ac?sticos",
+  "conteo": 0,
+  "seo": {
+   "title": "paneles ac?sticos",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 414,
+  "slug": "racks-y-estantera",
+  "nombre": "racks y estanter?a",
+  "conteo": 0,
+  "seo": {
+   "title": "racks y estanter?a",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ },
+ {
+  "legacyId": 415,
+  "slug": "mobiliario-para-consultorios-mdicos",
+  "nombre": "mobiliario para consultorios m?dicos",
+  "conteo": 0,
+  "seo": {
+   "title": "mobiliario para consultorios m?dicos",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ }
+]

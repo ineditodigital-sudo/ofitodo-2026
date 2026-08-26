@@ -14,8 +14,7 @@
     "@neondatabase/serverless": "^1.1.0",
     "drizzle-orm": "^0.45.2",
     "hono": "^4.13.5",
-    "zod": "^4.1.0",
-    "@ofitodo/schema": "*"
+    "zod": "^4.1.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.0.0",

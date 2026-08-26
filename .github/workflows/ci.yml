@@ -12,9 +12,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
+      # Sin npm workspaces (ver CLAUDE.md): cada app instala por separado
+      - run: npm install --no-audit --no-fund
+      - run: npm install --no-audit --no-fund --prefix scripts/.deps
+      - run: npm install --no-audit --no-fund --prefix apps/site
+      - run: npm install --no-audit --no-fund --prefix apps/admin
+      - run: npm install --no-audit --no-fund --prefix apps/api
       - run: npm run content:validate
-      - run: npm run typecheck
-      - run: npm test
-      - run: npm run build
+      - run: npm run typecheck --prefix apps/api
+      - run: npm run typecheck --prefix apps/admin
+      - run: npm test --prefix apps/api
+      - run: npm run build --prefix apps/admin
+      # El build del sitio necesita reference/ (html+meta, no versionado) → solo en runners con el repo completo
+      - name: Nota sobre build del sitio
+        run: echo "El build completo del sitio requiere reference/ (local). CI valida contenido, tipos, tests y panel."
