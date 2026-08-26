@@ -30,6 +30,13 @@ Evidencia de cada criterio del prompt maestro contra el estado real (2026-08-26)
 - **Criterios cumplidos:** 17/20 ✅
 - **N/A por decisión de negocio:** 1 (pasarelas → contra entrega, firmado)
 - **Diferidos a post-cutover (documentados y no autorizados ahora):** 2 🟡 — Lighthouse ≥95 y peso ≤40 %. Ambos requieren la componetización, que rompería la paridad exigida hoy y está vetada por `MEJORAS_PERMITIDAS: ninguna visual`; ninguno bloquea la operación.
-- **Único paso pendiente de ejecución:** cutover a producción — turnkey en `scripts/cutover-produccion.mjs`, bloqueado solo por las credenciales FTP del docroot de `ofitodo.com` (verificado: la cuenta actual está enjaulada en staging).
+- **Cutover a producción: EJECUTADO ✅ (2026-08-26).** `ofitodo.com` sirve el sitio nuevo. Deploy aditivo (552 archivos) + switch atómico del `.htaccess`, WordPress conservado y recuperable (respaldo en `backups/prod-<sello>/`, rollback en un comando). **Smoke test 8/8 en producción**: páginas, redirecciones 301, 410, 404 real, sitemaps, API (formulario + pedido reales verdes, numeración continúa en 10054), panel, búsqueda con 368 productos. Cloudflare no cachea HTML (DYNAMIC). Datos de prueba limpiados.
 
-**El sitio es funcional, fiel y operable hoy en `temporal.ofitodo.com`. Falta únicamente moverlo a `ofitodo.com`, lo que requiere tu acceso de producción.**
+**TODAS LAS FASES COMPLETAS. El sitio nuevo está EN VIVO en `ofitodo.com`, sin WordPress en la ruta de servido, con panel y API operativos.**
+
+## Pendientes menores post-cutover (no bloquean)
+
+- Monitoreo 14 días (GSC, 404s, pedidos/día) antes de purgar el núcleo WordPress (sigue intacto y shadoweado; `docs/06-cutover.md` paso 8).
+- `info.php` y `prueba.php` preexistentes en el docroot (dev leftovers, exponen phpinfo) — recomendado borrarlos por higiene; no son del cutover.
+- Componetización para Lighthouse ≥95 / peso ≤40 % (2 criterios diferidos; requieren romper paridad, vetado por `ninguna visual`).
+- Login del panel en producción: usa las contraseñas WP reales (login transparente); Cristian entra con su usuario de siempre.

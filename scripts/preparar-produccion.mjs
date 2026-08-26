@@ -43,9 +43,8 @@ AddDefaultCharset UTF-8
 ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
-# En producción el dominio principal SÍ tiene PHP-FPM (WordPress corría ahí):
-# se usa index.php directo; el puente CGI queda de respaldo (/cgi-bin/api.cgi)
-RewriteRule ^api(/.*)?$ /api/index.php [L,QSA]
+# /api vía puente CGI → php-cgi (verificado en el cutover; el handler LSAPI directo daba 500)
+RewriteRule ^api(/.*)?$ /cgi-bin/api.cgi [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^admin(/.*)?$ /admin/index.html [L]
 RewriteRule ^inicio/?$ / [R=301,L]

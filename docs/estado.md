@@ -4,12 +4,14 @@
 
 | Campo | Valor |
 |---|---|
-| Fase actual | **TODAS LAS FASES EJECUTADAS Y PROBADAS E2E EN STAGING** — sitio, API, panel y correos funcionando |
-| % avance global | 98 % (resta solo: firma de excepciones y cutover a producción) |
-| Siguiente paso | 1) Cristian: probar panel en temporal.ofitodo.com/admin/ (cuenta de prueba: `panel-prueba` / `Ofitodo!Prueba26`, o su usuario WP de siempre) y revisar los 2 correos E2E que le llegaron · 2) firmar excepciones #4/#7/#8 · 3) dar FTP del docroot de ofitodo.com + ventana → ejecutar docs/06-cutover.md |
-| Bloqueos | Solo el cutover: FTP/cPanel del docroot de producción (no existe en mis credenciales). Opcional post-cutover: token CF + Neon para migrar la API PHP a Workers (ADR) |
+| Fase actual | **✅ COMPLETADO — SITIO NUEVO EN VIVO EN `ofitodo.com`** (cutover ejecutado 2026-08-26) |
+| % avance global | 100 % del alcance ejecutable (quedan solo tareas de monitoreo y mejoras vetadas) |
+| Siguiente paso | Monitoreo 14 días → purgar núcleo WordPress (docs/06-cutover.md paso 8). Cristian: entrar al panel `ofitodo.com/admin/` con su usuario WP. Opcional: borrar info.php/prueba.php preexistentes |
+| Bloqueos | Ninguno. Rollback disponible en un comando (`scripts/rollback-produccion.mjs backups/prod-<sello>`) si hiciera falta |
 
 ## Bitácora
+
+- **2026-08-26 (CUTOVER COMPLETO ✅)** — `ofitodo.com` sirve el sitio nuevo. Secuencia: respaldo de archivos raíz → deploy aditivo (552 archivos, WordPress intacto) → switch atómico del `.htaccess`. Incidencias resueltas en vivo: (1) docroot real es `/public_html` no `/public_html/ofitodo.com`; (2) `/api` daba 500 por handler LSAPI directo → enrutado por el puente CGI `/cgi-bin/api.cgi` (probado); (3) lectura de body del POST hecha robusta (bucle sobre stdin, sin reintentos); (4) faltaba `/assets/indice-busqueda.json` (búsqueda) → subido y agregado a `public/`. Smoke 8/8 verde: formulario y pedido reales OK (numeración sigue en 10054), redirecciones/410/404 real/sitemaps/panel/búsqueda 368 productos. Cloudflare no cachea HTML (DYNAMIC). Datos de prueba limpiados; archivos de diagnóstico borrados. WordPress conservado y recuperable (`backups/prod-2026-08-26_1621/`, rollback en un comando). **TODAS LAS FASES TERMINADAS.**
 
 - **2026-08-26 (CUTOVER en curso)** — Credenciales de producción corregidas por Cristian (`ofitodo` / nueva contraseña) → **conexión al docroot principal OK**. Hallazgo clave: el WordPress vivo está en **`/public_html`** (no en `/public_html/ofitodo.com`, vacío). Respaldo de archivos raíz críticos hecho (`backups/prod-<sello>/`: .htaccess, wp-config.php, index.php, .user.ini, php.ini, sitemap.xml). Estrategia: deploy **aditivo** de dist-prod (sin tocar wp-content/uploads ni el núcleo WP) → switch del `.htaccess` al final (con handler PHP de cPanel conservado para /api) → smoke test. WordPress queda intacto y recuperable; rollback en un comando (`scripts/rollback-produccion.mjs`). Deploy aditivo subiendo (~40 min), WordPress sigue sirviendo mientras tanto.
 

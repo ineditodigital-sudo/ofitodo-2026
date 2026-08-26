@@ -22,16 +22,25 @@ header('Cache-Control: no-store'); // el nginx del hosting cachea GETs sin esta 
 $ruta = preg_replace('#^/api#', '', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '/');
 $metodo = $_SERVER['REQUEST_METHOD'];
 $crudo = file_get_contents('php://input');
-if ($crudo === '' && (int)($_SERVER['CONTENT_LENGTH'] ?? 0) > 0) {
-  // php-cgi vía puente CGI no siempre expone php://input: leer stdin directamente
+$len = (int)($_SERVER['CONTENT_LENGTH'] ?? 0);
+if (($crudo === '' || $crudo === false || ($len > 0 && strlen($crudo) < $len)) && $len > 0) {
+  // php-cgi vía puente CGI no siempre expone php://input completo: leer stdin en bucle
   $fh = fopen('php://stdin', 'rb');
-  $crudo = $fh ? (string)stream_get_contents($fh, (int)$_SERVER['CONTENT_LENGTH']) : '';
+  if ($fh) {
+    $crudo = '';
+    while (strlen($crudo) < $len && !feof($fh)) {
+      $chunk = fread($fh, 8192);
+      if ($chunk === false || $chunk === '') break;
+      $crudo .= $chunk;
+    }
+    fclose($fh);
+  }
 }
 $cuerpo = json_decode($crudo !== '' ? $crudo : 'null', true);
 
-$pdo = of_db();
-
 try {
+  $pdo = of_db();
+
   /* ---------- público ---------- */
   if ($ruta === '/salud' && $metodo === 'GET') {
     responder(['ok' => true, 'servicio' => 'ofitodo-api-php', 'version' => '1.0.0']);
@@ -219,7 +228,7 @@ try {
 
   fallar('Ruta no encontrada.', 404);
 } catch (Throwable $e) {
-  if ($pdo->inTransaction()) $pdo->rollBack();
+  if (isset($pdo) && $pdo instanceof PDO && $pdo->inTransaction()) $pdo->rollBack();
   http_response_code(500);
   echo json_encode(['ok' => false, 'mensaje' => 'Error del servidor.']);
 }
