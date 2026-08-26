@@ -20,16 +20,16 @@ Evidencia de cada criterio del prompt maestro contra el estado real (2026-08-26)
 | Peso de home y ficha vs original | ≤ 40 % | 🟡 diferido | Igual que arriba: llega con la componetización; hoy conserva el tema por paridad |
 | Sitemap, robots, verificaciones, analítica con IDs idénticos | ✔ | ✅ | 10 sitemaps con nombres Yoast idénticos; robots verbatim; GTM/GA4/Ads con los mismos IDs (congelados en el HTML) |
 | Panel: usuario no técnico cambia y publica sin ayuda | ✔ | ✅ | Panel v2: Inicio con KPIs, Pedidos, Mensajes, Productos (editor completo), Páginas y SEO, Ayuda. Guía `docs/guia-panel.md`. E2E de todos los endpoints |
-| Cambio de slug desde el panel genera 301 | ✔ | 🟡 parcial | El panel v2 aún no edita slugs (edita precio/stock/nombre/desc/foto/SEO); la regla "slug→301" vive en `redirects.json` + scripts. Edición de slug: siguiente iteración del panel |
+| Cambio de slug desde el panel genera 301 | ✔ | ✅ | El editor de producto tiene campo "Dirección web"; al cambiarlo la API registra el nuevo slug y crea el 301, `sincronizar-panel.mjs` renombra el producto en `content/` y añade la regla a `redirects.json`, y el build la emite en `.htaccess`. **Probado E2E** (cadena completa panel→301→.htaccess) + endpoint "deshacer cambios pendientes" |
 | Deploy con respaldo, smoke test y rollback probados en staging | ✔ | ✅ | Deploy FTPS reanudable probado (547 archivos); `cutover-produccion.mjs` con respaldo obligatorio + smoke + purga guarda; rollback documentado `docs/07-rollback.md` |
 | CLAUDE.md + AGENTS.md + docs/ + scripts/ + CI | ✔ | ✅ | 15 docs, 14 scripts, CI en `.github/workflows/ci.yml`; repo `ineditodigital-sudo/ofitodo-2026` |
 | docs/excepciones.md firmado por APROBADOR | ✔ | ✅ | 8 excepciones; #1-#8 firmadas por Cristian |
 
 ## Resumen
 
-- **Criterios cumplidos:** 16/20 ✅
+- **Criterios cumplidos:** 17/20 ✅
 - **N/A por decisión de negocio:** 1 (pasarelas → contra entrega, firmado)
-- **Diferidos a post-cutover (documentados y no autorizados ahora):** 3 🟡 — Lighthouse ≥95, peso ≤40 %, edición de slug en panel. Todos son mejoras que romperían la paridad exigida hoy o son iteración siguiente del panel; ninguno bloquea la operación.
+- **Diferidos a post-cutover (documentados y no autorizados ahora):** 2 🟡 — Lighthouse ≥95 y peso ≤40 %. Ambos requieren la componetización, que rompería la paridad exigida hoy y está vetada por `MEJORAS_PERMITIDAS: ninguna visual`; ninguno bloquea la operación.
 - **Único paso pendiente de ejecución:** cutover a producción — turnkey en `scripts/cutover-produccion.mjs`, bloqueado solo por las credenciales FTP del docroot de `ofitodo.com` (verificado: la cuenta actual está enjaulada en staging).
 
 **El sitio es funcional, fiel y operable hoy en `temporal.ofitodo.com`. Falta únicamente moverlo a `ofitodo.com`, lo que requiere tu acceso de producción.**

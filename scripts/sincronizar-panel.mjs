@@ -27,7 +27,28 @@ for (const o of data.productos) {
   if (o.imagen) { p.imagen = o.imagen; p.tieneReferencia = false; }
   nP++;
 }
+
+// cambios de slug: renombra el producto y prepara su 301 (§14)
+let nSlug = 0;
+for (const s of (data.slugs ?? [])) {
+  const p = productos.find((x) => x.slug === s.slug_actual);
+  if (!p || !s.slug_nuevo) continue;
+  p.slug = s.slug_nuevo;
+  p.tieneReferencia = false; // se regenera en la nueva ruta con plantilla donante
+  nSlug++;
+}
 writeFileSync(pf, JSON.stringify(productos, null, 1));
+
+// 301 automáticos en la fuente única de redirecciones
+if ((data.redirects ?? []).length) {
+  const rf = path.join(ROOT, 'content', 'redirects.json');
+  const red = JSON.parse(readFileSync(rf, 'utf8'));
+  for (const r of data.redirects) {
+    if (!red.redirects.some((x) => x.de === r.origen)) red.redirects.push({ de: r.origen, a: r.destino, codigo: 301 });
+    else red.redirects.find((x) => x.de === r.origen).a = r.destino;
+  }
+  writeFileSync(rf, JSON.stringify(red, null, 2));
+}
 
 // índice de búsqueda (nombre/precio actualizados)
 const idx = productos.map((p) => ({ slug: p.slug, nombre: p.nombre, sku: p.sku, precio: p.precio, imagen: p.imagen ? p.imagen.replace(/(\.\w+)$/, '-200x200$1') : null, imagenFull: p.imagen }));

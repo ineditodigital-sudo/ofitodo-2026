@@ -32,6 +32,14 @@ writeFileSync(path.join(OUT, 'api', 'datos', 'paginas.json'), JSON.stringify(pag
 const admin = path.join(ROOT, 'apps', 'admin', 'dist');
 if (existsSync(admin)) cpSync(admin, path.join(OUT, 'admin'), { recursive: true });
 
+// 301 desde content/redirects.json (incluye los que crea el panel al cambiar un slug)
+const red = JSON.parse(readFileSync(path.join(ROOT, 'content', 'redirects.json'), 'utf8'));
+const esc = (s) => s.replace(/([.\\])/g, '\\$1');
+const reglas301 = red.redirects
+  .filter((r) => r.codigo === 301 && !/^\/(inicio|wp-login|wp-admin)/.test(r.de))
+  .map((r) => `RewriteRule ^${esc(r.de.replace(/^\//, ''))}$ ${r.a} [R=301,L]`)
+  .join('\n');
+
 // 4. Configuración de STAGING: noindex + API + 404 del tema (el vhost da 500 en rutas
 //    inexistentes antes del ErrorDocument, ver docs/04-preview-staging.md → fallback rewrite)
 writeFileSync(path.join(OUT, '.htaccess'), `# STAGING temporal.ofitodo.com — no indexar nunca
@@ -46,10 +54,11 @@ RewriteRule ^api(/.*)?$ /cgi-bin/api.cgi [L,QSA]
 # Panel SPA
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^admin(/.*)?$ /admin/index.html [L]
-# Redirecciones del original
+# Redirecciones del original + panel (cambios de slug → 301)
 RewriteRule ^inicio/?$ / [R=301,L]
 RewriteRule ^wp-login\\.php$ /admin/ [R=301,L]
 RewriteRule ^wp-admin(/.*)?$ /admin/ [R=301,L]
+${reglas301}
 # Retiradas (docs/excepciones.md #3): 410
 RewriteRule ^wp-json(/.*)?$ - [G,L]
 RewriteRule ^xmlrpc\\.php$ - [G,L]

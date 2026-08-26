@@ -97,6 +97,8 @@ try {
     responder(['ok' => true,
       'productos' => $pdo->query('SELECT * FROM product_overrides')->fetchAll(PDO::FETCH_ASSOC),
       'paginas' => $pdo->query('SELECT * FROM pages_seo')->fetchAll(PDO::FETCH_ASSOC),
+      'slugs' => $pdo->query('SELECT * FROM slug_changes')->fetchAll(PDO::FETCH_ASSOC),
+      'redirects' => $pdo->query('SELECT * FROM redirects_panel')->fetchAll(PDO::FETCH_ASSOC),
     ]);
   }
 
@@ -159,7 +161,28 @@ try {
                    ON CONFLICT(slug) DO UPDATE SET precio=excluded.precio, stock=excluded.stock, nombre=excluded.nombre,
                    descripcion=excluded.descripcion, imagen=excluded.imagen, modificado=excluded.modificado')
         ->execute([$slug, $precio, $stock, $nombre, $descripcion, $imagen]);
+    // Cambio de dirección web (slug) → registra el nuevo slug y crea el 301 automático (§14)
+    $slugNuevo = of_slug((string)($cuerpo['slug_nuevo'] ?? ''));
+    if ($slugNuevo !== '' && $slugNuevo !== $slug) {
+      $precios = of_precios($pdo);
+      if (isset($precios[$slugNuevo])) fallar('Ya existe un producto con esa dirección web.');
+      $pdo->prepare('INSERT INTO slug_changes (slug_actual, slug_nuevo, tipo, creado) VALUES (?,?,?,datetime("now"))
+                     ON CONFLICT(slug_actual) DO UPDATE SET slug_nuevo=excluded.slug_nuevo, creado=excluded.creado')
+          ->execute([$slug, $slugNuevo, 'producto']);
+      $pdo->prepare('INSERT INTO redirects_panel (origen, destino, creado) VALUES (?,?,datetime("now"))
+                     ON CONFLICT(origen) DO UPDATE SET destino=excluded.destino')
+          ->execute(["/producto/{$slug}/", "/producto/{$slugNuevo}/"]);
+      responder(['ok' => true, 'slugNuevo' => $slugNuevo, 'aviso' => "La dirección cambió a /producto/{$slugNuevo}/. La dirección anterior redirigirá sola (301) tras la próxima publicación."]);
+    }
     responder(['ok' => true]);
+  }
+  if ($ruta === '/admin/producto-deshacer' && $metodo === 'POST') {
+    $slug = (string)($cuerpo['slug'] ?? '');
+    $sc = $pdo->prepare('SELECT slug_nuevo FROM slug_changes WHERE slug_actual = ?'); $sc->execute([$slug]);
+    if ($n = $sc->fetchColumn()) $pdo->prepare('DELETE FROM redirects_panel WHERE origen = ?')->execute(["/producto/{$slug}/"]);
+    $pdo->prepare('DELETE FROM slug_changes WHERE slug_actual = ?')->execute([$slug]);
+    $pdo->prepare('DELETE FROM product_overrides WHERE slug = ?')->execute([$slug]);
+    responder(['ok' => true, 'mensaje' => 'Cambios pendientes de este producto descartados.']);
   }
   if ($ruta === '/admin/paginas' && $metodo === 'GET') {
     $base = json_decode((string)file_get_contents(__DIR__ . '/datos/paginas.json'), true) ?? [];

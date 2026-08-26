@@ -14,6 +14,14 @@ function sanear(string $s): string {
   return str_replace(["\r", "\n"], ' ', strip_tags($s));
 }
 
+/** Normaliza un slug a minúsculas, guiones y sin acentos (como WordPress). */
+function of_slug(string $s): string {
+  $s = strtolower(trim($s));
+  $s = strtr($s, ['á'=>'a','é'=>'e','í'=>'i','ó'=>'o','ú'=>'u','ñ'=>'n','ü'=>'u']);
+  $s = preg_replace('/[^a-z0-9]+/', '-', $s);
+  return trim((string)$s, '-');
+}
+
 function of_db(): PDO {
   $dir = __DIR__ . '/datos';
   if (!is_dir($dir)) mkdir($dir, 0755, true);
@@ -27,6 +35,9 @@ function of_db(): PDO {
     try { $pdo->exec("ALTER TABLE product_overrides ADD COLUMN {$col}"); } catch (Throwable $e) {}
   }
   $pdo->exec('CREATE TABLE IF NOT EXISTS pages_seo (slug TEXT PRIMARY KEY, title TEXT, description TEXT, modificado TEXT)');
+  // Cambios de slug hechos desde el panel → generan 301 automático (§7.2, §14)
+  $pdo->exec('CREATE TABLE IF NOT EXISTS slug_changes (slug_actual TEXT PRIMARY KEY, slug_nuevo TEXT, tipo TEXT, creado TEXT)');
+  $pdo->exec('CREATE TABLE IF NOT EXISTS redirects_panel (origen TEXT PRIMARY KEY, destino TEXT, creado TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS admins (id INTEGER PRIMARY KEY, login TEXT UNIQUE, email TEXT, display_name TEXT, hash_legacy TEXT, hash_nuevo TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY, admin_id INTEGER, expira TEXT)');
   // Semilla: los 6 pedidos históricos de WooCommerce (§6.2, totales al centavo desde postmeta)

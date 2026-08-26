@@ -28,6 +28,14 @@ if (existsSync(admin)) cpSync(admin, path.join(OUT, 'admin'), { recursive: true 
 const idx = path.join(OUT, 'api', 'index.php');
 writeFileSync(idx, readFileSync(idx, 'utf8').replace('const EN_STAGING = true;', 'const EN_STAGING = false;'));
 
+// 301 desde content/redirects.json (incluye los que crea el panel al cambiar un slug)
+const red = JSON.parse(readFileSync(path.join(ROOT, 'content', 'redirects.json'), 'utf8'));
+const esc = (s) => s.replace(/([.\\])/g, '\\$1');
+const reglas301 = red.redirects
+  .filter((r) => r.codigo === 301 && !/^\/(inicio|wp-login|wp-admin)/.test(r.de))
+  .map((r) => `RewriteRule ^${esc(r.de.replace(/^\//, ''))}$ ${r.a} [R=301,L]`)
+  .join('\n');
+
 // .htaccess de PRODUCCIÓN: 404 real, redirecciones, 410, caché larga para assets
 writeFileSync(path.join(OUT, '.htaccess'), `# ofitodo.com — sitio estático + API (generado por preparar-produccion)
 DirectoryIndex index.html
@@ -43,6 +51,7 @@ RewriteRule ^admin(/.*)?$ /admin/index.html [L]
 RewriteRule ^inicio/?$ / [R=301,L]
 RewriteRule ^wp-login\\.php$ /admin/ [R=301,L]
 RewriteRule ^wp-admin(/.*)?$ /admin/ [R=301,L]
+${reglas301}
 RewriteRule ^wp-json(/.*)?$ - [G,L]
 RewriteRule ^xmlrpc\\.php$ - [G,L]
 RewriteRule ^wp-cron\\.php$ - [G,L]

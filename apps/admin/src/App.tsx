@@ -173,19 +173,22 @@ function EditorProducto({ p, onListo }: { p: Json; onListo: (msj: string) => voi
   const [stock, setStock] = useState(String(p.stock ?? 'instock'));
   const [descripcion, setDescripcion] = useState(String(p.descripcion ?? ''));
   const [imagen, setImagen] = useState(String(p.imagen ?? ''));
+  const [slug, setSlug] = useState(String(p.slug ?? ''));
   const [guardando, setGuardando] = useState(false);
+  const slugCambia = slug !== String(p.slug) && slug.trim() !== '';
   async function guardar() {
     setGuardando(true);
     try {
-      await api('/admin/productos', 'PUT', {
+      const r = await api('/admin/productos', 'PUT', {
         slug: p.slug,
         precio: precio === '' ? null : +precio,
         stock,
         nombre: nombre !== String(p.nombre) ? nombre : null,
         descripcion: descripcion || null,
         imagen: imagen !== String(p.imagen ?? '') ? imagen : null,
+        slug_nuevo: slugCambia ? slug : null,
       });
-      onListo('Guardado. Precio y disponibilidad ya están activos; nombre, descripción e imagen se aplican en la próxima publicación del sitio.');
+      onListo((r.aviso ? r.aviso + ' ' : '') + 'Guardado. Precio y disponibilidad ya están activos; nombre, descripción, imagen y dirección se aplican en la próxima publicación del sitio.');
     } finally { setGuardando(false); }
   }
   return (
@@ -197,6 +200,11 @@ function EditorProducto({ p, onListo }: { p: Json; onListo: (msj: string) => voi
       </div>
       <label>Descripción (se muestra en la página del producto) <em>con publicación</em><textarea rows={4} value={descripcion} onChange={(e) => setDescripcion(e.target.value)} placeholder="Escribe la nueva descripción solo si quieres cambiarla" /></label>
       <label>Foto principal (dirección de la imagen) <em>con publicación</em><input value={imagen} onChange={(e) => setImagen(e.target.value)} /></label>
+      <label>Dirección web del producto <em>con publicación</em>
+        <input value={slug} onChange={(e) => setSlug(e.target.value)} />
+        <small className="suave">tudominio.com/producto/<strong>{slug || '…'}</strong>/</small>
+        {slugCambia && <small className="aviso-inline">Al cambiarla, la dirección anterior enviará sola a la nueva (redirección 301) — no se pierde el posicionamiento en Google.</small>}
+      </label>
       <button disabled={guardando} onClick={guardar}>{guardando ? 'Guardando…' : 'Guardar cambios'}</button>
     </div>
   );

@@ -64,3 +64,5 @@ select, .tabla button { padding: 0.35rem 0.6rem; border-radius: 6px; border: 1px
 .editor .fila2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
 .editor button { justify-self: start; background: var(--color-primario); color: #fff; border: 0; padding: 0.55rem 1.1rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
 .tarjeta h3 { margin: 0 0 0.5rem; color: var(--color-primario); font-size: 1.05rem; }
+.editor small { font-weight: 400; }
+.aviso-inline { display: block; margin-top: 0.25rem; background: #fff4e0; color: #92600a; padding: 0.4rem 0.6rem; border-radius: 6px; font-size: 0.8rem; }
