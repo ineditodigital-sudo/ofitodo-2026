@@ -1,16 +1,16 @@
-import { useEffect, useState, type FormEvent, type ReactNode } from 'react';
+import { useEffect, useState, type FormEvent, type ReactNode, type ComponentType, type SVGProps } from 'react';
 import { api, fmtDinero, fmtFecha, subirImagen } from './api.ts';
 import { PageEditor } from './PageEditor.tsx';
+import * as Ic from './Icons.tsx';
 
-/* Panel de Ofitodo — CMS a la medida. Todo en lenguaje humano, imposible de romper.
-   Módulos: Inicio · Páginas · Encabezado y pie · Tienda · Blog · Menús · Marca · Contacto · Mensajes · Pedidos · Medios · Ayuda */
+/* Panel de Ofitodo — CMS a la medida. Todo en lenguaje humano, imposible de romper. */
 
 type Tab = 'inicio' | 'paginas' | 'global' | 'tienda' | 'blog' | 'menus' | 'marca' | 'contacto' | 'mensajes' | 'pedidos' | 'medios' | 'ayuda';
 const ESTADOS: Record<string, string> = { pendiente: 'Pendiente', confirmado: 'Confirmado', entregado: 'Entregado', cancelado: 'Cancelado', 'wc-processing': 'En proceso', 'wc-failed': 'Fallido' };
 
-const ICON: Record<Tab, string> = {
-  inicio: '◧', paginas: '▤', global: '⌂', tienda: '🛍', blog: '✎', menus: '☰',
-  marca: '🎨', contacto: '☏', mensajes: '✉', pedidos: '📦', medios: '🖼', ayuda: '?',
+const ICON: Record<Tab, ComponentType<SVGProps<SVGSVGElement>>> = {
+  inicio: Ic.IconInicio, paginas: Ic.IconPaginas, global: Ic.IconGlobal, tienda: Ic.IconTienda, blog: Ic.IconBlog, menus: Ic.IconMenus,
+  marca: Ic.IconMarca, contacto: Ic.IconContacto, mensajes: Ic.IconMensajes, pedidos: Ic.IconPedidos, medios: Ic.IconImagenes, ayuda: Ic.IconAyuda,
 };
 const NOMBRE: Record<Tab, string> = {
   inicio: 'Inicio', paginas: 'Páginas', global: 'Encabezado y pie', tienda: 'Tienda', blog: 'Blog',
@@ -38,16 +38,16 @@ export function App() {
         {grupos.map(([g, tabs]) => (
           <nav key={g} className="nav-grupo">
             {g && <div className="nav-grupo-tit">{g}</div>}
-            {tabs.map((t) => (
+            {tabs.map((t) => { const I = ICON[t]; return (
               <button key={t} className={'nav-item' + (tab === t ? ' activo' : '')} onClick={() => setTab(t)}>
-                <span className="nav-ico">{ICON[t]}</span>{NOMBRE[t]}
+                <span className="nav-ico"><I /></span>{NOMBRE[t]}
               </button>
-            ))}
+            ); })}
           </nav>
         ))}
         <div className="lateral-pie">
           <div className="usuario"><span className="usuario-ini">{(nombre[0] || 'A').toUpperCase()}</span><div><strong>{nombre}</strong><span>Administrador</span></div></div>
-          <button className="btn-salir" onClick={async () => { await api('/admin/salir', 'POST'); location.reload(); }}>Salir</button>
+          <button className="btn-salir" onClick={async () => { await api('/admin/salir', 'POST'); location.reload(); }}><Ic.IconSalir /> Salir</button>
         </div>
       </aside>
       <main className="principal">
@@ -101,19 +101,19 @@ function Inicio({ irA }: { irA: (t: Tab) => void }) {
   if (!r) return <Cargando />;
   return (
     <div>
-      <Encabezado titulo="Hola de nuevo 👋" sub="Un vistazo rápido a tu sitio y tu tienda" />
+      <Encabezado titulo="Resumen" sub="Un vistazo rápido a tu sitio y tu tienda" />
       <div className="kpis">
-        <button className="kpi" onClick={() => irA('pedidos')}><span className="kpi-ico azul">📦</span><strong>{r.pedidosPendientes ?? 0}</strong><span>pedidos por atender</span></button>
-        <button className="kpi" onClick={() => irA('mensajes')}><span className="kpi-ico verde">✉</span><strong>{r.mensajesNoLeidos ?? 0}</strong><span>mensajes sin leer</span></button>
-        <button className="kpi" onClick={() => irA('paginas')}><span className="kpi-ico morado">▤</span><strong>{r.cambiosPendientes ?? 0}</strong><span>cambios por publicar</span></button>
-        <button className="kpi" onClick={() => irA('tienda')}><span className="kpi-ico naranja">🛍</span><strong>—</strong><span>administrar tienda</span></button>
+        <button className="kpi" onClick={() => irA('pedidos')}><span className="kpi-ico azul"><Ic.IconPedidos /></span><strong>{r.pedidosPendientes ?? 0}</strong><span>pedidos por atender</span></button>
+        <button className="kpi" onClick={() => irA('mensajes')}><span className="kpi-ico verde"><Ic.IconMensajes /></span><strong>{r.mensajesNoLeidos ?? 0}</strong><span>mensajes sin leer</span></button>
+        <button className="kpi" onClick={() => irA('paginas')}><span className="kpi-ico morado"><Ic.IconPaginas /></span><strong>{r.cambiosPendientes ?? 0}</strong><span>cambios por publicar</span></button>
+        <button className="kpi" onClick={() => irA('tienda')}><span className="kpi-ico naranja"><Ic.IconTienda /></span><strong>Tienda</strong><span>administrar productos</span></button>
       </div>
       <div className="dos-col">
         <Card titulo="Últimos pedidos">
           {r.ultimosPedidos?.length ? <ul className="lista-simple">{r.ultimosPedidos.map((p: any) => <li key={p.numero}>#{p.numero} · {fmtDinero(p.total)} · {ESTADOS[p.estado] ?? p.estado} · {fmtFecha(p.creado)}</li>)}</ul> : <Vacio texto="Aún no hay pedidos." />}
         </Card>
         <Card titulo="Últimos mensajes">
-          {r.ultimosMensajes?.length ? <ul className="lista-simple">{r.ultimosMensajes.map((m: any) => <li key={m.id}>{Number(m.leido) ? '' : '🔵 '}{m.formulario} · {fmtFecha(m.creado)}</li>)}</ul> : <Vacio texto="Aún no hay mensajes." />}
+          {r.ultimosMensajes?.length ? <ul className="lista-simple">{r.ultimosMensajes.map((m: any) => <li key={m.id}>{Number(m.leido) ? null : <span className="punto-nuevo" />}{m.formulario} · {fmtFecha(m.creado)}</li>)}</ul> : <Vacio texto="Aún no hay mensajes." />}
         </Card>
       </div>
       <Card titulo="¿Cómo funciona tu sitio?">
@@ -229,7 +229,7 @@ function Mensajes() {
       <div className="lista">
         {filas.map((m) => (
           <details key={m.id} className="card" onToggle={(e) => (e.target as HTMLDetailsElement).open && !Number(m.leido) && (m.leido = 1, api('/admin/mensajes', 'PUT', { id: m.id, leido: 1 }).catch(() => {}))}>
-            <summary>{Number(m.leido) ? '' : '🔵 '}<strong>{m.formulario}</strong> · {fmtFecha(m.creado)} <span className="suave">desde {m.pagina || 'el sitio'}</span></summary>
+            <summary>{Number(m.leido) ? null : <span className="punto-nuevo" />}<strong>{m.formulario}</strong> · {fmtFecha(m.creado)} <span className="suave">desde {m.pagina || 'el sitio'}</span></summary>
             <dl>{Object.entries(JSON.parse(m.datos)).map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{String(v) || '—'}</dd></div>)}</dl>
           </details>
         ))}

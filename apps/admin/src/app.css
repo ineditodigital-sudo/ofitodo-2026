@@ -33,7 +33,11 @@ input, select, textarea { font-family: inherit; font-size: .95rem; }
 .nav-item { display: flex; align-items: center; gap: .7rem; width: 100%; text-align: left; background: transparent; border: 0; padding: .6rem .7rem; border-radius: 10px; color: var(--texto); font-size: .93rem; font-weight: 500; }
 .nav-item:hover { background: var(--fondo); }
 .nav-item.activo { background: var(--acento-suave); color: var(--primario); font-weight: 700; }
-.nav-ico { width: 20px; text-align: center; font-size: 1rem; }
+.nav-ico { width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; color: var(--suave); }
+.nav-item.activo .nav-ico { color: var(--primario); }
+.btn-salir { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; }
+.btn-salir svg { width: 16px; height: 16px; }
+.punto-nuevo { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--acento); margin-right: .45rem; vertical-align: middle; }
 .lateral-pie { margin-top: auto; display: grid; gap: .6rem; border-top: 1px solid var(--linea); padding-top: .9rem; }
 .usuario { display: flex; align-items: center; gap: .6rem; }
 .usuario-ini { width: 36px; height: 36px; border-radius: 50%; background: var(--primario); color: #fff; display: grid; place-items: center; font-weight: 700; }
@@ -48,8 +52,9 @@ input, select, textarea { font-family: inherit; font-size: .95rem; }
 .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.2rem; }
 .kpi { background: var(--card); border: 0; border-radius: var(--radio); box-shadow: var(--sombra); padding: 1.1rem; display: grid; gap: .25rem; text-align: left; }
 .kpi:hover { transform: translateY(-2px); transition: transform .15s; }
-.kpi-ico { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; font-size: 1.1rem; margin-bottom: .3rem; }
-.kpi-ico.azul { background: #e7effb; } .kpi-ico.verde { background: #e7f7ee; } .kpi-ico.morado { background: #f0ebff; } .kpi-ico.naranja { background: #fdf0e0; }
+.kpi-ico { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; margin-bottom: .3rem; }
+.kpi-ico svg { width: 20px; height: 20px; }
+.kpi-ico.azul { background: #e7effb; color: #2563c9; } .kpi-ico.verde { background: #e7f7ee; color: #16a34a; } .kpi-ico.morado { background: #f0ebff; color: #7c5cff; } .kpi-ico.naranja { background: #fdf0e0; color: #ea8a1e; }
 .kpi strong { font-size: 1.9rem; color: var(--primario); } .kpi span { color: var(--suave); font-size: .9rem; }
 
 /* ---- Cards ---- */

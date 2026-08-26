@@ -14,12 +14,13 @@ export async function api(ruta: string, metodo = 'GET', cuerpo?: unknown): Promi
     if (!r.ok || j.ok === false) throw new Error(j.mensaje ?? 'Ocurrió un error');
     return j;
   };
-  try { return await intento(); }
-  catch (e) {
-    if (metodo === 'GET') throw e;
-    await new Promise((res) => setTimeout(res, 400));
-    return intento();
+  // Reintenta hasta 2 veces (el arranque en frío del servidor puede fallar la 1ª petición)
+  let ultimo: unknown;
+  for (let i = 0; i < 3; i++) {
+    try { return await intento(); }
+    catch (e) { ultimo = e; await new Promise((res) => setTimeout(res, 350 * (i + 1))); }
   }
+  throw ultimo;
 }
 
 export const fmtDinero = (n: number | null) =>
