@@ -73,6 +73,17 @@ ExpiresByType application/javascript "access plus 1 month"
 Header set X-Content-Type-Options "nosniff"
 Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+# Handler PHP de cPanel (conservado del original para que /api ejecute PHP en el dominio principal)
+<IfModule php8_module>
+   php_value memory_limit 512M
+   php_value post_max_size 64M
+   php_value upload_max_filesize 64M
+</IfModule>
+# php -- BEGIN cPanel-generated handler, do not edit
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
 `);
 // robots real ya viene de apps/site/public/robots.txt (copiado con dist)
 console.log('dist-prod listo para el cutover (docs/06-cutover.md).');
