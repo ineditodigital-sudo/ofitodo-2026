@@ -5,13 +5,15 @@ El sitio es estático (Astro) + API PHP + panel. **Todo cambio editorial pasa po
 ## Ciclo estándar de publicación
 
 ```
-node scripts/wp-convert.mjs                 # regen de content/ si cambiaron datos fuente
+node scripts/sincronizar-panel.mjs          # baja los cambios hechos en el panel → content/
 npm run content:validate
 npm run build --prefix apps/site
 node scripts/preparar-staging.mjs
 node scripts/deploy-ftps.mjs dist-staging
 node scripts/parity.mjs                     # verificación de paridad tras cambios
 ```
+
+(`wp-convert.mjs` solo se re-corre si cambió la referencia/DB original; pisa `content/` regenerándolo.)
 
 ## Tareas comunes
 

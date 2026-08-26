@@ -91,6 +91,15 @@ try {
     responder(['ok' => true, 'numero' => $num, 'total' => $total]);
   }
 
+  // Exportación de cambios del panel para el ciclo de publicación (scripts/sincronizar-panel.mjs)
+  if ($ruta === '/exportar-cambios' && $metodo === 'GET') {
+    if (($_GET['clave'] ?? '') !== 'ofsync_7c1f4a9e2b8d4e63a5f0c9d21b7e8a44') fallar('Clave inválida.', 401);
+    responder(['ok' => true,
+      'productos' => $pdo->query('SELECT * FROM product_overrides')->fetchAll(PDO::FETCH_ASSOC),
+      'paginas' => $pdo->query('SELECT * FROM pages_seo')->fetchAll(PDO::FETCH_ASSOC),
+    ]);
+  }
+
   if ($ruta === '/productos/estado' && $metodo === 'GET') {
     $rows = $pdo->query('SELECT slug, precio, stock FROM product_overrides')->fetchAll(PDO::FETCH_ASSOC);
     responder(['ok' => true, 'overrides' => $rows]);
@@ -143,10 +152,46 @@ try {
     $slug = (string)($cuerpo['slug'] ?? '');
     $precio = $cuerpo['precio'] !== null && $cuerpo['precio'] !== '' ? round((float)$cuerpo['precio'], 2) : null;
     $stock = in_array($cuerpo['stock'] ?? 'instock', ['instock', 'outofstock'], true) ? $cuerpo['stock'] : 'instock';
-    $pdo->prepare('INSERT INTO product_overrides (slug, precio, stock) VALUES (?,?,?)
-                   ON CONFLICT(slug) DO UPDATE SET precio = excluded.precio, stock = excluded.stock')
-        ->execute([$slug, $precio, $stock]);
+    $nombre = trim((string)($cuerpo['nombre'] ?? '')) ?: null;
+    $descripcion = trim((string)($cuerpo['descripcion'] ?? '')) ?: null;
+    $imagen = trim((string)($cuerpo['imagen'] ?? '')) ?: null;
+    $pdo->prepare('INSERT INTO product_overrides (slug, precio, stock, nombre, descripcion, imagen, modificado) VALUES (?,?,?,?,?,?,datetime("now"))
+                   ON CONFLICT(slug) DO UPDATE SET precio=excluded.precio, stock=excluded.stock, nombre=excluded.nombre,
+                   descripcion=excluded.descripcion, imagen=excluded.imagen, modificado=excluded.modificado')
+        ->execute([$slug, $precio, $stock, $nombre, $descripcion, $imagen]);
     responder(['ok' => true]);
+  }
+  if ($ruta === '/admin/paginas' && $metodo === 'GET') {
+    $base = json_decode((string)file_get_contents(__DIR__ . '/datos/paginas.json'), true) ?? [];
+    $ov = [];
+    foreach ($pdo->query('SELECT * FROM pages_seo') as $o) $ov[$o['slug']] = $o;
+    foreach ($base as &$p) {
+      if (isset($ov[$p['slug']])) { $p['title'] = $ov[$p['slug']]['title'] ?: $p['title']; $p['description'] = $ov[$p['slug']]['description'] ?: $p['description']; $p['pendiente'] = true; }
+      else $p['pendiente'] = false;
+    }
+    responder(['ok' => true, 'paginas' => $base]);
+  }
+  if ($ruta === '/admin/paginas' && $metodo === 'PUT') {
+    $slug = (string)($cuerpo['slug'] ?? '');
+    if ($slug === '') fallar('Falta la página.');
+    $pdo->prepare('INSERT INTO pages_seo (slug, title, description, modificado) VALUES (?,?,?,datetime("now"))
+                   ON CONFLICT(slug) DO UPDATE SET title=excluded.title, description=excluded.description, modificado=excluded.modificado')
+        ->execute([$slug, trim((string)($cuerpo['title'] ?? '')), trim((string)($cuerpo['description'] ?? ''))]);
+    responder(['ok' => true]);
+  }
+  if ($ruta === '/admin/mensajes' && $metodo === 'PUT') {
+    $pdo->prepare('UPDATE form_submissions SET leido = ? WHERE id = ?')->execute([(int)($cuerpo['leido'] ?? 1), (int)($cuerpo['id'] ?? 0)]);
+    responder(['ok' => true]);
+  }
+  if ($ruta === '/admin/resumen' && $metodo === 'GET') {
+    responder(['ok' => true,
+      'pedidosPendientes' => (int)$pdo->query("SELECT COUNT(*) FROM orders WHERE estado IN ('pendiente','wc-processing')")->fetchColumn(),
+      'mensajesNoLeidos' => (int)$pdo->query('SELECT COUNT(*) FROM form_submissions WHERE leido = 0')->fetchColumn(),
+      'cambiosPendientes' => (int)$pdo->query("SELECT COUNT(*) FROM product_overrides WHERE nombre IS NOT NULL OR descripcion IS NOT NULL OR imagen IS NOT NULL")->fetchColumn()
+        + (int)$pdo->query('SELECT COUNT(*) FROM pages_seo')->fetchColumn(),
+      'ultimosPedidos' => $pdo->query('SELECT numero, estado, total, creado FROM orders ORDER BY id DESC LIMIT 5')->fetchAll(PDO::FETCH_ASSOC),
+      'ultimosMensajes' => $pdo->query('SELECT id, formulario, creado, leido FROM form_submissions ORDER BY id DESC LIMIT 5')->fetchAll(PDO::FETCH_ASSOC),
+    ]);
   }
 
   fallar('Ruta no encontrada.', 404);

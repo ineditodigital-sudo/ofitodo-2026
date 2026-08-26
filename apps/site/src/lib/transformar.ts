@@ -42,9 +42,17 @@ function base(html: string) {
   return $;
 }
 
-/** Página congelada: referencia + enlaces relativos + islas activas. */
-export function congelada(html: string): string {
-  return base(html).html();
+/** Página congelada: referencia + enlaces relativos + islas activas.
+ *  El SEO editable (panel → content/es) parcha title/description sobre la referencia. */
+export function congelada(html: string, seo?: { title?: string; description?: string | null }): string {
+  const $ = base(html);
+  if (seo?.title && $('title').first().text() !== seo.title) $('title').text(seo.title);
+  if (seo?.description) {
+    const m = $('meta[name="description"]');
+    if (m.length) m.attr('content', seo.description);
+    else $('title').after(`<meta name="description" content="${seo.description.replace(/"/g, '&quot;')}">`);
+  }
+  return $.html();
 }
 
 /** Ficha de producto: referencia propia parchada con los datos del catálogo. */

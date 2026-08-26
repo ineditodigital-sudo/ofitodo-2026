@@ -1,6 +1,6 @@
 // preparar-staging: arma dist-staging/ = sitio (Astro) + API PHP + panel + config de staging.
 // Luego: node scripts/deploy-ftps.mjs dist-staging
-import { cpSync, mkdirSync, rmSync, writeFileSync, copyFileSync, existsSync } from 'node:fs';
+import { cpSync, mkdirSync, rmSync, writeFileSync, copyFileSync, existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -17,6 +17,16 @@ cpSync(path.join(ROOT, 'apps', 'site', 'dist'), OUT, { recursive: true });
 cpSync(path.join(ROOT, 'apps', 'api-php', 'api'), path.join(OUT, 'api'), { recursive: true });
 cpSync(path.join(ROOT, 'apps', 'api-php', 'cgi-bin'), path.join(OUT, 'cgi-bin'), { recursive: true });
 copyFileSync(path.join(ROOT, 'content', 'catalogo', 'indice-busqueda.json'), path.join(OUT, 'api', 'datos', 'precios.json'));
+// listado de páginas editables (SEO) para el panel
+const paginas = [];
+for (const col of ['pages', 'posts']) {
+  const dir = path.join(ROOT, 'content', 'es', col);
+  for (const f of (existsSync(dir) ? readdirSync(dir) : []).filter((x) => x.endsWith('.json'))) {
+    const p = JSON.parse(readFileSync(path.join(dir, f), 'utf8'));
+    paginas.push({ slug: p.slug, tipo: p.tipo, title: p.seo.title, description: p.seo.description });
+  }
+}
+writeFileSync(path.join(OUT, 'api', 'datos', 'paginas.json'), JSON.stringify(paginas, null, 1));
 
 // 3. Panel (si ya está construido)
 const admin = path.join(ROOT, 'apps', 'admin', 'dist');

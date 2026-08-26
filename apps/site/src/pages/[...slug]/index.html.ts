@@ -17,7 +17,7 @@ export function getStaticPaths(): Ruta[] {
     rutas.push({ params: { slug: slug || undefined }, props });
   };
 
-  for (const c of congeladas()) add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef });
+  for (const c of congeladas()) add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef, seo: c.seo });
 
   const prods = productos();
   for (const p of prods) add(`/producto/${p.slug}/`, { tipo: 'producto', slug: p.slug });
@@ -47,7 +47,7 @@ const porSlugProducto = () => new Map(productos().map((p) => [p.slug, p]));
 export const GET: APIRoute = ({ props }) => {
   let html = '';
   if (props.tipo === 'congelada') {
-    html = T.congelada(refHtml(props.htmlRef as string));
+    html = T.congelada(refHtml(props.htmlRef as string), props.seo as { title?: string; description?: string | null } | undefined);
   } else if (props.tipo === 'producto') {
     const p = porSlugProducto().get(props.slug as string)!;
     const ref = p.tieneReferencia ? refHtml(`producto__${p.slug}.html`) : refHtml('producto__silla-operativa-modelo-lituania-ofitodo.html');

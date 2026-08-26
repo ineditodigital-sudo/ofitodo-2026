@@ -42,3 +42,25 @@ button:disabled { opacity: 0.6; cursor: wait; }
 .aviso { background: #ecf7ef; border-left: 3px solid #2e7d46; padding: 0.7rem 0.9rem; border-radius: 6px; }
 select, .tabla button { padding: 0.35rem 0.6rem; border-radius: 6px; border: 1px solid #d1d5db; background: #fff; color: var(--color-texto); font-size: 0.9rem; cursor: pointer; }
 .tabla button { background: var(--color-primario); color: #fff; border: 0; }
+
+/* v2 */
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin-bottom: 1rem; }
+.kpi { background: #fff; border: 0; border-radius: 10px; box-shadow: 0 2px 10px rgb(21 58 103 / 0.08); padding: 1rem; text-align: left; cursor: pointer; display: grid; gap: 0.2rem; }
+.kpi strong { font-size: 1.8rem; color: var(--color-primario); }
+.kpi span { color: #6b7280; font-size: 0.9rem; }
+.kpi:hover { outline: 2px solid var(--color-acento); }
+.dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 0.8rem; }
+@media (max-width: 760px) { .dos-col { grid-template-columns: 1fr; } }
+.lista-simple { margin: 0.4rem 0 0; padding-left: 1.1rem; display: grid; gap: 0.3rem; font-size: 0.92rem; }
+.fila-prod { display: flex; align-items: center; gap: 0.8rem; cursor: pointer; flex-wrap: wrap; }
+.fila-prod img { border-radius: 6px; object-fit: cover; flex: none; }
+.fila-prod .precio { margin-left: auto; font-weight: 700; color: var(--color-primario); }
+.fila-prod a { color: var(--color-acento); font-size: 0.85rem; text-decoration: none; }
+.pill { background: #fff4e0; color: #92600a; font-size: 0.75rem; padding: 0.15rem 0.55rem; border-radius: 99px; font-weight: 600; }
+.editor { display: grid; gap: 0.7rem; margin-top: 0.9rem; border-top: 1px solid #eef1f4; padding-top: 0.9rem; }
+.editor label { display: grid; gap: 0.25rem; font-weight: 600; font-size: 0.85rem; }
+.editor label em { font-weight: 400; color: #6b7280; font-style: normal; font-size: 0.78rem; }
+.editor input, .editor textarea, .editor select { padding: 0.5rem 0.7rem; border: 1px solid #d1d5db; border-radius: 8px; font-size: 0.95rem; font-family: inherit; }
+.editor .fila2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+.editor button { justify-self: start; background: var(--color-primario); color: #fff; border: 0; padding: 0.55rem 1.1rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.tarjeta h3 { margin: 0 0 0.5rem; color: var(--color-primario); font-size: 1.05rem; }

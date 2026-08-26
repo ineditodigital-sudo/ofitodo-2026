@@ -23,6 +23,10 @@ function of_db(): PDO {
   $pdo->exec('CREATE TABLE IF NOT EXISTS form_submissions (id INTEGER PRIMARY KEY, formulario TEXT, datos TEXT, pagina TEXT, creado TEXT, leido INTEGER DEFAULT 0)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS orders (id INTEGER PRIMARY KEY, numero INTEGER UNIQUE, estado TEXT, total REAL, cliente TEXT, items TEXT, creado TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS product_overrides (slug TEXT PRIMARY KEY, precio REAL, stock TEXT)');
+  foreach (['nombre TEXT', 'descripcion TEXT', 'imagen TEXT', 'modificado TEXT'] as $col) {
+    try { $pdo->exec("ALTER TABLE product_overrides ADD COLUMN {$col}"); } catch (Throwable $e) {}
+  }
+  $pdo->exec('CREATE TABLE IF NOT EXISTS pages_seo (slug TEXT PRIMARY KEY, title TEXT, description TEXT, modificado TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS admins (id INTEGER PRIMARY KEY, login TEXT UNIQUE, email TEXT, display_name TEXT, hash_legacy TEXT, hash_nuevo TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY, admin_id INTEGER, expira TEXT)');
   // Semilla: los 6 pedidos históricos de WooCommerce (§6.2, totales al centavo desde postmeta)
@@ -57,12 +61,17 @@ function of_db(): PDO {
 function of_precios(PDO $pdo): array {
   $base = json_decode((string)file_get_contents(__DIR__ . '/datos/precios.json'), true) ?? [];
   $map = [];
-  foreach ($base as $p) $map[$p['slug']] = ['slug' => $p['slug'], 'nombre' => $p['nombre'], 'sku' => $p['sku'], 'precio' => $p['precio'], 'stock' => 'instock'];
-  foreach ($pdo->query('SELECT slug, precio, stock FROM product_overrides') as $o) {
-    if (isset($map[$o['slug']])) {
-      if ($o['precio'] !== null) $map[$o['slug']]['precio'] = (float)$o['precio'];
-      $map[$o['slug']]['stock'] = $o['stock'];
-    }
+  foreach ($base as $p) $map[$p['slug']] = ['slug' => $p['slug'], 'nombre' => $p['nombre'], 'sku' => $p['sku'], 'precio' => $p['precio'], 'imagen' => $p['imagenFull'] ?? null, 'stock' => 'instock', 'pendiente' => false];
+  foreach ($pdo->query('SELECT * FROM product_overrides') as $o) {
+    if (!isset($map[$o['slug']])) continue;
+    $m = &$map[$o['slug']];
+    if ($o['precio'] !== null) $m['precio'] = (float)$o['precio'];
+    if (!empty($o['stock'])) $m['stock'] = $o['stock'];
+    if (!empty($o['nombre'])) $m['nombre'] = $o['nombre'];
+    if (!empty($o['descripcion'])) $m['descripcion'] = $o['descripcion'];
+    if (!empty($o['imagen'])) $m['imagen'] = $o['imagen'];
+    $m['pendiente'] = !empty($o['nombre']) || !empty($o['descripcion']) || !empty($o['imagen']);
+    unset($m);
   }
   return $map;
 }
