@@ -279,6 +279,23 @@ Los 3 con rol `administrator`. Sin clientes registrados.
 - La cuenta FTP entra directo al docroot del subdominio (no usar prefijo `public_html/`).
 - `http(s)://temporal.ofitodo.com/` responde 200 (docroot vacío, creado 2026-08-26). Credenciales solo en `.env`.
 
+## Métricas base (Lighthouse mobile, throttling simulado)
+
+| URL | Perf | A11y | BP | SEO | Peso | Requests | LCP | CLS |
+|---|---|---|---|---|---|---|---|---|
+| / | 45 | 94 | 61 | 100 | 12.2 MB | 225 | 42.9 s | 0 |
+| /nosotros/ | 46 | 94 | 61 | 100 | 2.3 MB | 180 | 16.9 s | 0 |
+| /productos/ | 44 | 94 | 61 | 92 | 4.3 MB | 188 | 18.6 s | 0 |
+| /tienda/ | 51 | 88 | 61 | 100 | 2.2 MB | 196 | 15.8 s | 0 |
+| /contactanos/ | 52 | 90 | 61 | 100 | 2.5 MB | 237 | 6.7 s | 0.001 |
+| /producto/silla-visita-moderna/ | **17** | 85 | 61 | 92 | 2.4 MB | 218 | 7.7 s | **0.715** |
+| /producto/escritorio-directivo-modelo-arpa/ | 30 | 84 | 61 | 92 | 2.9 MB | 219 | 19.5 s | 0.183 |
+| /categoria-producto/escritorios/ | 46 | 94 | 61 | 100 | 2.3 MB | 187 | 21.3 s | 0 |
+| /mobiliario-de-oficina-en-aguascalientes/ | 49 | 89 | 61 | 100 | 3.9 MB | 184 | 24.8 s | 0 |
+| /descargar-catalogo/ | 38 | 91 | 61 | 100 | 2.4 MB | 180 | 17.3 s | 0 |
+
+**Metas M2:** Lighthouse ≥95 en las 4 · peso ≤40 % del original (home ≤4.9 MB — apuntamos muy por debajo; ficha ≤0.96 MB) · LCP <2.5 s · CLS <0.1.
+
 ## Rastreo del sitio vivo
 
 - URLs rastreadas: **533** · 200 OK: 532 · con redirección: 4 · noindex: 5 · errores de rastreo: 0

@@ -4,12 +4,14 @@
 
 | Campo | Valor |
 |---|---|
-| Fase actual | **C2 — Referencia e inventario: rastreo en curso (~5 h)** |
-| % avance global | 20 % |
-| Siguiente paso | Al terminar el rastreo: regenerar inventario con datos del crawl, Lighthouse base de 10 páginas, componentes recurrentes → compuerta C2 |
-| Bloqueos | Ninguno |
+| Fase actual | **C2 — Referencia e inventario: COMPLETA, en compuerta** (borrador de Fase R listo en [03-arquitectura.md](03-arquitectura.md)) |
+| % avance global | 30 % |
+| Siguiente paso | Aprobación compuerta C2 + revisión del ADR → Fase R: scaffold del monorepo |
+| Bloqueos | Para Fase S (no urgente hoy): API token de Cloudflare y credenciales SMTP de formularios@ofitodo.com |
 
 ## Bitácora
+
+- **2026-08-26** — **C2 COMPLETA**: rastreo 533/533 sin errores (HTML + metas + screenshots 3 viewports, ~2.5 GB en `reference/`), inventario final con CSV por URL, flujo de compra grabado (sin envío/impuestos; métodos vivos: Transferencia, PayPal, Tarjetas, OXXO), Lighthouse base 10 páginas (Perf 17-52, home 12.2 MB/225 req, fichas con CLS hasta 0.715). Borrador ADR Fase R publicado. En compuerta C2.
 
 - **2026-08-26** — C2 en marcha: DB exportada a `reference/db-export/` (21 tablas JSON), inventario base en `docs/02-inventario.md`, manifiesto de media (2,120 originales/0.78 GB + 19,649 thumbs + 5,632 huérfanos, nada faltante), canónico verificado (https, sin www, trailing slash, `?p=`→301), rastreo de 533 URLs corriendo en segundo plano. Hallazgos: Cloudflare ACTIVO (ficha actualizada); GTM-KK4C8J9P + AW-11184632208 + AW-951553100 + GT-55XJKWD + GA4 G-KDXBWMR8FD; solo 37/368 productos con precio (catálogo de cotización); 170 reseñas TODAS sin aprobar (no visibles); pedidos: 4 fallidos + 2 de $0; `woocommerce_order_items` vacía en dump (delta del cutover desde DB viva); snippet activo "Buscar SKU en Ajax Search Lite"; fuentes Google: Josefin Sans, Bellefair, Lato, Biryani; home sin `<h1>` (candidata a mejora, no se toca).
 
