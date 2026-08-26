@@ -1,0 +1,30 @@
+{
+  "nombre": "Ofitodo",
+  "tagline": "Mobiliario para oficina y más",
+  "dominio": "https://ofitodo.com",
+  "idioma": "es",
+  "contacto": {
+    "telefonos": ["(449) 918.40.80", "(449) 136.79.26"],
+    "whatsapp": "+524493419403",
+    "whatsappMensaje": "Hola, he visto su página de Ofitodo y me gustaría solicitar más información.",
+    "correoVentas": "ventasofitodo@hotmail.com",
+    "correoFormularios": "formularios@ofitodo.com"
+  },
+  "redes": {
+    "facebook": "https://www.facebook.com/comercailizadoraofitodo",
+    "instagram": "https://www.instagram.com/ofitodo_/",
+    "linkedin": "https://www.linkedin.com/company/comercializadora-ofitodo/",
+    "tiktok": "https://www.tiktok.com/@ofitodo_?is_from_webapp=1&sender_device=pc"
+  },
+  "analitica": {
+    "gtm": "GTM-KK4C8J9P",
+    "ga4": "G-KDXBWMR8FD",
+    "googleAds": ["AW-11184632208", "AW-951553100"],
+    "googleTag": "GT-55XJKWD"
+  },
+  "comercio": {
+    "moneda": "MXN",
+    "pais": "MX",
+    "metodoPago": "contra-entrega"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@ofitodo/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.13.5",
+    "zod": "^4.1.0",
+    "@ofitodo/schema": "*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.0.0",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.0",
+    "wrangler": "^4.126.0"
+  }
+}

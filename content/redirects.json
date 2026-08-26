@@ -1,0 +1,8 @@
+{
+  "comentario": "Fuente única de redirecciones. Genera .htaccess en build. El panel y redirect:add escriben aquí.",
+  "redirects": [
+    { "de": "/wp-login.php", "a": "/admin/", "codigo": 301 },
+    { "de": "/wp-admin/", "a": "/admin/", "codigo": 301 }
+  ],
+  "gone410": ["/wp-json/*", "/xmlrpc.php", "/wp-cron.php"]
+}

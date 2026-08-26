@@ -1,0 +1,30 @@
+name: Deploy staging (temporal.ofitodo.com)
+# Manual mientras dura la reconstrucción; al aprobar Fase S se activa on: push a main.
+# Secrets requeridos en el repo: FTP_HOST=temporal.ofitodo.com, FTP_USER, FTP_PASS
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run content:validate
+      - run: npm run build -w apps/site
+      - name: Subir por FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          protocol: ftps
+          port: 21
+          local-dir: apps/site/dist/
+          server-dir: ./
+          dangerous-clean-slate: false

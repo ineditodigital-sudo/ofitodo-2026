@@ -1,0 +1,34 @@
+[
+  {
+    "url": "https://ofitodo.com/finalizar-compra/",
+    "motivo": "redirige a https://ofitodo.com/cart/"
+  },
+  {
+    "url": "https://ofitodo.com/elementor-hf/header/",
+    "motivo": "redirige a https://ofitodo.com/"
+  },
+  {
+    "url": "https://ofitodo.com/elementor-hf/footer/",
+    "motivo": "redirige a https://ofitodo.com/"
+  },
+  {
+    "url": "https://ofitodo.com/carrito/",
+    "motivo": "redirige a https://ofitodo.com/producto/carrito-industrial-metalico/"
+  },
+  {
+    "url": "https://ofitodo.com/?s=escritorio",
+    "motivo": "query"
+  },
+  {
+    "url": "https://ofitodo.com/feed/",
+    "motivo": "feed"
+  },
+  {
+    "url": "https://ofitodo.com/comments/feed/",
+    "motivo": "feed"
+  },
+  {
+    "url": "https://ofitodo.com/url-inexistente-para-404-xyz/",
+    "motivo": "status 404"
+  }
+]

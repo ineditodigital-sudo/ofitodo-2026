@@ -1,0 +1,21 @@
+{
+  "name": "@ofitodo/site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/theme-tokens.mjs && astro build",
+    "typecheck": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/react": "^6.0.4",
+    "@ofitodo/schema": "*",
+    "@ofitodo/ui": "*",
+    "astro": "^7.2.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.9.0"
+  }
+}

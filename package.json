@@ -2,15 +2,22 @@
   "name": "ofitodo-2026",
   "private": true,
   "version": "0.1.0",
-  "description": "Migración de ofitodo.com a sitio estático + API + panel (wp-rebuild)",
+  "description": "Migración de ofitodo.com a sitio estático (Astro) + API (Workers) + panel a la medida",
   "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
+    "build": "npm run build -w apps/site && npm run build -w apps/admin",
+    "typecheck": "npm run typecheck -w apps/api && npm run typecheck -w apps/admin",
+    "test": "npm run test -w apps/api",
+    "content:validate": "node scripts/content-validate.mjs",
     "wp:extract": "node scripts/wp-extract.mjs",
     "wp:crawl": "node scripts/wp-crawl.mjs",
     "wp:inventory": "node scripts/wp-inventory.mjs"
   },
   "devDependencies": {
+    "basic-ftp": "^5.1.0",
     "php-serialize": "^5.1.3",
-    "playwright": "^1.58.0"
+    "playwright": "^1.58.0",
+    "tsx": "^4.20.0"
   }
 }

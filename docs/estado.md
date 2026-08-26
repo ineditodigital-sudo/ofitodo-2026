@@ -4,12 +4,14 @@
 
 | Campo | Valor |
 |---|---|
-| Fase actual | **C2 — Referencia e inventario: COMPLETA, en compuerta** (borrador de Fase R listo en [03-arquitectura.md](03-arquitectura.md)) |
-| % avance global | 30 % |
-| Siguiente paso | Aprobación compuerta C2 + revisión del ADR → Fase R: scaffold del monorepo |
-| Bloqueos | Para Fase S (no urgente hoy): API token de Cloudflare y credenciales SMTP de formularios@ofitodo.com |
+| Fase actual | **R — Arquitectura y scaffold: EN CURSO** (C2 y ADR aprobados 2026-08-26) |
+| % avance global | 35 % |
+| Siguiente paso | Scaffold compilando (site Astro + api Hono + admin React + schema/ui) en rama `fase-r-scaffold` → PR → compuerta R |
+| Bloqueos | Para Fase S (no urgente hoy): API token de Cloudflare, credenciales SMTP de formularios@ofitodo.com, cuenta Neon (DB) |
 
 ## Bitácora
+
+- **2026-08-26** — **Compuertas C2 y ADR APROBADAS** por Cristian. Fase R iniciada en rama `fase-r-scaffold`: monorepo npm workspaces (apps/site Astro 7 + apps/api Hono/Workers con esquema Drizzle completo + apps/admin React/Vite con login + packages/schema zod + packages/ui), content/ con site.json/theme.json/redirects.json reales, validador de contenido, CI y deploy-staging por FTPS, CLAUDE.md/AGENTS.md.
 
 - **2026-08-26** — **C2 COMPLETA**: rastreo 533/533 sin errores (HTML + metas + screenshots 3 viewports, ~2.5 GB en `reference/`), inventario final con CSV por URL, flujo de compra grabado (sin envío/impuestos; métodos vivos: Transferencia, PayPal, Tarjetas, OXXO), Lighthouse base 10 páginas (Perf 17-52, home 12.2 MB/225 req, fichas con CLS hasta 0.715). Borrador ADR Fase R publicado. En compuerta C2.
 
