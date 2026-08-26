@@ -25,6 +25,15 @@ function of_db(): PDO {
   $pdo->exec('CREATE TABLE IF NOT EXISTS product_overrides (slug TEXT PRIMARY KEY, precio REAL, stock TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS admins (id INTEGER PRIMARY KEY, login TEXT UNIQUE, email TEXT, display_name TEXT, hash_legacy TEXT, hash_nuevo TEXT)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY, admin_id INTEGER, expira TEXT)');
+  // Semilla: los 6 pedidos históricos de WooCommerce (§6.2, totales al centavo desde postmeta)
+  if ((int)$pdo->query('SELECT COUNT(*) FROM orders')->fetchColumn() === 0) {
+    $hist = json_decode((string)file_get_contents(__DIR__ . '/datos/pedidos-historicos.json'), true) ?? [];
+    $ins = $pdo->prepare('INSERT INTO orders (numero, estado, total, cliente, items, creado) VALUES (?,?,?,?,?,?)');
+    foreach ($hist as $h) {
+      $ins->execute([$h['numero'], $h['estado'], $h['total'],
+        json_encode($h['cliente'], JSON_UNESCAPED_UNICODE), json_encode($h['items'], JSON_UNESCAPED_UNICODE), $h['fecha']]);
+    }
+  }
   // Semilla: los 3 administradores reales de WordPress con su hash original (login transparente §6.1)
   if ((int)$pdo->query('SELECT COUNT(*) FROM admins')->fetchColumn() === 0) {
     $ins = $pdo->prepare('INSERT INTO admins (login, email, display_name, hash_legacy) VALUES (?,?,?,?)');

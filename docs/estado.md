@@ -4,12 +4,16 @@
 
 | Campo | Valor |
 |---|---|
-| Fase actual | **R en curso + PREVIEW EN LÍNEA en temporal.ofitodo.com** |
-| % avance global | 40 % |
-| Siguiente paso | PR de `fase-r-scaffold` (CI verifica en Linux) → compuerta R → Fase S: conversión de contenido y reconstrucción Astro plantilla por plantilla contra el preview |
-| Bloqueos | Local: disco E: es exFAT → npm workspaces no instala (symlinks); el build local del monorepo requiere mover el repo a NTFS o verificar solo en CI. Para Fase S: token Cloudflare, SMTP formularios@, cuenta Neon |
+| Fase actual | **TODAS LAS FASES EJECUTADAS hasta staging** (S 99.6 % paridad · M1 ✔ · M2 medida · A/A2 runbooks listos) |
+| % avance global | 95 % (resta: toggle PHP del subdominio, pruebas E2E de envío, cutover a producción) |
+| Siguiente paso | 1) Cristian: cPanel → MultiPHP Manager → asignar PHP 8.x a temporal.ofitodo.com (activa /api, formularios, pedidos y panel) · 2) probar /api/salud, un formulario, un pedido y el login del panel · 3) firmar excepciones #4/#7/#8 · 4) cutover (docs/06-cutover.md) |
+| Bloqueos | (a) pool PHP del subdominio (cPanel, 1 min, solo Cristian) · (b) FTP del docroot de ofitodo.com para el cutover · (c) opcional ADR: token CF + Neon para migrar la API de PHP a Workers |
 
 ## Bitácora
+
+- **2026-08-26 (cierre)** — Deploy COMPLETO del sitio nuevo a temporal (547 archivos, 0 fallos): 528 páginas Astro, sitemaps y robots idénticos, redirects y 410 verificados en vivo, panel y API subidos. Pedidos históricos (6, $13,127.04 al centavo) sembrados. M2 medido: BP 61→75, CLS ficha 0.715→0 (SDKs de pago fuera); Performance queda para la componetización (plan en 05-rendimiento.md). **Hallazgo bloqueante menor: el subdominio no tiene pool PHP → /api/* da 500 hasta activar MultiPHP en cPanel (solo Cristian)**; mientras, formularios/checkout degradan con fallback a WhatsApp y el resto del sitio es 100 % funcional. Docs 05/05b/06/07/08/09 completos; excepciones #4-#8 registradas.
+
+- **2026-08-26 (noche)** — Directiva de Cristian: "termina todas las fases". **Fase S ejecutada completa** (enfoque híbrido §5.5): 528 URLs generadas por Astro (productos/listados desde datos con referencia como estructura; marketing congelado con islas), búsqueda con SKU, carrito+checkout contra entrega, formularios → API, panel v1 con login WP transparente, sitemaps y robots idénticos. **Paridad 99.6 % (524/526; las 2 difs son cart/mi-cuenta rediseñadas por excepción #1)**. API en dos sabores: Hono (ADR, pendiente CF) y PHP+SQLite (operativa). Runbooks 06/07/09 escritos; excepciones #4-#8 registradas (3 pendientes de firma). Deploy del paquete completo a temporal en curso.
 
 - **2026-08-26 (tarde)** — **PREVIEW COMPLETO EN LÍNEA: https://temporal.ofitodo.com** (orden de Cristian /goal). Export estático de la referencia C2 (525 páginas + 404 real) desplegado por FTPS reanudable (527 archivos, 0 fallidos), verificado por tipo y visualmente. Staging noindex (X-Robots-Tag + robots.txt Disallow). Peculiaridad del vhost: soft-404 en staging (ver 04-preview-staging.md). Rama `fase-r-scaffold` pusheada (PR pendiente de abrir). Hallazgo de entorno: E: es exFAT → sin symlinks → npm workspaces falla local; verificación del monorepo va por CI.
 
