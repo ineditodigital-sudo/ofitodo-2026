@@ -1,0 +1,16 @@
+{
+  "name": "ofitodo-2026",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Migración de ofitodo.com a sitio estático + API + panel (wp-rebuild)",
+  "type": "module",
+  "scripts": {
+    "wp:extract": "node scripts/wp-extract.mjs",
+    "wp:crawl": "node scripts/wp-crawl.mjs",
+    "wp:inventory": "node scripts/wp-inventory.mjs"
+  },
+  "devDependencies": {
+    "php-serialize": "^5.1.3",
+    "playwright": "^1.58.0"
+  }
+}
