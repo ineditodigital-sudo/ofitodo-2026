@@ -17,6 +17,9 @@ const analizar = (html) => {
   // Ítems pre-renderizados ocultos que sustituyen el "load more" ajax del original:
   // no cuentan para paridad (la vista inicial es idéntica).
   $('[data-of-mas], .of-cargar-mas-holder').remove();
+  // El icono del botón de WhatsApp venía de un banco externo que ya no lo sirve
+  // (se veía roto en todas las fichas): se sustituyó por un icono propio.
+  $('img[src*="vecteezy"], img[src*="whatsapp-logo"]').remove();
   return {
     title: $('title').first().text(),
     description: $('meta[name="description"]').attr('content') ?? null,
