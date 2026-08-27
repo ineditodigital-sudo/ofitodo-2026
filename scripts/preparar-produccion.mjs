@@ -86,6 +86,10 @@ Header unset Pragma
 Header set Cache-Control "public, max-age=31536000, immutable"
 </FilesMatch>
 </IfModule>
+# El manifiesto de despliegue no es contenido del sitio
+<Files ".deploy-manifest.json">
+Require all denied
+</Files>
 <IfModule mod_headers.c>
 Header set X-Content-Type-Options "nosniff"
 Header set Referrer-Policy "strict-origin-when-cross-origin"
