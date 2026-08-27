@@ -20,3 +20,6 @@ export const IconPedidos = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><p
 export const IconMensajes = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>);
 export const IconAyuda = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><circle cx="12" cy="12" r="10" /><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>);
 export const IconSalir = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><path d="m16 17 5-5-5-5M21 12H9" /></svg>);
+export const IconFlecha = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><path d="M7 17 17 7M7 7h10v10" /></svg>);
+export const IconBuscar = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>);
+export const IconGuardar = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><path d="M20 6 9 17l-5-5" /></svg>);

@@ -31,41 +31,51 @@ export function App() {
     ['Tienda', ['tienda', 'pedidos', 'mensajes']],
     ['', ['ayuda']],
   ];
+  const esEditor = tab === 'paginas' || tab === 'global' || tab === 'blog';
   return (
     <div className="app">
       <aside className="lateral">
-        <div className="marca-logo"><span className="logo-cuadro">O</span> Ofitodo</div>
-        {grupos.map(([g, tabs]) => (
-          <nav key={g} className="nav-grupo">
-            {g && <div className="nav-grupo-tit">{g}</div>}
-            {tabs.map((t) => { const I = ICON[t]; return (
-              <button key={t} className={'nav-item' + (tab === t ? ' activo' : '')} onClick={() => setTab(t)}>
-                <span className="nav-ico"><I /></span>{NOMBRE[t]}
-              </button>
-            ); })}
-          </nav>
-        ))}
+        <div className="marca-logo"><span className="logo-cuadro">O</span> <span>Ofitodo<em>Panel de administración</em></span></div>
+        <div className="nav-scroll">
+          {grupos.map(([g, tabs]) => (
+            <nav key={g} className="nav-grupo">
+              {g && <div className="nav-grupo-tit">{g}</div>}
+              {tabs.map((t) => { const I = ICON[t]; return (
+                <button key={t} className={'nav-item' + (tab === t ? ' activo' : '')} onClick={() => setTab(t)}>
+                  <span className="nav-ico"><I /></span>{NOMBRE[t]}
+                </button>
+              ); })}
+            </nav>
+          ))}
+        </div>
         <div className="lateral-pie">
-          <div className="usuario"><span className="usuario-ini">{(nombre[0] || 'A').toUpperCase()}</span><div><strong>{nombre}</strong><span>Administrador</span></div></div>
-          <button className="btn-salir" onClick={async () => { await api('/admin/salir', 'POST'); location.reload(); }}><Ic.IconSalir /> Salir</button>
+          <div className="usuario"><span className="usuario-ini">{(nombre[0] || 'A').toUpperCase()}</span><div className="usuario-txt"><strong>{nombre}</strong><span>Administrador</span></div></div>
+          <button className="btn-salir" onClick={async () => { await api('/admin/salir', 'POST'); location.reload(); }}><Ic.IconSalir /> Cerrar sesión</button>
         </div>
       </aside>
       <main className="principal">
-        {tab === 'inicio' && <Inicio irA={setTab} />}
-        {tab === 'paginas' && <Paginas soloGlobal={false} />}
-        {tab === 'global' && <Paginas soloGlobal />}
-        {tab === 'blog' && <Paginas soloBlog />}
-        {tab === 'tienda' && <Tienda />}
-        {tab === 'pedidos' && <Pedidos />}
-        {tab === 'mensajes' && <Mensajes />}
-        {tab === 'marca' && <Marca />}
-        {tab === 'contacto' && <Contacto />}
-        {tab === 'menus' && <Placeholder titulo="Menús" texto="El menú principal y el pie se editan hoy desde «Encabezado y pie» (cada enlace del menú es un botón editable). Un organizador de menú con arrastrar-y-soltar llega en la próxima versión." />}
-        {tab === 'medios' && <Medios />}
-        {tab === 'ayuda' && <Ayuda />}
+        <div className={'contenido-scroll' + (esEditor ? ' sin-pad' : '')}>
+          {tab === 'inicio' && <Inicio irA={setTab} nombre={nombre} />}
+          {tab === 'paginas' && <Paginas soloGlobal={false} />}
+          {tab === 'global' && <Paginas soloGlobal />}
+          {tab === 'blog' && <Paginas soloBlog />}
+          {tab === 'tienda' && <Tienda />}
+          {tab === 'pedidos' && <Pedidos />}
+          {tab === 'mensajes' && <Mensajes />}
+          {tab === 'marca' && <Marca />}
+          {tab === 'contacto' && <Contacto />}
+          {tab === 'menus' && <Placeholder titulo="Menús" texto="El menú principal y el pie se editan desde «Encabezado y pie»: cada enlace del menú es un botón editable con vista previa en vivo. Un organizador con arrastrar-y-soltar llega en la próxima versión." />}
+          {tab === 'medios' && <Medios />}
+          {tab === 'ayuda' && <Ayuda />}
+        </div>
       </main>
     </div>
   );
+}
+
+function EstadoPill({ estado }: { estado: string }) {
+  const map: Record<string, string> = { pendiente: 'amarillo', confirmado: 'azul', entregado: 'verde', cancelado: 'gris', 'wc-processing': 'azul', 'wc-failed': 'rojo' };
+  return <span className={'pill pill-' + (map[estado] || 'gris')}>{ESTADOS[estado] ?? estado}</span>;
 }
 
 function Encabezado({ titulo, sub, extra }: { titulo: string; sub?: string; extra?: ReactNode }) {
@@ -95,32 +105,57 @@ function Login({ onOk }: { onOk: (n: string) => void }) {
   );
 }
 
-function Inicio({ irA }: { irA: (t: Tab) => void }) {
+function Inicio({ irA, nombre }: { irA: (t: Tab) => void; nombre: string }) {
   const [r, setR] = useState<any>(null);
   useEffect(() => { api('/admin/resumen').then(setR).catch(() => setR({})); }, []);
+  const hora = new Date().getHours();
+  const saludo = hora < 12 ? 'Buenos días' : hora < 19 ? 'Buenas tardes' : 'Buenas noches';
   if (!r) return <Cargando />;
   return (
     <div>
-      <Encabezado titulo="Resumen" sub="Un vistazo rápido a tu sitio y tu tienda" />
+      <div className="hero">
+        <div className="hero-txt">
+          <h1>{saludo}, {nombre.split(' ')[0]}</h1>
+          <p>Este es el panel de tu sitio. Desde aquí administras todo sin conocimientos técnicos.</p>
+          <div className="hero-acc">
+            <button className="btn-blanco" onClick={() => irA('paginas')}><Ic.IconPaginas /> Editar páginas</button>
+            <button className="btn-blanco-ghost" onClick={() => irA('tienda')}>Administrar tienda</button>
+          </div>
+        </div>
+        <div className="hero-deco"><Ic.IconInicio /></div>
+      </div>
       <div className="kpis">
-        <button className="kpi" onClick={() => irA('pedidos')}><span className="kpi-ico azul"><Ic.IconPedidos /></span><strong>{r.pedidosPendientes ?? 0}</strong><span>pedidos por atender</span></button>
-        <button className="kpi" onClick={() => irA('mensajes')}><span className="kpi-ico verde"><Ic.IconMensajes /></span><strong>{r.mensajesNoLeidos ?? 0}</strong><span>mensajes sin leer</span></button>
-        <button className="kpi" onClick={() => irA('paginas')}><span className="kpi-ico morado"><Ic.IconPaginas /></span><strong>{r.cambiosPendientes ?? 0}</strong><span>cambios por publicar</span></button>
-        <button className="kpi" onClick={() => irA('tienda')}><span className="kpi-ico naranja"><Ic.IconTienda /></span><strong>Tienda</strong><span>administrar productos</span></button>
+        <KpiCard color="azul" icon={<Ic.IconPedidos />} valor={r.pedidosPendientes ?? 0} label="pedidos por atender" onClick={() => irA('pedidos')} />
+        <KpiCard color="verde" icon={<Ic.IconMensajes />} valor={r.mensajesNoLeidos ?? 0} label="mensajes sin leer" onClick={() => irA('mensajes')} />
+        <KpiCard color="morado" icon={<Ic.IconPaginas />} valor={r.cambiosPendientes ?? 0} label="cambios por publicar" onClick={() => irA('paginas')} />
+        <KpiCard color="naranja" icon={<Ic.IconTienda />} valor={'Tienda'} label="precios y productos" onClick={() => irA('tienda')} />
       </div>
       <div className="dos-col">
-        <Card titulo="Últimos pedidos">
-          {r.ultimosPedidos?.length ? <ul className="lista-simple">{r.ultimosPedidos.map((p: any) => <li key={p.numero}>#{p.numero} · {fmtDinero(p.total)} · {ESTADOS[p.estado] ?? p.estado} · {fmtFecha(p.creado)}</li>)}</ul> : <Vacio texto="Aún no hay pedidos." />}
+        <Card titulo="Últimos pedidos" accion={r.ultimosPedidos?.length ? <button className="link-accion" onClick={() => irA('pedidos')}>Ver todos</button> : undefined}>
+          {r.ultimosPedidos?.length ? <ul className="lista-mov">{r.ultimosPedidos.map((p: any) => (
+            <li key={p.numero}><span className="mov-ico azul"><Ic.IconPedidos /></span><div className="mov-info"><strong>Pedido #{p.numero}</strong><span>{fmtFecha(p.creado)}</span></div><div className="mov-der"><span className="mov-monto">{fmtDinero(p.total)}</span><EstadoPill estado={p.estado} /></div></li>
+          ))}</ul> : <VacioIlustrado icon={<Ic.IconPedidos />} texto="Aún no hay pedidos. Aparecerán aquí cuando alguien compre." />}
         </Card>
-        <Card titulo="Últimos mensajes">
-          {r.ultimosMensajes?.length ? <ul className="lista-simple">{r.ultimosMensajes.map((m: any) => <li key={m.id}>{Number(m.leido) ? null : <span className="punto-nuevo" />}{m.formulario} · {fmtFecha(m.creado)}</li>)}</ul> : <Vacio texto="Aún no hay mensajes." />}
+        <Card titulo="Últimos mensajes" accion={r.ultimosMensajes?.length ? <button className="link-accion" onClick={() => irA('mensajes')}>Ver todos</button> : undefined}>
+          {r.ultimosMensajes?.length ? <ul className="lista-mov">{r.ultimosMensajes.map((m: any) => (
+            <li key={m.id}><span className="mov-ico verde"><Ic.IconMensajes /></span><div className="mov-info"><strong>{m.formulario}</strong><span>{fmtFecha(m.creado)}</span></div>{!Number(m.leido) && <span className="pill pill-azul">nuevo</span>}</li>
+          ))}</ul> : <VacioIlustrado icon={<Ic.IconMensajes />} texto="Aún no hay mensajes de los formularios." />}
         </Card>
       </div>
-      <Card titulo="¿Cómo funciona tu sitio?">
-        <p><strong>Al instante:</strong> precios y disponibilidad de productos, estados de pedidos y mensajes.</p>
-        <p><strong>Con «Publicar»:</strong> textos, imágenes, botones, colores y SEO — quedan guardados y se ven en el sitio en la siguiente actualización (unos minutos).</p>
-      </Card>
+      <div className="tip">
+        <div className="tip-ico"><Ic.IconAyuda /></div>
+        <div><strong>¿Cómo funciona?</strong> Los precios de productos y estados de pedidos cambian <b>al instante</b>. Los textos, imágenes, botones y colores del sitio se guardan y aparecen al pulsar <b>«Publicar»</b> (tardan unos minutos en verse).</div>
+      </div>
     </div>
+  );
+}
+
+function KpiCard({ color, icon, valor, label, onClick }: { color: string; icon: ReactNode; valor: ReactNode; label: string; onClick: () => void }) {
+  return (
+    <button className={'kpi kpi-' + color} onClick={onClick}>
+      <div className="kpi-top"><span className={'kpi-ico ' + color}>{icon}</span><span className="kpi-flecha"><Ic.IconFlecha /></span></div>
+      <strong>{valor}</strong><span>{label}</span>
+    </button>
   );
 }
 
@@ -135,13 +170,16 @@ function Paginas({ soloGlobal, soloBlog }: { soloGlobal?: boolean; soloBlog?: bo
   const items = lista.filter((p) => p.key !== '_global').filter((p) => (soloBlog ? esBlog(p) : true));
   return (
     <div>
-      <Encabezado titulo={soloBlog ? 'Blog' : 'Páginas'} sub="Elige una página para editar sus textos, imágenes, botones y enlaces con vista previa en vivo" />
+      <Encabezado titulo={soloBlog ? 'Blog' : 'Páginas del sitio'} sub="Elige una página para editar sus textos, imágenes, botones y enlaces con vista previa en vivo" />
       <div className="grid-paginas">
-        {items.map((p) => (
+        {items.map((p, i) => (
           <button key={p.key} className="pagina-card" onClick={() => setAbierta(p.key)}>
-            <div className="pagina-card-tit">{p.titulo}</div>
-            <div className="pagina-card-slug">{p.slug}</div>
-            <div className="pagina-card-pie"><span>{p.campos} elementos editables</span>{p.borrador && <span className="pill-borrador">borrador</span>}</div>
+            <div className={'pagina-card-top c' + (i % 6)}><Ic.IconPaginas /></div>
+            <div className="pagina-card-body">
+              <div className="pagina-card-tit">{p.titulo}</div>
+              <div className="pagina-card-slug">{p.slug}</div>
+            </div>
+            <div className="pagina-card-pie"><span>{p.campos} elementos</span>{p.borrador ? <span className="pill pill-amarillo">borrador</span> : <span className="link-accion">Editar →</span>}</div>
           </button>
         ))}
       </div>
@@ -192,7 +230,7 @@ function Pedidos() {
   const cargar = () => api('/admin/pedidos').then((r) => setFilas(r.pedidos));
   useEffect(() => { cargar(); }, []);
   if (!filas) return <Cargando />;
-  if (!filas.length) return <><Encabezado titulo="Pedidos" /><Vacio texto="Todavía no hay pedidos. Cuando alguien compre contra entrega, aparecerá aquí." /></>;
+  if (!filas.length) return <><Encabezado titulo="Pedidos" /><VacioIlustrado icon={<Ic.IconPedidos />} texto="Todavía no hay pedidos. Cuando alguien compre contra entrega, aparecerá aquí." /></>;
   return (
     <div>
       <Encabezado titulo="Pedidos" sub="Pago contra entrega" />
@@ -200,9 +238,13 @@ function Pedidos() {
         {filas.map((p) => {
           const cli = JSON.parse(p.cliente); const items = JSON.parse(p.items);
           return (
-            <details key={p.id} className="card">
-              <summary><strong>Pedido #{p.numero}</strong> · {fmtDinero(p.total)} · {fmtFecha(p.creado)}
-                <select value={p.estado} onClick={(e) => e.stopPropagation()} onChange={async (e) => { await api('/admin/pedidos', 'PUT', { id: p.id, estado: e.target.value }); cargar(); }}>
+            <details key={p.id} className="card acordeon">
+              <summary>
+                <span className="mov-ico azul"><Ic.IconPedidos /></span>
+                <div className="ped-info"><strong>Pedido #{p.numero}</strong><span className="suave">{cli.billing_first_name} {cli.billing_last_name} · {fmtFecha(p.creado)}</span></div>
+                <span className="ped-monto">{fmtDinero(p.total)}</span>
+                <EstadoPill estado={p.estado} />
+                <select className="ped-select" value={p.estado} onClick={(e) => e.stopPropagation()} onChange={async (e) => { await api('/admin/pedidos', 'PUT', { id: p.id, estado: e.target.value }); cargar(); }}>
                   {Object.entries(ESTADOS).map(([v, t]) => <option key={v} value={v}>{t}</option>)}
                 </select>
               </summary>
@@ -222,14 +264,18 @@ function Mensajes() {
   const [filas, setFilas] = useState<any[] | null>(null);
   useEffect(() => { api('/admin/mensajes').then((r) => setFilas(r.mensajes)); }, []);
   if (!filas) return <Cargando />;
-  if (!filas.length) return <><Encabezado titulo="Mensajes" /><Vacio texto="Aún no hay mensajes de los formularios del sitio." /></>;
+  if (!filas.length) return <><Encabezado titulo="Mensajes" /><VacioIlustrado icon={<Ic.IconMensajes />} texto="Aún no hay mensajes de los formularios del sitio." /></>;
   return (
     <div>
       <Encabezado titulo="Mensajes recibidos" sub="Lo que llega por los formularios del sitio (también te llega por correo)" />
       <div className="lista">
         {filas.map((m) => (
-          <details key={m.id} className="card" onToggle={(e) => (e.target as HTMLDetailsElement).open && !Number(m.leido) && (m.leido = 1, api('/admin/mensajes', 'PUT', { id: m.id, leido: 1 }).catch(() => {}))}>
-            <summary>{Number(m.leido) ? null : <span className="punto-nuevo" />}<strong>{m.formulario}</strong> · {fmtFecha(m.creado)} <span className="suave">desde {m.pagina || 'el sitio'}</span></summary>
+          <details key={m.id} className="card acordeon" onToggle={(e) => (e.target as HTMLDetailsElement).open && !Number(m.leido) && (m.leido = 1, api('/admin/mensajes', 'PUT', { id: m.id, leido: 1 }).catch(() => {}))}>
+            <summary>
+              <span className="mov-ico verde"><Ic.IconMensajes /></span>
+              <div className="ped-info"><strong>{m.formulario}</strong><span className="suave">{fmtFecha(m.creado)} · desde {m.pagina || 'el sitio'}</span></div>
+              {Number(m.leido) ? null : <span className="pill pill-azul">nuevo</span>}
+            </summary>
             <dl>{Object.entries(JSON.parse(m.datos)).map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{String(v) || '—'}</dd></div>)}</dl>
           </details>
         ))}
@@ -331,8 +377,11 @@ function Ayuda() {
 }
 
 /* --- piezas reutilizables --- */
-function Card({ titulo, children }: { titulo?: string; children: ReactNode }) { return <section className="card bloque">{titulo && <h3>{titulo}</h3>}{children}</section>; }
+function Card({ titulo, children, accion }: { titulo?: string; children: ReactNode; accion?: ReactNode }) {
+  return <section className="card bloque">{titulo && <div className="card-cab"><h3>{titulo}</h3>{accion}</div>}{children}</section>;
+}
 function Campo({ lbl, v, on }: { lbl: string; v: string; on: (v: string) => void }) { return <label className="campo2"><span>{lbl}</span><input value={v} onChange={(e) => on(e.target.value)} /></label>; }
-function Cargando() { return <div className="cargando">Cargando…</div>; }
+function Cargando() { return <div className="cargando"><span className="spinner" /> Cargando…</div>; }
 function Vacio({ texto }: { texto: string }) { return <p className="vacio">{texto}</p>; }
-function Placeholder({ titulo, texto }: { titulo: string; texto: string }) { return <div><Encabezado titulo={titulo} /><Card>{<p>{texto}</p>}</Card></div>; }
+function VacioIlustrado({ icon, texto }: { icon: ReactNode; texto: string }) { return <div className="vacio-ilus"><span className="vacio-ico">{icon}</span><p>{texto}</p></div>; }
+function Placeholder({ titulo, texto }: { titulo: string; texto: string }) { return <div><Encabezado titulo={titulo} /><Card>{<p className="suave">{texto}</p>}</Card></div>; }

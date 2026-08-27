@@ -93,7 +93,7 @@ export function PageEditor({ pageKey, onSalir }: { pageKey: string; onSalir: () 
     finally { setEstado('listo'); setTimeout(() => setAviso(null), 6000); }
   }
 
-  if (!pag) return <div className="ed-cargando">Cargando la página…</div>;
+  if (!pag) return <div className="ed-cargando"><span className="spinner" /> Cargando la página…</div>;
 
   const secciones = agrupar(pag.campos);
   const hayCambios = Object.keys(cambios).length > 0;
