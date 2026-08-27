@@ -31,6 +31,10 @@ function mejorVariante(v: [string, number][], objetivo: number): [string, number
   return debajo || v.find(([, w]) => w >= objetivo) || v[v.length - 1];
 }
 
+// hoja de refinamiento versionada por contenido (evita servir CSS viejo desde la caché)
+let CSS_REFINAMIENTO = '/assets/refinamiento.css';
+try { CSS_REFINAMIENTO = JSON.parse(readFileSync(path.resolve(process.cwd(), 'src', 'generado', 'assets.json'), 'utf8')).refinamiento; } catch { /* usa el nombre base */ }
+
 const BASE_UPLOADS = 'https://ofitodo.com/wp-content/uploads/';
 const clave = (src: string) => (src.split('/uploads/')[1] || '').replace(/-\d+x\d+(\.\w+)$/, '$1');
 
@@ -147,7 +151,7 @@ function base(html: string) {
   $('.ppc-button-wrapper, #ppc-button-ppcp-gateway, .paypal-buttons, #ppcp-messages, [id^="zoid-paypal"]').remove();
   optimizarImagenes($);
   // Capa de refinamiento visual (va al final del head: solo ajusta lo del tema)
-  $('head').append('<link rel="stylesheet" href="/assets/refinamiento.css">');
+  $('head').append(`<link rel="stylesheet" href="${CSS_REFINAMIENTO}">`);
   // Islas propias (búsqueda, carrito, formularios)
   $('body').append('<script defer src="/assets/islas.js"></script>');
   return $;
