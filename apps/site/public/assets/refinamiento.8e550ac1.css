@@ -401,3 +401,71 @@ h1.of-h1-promovido,
 h1.of-h1-promovido::after { display: none !important; }
 /* en la barra de título interior el h1 mantiene su escala propia */
 .mkd-title-holder h1.of-h1-promovido { font-size: clamp(1.9rem, 3.4vw, 2.9rem) !important; }
+
+/* ============================================================
+   CAPA 3 — Secciones con tratamiento propio
+   ============================================================ */
+
+/* ---------- Proceso de compra: pasos legibles sobre la foto ---------- */
+/* Las cajas tenían fondo blanco al 49 %: el texto competía con la imagen. */
+.elementor-widget-icon-box .elementor-icon-box-wrapper,
+.e-con:has(> .elementor-widget-icon-box) {
+  border-radius: 12px;
+}
+.elementor-widget-icon-box {
+  background-color: rgb(255 255 255 / .93) !important;
+  border-radius: 12px;
+  padding: 18px 16px !important;
+  box-shadow: 0 2px 6px rgb(16 35 58 / .08), 0 10px 26px rgb(16 35 58 / .10);
+  backdrop-filter: blur(6px);
+  transition: transform var(--of-transicion), box-shadow var(--of-transicion);
+}
+.elementor-widget-icon-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgb(16 35 58 / .12), 0 18px 40px rgb(16 35 58 / .16);
+}
+.elementor-icon-box-title, .elementor-icon-box-title a {
+  color: var(--of-azul) !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: .01em !important;
+}
+.elementor-widget-icon-box .elementor-icon { color: var(--of-acento) !important; }
+
+/* ---------- Logos de clientes: presencia uniforme ---------- */
+/* Venían con tamaños y contrastes dispares; en gris se leen como un conjunto
+   y recuperan su color al pasar el cursor. */
+.elementor-widget-image-carousel .swiper-slide img {
+  filter: grayscale(1);
+  opacity: .62;
+  transition: filter var(--of-transicion), opacity var(--of-transicion);
+  max-height: 52px;
+  width: auto !important;
+  object-fit: contain;
+  margin-inline: auto;
+}
+.elementor-widget-image-carousel .swiper-slide:hover img { filter: none; opacity: 1; }
+
+/* ---------- Hero: contraste y foco ---------- */
+/* La caja del hero era muy translúcida y el texto perdía fuerza sobre la foto. */
+.e-con.e-parent:first-of-type .e-con:has(h1),
+.e-con.e-parent:nth-of-type(2) .e-con:has(h1) {
+  backdrop-filter: blur(3px) saturate(1.05);
+}
+h1.of-h1-promovido { text-shadow: 0 1px 2px rgb(16 35 58 / .08); }
+
+/* ---------- Franja final de contacto: profundidad ---------- */
+/* Última sección con botones antes del pie: el azul plano gana volumen. */
+.hfeed > .e-con.e-parent:nth-last-of-type(-n+2):has(.elementor-widget-button):has(.elementor-widget-heading) {
+  background-image: linear-gradient(135deg, #1b2b57 0%, #233465 50%, #31508f 100%) !important;
+}
+
+/* ---------- Separadores del tema: más discretos ---------- */
+.elementor-widget-divider .elementor-divider-separator { border-top-width: 2px; opacity: .5; }
+
+/* ---------- Móvil: proceso de compra en columna cómoda ---------- */
+@media (max-width: 767px) {
+  .elementor-widget-icon-box { padding: 16px 14px !important; }
+  .elementor-icon-box-title { font-size: 14px !important; }
+  .elementor-widget-image-carousel .swiper-slide img { max-height: 44px; }
+}
