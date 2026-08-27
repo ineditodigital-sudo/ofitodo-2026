@@ -4,6 +4,8 @@ import { imagenVariante, categorias, productos, sitio, type Listado } from './co
 import { documento, migas, FLECHA, WA, CHECK } from './chrome.ts';
 import { NOSOTROS, SECTORES_PAG, PRODUCTOS_PAG, CONTACTO_PAG } from './interiores-datos.ts';
 import { SECTORES } from './home-datos.ts';
+import { SECTORES_DATOS, POR_QUE, CIERRE_SECTOR, type Sector } from './sectores-datos.ts';
+import { tarjetaProducto } from './plantillas.ts';
 
 const esc = (s: unknown) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const WHATSAPP = '5214493419403';
@@ -284,10 +286,86 @@ ${migas([{ t: 'Contáctanos' }])}
   });
 }
 
+/* --- Página de sector ----------------------------------------------------- */
+export function paginaSector(sec: Sector): string {
+  const todos = productos();
+  // Muestra repartida entre las categorías del sector (por turnos), para que
+  // no se llene toda la rejilla con productos de una sola de ellas.
+  const porCategoria = sec.categorias.map((c) => todos.filter((p) => p.imagen && p.categorias.includes(c)));
+  const vistos = new Set<string>();
+  const destacados: typeof todos = [];
+  for (let vuelta = 0; destacados.length < 8 && vuelta < 40; vuelta++) {
+    let agregado = false;
+    for (const grupo of porCategoria) {
+      const p = grupo[vuelta];
+      if (!p || vistos.has(p.slug)) continue;
+      vistos.add(p.slug); destacados.push(p); agregado = true;
+      if (destacados.length >= 8) break;
+    }
+    if (!agregado && porCategoria.every((g) => vuelta >= g.length)) break;
+  }
+  const cats = categorias().filter((c) => sec.categorias.includes(c.slug) && c.conteo > 0 && c.tieneReferencia);
+
+  const cuerpo = `
+${migas([{ t: 'Sectores', h: '/sectores/' }, { t: sec.nombre }])}
+<main id="contenido">
+  ${franja({ entrada: sec.entrada, titulo: sec.nombre, texto: sec.resumen ?? undefined, imagen: sec.imagen })}
+
+  <section class="seccion">
+    <div class="contenedor contenedor--texto">
+      <h2 class="titulo-menor revelar">${esc(sec.introTitulo)}</h2>
+      <div class="prosa revelar"><p>${esc(sec.intro)}</p></div>
+    </div>
+  </section>
+
+  ${cats.length ? `<section class="seccion seccion--ajustada">
+    <div class="contenedor">
+      <h2 class="titulo-menor">Categorías para este sector</h2>
+      <ul class="fichas">
+        ${cats.map((c) => `<li><a href="/categoria-producto/${c.ruta ?? c.slug}/">${esc(c.nombre)} <b>${c.conteo}</b></a></li>`).join('')}
+      </ul>
+    </div>
+  </section>` : ''}
+
+  ${destacados.length ? `<section class="seccion">
+    <div class="contenedor">
+      <h2 class="titulo-menor">Productos relacionados</h2>
+      <div class="rejilla rejilla--prod">${destacados.map(tarjetaProducto).join('')}</div>
+    </div>
+  </section>` : ''}
+
+  <section class="seccion seccion--alt">
+    <div class="contenedor">
+      <div class="cab-seccion revelar">
+        <span class="etiqueta">Por qué nosotros</span>
+        <h2>${esc(POR_QUE.titulo)}</h2>
+      </div>
+      <div class="rejilla rejilla--cuatro">
+        ${POR_QUE.puntos.map((x, i) => `<article class="paso revelar">
+          <span class="paso__n">${String(i + 1).padStart(2, '0')}</span>
+          <h3>${esc(x.titulo)}</h3>
+          <p>${esc(x.texto)}</p>
+        </article>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  ${cierre({ ...CIERRE_SECTOR, mensaje: `Hola, me interesa mobiliario para ${sec.nombre.toLowerCase().replace('muebles para ', '')}.` })}
+</main>`;
+
+  return documento({
+    titulo: `${sec.nombre} | Ofitodo`,
+    descripcion: sec.resumen ?? sec.intro.slice(0, 155),
+    ruta: `/${sec.slug}/`, activo: '/sectores/', ogImagen: sec.imagen,
+    clase: 'pag-sector', cuerpo,
+  });
+}
+
 export const INTERIORES: Record<string, () => string> = {
   '/nosotros/': paginaNosotros,
   '/productos/': paginaProductos,
   '/sectores/': paginaSectores,
   '/contactanos/': paginaContacto,
+  ...Object.fromEntries(SECTORES_DATOS.map((x) => [`/${x.slug}/`, () => paginaSector(x)])),
 };
 

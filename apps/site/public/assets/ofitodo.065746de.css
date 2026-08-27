@@ -206,13 +206,12 @@ ul { margin: 0; padding: 0; list-style: none; }
     }
   }
 }
-}
 
 /* ===========================================================================
    ENCABEZADO Y PIE PROPIOS (sin Elementor)
    =========================================================================== */
-.saltar { position: fixed; left: 0; top: 0; z-index: 200; background: var(--azul); color: #fff; padding: .8rem 1.2rem; border-radius: 0 0 var(--r-sm) 0; transform: translateY(-200%); transition: transform .18s var(--ease); }
-.saltar:focus { transform: none; }
+.saltar { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.saltar:focus { position: fixed; left: .5rem; top: .5rem; width: auto; height: auto; clip-path: none; z-index: 300; background: var(--azul); color: #fff; padding: .8rem 1.2rem; border-radius: var(--r-sm); box-shadow: var(--suave); }
 .oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .cab { position: sticky; top: 0; z-index: 100; background: rgb(255 255 255 / .92); backdrop-filter: saturate(1.6) blur(10px); border-bottom: 1px solid transparent; transition: box-shadow var(--ease), border-color var(--ease); }

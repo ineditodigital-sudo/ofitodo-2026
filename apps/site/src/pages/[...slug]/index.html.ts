@@ -7,8 +7,12 @@ import * as T from '../../lib/transformar.ts';
 import * as SIS from '../../lib/sistema-paginas.ts';
 import { paginaCatalogo, paginaProducto } from '../../lib/plantillas.ts';
 import { INTERIORES } from '../../lib/interiores.ts';
+import { entradas, cuerpos, paginaBlog, paginaEntrada } from '../../lib/blog.ts';
 
 type Ruta = { params: { slug: string | undefined }; props: Record<string, unknown> };
+
+// Entradas del blog cuyo cuerpo se pudo extraer sin perder contenido
+const reconstruibles = new Set(Object.keys(cuerpos()));
 
 export function getStaticPaths(): Ruta[] {
   const rutas: Ruta[] = [];
@@ -24,6 +28,8 @@ export function getStaticPaths(): Ruta[] {
   for (const c of congeladas()) {
     if (c.slug === '/') continue;
     if (INTERIORES[c.slug]) { add(c.slug, { tipo: 'interior', slug: c.slug }); continue; }
+    if (c.slug === '/blog/') { add(c.slug, { tipo: 'blog' }); continue; }
+    if (reconstruibles.has(c.slug)) { add(c.slug, { tipo: 'entrada', slug: c.slug }); continue; }
     add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef, seo: c.seo, key: claveDe(c.slug) });
   }
 
@@ -56,6 +62,11 @@ export const GET: APIRoute = ({ props }) => {
   if (props.tipo === 'congelada') {
     html = T.congelada(refHtml(props.htmlRef as string), props.seo as { title?: string; description?: string | null } | undefined,
       { pagina: overridesPagina(props.key as string), global: overridesGlobal() });
+  } else if (props.tipo === 'blog') {
+    html = paginaBlog();
+  } else if (props.tipo === 'entrada') {
+    const e = entradas().find((x) => x.slug === props.slug)!;
+    html = paginaEntrada(e, cuerpos()[e.slug]);
   } else if (props.tipo === 'interior') {
     html = INTERIORES[props.slug as string]();
   } else if (props.tipo === 'producto') {
