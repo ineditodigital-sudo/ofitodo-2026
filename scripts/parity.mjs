@@ -45,7 +45,10 @@ for (const f of readdirSync(path.join(ROOT, 'reference', 'meta'))) {
     for (const k of ['title', 'description', 'canonical', 'robots']) {
       if ((ref[k] ?? '') !== (nue[k] ?? '')) fila.difs.push({ campo: k, ref: ref[k], nuevo: nue[k] });
     }
-    if (ref.hs.join('|') !== nue.hs.join('|')) {
+    // El primer encabezado del contenido se promueve a h1 a propósito (mejora de SEO:
+  // 398 páginas no tenían h1). Si el texto es el mismo, no cuenta como diferencia.
+  const normalizar = (hs) => hs.map((h, i) => (i === 0 ? h.replace(/^h[123]:/, 'hN:') : h));
+  if (normalizar(ref.hs).join('|') !== normalizar(nue.hs).join('|')) {
       const rs = new Set(ref.hs), ns = new Set(nue.hs);
       fila.difs.push({ campo: 'headings', faltan: ref.hs.filter((h) => !ns.has(h)).slice(0, 5), sobran: nue.hs.filter((h) => !rs.has(h)).slice(0, 5) });
     }

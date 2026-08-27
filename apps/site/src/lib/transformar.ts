@@ -120,6 +120,19 @@ function optimizarFondos($: any): void {
   });
 }
 
+/** SEO + jerarquía: 398 páginas del sitio no tenían <h1> (Google no sabía cuál era
+ *  el tema principal). Si falta, el primer encabezado del contenido pasa a ser h1
+ *  conservando todas sus clases: la página se ve igual, pero queda bien estructurada. */
+function asegurarH1($: any): void {
+  if ($('h1').length > 0) return;
+  const candidato = $('h2, h3').filter((_: number, el: unknown) =>
+    $(el).closest('header, footer, nav').length === 0 && $(el).text().trim().length > 2).first();
+  if (!candidato.length) return;
+  const el = candidato.get(0);
+  el.tagName = 'h1';
+  $(el).addClass('of-h1-promovido');
+}
+
 const KEEP_ABS = /^https:\/\/ofitodo\.com\/(wp-content|wp-includes|wp-json|xmlrpc|wp-login|wp-admin|feed|comments\/feed|\?)/;
 const PAGO_RE = /paypal\.com|paypalobjects\.com|mlstatic\.com|mercadopago|mercadolibre|woocommerce-paypal-payments/;
 
@@ -149,6 +162,7 @@ function base(html: string) {
   $('link[href]').each((_: number, el: unknown) => { if (PAGO_RE.test($(el).attr('href') ?? '')) $(el).remove(); });
   // DOM muerto de botones de pago ya renderizados en la referencia
   $('.ppc-button-wrapper, #ppc-button-ppcp-gateway, .paypal-buttons, #ppcp-messages, [id^="zoid-paypal"]').remove();
+  asegurarH1($);
   optimizarImagenes($);
   // Capa de refinamiento visual (va al final del head: solo ajusta lo del tema)
   $('head').append(`<link rel="stylesheet" href="${CSS_REFINAMIENTO}">`);

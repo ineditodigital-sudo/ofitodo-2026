@@ -267,3 +267,137 @@ img { max-width: 100%; height: auto; }
   p, .elementor-widget-text-editor { font-size: 15.5px; line-height: 1.7; }
   .elementor-button { width: auto; }
 }
+
+/* ============================================================
+   CAPA 2 — Presencia visual (jerarquía, ritmo y contraste)
+   El diseño original tenía títulos de sección de 24 px, hero de
+   40 px y secciones sin respiración: se veía tímido y desordenado.
+   ============================================================ */
+
+/* ---------- Hero: que domine la primera pantalla ---------- */
+.mkd-title-holder h1,
+.elementor-location-header + * h1,
+.e-con.e-parent:first-of-type h1.elementor-heading-title,
+h1.elementor-heading-title {
+  font-size: clamp(2.4rem, 4.6vw, 4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.02em !important;
+}
+
+/* ---------- Títulos de sección: presencia y acento de marca ---------- */
+/* Antes: 24 px sin separación del contenido. Ahora: escala mayor,
+   aire debajo y una línea de acento que ordena visualmente la página. */
+.e-con-inner > .elementor-widget-heading h2.elementor-heading-title,
+.e-con > .elementor-widget-heading h2.elementor-heading-title,
+.elementor-widget-heading h2.elementor-heading-title {
+  font-size: clamp(1.75rem, 2.9vw, 2.5rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.16 !important;
+  letter-spacing: -.015em !important;
+}
+/* subrayado de acento bajo los títulos de sección centrados */
+.elementor-widget-heading:has(h2) .elementor-heading-title[style*="center"]::after,
+.elementor-widget-heading.elementor-widget-heading--center h2::after,
+.e-con .elementor-widget-heading h2.elementor-heading-title::after {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 4px;
+  border-radius: 99px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, var(--of-azul), var(--of-acento));
+}
+/* títulos alineados a la izquierda: el acento también se alinea */
+.elementor-widget-heading[class*="align-left"] h2.elementor-heading-title::after,
+.e-con[class*="text-left"] .elementor-widget-heading h2.elementor-heading-title::after { margin-inline: 0 auto; }
+
+/* subtítulos internos con jerarquía clara */
+.elementor-widget-heading h3.elementor-heading-title {
+  font-size: clamp(1.2rem, 1.7vw, 1.55rem) !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- Ritmo vertical: aire consistente entre secciones ---------- */
+/* Muchas secciones venían con padding 0 y otras con 50 px: de ahí los
+   huecos irregulares. Se unifica el pulso vertical de la página. */
+.e-con.e-parent { padding-block: clamp(2.75rem, 5vw, 4.5rem); }
+.e-con.e-parent:first-of-type { padding-block: 0; }        /* el hero conserva su altura */
+.e-con.e-parent:has(> .e-con-inner > .elementor-widget-image:only-child) { padding-block: 0; }
+
+/* espacio entre el título de sección y su contenido */
+.e-con-inner > .elementor-widget-heading { margin-bottom: clamp(1.1rem, 2vw, 2rem); }
+
+/* ---------- Botones: tamaño de acción real ---------- */
+.elementor-button {
+  font-size: 15.5px !important;
+  padding: 15px 32px !important;
+  border-radius: 11px !important;
+}
+.elementor-button-icon svg, .elementor-button-icon i { transition: transform var(--of-transicion); }
+.elementor-button:hover .elementor-button-icon svg { transform: translateX(3px); }
+
+/* ---------- Franja de llamada a la acción: profundidad ---------- */
+/* La banda final "¿Listo para transformar tu espacio?" era un azul plano. */
+.e-con.e-parent:has(.elementor-widget-button):has(h2)[class*="dark"],
+footer + .e-con,
+.e-con.e-parent[style*="233465"], .e-con.e-parent[style*="23,52,101"] {
+  background-image: linear-gradient(135deg, #1b2b57 0%, #233465 45%, #2f4a8f 100%) !important;
+}
+
+/* ---------- Cuadrículas: separación más generosa ---------- */
+.e-con-inner:has(> a.e-con) { gap: clamp(.9rem, 1.6vw, 1.4rem); }
+
+/* ---------- Pie de página: jerarquía y legibilidad ---------- */
+footer .elementor-heading-title { letter-spacing: .04em !important; font-size: .95rem !important; }
+footer a { opacity: .92; }
+footer a:hover { opacity: 1; }
+
+/* ---------- Móvil: que la jerarquía siga leyéndose ---------- */
+@media (max-width: 767px) {
+  .e-con.e-parent { padding-block: clamp(2rem, 8vw, 3rem); }
+  .elementor-widget-heading h2.elementor-heading-title::after { margin-top: 14px; width: 52px; height: 3px; }
+  .elementor-button { padding: 14px 26px !important; width: auto; }
+}
+
+/* ---------- Correcciones de la capa 2 ---------- */
+/* El pie no es una sección de contenido: sus encabezados deben ser discretos
+   (la regla general de títulos los había agrandado). */
+footer .e-con-inner .elementor-widget-heading h2.elementor-heading-title,
+footer .e-con-inner .elementor-widget-heading h3.elementor-heading-title,
+footer .e-con .elementor-widget-heading .elementor-heading-title,
+footer .elementor-heading-title.elementor-size-default,
+.elementor-location-footer .e-con .elementor-heading-title {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  line-height: 1.4 !important;
+}
+footer .elementor-heading-title::after,
+.elementor-location-footer .elementor-heading-title::after { display: none !important; }
+
+/* El encabezado tampoco lleva acento ni escala de sección */
+header .elementor-heading-title::after { display: none !important; }
+
+/* Ritmo vertical: generoso pero sin exagerar */
+.e-con.e-parent { padding-block: clamp(2.25rem, 3.6vw, 3.25rem); }
+footer .e-con.e-parent, .elementor-location-footer .e-con.e-parent { padding-block: revert; }
+
+/* El acento solo bajo títulos de sección reales (no en tarjetas ni cajas de icono) */
+a.e-con .elementor-heading-title::after,
+.elementor-widget-icon-box .elementor-heading-title::after,
+.eael-grid-post .elementor-heading-title::after { display: none !important; }
+
+/* ---------- Hero promovido a h1: peso de portada ---------- */
+/* El encabezado principal de cada página (antes un h2 de 40 px) ahora domina
+   la primera pantalla y no lleva el acento de las secciones interiores. */
+h1.of-h1-promovido,
+.e-con.e-parent:nth-of-type(-n+2) h1.elementor-heading-title {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.02em !important;
+}
+h1.of-h1-promovido::after { display: none !important; }
+/* en la barra de título interior el h1 mantiene su escala propia */
+.mkd-title-holder h1.of-h1-promovido { font-size: clamp(1.9rem, 3.4vw, 2.9rem) !important; }
