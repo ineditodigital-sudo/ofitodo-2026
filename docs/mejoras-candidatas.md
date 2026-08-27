@@ -1,4 +1,33 @@
-# Refinamiento del sitio público — propuesta
+# Refinamiento del sitio público
+
+> **Cambio de política (2026-08-27):** Cristian aprueba explícitamente mejoras visuales —
+> *"necesito una versión mejorada manteniendo la misma estructura pero con un mejor diseño"*.
+> `MEJORAS_PERMITIDAS` pasa de «ninguna visual» a **«diseño: mejoras que conserven la estructura»**.
+> La paridad de **contenido** (textos, enlaces, SEO) se sigue verificando; la paridad **visual** deja
+> de ser un requisito en las áreas refinadas.
+
+## ✅ Rediseño visual — capa de refinamiento (2026-08-27)
+
+Enfoque: una hoja de estilo (`/assets/refinamiento.css`) que carga **después** del CSS del tema y
+solo ajusta. **No se toca una línea de HTML**, así que el CMS, los enlaces y el SEO siguen intactos
+y el cambio es reversible quitando una línea.
+
+| Antes | Después |
+|---|---|
+| Títulos con interlineado igual al tamaño (40 px/40 px): las líneas se pegaban | Interlineado 1.22 y tracking ajustado |
+| Cuadrículas de Productos/Sectores: imágenes sueltas con etiquetas en cajas apretadas | **Tarjetas reales**: fondo, borde, sombra suave, esquinas redondeadas y elevación al pasar el cursor |
+| Imágenes de proporciones dispares en la misma fila | Proporción uniforme 4:3 con recorte inteligente |
+| Botones planos, sin respuesta | Sombra sutil, elevación y transición al pasar el cursor |
+| Etiquetas diminutas y apretadas | Tipografía legible en azul de marca, centrada y con aire |
+| Campos de formulario sin foco visible | Foco con anillo azul de marca (también mejora accesibilidad) |
+
+Incluye además: ritmo vertical parejo entre secciones, longitud de línea cómoda en textos
+centrados, foco visible para navegación por teclado, y respeto a `prefers-reduced-motion`.
+Verificado en escritorio y móvil (390 px) sin desbordamiento.
+
+---
+
+## Diagnóstico y plan original (referencia)
 
 **Medido en producción el 2026-08-27** (no son estimaciones: son las cifras reales de `ofitodo.com` hoy).
 

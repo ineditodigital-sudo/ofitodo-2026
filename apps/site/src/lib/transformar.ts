@@ -23,6 +23,14 @@ let MEDIDAS: Record<string, number> = {};
 try { VARIANTES = JSON.parse(readFileSync(RUTA('imagenes-variantes.json'), 'utf8')); } catch { /* sin catálogo: no se optimiza */ }
 try { MEDIDAS = JSON.parse(readFileSync(RUTA('imagenes-medidas.json'), 'utf8')); } catch { /* sin medidas */ }
 
+/** Elige la variante más ajustada al objetivo: acepta hasta un 5 % por debajo antes
+ *  de saltar al siguiente tamaño (evita bajar 2048 px cuando 1536 px basta). */
+function mejorVariante(v: [string, number][], objetivo: number): [string, number] {
+  const holgado = objetivo * 0.95;
+  const debajo = [...v].reverse().find(([, w]) => w >= holgado && w <= objetivo);
+  return debajo || v.find(([, w]) => w >= objetivo) || v[v.length - 1];
+}
+
 const BASE_UPLOADS = 'https://ofitodo.com/wp-content/uploads/';
 const clave = (src: string) => (src.split('/uploads/')[1] || '').replace(/-\d+x\d+(\.\w+)$/, '$1');
 
@@ -42,7 +50,7 @@ function optimizarImagenes($: any): void {
     // ninguna imagen del sitio se muestra a más de 1024 px de ancho real.
     const TOPE_SIN_MEDIDA = 1024;
     const objetivo = anchoCss ? Math.min(anchoCss * 2, info.w) : Math.min(TOPE_SIN_MEDIDA, info.w);
-    const elegida = info.v.find(([, w]) => w >= objetivo) || info.v[info.v.length - 1];
+    const elegida = mejorVariante(info.v, objetivo);
 
     // srcset solo con las variantes útiles (hasta la elegida)
     const utiles = info.v.filter(([, w]) => w <= elegida[1]);
@@ -63,25 +71,48 @@ function optimizarImagenes($: any): void {
   optimizarFondos($);
 }
 
-/** Fondos de sección (background-image en CSS y atributos style): un fondo a pantalla
- *  completa no necesita más de 1600 px; los originales llegan a 2560 px y 700 KB. */
+/** Imágenes que no son <img>: fondos de sección (CSS) y las que los carruseles
+ *  crean por JavaScript desde su configuración JSON. Un fondo a pantalla completa no
+ *  necesita más de 1600 px; varios originales llegaban a 2560 px y 700 KB. */
+const TOPE_FONDO = 1600;
+function variantePara(url: string, tope: number): string | null {
+  const info = VARIANTES[clave(url.replace(/\\\//g, '/'))];
+  if (!info || info.w <= tope) return null;
+  return mejorVariante(info.v, tope)[0];
+}
 function optimizarFondos($: any): void {
-  const TOPE_FONDO = 1600;
-  const reemplazar = (css: string): string =>
-    css.replace(/url\((['"]?)(https:\/\/ofitodo\.com\/wp-content\/uploads\/[^'")]+)\1\)/g, (todo: string, comilla: string, url: string) => {
-      const k = clave(url);
-      const info = VARIANTES[k];
-      if (!info || info.w <= TOPE_FONDO) return todo;
-      const elegida = info.v.find(([, w]) => w >= TOPE_FONDO) || info.v[info.v.length - 1];
-      return `url(${comilla}${BASE_UPLOADS}${elegida[0]}${comilla})`;
-    });
+  // 1. background-image en <style> y en atributos style
+  const enCss = (css: string): string =>
+    css.replace(/url\((['"]?)(https:\/\/ofitodo\.com\/wp-content\/uploads\/[^'")]+)\1\)/g,
+      (todo: string, q: string, url: string) => {
+        const v = variantePara(url, TOPE_FONDO);
+        return v ? `url(${q}${BASE_UPLOADS}${v}${q})` : todo;
+      });
   $('style').each((_: number, el: unknown) => {
     const t = $(el).html();
-    if (t && t.includes('/uploads/')) $(el).html(reemplazar(t));
+    if (t && t.includes('/uploads/')) $(el).html(enCss(t));
   });
   $('[style*="/uploads/"]').each((_: number, el: unknown) => {
     const s = $(el).attr('style');
-    if (s) $(el).attr('style', reemplazar(s));
+    if (s) $(el).attr('style', enCss(s));
+  });
+
+  // 2. URLs dentro de la configuración JSON de carruseles (data-settings, etc.).
+  //    Ahí las barras van escapadas: https:\/\/ofitodo.com\/wp-content\/uploads\/…
+  const enJson = (txt: string): string =>
+    txt.replace(/https:(?:\\\/|\/){2}ofitodo\.com(?:\\\/|\/)wp-content(?:\\\/|\/)uploads(?:\\\/|\/)[^"'\s,}\]]+?\.(?:jpe?g|png|webp|gif)/gi,
+      (url: string) => {
+        const v = variantePara(url, TOPE_FONDO);
+        if (!v) return url;
+        const escapado = url.includes('\\/');
+        const nueva = BASE_UPLOADS + v;
+        return escapado ? nueva.replace(/\//g, '\\/') : nueva;
+      });
+  $('[data-settings*="uploads"], [data-elementor-settings*="uploads"]').each((_: number, el: unknown) => {
+    for (const attr of ['data-settings', 'data-elementor-settings']) {
+      const s = $(el).attr(attr);
+      if (s && s.includes('uploads')) $(el).attr(attr, enJson(s));
+    }
   });
 }
 
@@ -115,6 +146,8 @@ function base(html: string) {
   // DOM muerto de botones de pago ya renderizados en la referencia
   $('.ppc-button-wrapper, #ppc-button-ppcp-gateway, .paypal-buttons, #ppcp-messages, [id^="zoid-paypal"]').remove();
   optimizarImagenes($);
+  // Capa de refinamiento visual (va al final del head: solo ajusta lo del tema)
+  $('head').append('<link rel="stylesheet" href="/assets/refinamiento.css">');
   // Islas propias (búsqueda, carrito, formularios)
   $('body').append('<script defer src="/assets/islas.js"></script>');
   return $;
