@@ -2,6 +2,7 @@
  "pagina": "/muebles-para-bancos/",
  "titulo": "Muebles para bancos",
  "key": "muebles-para-bancos",
+ "tipo": "page",
  "campos": [
   {
    "id": "l1",

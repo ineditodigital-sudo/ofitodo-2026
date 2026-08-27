@@ -232,7 +232,7 @@ try {
       $key = basename($f, '.json');
       $pub = $pdo->prepare("SELECT COUNT(*) FROM content_overrides WHERE pagina=? AND estado='borrador'");
       $pub->execute([$key]);
-      $lista[] = ['key' => $key, 'titulo' => $d['titulo'] ?? $key, 'slug' => $d['pagina'] ?? '', 'campos' => count($d['campos'] ?? []), 'borrador' => (int)$pub->fetchColumn() > 0];
+      $lista[] = ['key' => $key, 'titulo' => $d['titulo'] ?? $key, 'slug' => $d['pagina'] ?? '', 'tipo' => $d['tipo'] ?? 'page', 'campos' => count($d['campos'] ?? []), 'borrador' => (int)$pub->fetchColumn() > 0];
     }
     usort($lista, fn($a, $b) => $a['key'] === '_global' ? -1 : ($b['key'] === '_global' ? 1 : strcmp($a['titulo'], $b['titulo'])));
     responder(['ok' => true, 'paginas' => $lista]);

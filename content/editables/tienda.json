@@ -2,6 +2,7 @@
  "pagina": "/tienda/",
  "titulo": "Tienda",
  "key": "tienda",
+ "tipo": "page",
  "campos": [
   {
    "id": "i0",

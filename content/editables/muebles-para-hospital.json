@@ -2,6 +2,7 @@
  "pagina": "/muebles-para-hospital/",
  "titulo": "Muebles para Hospital",
  "key": "muebles-para-hospital",
+ "tipo": "page",
  "campos": [
   {
    "id": "l1",

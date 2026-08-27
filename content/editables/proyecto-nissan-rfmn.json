@@ -2,6 +2,7 @@
  "pagina": "/proyecto-nissan-rfmn/",
  "titulo": "Proyecto Nissan RFMN",
  "key": "proyecto-nissan-rfmn",
+ "tipo": "post",
  "campos": [
   {
    "id": "t0",

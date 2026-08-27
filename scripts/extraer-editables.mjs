@@ -28,7 +28,7 @@ for (const pg of congeladas) {
   const campos = core.extraer($, core.scopeContenido($), { saltarHF: true })
     .filter((c) => !esBasura(c));
   const key = (pg.slug === '/' ? 'home' : pg.slug.replace(/^\/|\/$/g, '').replace(/\//g, '__'));
-  writeFileSync(path.join(OUT, `${key}.json`), JSON.stringify({ pagina: pg.slug, titulo: pg.title, key, campos }, null, 1));
+  writeFileSync(path.join(OUT, `${key}.json`), JSON.stringify({ pagina: pg.slug, titulo: pg.title, key, tipo: pg.tipo || 'page', campos }, null, 1));
   totalCampos += campos.length;
 }
 

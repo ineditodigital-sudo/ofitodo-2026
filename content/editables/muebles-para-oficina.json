@@ -2,6 +2,7 @@
  "pagina": "/muebles-para-oficina/",
  "titulo": "Muebles para oficina",
  "key": "muebles-para-oficina",
+ "tipo": "page",
  "campos": [
   {
    "id": "l1",

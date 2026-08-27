@@ -2,6 +2,7 @@
  "pagina": "/sala-de-juntas/",
  "titulo": "Sala de Juntas",
  "key": "sala-de-juntas",
+ "tipo": "post",
  "campos": [
   {
    "id": "t0",

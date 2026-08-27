@@ -2,6 +2,7 @@
  "pagina": "/proyecto-adient/",
  "titulo": "Proyecto Adient",
  "key": "proyecto-adient",
+ "tipo": "post",
  "campos": [
   {
    "id": "t0",

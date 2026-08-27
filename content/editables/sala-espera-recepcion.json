@@ -2,6 +2,7 @@
  "pagina": "/sala-espera-recepcion/",
  "titulo": "SALA DE ESPERA Y RECEPCIÓN",
  "key": "sala-espera-recepcion",
+ "tipo": "page",
  "campos": [
   {
    "id": "i0",

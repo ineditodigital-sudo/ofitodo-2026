@@ -2,6 +2,7 @@
  "pagina": "/manuel-santos/",
  "titulo": "Manuel Santos",
  "key": "manuel-santos",
+ "tipo": "post",
  "campos": [
   {
    "id": "i0",

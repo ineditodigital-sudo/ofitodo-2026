@@ -2,6 +2,7 @@
  "pagina": "/soluciones/",
  "titulo": "Soluciones",
  "key": "soluciones",
+ "tipo": "page",
  "campos": [
   {
    "id": "i0",

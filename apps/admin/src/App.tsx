@@ -159,30 +159,84 @@ function KpiCard({ color, icon, valor, label, onClick }: { color: string; icon: 
   );
 }
 
+const PRINCIPALES = ['/', '/nosotros/', '/productos/', '/tienda/', '/sectores/', '/contactanos/', '/blog/', '/soluciones/', '/descargar-catalogo/'];
+const GRUPOS_PAG = [
+  { id: 'principales', nombre: 'Páginas principales', color: 'azul' },
+  { id: 'sectores', nombre: 'Muebles por sector', color: 'verde' },
+  { id: 'proyectos', nombre: 'Proyectos y espacios', color: 'morado' },
+  { id: 'legales', nombre: 'Avisos legales', color: 'gris' },
+  { id: 'otras', nombre: 'Otras páginas', color: 'naranja' },
+];
+const GRUPOS_BLOG = [
+  { id: 'articulos', nombre: 'Artículos del blog', color: 'azul' },
+  { id: 'proyectos', nombre: 'Proyectos publicados', color: 'morado' },
+];
+function catPagina(p: any): string {
+  if (PRINCIPALES.includes(p.slug)) return 'principales';
+  if (/^\/muebles-para-/.test(p.slug)) return 'sectores';
+  if (/privacidad|seguridad|aviso/.test(p.slug)) return 'legales';
+  if (/interior-design|proyecto|sala-espera|destacad/.test(p.slug)) return 'proyectos';
+  return 'otras';
+}
+
 function Paginas({ soloGlobal, soloBlog }: { soloGlobal?: boolean; soloBlog?: boolean }) {
   const [lista, setLista] = useState<any[] | null>(null);
   const [abierta, setAbierta] = useState<string | null>(soloGlobal ? '_global' : null);
+  const [q, setQ] = useState('');
   useEffect(() => { api('/admin/paginas-editables').then((r) => setLista(r.paginas)); }, []);
   if (soloGlobal) return <div className="editor-full"><PageEditor pageKey="_global" onSalir={() => { }} /></div>;
   if (abierta) return <div className="editor-full"><PageEditor pageKey={abierta} onSalir={() => setAbierta(null)} /></div>;
   if (!lista) return <Cargando />;
-  const esBlog = (p: any) => p.slug && /^\/(mobiliario|proyecto|estaciones|consultorios|sala|bancas|stand|manuel)/.test(p.slug);
-  const items = lista.filter((p) => p.key !== '_global').filter((p) => (soloBlog ? esBlog(p) : true));
+
+  const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const filtro = norm(q.trim());
+  let items = lista.filter((p) => p.key !== '_global').filter((p) => (soloBlog ? p.tipo === 'post' : p.tipo !== 'post'));
+  if (filtro) items = items.filter((p) => norm(p.titulo + ' ' + p.slug).includes(filtro));
+
+  const grupos = soloBlog ? GRUPOS_BLOG : GRUPOS_PAG;
+  const catDe = soloBlog ? (p: any) => (/^\/proyecto/.test(p.slug) ? 'proyectos' : 'articulos') : catPagina;
+  const porGrupo = new Map<string, any[]>();
+  for (const p of items) { const c = catDe(p); if (!porGrupo.has(c)) porGrupo.set(c, []); porGrupo.get(c)!.push(p); }
+  // ordenar principales por el orden curado
+  porGrupo.get('principales')?.sort((a, b) => {
+    const ia = PRINCIPALES.indexOf(a.slug), ib = PRINCIPALES.indexOf(b.slug);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
+  for (const [k, arr] of porGrupo) if (k !== 'principales') arr.sort((a, b) => a.titulo.localeCompare(b.titulo));
+
+  const totalPub = lista.filter((p) => p.borrador).length;
   return (
     <div>
-      <Encabezado titulo={soloBlog ? 'Blog' : 'Páginas del sitio'} sub="Elige una página para editar sus textos, imágenes, botones y enlaces con vista previa en vivo" />
-      <div className="grid-paginas">
-        {items.map((p, i) => (
-          <button key={p.key} className="pagina-card" onClick={() => setAbierta(p.key)}>
-            <div className={'pagina-card-top c' + (i % 6)}><Ic.IconPaginas /></div>
-            <div className="pagina-card-body">
-              <div className="pagina-card-tit">{p.titulo}</div>
-              <div className="pagina-card-slug">{p.slug}</div>
-            </div>
-            <div className="pagina-card-pie"><span>{p.campos} elementos</span>{p.borrador ? <span className="pill pill-amarillo">borrador</span> : <span className="link-accion">Editar →</span>}</div>
-          </button>
-        ))}
+      <Encabezado titulo={soloBlog ? 'Entradas del blog' : 'Páginas del sitio'}
+        sub="Haz clic en una página para editar sus textos, imágenes y botones con vista previa en vivo"
+        extra={totalPub > 0 ? <span className="pill pill-amarillo">{totalPub} con cambios sin publicar</span> : undefined} />
+      <div className="pg-buscar">
+        <Ic.IconBuscar />
+        <input placeholder={`Buscar entre ${items.length} ${soloBlog ? 'entradas' : 'páginas'}…`} value={q} onChange={(e) => setQ(e.target.value)} />
+        {q && <button className="pg-buscar-x" onClick={() => setQ('')}>×</button>}
       </div>
+      {items.length === 0 && <VacioIlustrado icon={<Ic.IconBuscar />} texto="No encontramos ninguna página con ese nombre." />}
+      {grupos.map((g) => {
+        const arr = porGrupo.get(g.id); if (!arr || !arr.length) return null;
+        return (
+          <section key={g.id} className="pg-grupo">
+            <div className="pg-grupo-cab"><span className={'pg-grupo-punto ' + g.color} /><h3>{g.nombre}</h3><span className="pg-grupo-num">{arr.length}</span></div>
+            <div className="pg-grid">
+              {arr.map((p) => (
+                <button key={p.key} className="pg-card" onClick={() => setAbierta(p.key)}>
+                  <span className={'pg-ico ' + g.color}><Ic.IconPaginas /></span>
+                  <span className="pg-body"><strong>{p.titulo}</strong><span className="pg-slug">{p.slug}</span></span>
+                  <span className="pg-meta">
+                    {p.borrador && <span className="pill pill-amarillo">borrador</span>}
+                    <span className="pg-count">{p.campos} elementos</span>
+                    <span className="pg-edit">Editar<Ic.IconFlecha /></span>
+                  </span>
+                </button>
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }

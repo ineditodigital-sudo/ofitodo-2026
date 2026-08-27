@@ -2,6 +2,7 @@
  "pagina": "/proyecto-farmacias-del-ahorro/",
  "titulo": "Proyecto Farmacias del Ahorro",
  "key": "proyecto-farmacias-del-ahorro",
+ "tipo": "post",
  "campos": [
   {
    "id": "t0",

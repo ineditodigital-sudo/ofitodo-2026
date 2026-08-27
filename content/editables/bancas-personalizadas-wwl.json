@@ -2,6 +2,7 @@
  "pagina": "/bancas-personalizadas-wwl/",
  "titulo": "BANCAS PARA WWL MÉXICO",
  "key": "bancas-personalizadas-wwl",
+ "tipo": "post",
  "campos": [
   {
    "id": "i0",

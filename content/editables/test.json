@@ -2,6 +2,7 @@
  "pagina": "/test/",
  "titulo": "TEST",
  "key": "test",
+ "tipo": "page",
  "campos": [
   {
    "id": "i0",

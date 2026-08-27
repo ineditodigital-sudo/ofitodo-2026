@@ -2,6 +2,7 @@
  "pagina": "/muebles-para-escuelas/",
  "titulo": "Muebles para Escuelas",
  "key": "muebles-para-escuelas",
+ "tipo": "page",
  "campos": [
   {
    "id": "l1",

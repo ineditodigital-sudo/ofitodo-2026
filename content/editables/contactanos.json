@@ -2,6 +2,7 @@
  "pagina": "/contactanos/",
  "titulo": "Contáctanos",
  "key": "contactanos",
+ "tipo": "page",
  "campos": [
   {
    "id": "i0",

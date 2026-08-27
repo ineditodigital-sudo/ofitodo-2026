@@ -2,6 +2,7 @@
  "pagina": "/proyectos-destacados/",
  "titulo": "Proyectos destacados",
  "key": "proyectos-destacados",
+ "tipo": "page",
  "campos": [
   {
    "id": "i0",
