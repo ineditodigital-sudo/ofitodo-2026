@@ -314,6 +314,35 @@ try {
         ->execute([$clave, json_encode($cuerpo['valor'], JSON_UNESCAPED_UNICODE)]);
     responder(['ok' => true, 'mensaje' => 'Guardado. Se aplica en la próxima actualización del sitio.']);
   }
+  if ($ruta === '/admin/medios' && $metodo === 'GET') {
+    $q = mb_strtolower(trim((string)($_GET['q'] ?? '')));
+    $tipo = (string)($_GET['tipo'] ?? '');
+    $pagina = max(1, (int)($_GET['pagina'] ?? 1));
+    $porPag = 60;
+    // 1) medios subidos desde el panel (carpeta /media)
+    $subidos = [];
+    $dirMedia = dirname(__DIR__) . '/media';
+    if (is_dir($dirMedia)) {
+      foreach (array_diff(scandir($dirMedia), ['.', '..']) as $f) {
+        if ($f === '.htaccess' || is_dir($dirMedia . '/' . $f)) continue;
+        $ext = strtolower(pathinfo($f, PATHINFO_EXTENSION));
+        $t = in_array($ext, ['jpg','jpeg','png','gif','webp','avif','svg']) ? 'imagen' : (in_array($ext, ['mp4','webm','mov']) ? 'video' : (in_array($ext, ['pdf','doc','docx','xls','xlsx','zip']) ? 'documento' : 'otro'));
+        $subidos[] = ['id' => 'up-' . md5($f), 'nombre' => $f, 'archivo' => $f, 'url' => '/media/' . $f, 'thumb' => '/media/' . $f,
+          'tipo' => $t, 'alt' => '', 'fecha' => date('Y-m-d', (int)filemtime($dirMedia . '/' . $f)), 'origen' => 'panel',
+          'peso' => (int)filesize($dirMedia . '/' . $f)];
+      }
+      usort($subidos, fn($a, $b) => strcmp($b['fecha'], $a['fecha']));
+    }
+    // 2) biblioteca del sitio
+    $cat = json_decode((string)@file_get_contents(__DIR__ . '/datos/medios.json'), true) ?: [];
+    $todos = array_merge($subidos, $cat);
+    if ($tipo !== '' && $tipo !== 'todos') $todos = array_values(array_filter($todos, fn($m) => $m['tipo'] === $tipo));
+    if ($q !== '') $todos = array_values(array_filter($todos, fn($m) => str_contains(mb_strtolower($m['nombre'] . ' ' . $m['archivo']), $q)));
+    $total = count($todos);
+    $items = array_slice($todos, ($pagina - 1) * $porPag, $porPag);
+    responder(['ok' => true, 'medios' => $items, 'total' => $total, 'pagina' => $pagina, 'paginas' => max(1, (int)ceil($total / $porPag)),
+      'conteos' => ['subidos' => count($subidos), 'sitio' => count($cat)]]);
+  }
   if ($ruta === '/admin/media' && $metodo === 'POST') {
     $data = (string)($cuerpo['archivo'] ?? '');
     $nombre = preg_replace('/[^a-z0-9._-]/i', '-', (string)($cuerpo['nombre'] ?? 'imagen'));

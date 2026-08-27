@@ -1,7 +1,10 @@
 import { useEffect, useState, type FormEvent, type ReactNode, type ComponentType, type SVGProps } from 'react';
-import { api, fmtDinero, fmtFecha, subirImagen } from './api.ts';
+import { api, fmtDinero, fmtFecha } from './api.ts';
 import { PageEditor } from './PageEditor.tsx';
+import { Medios } from './Medios.tsx';
 import * as Ic from './Icons.tsx';
+
+const LOGO = 'https://ofitodo.com/wp-content/uploads/2025/12/logo-azul-3.webp';
 
 /* Panel de Ofitodo — CMS a la medida. Todo en lenguaje humano, imposible de romper. */
 
@@ -15,7 +18,7 @@ const ICON: Record<Tab, ComponentType<SVGProps<SVGSVGElement>>> = {
 const NOMBRE: Record<Tab, string> = {
   inicio: 'Inicio', paginas: 'Páginas', global: 'Encabezado y pie', tienda: 'Tienda', blog: 'Blog',
   menus: 'Menús', marca: 'Marca y colores', contacto: 'Contacto y redes', mensajes: 'Mensajes',
-  pedidos: 'Pedidos', medios: 'Imágenes', ayuda: 'Ayuda',
+  pedidos: 'Pedidos', medios: 'Medios', ayuda: 'Ayuda',
 };
 
 export function App() {
@@ -35,7 +38,7 @@ export function App() {
   return (
     <div className="app">
       <aside className="lateral">
-        <div className="marca-logo"><span className="logo-cuadro">O</span> <span>Ofitodo<em>Panel de administración</em></span></div>
+        <div className="marca-logo"><img className="logo-img" src={LOGO} alt="Ofitodo" /><span className="marca-sub">Panel de administración</span></div>
         <div className="nav-scroll">
           {grupos.map(([g, tabs]) => (
             <nav key={g} className="nav-grupo">
@@ -93,7 +96,7 @@ function Login({ onOk }: { onOk: (n: string) => void }) {
   return (
     <main className="acceso">
       <form onSubmit={entrar} className="acceso-tarjeta">
-        <div className="marca-logo grande"><span className="logo-cuadro">O</span> Ofitodo</div>
+        <img className="logo-img grande" src={LOGO} alt="Ofitodo" />
         <p className="acceso-sub">Administra tu sitio web</p>
         <label>Usuario o correo<input value={u} onChange={(e) => setU(e.target.value)} autoComplete="username" required /></label>
         <label>Contraseña<input type="password" value={c} onChange={(e) => setC(e.target.value)} autoComplete="current-password" required /></label>
@@ -386,25 +389,6 @@ function Contacto() {
       </Card>
       <Card titulo="Redes sociales">
         {['facebook', 'instagram', 'linkedin', 'tiktok'].map((r) => <Campo key={r} lbl={r[0].toUpperCase() + r.slice(1)} v={redes[r] || ''} on={(v) => setRed(r, v)} />)}
-      </Card>
-    </div>
-  );
-}
-
-function Medios() {
-  const [subida, setSubida] = useState<{ url: string; peso: number } | null>(null);
-  const [subiendo, setSubiendo] = useState(false);
-  async function onFile(e: React.ChangeEvent<HTMLInputElement>) {
-    const f = e.target.files?.[0]; if (!f) return; setSubiendo(true);
-    try { setSubida(await subirImagen(f)); } catch (x) { alert((x as Error).message); } finally { setSubiendo(false); }
-  }
-  return (
-    <div>
-      <Encabezado titulo="Imágenes" sub="Sube una imagen y copia su dirección para usarla donde quieras" />
-      <Card titulo="Subir imagen">
-        <label className="btn-file grande">{subiendo ? 'Subiendo y optimizando…' : 'Elegir imagen'}<input type="file" accept="image/*" hidden onChange={onFile} /></label>
-        {subida && <div className="subida-ok"><img src={subida.url} alt="" /><div><p>Lista ✔ ({Math.round(subida.peso / 1024)} KB)</p><input readOnly value={subida.url} onFocus={(e) => e.target.select()} /></div></div>}
-        <p className="suave">Las imágenes se optimizan solas para que el sitio cargue rápido.</p>
       </Card>
     </div>
   );

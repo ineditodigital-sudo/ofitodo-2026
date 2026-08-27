@@ -32,12 +32,10 @@ svg { display: block; }
 /* ============ Layout ============ */
 .app { display: grid; grid-template-columns: 264px 1fr; min-height: 100vh; }
 .lateral { background: #fff; border-right: 1px solid var(--linea); display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; }
-.marca-logo { display: flex; align-items: center; gap: .6rem; font-weight: 800; font-size: 1.15rem; color: var(--primario); padding: 1.25rem 1.15rem; border-bottom: 1px solid var(--linea); }
-.marca-logo span { display: flex; flex-direction: column; line-height: 1.1; }
-.marca-logo em { font-style: normal; font-size: .68rem; font-weight: 500; color: var(--tenue); letter-spacing: .02em; }
-.marca-logo.grande { justify-content: center; font-size: 1.6rem; border: 0; padding: 0; }
-.marca-logo.grande span { flex-direction: row; }
-.logo-cuadro { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primario), var(--acento)); color: #fff; display: grid; place-items: center; font-size: 1.1rem; font-weight: 800; box-shadow: 0 6px 14px rgb(79 110 247 / .3); flex: none; }
+.marca-logo { display: grid; gap: .3rem; padding: 1.4rem 1.25rem 1.2rem; border-bottom: 1px solid var(--linea); }
+.logo-img { width: 128px; height: auto; display: block; }
+.logo-img.grande { width: 168px; margin: 0 auto .2rem; }
+.marca-sub { font-size: .7rem; font-weight: 600; color: var(--tenue); letter-spacing: .03em; }
 .nav-scroll { flex: 1; overflow-y: auto; padding: 1rem .8rem; display: grid; gap: 1rem; align-content: start; }
 .nav-grupo { display: grid; gap: 3px; }
 .nav-grupo-tit { font-size: .68rem; text-transform: uppercase; letter-spacing: .07em; color: var(--tenue); font-weight: 700; padding: .35rem .7rem; }
@@ -55,12 +53,15 @@ svg { display: block; }
 .btn-salir svg { width: 16px; height: 16px; }
 
 .principal { min-width: 0; display: flex; flex-direction: column; height: 100vh; }
-.contenido-scroll { flex: 1; overflow-y: auto; padding: 2rem 2.2rem; }
+.contenido-scroll { flex: 1; overflow-y: auto; padding: 2.25rem 2.5rem 3rem; }
+.contenido-scroll > * { max-width: 1320px; }
 .contenido-scroll.sin-pad { padding: 0; }
-@media (max-width: 900px) { .app { grid-template-columns: 1fr; } .lateral { position: static; height: auto; } .principal { height: auto; } .contenido-scroll { padding: 1.2rem; } }
+.contenido-scroll.sin-pad > * { max-width: none; }
+@media (max-width: 900px) { .app { grid-template-columns: 1fr; } .lateral { position: static; height: auto; } .principal { height: auto; } .contenido-scroll { padding: 1.25rem 1.15rem 2rem; } }
 
-.cab { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-.cab h1 { font-size: 1.6rem; letter-spacing: -.01em; } .cab p { margin: .35rem 0 0; color: var(--suave); }
+.cab { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.75rem; flex-wrap: wrap; }
+.cab h1 { font-size: 1.55rem; letter-spacing: -.015em; line-height: 1.2; } .cab p { margin: .4rem 0 0; color: var(--suave); font-size: .94rem; line-height: 1.5; }
+.cab label.btn-pri { cursor: pointer; }
 
 /* ============ Hero / bienvenida ============ */
 .hero { position: relative; overflow: hidden; border-radius: 20px; padding: 1.8rem 2rem; margin-bottom: 1.4rem; color: #fff;
@@ -215,6 +216,46 @@ svg { display: block; }
 .subida-ok { display: flex; gap: 1rem; align-items: center; margin-top: 1rem; background: var(--fondo); padding: 1rem; border-radius: 12px; }
 .subida-ok img { max-width: 130px; max-height: 100px; border-radius: 10px; object-fit: cover; }
 .subida-ok input { width: 340px; max-width: 100%; padding: .5rem; border: 1.5px solid var(--linea); border-radius: 9px; margin-top: .4rem; }
+
+/* ============ Medios (repositorio) ============ */
+.med-barra { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.med-buscar { margin-bottom: 0; flex: 1; min-width: 260px; max-width: 420px; }
+.med-tabs { display: inline-flex; background: #fff; border: 1px solid var(--linea); border-radius: 11px; padding: .25rem; gap: .15rem; box-shadow: var(--sombra-sm); }
+.med-tab { border: 0; background: transparent; padding: .45rem .9rem; border-radius: 8px; font-size: .86rem; font-weight: 600; color: var(--suave); transition: background .14s, color .14s; }
+.med-tab:hover { color: var(--texto); }
+.med-tab.activo { background: var(--acento-suave); color: var(--primario); }
+.med-info { color: var(--suave); font-size: .86rem; margin: 0 0 1.1rem; }
+.med-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(154px, 1fr)); gap: 1rem; }
+.med-card { display: grid; gap: .5rem; padding: 0; background: transparent; border: 0; text-align: left; }
+.med-thumb { position: relative; display: block; aspect-ratio: 1; border-radius: 13px; overflow: hidden; background: #fff; border: 1px solid var(--linea); box-shadow: var(--sombra-sm); transition: transform .14s, box-shadow .16s, border-color .14s; }
+.med-card:hover .med-thumb { transform: translateY(-3px); box-shadow: var(--sombra); border-color: var(--acento); }
+.med-card.activo .med-thumb { border-color: var(--acento); box-shadow: 0 0 0 3px var(--acento-suave); }
+.med-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.med-ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: .78rem; font-weight: 800; letter-spacing: .06em; color: var(--suave); background: var(--fondo); }
+.med-ph.video { background: var(--morado-bg); color: var(--morado); } .med-ph.documento { background: var(--rojo-bg); color: var(--rojo); }
+.med-badge { position: absolute; top: .45rem; left: .45rem; background: var(--acento); color: #fff; font-size: .66rem; font-weight: 700; padding: .12rem .45rem; border-radius: 99px; }
+.med-nombre { font-size: .78rem; color: var(--suave); line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.med-pag { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.8rem; color: var(--suave); font-size: .88rem; }
+/* modal de detalle */
+.med-modal { position: fixed; inset: 0; background: rgb(16 35 58 / .55); backdrop-filter: blur(3px); display: grid; place-items: center; padding: 1.5rem; z-index: 50; animation: aparece .16s ease-out; }
+@keyframes aparece { from { opacity: 0; } to { opacity: 1; } }
+.med-panel { position: relative; background: #fff; border-radius: 20px; box-shadow: var(--sombra-lg); width: min(880px, 100%); max-height: 88vh; overflow: auto; display: grid; grid-template-columns: 1.15fr 1fr; }
+@media (max-width: 760px) { .med-panel { grid-template-columns: 1fr; } }
+.med-cerrar { position: absolute; top: .7rem; right: .8rem; width: 32px; height: 32px; border: 0; border-radius: 9px; background: rgb(255 255 255 / .9); color: var(--suave); font-size: 1.3rem; line-height: 1; z-index: 1; box-shadow: var(--sombra-sm); }
+.med-vista { background: var(--fondo); display: grid; place-items: center; padding: 1.5rem; border-radius: 20px 0 0 20px; min-height: 260px; }
+@media (max-width: 760px) { .med-vista { border-radius: 20px 20px 0 0; } }
+.med-vista img, .med-vista video { max-width: 100%; max-height: 420px; border-radius: 12px; box-shadow: var(--sombra); }
+.med-doc { display: grid; gap: .6rem; justify-items: center; color: var(--suave); } .med-doc svg { width: 44px; height: 44px; }
+.med-detalle { padding: 1.6rem 1.7rem; display: grid; align-content: start; gap: .5rem; }
+.med-detalle h3 { font-size: 1.05rem; color: var(--primario); word-break: break-word; margin-bottom: .3rem; }
+.med-dl { margin: 0 0 .6rem; display: grid; gap: .1rem; }
+.med-dl div { display: flex; gap: .7rem; padding: .3rem 0; border-bottom: 1px solid var(--linea); font-size: .85rem; }
+.med-dl dt { color: var(--tenue); min-width: 92px; font-weight: 600; } .med-dl dd { margin: 0; color: var(--texto); word-break: break-word; }
+.med-lbl { font-size: .76rem; font-weight: 700; color: var(--suave); text-transform: uppercase; letter-spacing: .03em; margin-top: .3rem; }
+.med-url { display: flex; gap: .5rem; }
+.med-url input { flex: 1; min-width: 0; padding: .55rem .7rem; border: 1.5px solid var(--linea); border-radius: 9px; font-size: .82rem; color: var(--suave); }
+.med-abrir { text-align: center; text-decoration: none; margin-top: .5rem; }
+.med-nota { font-size: .82rem; margin: .6rem 0 0; line-height: 1.5; }
 
 /* ============ Editor con vista previa ============ */
 .editor-full { height: 100%; }
