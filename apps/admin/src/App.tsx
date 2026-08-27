@@ -25,7 +25,10 @@ export function App() {
   const [nombre, setNombre] = useState<string | null>(null);
   const [listo, setListo] = useState(false);
   const [tab, setTab] = useState<Tab>('inicio');
+  const [editorAbierto, setEditorAbierto] = useState(false);
+  const [menuAbierto, setMenuAbierto] = useState(false);
   useEffect(() => { api('/admin/yo').then((r) => setNombre(r.nombre)).catch(() => {}).finally(() => setListo(true)); }, []);
+  function irA(t: Tab) { setTab(t); setEditorAbierto(false); setMenuAbierto(false); }
   if (!listo) return null;
   if (!nombre) return <Login onOk={setNombre} />;
   const grupos: [string, Tab[]][] = [
@@ -34,17 +37,28 @@ export function App() {
     ['Tienda', ['tienda', 'pedidos', 'mensajes']],
     ['', ['ayuda']],
   ];
-  const esEditor = tab === 'paginas' || tab === 'global' || tab === 'blog';
+  // El padding solo se quita cuando el editor de página ocupa toda la pantalla
+  const aPantallaCompleta = editorAbierto || tab === 'global';
   return (
-    <div className="app">
+    <div className={'app' + (menuAbierto ? ' menu-abierto' : '')}>
+      <div className="movil-barra">
+        <button className="movil-menu" onClick={() => setMenuAbierto(true)} aria-label="Abrir menú"><Ic.IconMenus /></button>
+        <img className="logo-img movil-logo" src={LOGO} alt="Ofitodo" />
+        <span className="usuario-ini chico">{(nombre[0] || 'A').toUpperCase()}</span>
+      </div>
+      <div className="lateral-fondo" onClick={() => setMenuAbierto(false)} />
       <aside className="lateral">
-        <div className="marca-logo"><img className="logo-img" src={LOGO} alt="Ofitodo" /><span className="marca-sub">Panel de administración</span></div>
+        <div className="marca-logo">
+          <img className="logo-img" src={LOGO} alt="Ofitodo" />
+          <span className="marca-sub">Panel de administración</span>
+          <button className="lateral-cerrar" onClick={() => setMenuAbierto(false)} aria-label="Cerrar menú">×</button>
+        </div>
         <div className="nav-scroll">
           {grupos.map(([g, tabs]) => (
             <nav key={g} className="nav-grupo">
               {g && <div className="nav-grupo-tit">{g}</div>}
               {tabs.map((t) => { const I = ICON[t]; return (
-                <button key={t} className={'nav-item' + (tab === t ? ' activo' : '')} onClick={() => setTab(t)}>
+                <button key={t} className={'nav-item' + (tab === t ? ' activo' : '')} onClick={() => irA(t)}>
                   <span className="nav-ico"><I /></span>{NOMBRE[t]}
                 </button>
               ); })}
@@ -57,11 +71,11 @@ export function App() {
         </div>
       </aside>
       <main className="principal">
-        <div className={'contenido-scroll' + (esEditor ? ' sin-pad' : '')}>
-          {tab === 'inicio' && <Inicio irA={setTab} nombre={nombre} />}
-          {tab === 'paginas' && <Paginas soloGlobal={false} />}
-          {tab === 'global' && <Paginas soloGlobal />}
-          {tab === 'blog' && <Paginas soloBlog />}
+        <div className={'contenido-scroll' + (aPantallaCompleta ? ' sin-pad' : '')}>
+          {tab === 'inicio' && <Inicio irA={irA} nombre={nombre} />}
+          {tab === 'paginas' && <Paginas onEditor={setEditorAbierto} />}
+          {tab === 'global' && <Paginas soloGlobal onEditor={setEditorAbierto} />}
+          {tab === 'blog' && <Paginas soloBlog onEditor={setEditorAbierto} />}
           {tab === 'tienda' && <Tienda />}
           {tab === 'pedidos' && <Pedidos />}
           {tab === 'mensajes' && <Mensajes />}
@@ -182,13 +196,15 @@ function catPagina(p: any): string {
   return 'otras';
 }
 
-function Paginas({ soloGlobal, soloBlog }: { soloGlobal?: boolean; soloBlog?: boolean }) {
+function Paginas({ soloGlobal, soloBlog, onEditor }: { soloGlobal?: boolean; soloBlog?: boolean; onEditor?: (v: boolean) => void }) {
   const [lista, setLista] = useState<any[] | null>(null);
   const [abierta, setAbierta] = useState<string | null>(soloGlobal ? '_global' : null);
   const [q, setQ] = useState('');
   useEffect(() => { api('/admin/paginas-editables').then((r) => setLista(r.paginas)); }, []);
+  useEffect(() => () => onEditor?.(false), []);
+  function abrir(k: string | null) { setAbierta(k); onEditor?.(!!k); }
   if (soloGlobal) return <div className="editor-full"><PageEditor pageKey="_global" onSalir={() => { }} /></div>;
-  if (abierta) return <div className="editor-full"><PageEditor pageKey={abierta} onSalir={() => setAbierta(null)} /></div>;
+  if (abierta) return <div className="editor-full"><PageEditor pageKey={abierta} onSalir={() => abrir(null)} /></div>;
   if (!lista) return <Cargando />;
 
   const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -226,7 +242,7 @@ function Paginas({ soloGlobal, soloBlog }: { soloGlobal?: boolean; soloBlog?: bo
             <div className="pg-grupo-cab"><span className={'pg-grupo-punto ' + g.color} /><h3>{g.nombre}</h3><span className="pg-grupo-num">{arr.length}</span></div>
             <div className="pg-grid">
               {arr.map((p) => (
-                <button key={p.key} className="pg-card" onClick={() => setAbierta(p.key)}>
+                <button key={p.key} className="pg-card" onClick={() => abrir(p.key)}>
                   <span className={'pg-ico ' + g.color}><Ic.IconPaginas /></span>
                   <span className="pg-body"><strong>{p.titulo}</strong><span className="pg-slug">{p.slug}</span></span>
                   <span className="pg-meta">
