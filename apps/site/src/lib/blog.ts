@@ -158,3 +158,38 @@ ${migas([{ t: 'Blog', h: '/blog/' }, { t: e.titulo }])}
     }),
   });
 }
+
+/* --- Archivo (tipo de contenido o autor) ---------------------------------- */
+export function paginaArchivo(ruta: string, titulo: string, descripcion: string, filtro: (slug: string) => boolean): string {
+  const lista = entradas().filter((e) => filtro(e.slug));
+  const cuerpo = `
+${migas([{ t: 'Blog', h: '/blog/' }, { t: titulo }])}
+<main id="contenido">
+  <section class="franja">
+    <div class="contenedor franja__inner">
+      <span class="etiqueta">Blog</span>
+      <h1>${esc(titulo)}</h1>
+      <p>${esc(descripcion)}</p>
+      <p class="franja__conteo">${lista.length} publicacion${lista.length === 1 ? '' : 'es'}</p>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      ${lista.length
+        ? `<div class="rejilla rejilla--notas">${lista.map(tarjetaEntrada).join('')}</div>`
+        : '<p class="vacio">Todavía no hay publicaciones en esta sección.</p>'}
+    </div>
+  </section>
+
+  <section class="seccion seccion--ajustada">
+    <div class="contenedor"><a class="btn btn--linea" href="/blog/">Ver todo el blog ${FLECHA}</a></div>
+  </section>
+</main>`;
+
+  return documento({
+    titulo: `${titulo} | Ofitodo`,
+    descripcion, ruta, activo: '/blog/', clase: 'pag-archivo', cuerpo,
+    ogImagen: lista[0]?.imagen ?? null,
+  });
+}

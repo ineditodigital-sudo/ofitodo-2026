@@ -369,3 +369,103 @@ export const INTERIORES: Record<string, () => string> = {
   ...Object.fromEntries(SECTORES_DATOS.map((x) => [`/${x.slug}/`, () => paginaSector(x)])),
 };
 
+
+/* --- Página de contenido simple (legales y páginas informativas) ---------- */
+export function paginaContenido(ruta: string, d: { titulo: string; seo: { title: string; description: string | null }; html: string }): string {
+  const cuerpo = `
+${migas([{ t: d.titulo }])}
+<main id="contenido">
+  <section class="franja">
+    <div class="contenedor franja__inner">
+      <span class="etiqueta">Ofitodo</span>
+      <h1>${esc(d.titulo)}</h1>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor contenedor--texto">
+      <div class="prosa">${d.html}</div>
+    </div>
+  </section>
+</main>`;
+
+  return documento({
+    titulo: d.seo?.title || `${d.titulo} | Ofitodo`,
+    descripcion: d.seo?.description || `${d.titulo} de Comercializadora Ofitodo.`,
+    ruta, clase: 'pag-contenido', cuerpo,
+  });
+}
+
+/* --- Tienda: catálogo completo ------------------------------------------- */
+export function paginaTienda(ruta = '/tienda/'): string {
+  const todos = productos().filter((p) => p.imagen && !p.categorias.includes('uncategorized'));
+  const cats = categorias()
+    .filter((c) => !c.parentSlug && c.conteo > 0 && c.tieneReferencia)
+    .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+
+  const cuerpo = `
+${migas([{ t: 'Tienda' }])}
+<main id="contenido">
+  <section class="franja">
+    <div class="contenedor franja__inner">
+      <span class="etiqueta">Tienda</span>
+      <h1>Todo nuestro catálogo</h1>
+      <p>Mobiliario para oficina fabricado en Aguascalientes, con envío a todo México y pago contra entrega.</p>
+      <p class="franja__conteo">${todos.length} productos</p>
+    </div>
+  </section>
+
+  <section class="seccion seccion--ajustada">
+    <div class="contenedor">
+      <h2 class="titulo-menor">Filtra por categoría</h2>
+      <ul class="fichas">
+        ${cats.map((c) => `<li><a href="/categoria-producto/${c.ruta ?? c.slug}/">${esc(c.nombre)} <b>${c.conteo}</b></a></li>`).join('')}
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="rejilla rejilla--prod">${todos.map(tarjetaProducto).join('')}</div>
+    </div>
+  </section>
+
+  ${cierre({
+    titulo: '¿Necesitas algo a la medida?',
+    texto: 'Somos fabricantes: adaptamos cualquier modelo a tu espacio, tus materiales y tu presupuesto.',
+    cta: 'Hablar con un asesor',
+    mensaje: 'Hola, me gustaría cotizar mobiliario para oficina.',
+  })}
+</main>`;
+
+  return documento({
+    titulo: 'Tienda | Ofitodo',
+    descripcion: `Catálogo completo de mobiliario para oficina: ${todos.length} productos con envío a todo México y pago contra entrega.`,
+    ruta, activo: '/tienda/', clase: 'pag-tienda', cuerpo,
+  });
+}
+
+/* --- Páginas de sistema (carrito, compra, cuenta, pedido) ----------------- */
+export function paginaSistema(ruta: string, titulo: string, descripcion: string, contenido: string): string {
+  const cuerpo = `
+${migas([{ t: titulo }])}
+<main id="contenido">
+  <section class="franja">
+    <div class="contenedor franja__inner">
+      <span class="etiqueta">Tu compra</span>
+      <h1>${esc(titulo)}</h1>
+      <p>${esc(descripcion)}</p>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">${contenido}</div>
+  </section>
+</main>`;
+
+  return documento({
+    titulo: `${titulo} | Ofitodo`,
+    descripcion, ruta, activo: '/tienda/', clase: 'pag-sistema', cuerpo,
+    noIndex: true,
+  });
+}

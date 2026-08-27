@@ -6,13 +6,30 @@ import { productos, categorias, etiquetas, marcas, congeladas, refHtml, hayRef, 
 import * as T from '../../lib/transformar.ts';
 import * as SIS from '../../lib/sistema-paginas.ts';
 import { paginaCatalogo, paginaProducto } from '../../lib/plantillas.ts';
-import { INTERIORES } from '../../lib/interiores.ts';
-import { entradas, cuerpos, paginaBlog, paginaEntrada } from '../../lib/blog.ts';
+import { INTERIORES, paginaContenido, paginaTienda, paginaSistema } from '../../lib/interiores.ts';
+import { readFileSync as leerArchivo, existsSync as hayArchivo } from 'node:fs';
+import pathMod from 'node:path';
+import { entradas, cuerpos, paginaBlog, paginaEntrada, paginaArchivo } from '../../lib/blog.ts';
 
 type Ruta = { params: { slug: string | undefined }; props: Record<string, unknown> };
 
 // Entradas del blog cuyo cuerpo se pudo extraer sin perder contenido
 const reconstruibles = new Set(Object.keys(cuerpos()));
+
+// Archivos de WordPress (tipo de contenido y autor) rehechos como listados
+const ARCHIVOS: Record<string, { titulo: string; descripcion: string; filtro: (s: string) => boolean }> = {
+  '/tipo/blog/': { titulo: 'Artículos', descripcion: 'Guías y consejos para equipar tu espacio de trabajo.', filtro: (x) => !x.startsWith('/proyecto') },
+  '/tipo/proyectos/': { titulo: 'Proyectos', descripcion: 'Instalaciones reales que hemos fabricado y montado.', filtro: (x) => x.startsWith('/proyecto') },
+  '/tipo/tarjetas/': { titulo: 'Tarjetas', descripcion: 'Publicaciones de contacto del equipo de Ofitodo.', filtro: () => true },
+  '/tipo/uncategorized/': { titulo: 'Publicaciones', descripcion: 'Todas las publicaciones del blog de Ofitodo.', filtro: () => true },
+  '/author/marketing/': { titulo: 'Publicaciones de marketing', descripcion: 'Publicaciones del equipo de marketing de Ofitodo.', filtro: () => true },
+  '/author/developer/': { titulo: 'Publicaciones de desarrollo', descripcion: 'Publicaciones del equipo de desarrollo de Ofitodo.', filtro: () => true },
+};
+
+// Páginas simples (legales e informativas) con su contenido ya extraído
+const RUTA_PAGS = pathMod.resolve(process.cwd(), '..', '..', 'content', 'paginas-cuerpos.json');
+const paginasCuerpos: Record<string, { titulo: string; seo: { title: string; description: string | null }; html: string }> =
+  hayArchivo(RUTA_PAGS) ? JSON.parse(leerArchivo(RUTA_PAGS, 'utf8')) : {};
 
 export function getStaticPaths(): Ruta[] {
   const rutas: Ruta[] = [];
@@ -29,6 +46,8 @@ export function getStaticPaths(): Ruta[] {
     if (c.slug === '/') continue;
     if (INTERIORES[c.slug]) { add(c.slug, { tipo: 'interior', slug: c.slug }); continue; }
     if (c.slug === '/blog/') { add(c.slug, { tipo: 'blog' }); continue; }
+    if (c.slug === '/tienda/' || c.slug === '/shop/') { add(c.slug, { tipo: 'tienda', slug: c.slug }); continue; }
+    if (paginasCuerpos[c.slug]) { add(c.slug, { tipo: 'contenido', slug: c.slug }); continue; }
     if (reconstruibles.has(c.slug)) { add(c.slug, { tipo: 'entrada', slug: c.slug }); continue; }
     add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef, seo: c.seo, key: claveDe(c.slug) });
   }
@@ -50,8 +69,12 @@ export function getStaticPaths(): Ruta[] {
   for (const pathname of urls200()) {
     const clave = pathname.replace(/\/$/, '') || '/';
     if (cubiertas.has(clave)) continue;
+    const ruta = pathname.endsWith('/') ? pathname : `${pathname}/`;
+    // Archivos de WordPress que también reciben el diseño nuevo
+    if (ruta === '/shop/') { add(ruta, { tipo: 'tienda', slug: ruta }); continue; }
+    if (ARCHIVOS[ruta]) { add(ruta, { tipo: 'archivo', slug: ruta }); continue; }
     const f = `${urlKey(pathname)}.html`;
-    if (hayRef(f)) add(pathname.endsWith('/') ? pathname : `${pathname}/`, { tipo: 'congelada', htmlRef: f });
+    if (hayRef(f)) add(ruta, { tipo: 'congelada', htmlRef: f });
   }
   return rutas;
 }
@@ -62,6 +85,13 @@ export const GET: APIRoute = ({ props }) => {
   if (props.tipo === 'congelada') {
     html = T.congelada(refHtml(props.htmlRef as string), props.seo as { title?: string; description?: string | null } | undefined,
       { pagina: overridesPagina(props.key as string), global: overridesGlobal() });
+  } else if (props.tipo === 'archivo') {
+    const a = ARCHIVOS[props.slug as string];
+    html = paginaArchivo(props.slug as string, a.titulo, a.descripcion, a.filtro);
+  } else if (props.tipo === 'tienda') {
+    html = paginaTienda(props.slug as string);
+  } else if (props.tipo === 'contenido') {
+    html = paginaContenido(props.slug as string, paginasCuerpos[props.slug as string]);
   } else if (props.tipo === 'blog') {
     html = paginaBlog();
   } else if (props.tipo === 'entrada') {
@@ -93,16 +123,15 @@ export const GET: APIRoute = ({ props }) => {
       : props.tipo === 'etiqueta' ? `/product-tag/${l.slug}/` : `/marca/${l.slug}/`;
     html = paginaCatalogo({ l, ruta, tipo: props.tipo, productos: prods, subcategorias: subcats, hermanas });
   } else if (props.tipo === 'sistema') {
-    const donor = refHtml('contactanos.html');
     const cual = props.cual as string;
-    const conf: Record<string, { t: string; c: string; slug: string }> = {
-      carrito: { t: 'Carrito', c: SIS.carrito(), slug: '/cart/' },
-      checkout: { t: 'Finalizar compra', c: SIS.checkout(), slug: '/finalizar-compra/' },
-      miCuenta: { t: 'Mi cuenta', c: SIS.miCuenta(), slug: '/mi-cuenta/' },
-      pedidoRecibido: { t: 'Pedido recibido', c: SIS.pedidoRecibido(), slug: '/pedido-recibido/' },
+    const conf: Record<string, { t: string; d: string; c: string; slug: string }> = {
+      carrito: { t: 'Carrito', d: 'Revisa los productos que has agregado antes de finalizar tu compra.', c: SIS.carrito(), slug: '/cart/' },
+      checkout: { t: 'Finalizar compra', d: 'Completa tus datos de entrega. El pago es contra entrega.', c: SIS.checkout(), slug: '/finalizar-compra/' },
+      miCuenta: { t: 'Mi cuenta', d: 'Acceso de clientes y del equipo de Ofitodo.', c: SIS.miCuenta(), slug: '/mi-cuenta/' },
+      pedidoRecibido: { t: 'Pedido recibido', d: 'Hemos recibido tu pedido; te contactaremos para coordinar la entrega.', c: SIS.pedidoRecibido(), slug: '/pedido-recibido/' },
     };
     const k = conf[cual];
-    html = T.sistema(donor, { titulo: k.t, tituloBarra: k.t, contenidoHtml: k.c, slug: k.slug });
+    html = paginaSistema(k.slug, k.t, k.d, k.c);
   }
   return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
 };

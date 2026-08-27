@@ -92,6 +92,9 @@ for (const p of posts) {
       else $el.remove();
     });
 
+    // La plantilla ya pinta el título como h1: los del cuerpo bajan a h2
+    region.find('h1').each((_, el) => { const $e = $(el); $e.replaceWith(`<h2>${$e.html()}</h2>`); });
+
     let html = region.map((_, el) => $(el).html()).get().join('\n');
 
     // Compacta envoltorios que quedaron sin contenido
