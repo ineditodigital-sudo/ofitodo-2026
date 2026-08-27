@@ -1,35 +1,37 @@
-// Versiona la hoja de refinamiento con un hash del contenido:
-//   refinamiento.css → refinamiento.<hash>.css
+// Versiona cada hoja de estilo con un hash de su contenido:
+//   ofitodo.css → ofitodo.<hash>.css
 // Así cada cambio estrena URL (la caché de Cloudflare deja de ser un problema)
 // y a la vez se puede seguir cacheando durante mucho tiempo.
-import { readFileSync, writeFileSync, readdirSync, unlinkSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, unlinkSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 
 const AQUI = path.resolve(import.meta.dirname, '..');
 const ASSETS = path.join(AQUI, 'public', 'assets');
-const ORIGEN = path.join(ASSETS, 'refinamiento.css');
-const ORIGEN2 = path.join(ASSETS, 'ofitodo.css');
 
-const css = readFileSync(ORIGEN, 'utf8');
-const hash = createHash('sha1').update(css).digest('hex').slice(0, 8);
-const nombre = `refinamiento.${hash}.css`;
+// Hojas del sistema de diseño que se versionan (nombre lógico → archivo fuente)
+const HOJAS = ['refinamiento', 'ofitodo', 'paginas'];
 
-// limpiar versiones anteriores para no acumular archivos
-for (const f of readdirSync(ASSETS)) {
-  if (/^refinamiento\.[0-9a-f]{8}\.css$/.test(f) && f !== nombre) unlinkSync(path.join(ASSETS, f));
+const salida = {};
+for (const nombre of HOJAS) {
+  const origen = path.join(ASSETS, `${nombre}.css`);
+  if (!existsSync(origen)) continue;
+
+  const css = readFileSync(origen, 'utf8');
+  const hash = createHash('sha1').update(css).digest('hex').slice(0, 8);
+  const archivo = `${nombre}.${hash}.css`;
+
+  // limpiar versiones anteriores para no acumular archivos
+  const viejo = new RegExp(`^${nombre}\\.[0-9a-f]{8}\\.css$`);
+  for (const f of readdirSync(ASSETS)) {
+    if (viejo.test(f) && f !== archivo) unlinkSync(path.join(ASSETS, f));
+  }
+
+  writeFileSync(path.join(ASSETS, archivo), css);
+  salida[nombre] = `/assets/${archivo}`;
+  console.log(`${nombre} versionado → ${archivo}`);
 }
-writeFileSync(path.join(ASSETS, nombre), css);
 
 // el build lo lee para enlazarlo en cada página
 mkdirSync(path.join(AQUI, 'src', 'generado'), { recursive: true });
-const css2 = readFileSync(ORIGEN2, 'utf8');
-const hash2 = createHash('sha1').update(css2).digest('hex').slice(0, 8);
-const nombre2 = `ofitodo.${hash2}.css`;
-for (const f of readdirSync(ASSETS)) {
-  if (/^ofitodo.[0-9a-f]{8}.css$/.test(f) && f !== nombre2) unlinkSync(path.join(ASSETS, f));
-}
-writeFileSync(path.join(ASSETS, nombre2), css2);
-writeFileSync(path.join(AQUI, 'src', 'generado', 'assets.json'), JSON.stringify({ refinamiento: `/assets/${nombre}`, ofitodo: `/assets/${nombre2}` }, null, 1));
-console.log(`portada versionada → ${nombre2}`);
-console.log(`refinamiento versionado → ${nombre}`);
+writeFileSync(path.join(AQUI, 'src', 'generado', 'assets.json'), JSON.stringify(salida, null, 1));

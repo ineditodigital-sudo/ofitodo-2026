@@ -187,17 +187,32 @@ ul { margin: 0; padding: 0; list-style: none; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
 
-/* --- Aparición al hacer scroll (sin librerías) --- */
+/* --- Aparición al hacer scroll -------------------------------------------
+   Animación CSS ligada al avance del scroll (animation-timeline: view()).
+   Sin JavaScript: si el navegador no la soporta, el contenido se ve tal cual.
+   Y anima SOLO el desplazamiento, nunca la opacidad: aunque la animación se
+   quedara a medias, el texto siempre es legible. Una sección no puede
+   quedarse en blanco por un fallo de script ni por un navegador antiguo.   */
+@keyframes aparecer {
+  from { transform: translateY(22px); }
+  to   { transform: none; }
+}
 @media (prefers-reduced-motion: no-preference) {
-  .revelar { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.4,0,.2,1); }
-  .revelar.visible { opacity: 1; transform: none; }
+  @supports (animation-timeline: view()) {
+    .revelar {
+      animation: aparecer linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+  }
+}
 }
 
 /* ===========================================================================
    ENCABEZADO Y PIE PROPIOS (sin Elementor)
    =========================================================================== */
-.saltar { position: absolute; left: -9999px; top: 0; z-index: 200; background: var(--azul); color: #fff; padding: .8rem 1.2rem; border-radius: 0 0 var(--r-sm) 0; }
-.saltar:focus { left: 0; }
+.saltar { position: fixed; left: 0; top: 0; z-index: 200; background: var(--azul); color: #fff; padding: .8rem 1.2rem; border-radius: 0 0 var(--r-sm) 0; transform: translateY(-200%); transition: transform .18s var(--ease); }
+.saltar:focus { transform: none; }
 .oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .cab { position: sticky; top: 0; z-index: 100; background: rgb(255 255 255 / .92); backdrop-filter: saturate(1.6) blur(10px); border-bottom: 1px solid transparent; transition: box-shadow var(--ease), border-color var(--ease); }

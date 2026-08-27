@@ -1,26 +1,13 @@
 // PORTADA REDISEÑADA — HTML propio, semántico y ligero.
-// Conserva el encabezado y el pie reales del sitio (para no perder menú, buscador,
-// WhatsApp ni analítica) y sustituye TODO el cuerpo por un diseño nuevo.
+// Encabezado, pie y armazón propios (chrome.ts). Sin Elementor ni jQuery.
+
 import type { APIRoute } from 'astro';
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
-import { createRequire } from 'node:module';
 import { categorias, productos, imagenVariante } from '../lib/contenido.ts';
 import { HERO, INTRO, PERSONALIZADO, SECTORES, PROCESO, CLIENTES, CATALOGOS, CIERRE } from '../lib/home-datos.ts';
-import { encabezado, pie, SCRIPT_CHROME } from '../lib/chrome.ts';
+import { documento, FLECHA, CHECK, WA } from '../lib/chrome.ts';
 
-const require = createRequire(path.resolve(process.cwd(), '..', '..', 'scripts', '.deps', 'node_modules', 'cheerio', 'index.js'));
-const { load } = require('cheerio');
-
-const CSS_HOME = (() => {
-  try { return JSON.parse(readFileSync(path.resolve(process.cwd(), 'src', 'generado', 'assets.json'), 'utf8')).ofitodo ?? '/assets/ofitodo.css'; }
-  catch { return '/assets/ofitodo.css'; }
-})();
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const FLECHA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
-const WA = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.43 12.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>';
 
 function tarjetaCategoria(c: { nombre: string; ruta: string; imagen: string | null; conteo: number }): string {
   const img = imagenVariante(c.imagen, 600);
@@ -172,52 +159,22 @@ export const GET: APIRoute = () => {
 
 </main>`;
 
-  const html = `<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mobiliario para Oficina en Aguascalientes | Ofitodo</title>
-<meta name="description" content="Fabricantes de mobiliario para oficina en Aguascalientes y todo México. Escritorios, sillas, estaciones de trabajo y mobiliario a medida para empresas.">
-<link rel="canonical" href="https://ofitodo.com/">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta property="og:locale" content="es_ES">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mobiliario para Oficina en Aguascalientes | Ofitodo">
-<meta property="og:description" content="Fabricantes de mobiliario para oficina en Aguascalientes y todo México.">
-<meta property="og:url" content="https://ofitodo.com/">
-<meta property="og:site_name" content="Ofitodo">
-<meta property="og:image" content="https://ofitodo.com/wp-content/uploads/2026/01/Group-35-1.webp">
-<link rel="icon" href="https://ofitodo.com/wp-content/uploads/2023/05/cropped-Ofitodo_logoPerfil-32x32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="https://ofitodo.com/wp-content/uploads/2023/05/cropped-Ofitodo_logoPerfil-180x180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${CSS_HOME}">
-</head>
-<body class="ofitodo-home">
-${encabezado("/")}
-${cuerpo}
-${pie()}
-<script>
-${SCRIPT_CHROME}
-// Aparición progresiva al hacer scroll (nativo, sin librerías)
-document.addEventListener('DOMContentLoaded', function () {
-  var els = document.querySelectorAll('.revelar');
-  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    els.forEach(function (e) { e.classList.add('visible'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entradas) {
-    entradas.forEach(function (e, i) {
-      if (e.isIntersecting) { setTimeout(function () { e.target.classList.add('visible'); }, i * 70); io.unobserve(e.target); }
-    });
-  }, { rootMargin: '0px 0px -12% 0px', threshold: .06 });
-  els.forEach(function (e) { io.observe(e); });
-});
-</script>
-</body>
-</html>`;
+  const html = documento({
+    titulo: 'Mobiliario para Oficina en Aguascalientes | Ofitodo',
+    descripcion: 'Fabricantes de mobiliario para oficina en Aguascalientes y todo México. Escritorios, sillas, estaciones de trabajo y mobiliario a medida para empresas.',
+    ruta: '/', activo: '/', clase: 'ofitodo-home', cuerpo,
+    ogImagen: 'https://ofitodo.com/wp-content/uploads/2026/01/Group-35-1.webp',
+    jsonLd: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Ofitodo',
+      description: 'Fabricantes de mobiliario para oficina en Aguascalientes y todo México.',
+      url: 'https://ofitodo.com/',
+      image: 'https://ofitodo.com/wp-content/uploads/2025/12/logo-azul-3.webp',
+      telephone: '+52 449 918 40 80',
+      address: { '@type': 'PostalAddress', addressLocality: 'Aguascalientes', addressRegion: 'Aguascalientes', addressCountry: 'MX' },
+    }),
+  });
 
   return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
 };

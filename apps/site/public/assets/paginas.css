@@ -1,0 +1,293 @@
+/* =========================================================================
+   Ofitodo — páginas interiores (catálogo, ficha de producto, contenido)
+   Extiende el sistema de diseño de ofitodo.css. Sin dependencias.
+   ========================================================================= */
+
+/* --- Migas de pan -------------------------------------------------------- */
+.migas { border-bottom: 1px solid var(--borde); background: var(--blanco); }
+.migas ol {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem;
+  list-style: none; margin: 0; padding: .9rem 0; font-size: var(--t-xs);
+}
+.migas li { display: flex; align-items: center; gap: .5rem; color: var(--tenue); }
+.migas li + li::before { content: "/"; color: var(--borde); }
+.migas a { color: var(--tenue); text-decoration: none; }
+.migas a:hover { color: var(--acento); text-decoration: underline; }
+.migas [aria-current] { color: var(--texto); font-weight: 600; }
+
+/* --- Franja de encabezado de sección ------------------------------------- */
+.franja {
+  position: relative; isolation: isolate; overflow: hidden;
+  background: var(--azul); color: #fff;
+  padding: clamp(3rem, 2rem + 4vw, 5.5rem) 0;
+}
+.franja__media { position: absolute; inset: 0; z-index: -2; }
+.franja__media img { width: 100%; height: 100%; object-fit: cover; }
+.franja--foto::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(100deg, rgba(10, 26, 51, .93) 0%, rgba(10, 26, 51, .82) 45%, rgba(10, 26, 51, .55) 100%);
+}
+.franja__inner { max-width: 46rem; }
+.franja h1 {
+  font-size: clamp(2rem, 1.4rem + 2.4vw, 3.25rem); line-height: 1.08;
+  letter-spacing: -.02em; margin: .6rem 0 0; color: #fff;
+}
+.franja p { color: rgba(255, 255, 255, .84); margin: 1rem 0 0; max-width: 42rem; }
+.franja__conteo {
+  display: inline-block; margin-top: 1.4rem !important; padding: .4rem .9rem;
+  border: 1px solid rgba(255, 255, 255, .28); border-radius: var(--r-full);
+  font-size: var(--t-xs); font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase; color: #fff !important;
+}
+
+/* --- Secciones auxiliares ------------------------------------------------ */
+.seccion--ajustada { padding-block: clamp(2rem, 1.4rem + 2vw, 3rem); }
+.seccion--alt { background: var(--fondo-2); }
+.contenedor--texto { max-width: 52rem; }
+.titulo-menor {
+  font-size: clamp(1.25rem, 1.1rem + .7vw, 1.65rem); letter-spacing: -.01em;
+  margin: 0 0 1.6rem; color: var(--tinta);
+}
+.vacio {
+  padding: 3rem 1.5rem; text-align: center; color: var(--tenue);
+  background: var(--fondo-2); border-radius: var(--r); border: 1px dashed var(--borde);
+}
+.etiqueta--enlace {
+  text-decoration: none; transition: color .18s var(--ease);
+}
+.etiqueta--enlace:hover { color: var(--azul); }
+
+/* --- Fichas de navegación (subcategorías, hermanas) ---------------------- */
+.fichas { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; margin: 0; padding: 0; }
+.fichas a {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .6rem 1rem; border: 1px solid var(--borde); border-radius: var(--r-full);
+  background: var(--blanco); color: var(--texto); text-decoration: none;
+  font-size: var(--t-sm); font-weight: 500; line-height: 1;
+  transition: border-color .18s var(--ease), color .18s var(--ease), transform .18s var(--ease);
+}
+.fichas a:hover { border-color: var(--acento); color: var(--acento); transform: translateY(-1px); }
+.fichas b {
+  font-size: var(--t-xs); font-weight: 700; color: var(--tenue);
+  background: var(--fondo-2); border-radius: var(--r-full); padding: .15rem .45rem;
+}
+.fichas a:hover b { background: var(--acento-claro); color: var(--acento); }
+
+/* --- Rejilla y tarjeta de producto --------------------------------------- */
+.rejilla--prod { grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }
+.prod {
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--r);
+  text-decoration: none; color: inherit;
+  transition: transform .22s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease);
+}
+.prod:hover { transform: translateY(-3px); box-shadow: var(--suave); border-color: #d3dbe6; }
+.prod__img {
+  display: block; aspect-ratio: 1 / 1; overflow: hidden;
+  background: var(--fondo-2); border-bottom: 1px solid var(--borde);
+}
+.prod__img img {
+  width: 100%; height: 100%; object-fit: contain; padding: .75rem;
+  transition: transform .35s var(--ease);
+}
+.prod:hover .prod__img img { transform: scale(1.04); }
+.prod__sinimg { display: block; width: 100%; height: 100%; background: var(--fondo-2); }
+.prod__cuerpo { display: flex; flex-direction: column; gap: .35rem; padding: 1rem 1.05rem 1.15rem; flex: 1; }
+.prod__nombre {
+  font-weight: 600; font-size: var(--t-sm); line-height: 1.35; color: var(--tinta);
+  display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.prod__sku { font-size: var(--t-xs); color: var(--tenue); }
+.prod__ir {
+  margin-top: auto; padding-top: .6rem; display: inline-flex; align-items: center; gap: .35rem;
+  font-size: var(--t-xs); font-weight: 600; color: var(--acento);
+}
+.prod__ir svg { width: 1em; height: 1em; transition: transform .2s var(--ease); }
+.prod:hover .prod__ir svg { transform: translateX(3px); }
+
+/* --- Ficha de producto --------------------------------------------------- */
+.ficha { padding-block: clamp(2rem, 1.4rem + 2.4vw, 3.5rem); }
+.ficha__grid {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(2rem, 1rem + 3vw, 4rem); align-items: start;
+}
+.galeria { position: sticky; top: calc(var(--alto-cab, 76px) + 1.25rem); min-width: 0; }
+.ficha__info { min-width: 0; }
+.galeria__marco {
+  aspect-ratio: 1 / 1; display: grid; place-items: center; overflow: hidden;
+  background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--r-lg);
+}
+.galeria__marco img { width: 100%; height: 100%; object-fit: contain; padding: 1.5rem; }
+.galeria__tiras {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(4.5rem, 1fr));
+  gap: .6rem; list-style: none; margin: .75rem 0 0; padding: 0;
+}
+.galeria__mini {
+  display: block; width: 100%; aspect-ratio: 1 / 1; padding: .3rem; cursor: pointer;
+  background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--r-sm);
+  transition: border-color .18s var(--ease);
+}
+.galeria__mini img { width: 100%; height: 100%; object-fit: contain; }
+.galeria__mini:hover { border-color: var(--acento); }
+.galeria__mini.activa { border-color: var(--azul); box-shadow: 0 0 0 2px var(--acento-claro); }
+
+.ficha__info h1 {
+  font-size: clamp(1.6rem, 1.25rem + 1.5vw, 2.4rem); line-height: 1.15;
+  letter-spacing: -.02em; margin: .55rem 0 0; color: var(--tinta);
+}
+.ficha__sku { margin: .6rem 0 0; font-size: var(--t-sm); color: var(--tenue); }
+.ficha__sku strong { color: var(--texto); font-weight: 600; letter-spacing: .02em; }
+.ficha__resumen { margin: 1.1rem 0 0; color: var(--texto); line-height: 1.65; }
+.ficha__precio {
+  display: flex; flex-direction: column; gap: .15rem; margin-top: 1.6rem;
+  padding: 1.05rem 1.25rem; background: var(--fondo-2);
+  border: 1px solid var(--borde); border-left: 3px solid var(--acento); border-radius: var(--r-sm);
+}
+.ficha__precio strong { font-size: 1.4rem; color: var(--tinta); letter-spacing: -.01em; }
+.ficha__precio span { font-size: var(--t-xs); color: var(--tenue); }
+.ficha__acciones { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.ficha__garantias {
+  display: grid; gap: .7rem; list-style: none; margin: 1.8rem 0 0; padding: 1.5rem 0 0;
+  border-top: 1px solid var(--borde);
+}
+.ficha__garantias li {
+  display: flex; align-items: center; gap: .65rem;
+  font-size: var(--t-sm); color: var(--texto);
+}
+.ficha__garantias svg { width: 1.05rem; height: 1.05rem; flex: none; color: var(--wa); }
+
+/* --- Prosa (descripciones de producto y contenido editorial) ------------- */
+.prosa { color: var(--texto); line-height: 1.75; }
+.prosa > :first-child { margin-top: 0; }
+.prosa > :last-child { margin-bottom: 0; }
+.prosa p { margin: 0 0 1.05rem; }
+.prosa h2, .prosa h3, .prosa h4 {
+  color: var(--tinta); line-height: 1.25; letter-spacing: -.01em; margin: 2rem 0 .8rem;
+}
+.prosa h2 { font-size: 1.4rem; }
+.prosa h3 { font-size: 1.15rem; }
+.prosa h4 { font-size: 1rem; }
+.prosa ul, .prosa ol { margin: 0 0 1.05rem; padding-left: 1.35rem; }
+.prosa li { margin-bottom: .45rem; }
+.prosa ul { list-style: none; padding-left: 0; }
+.prosa ul > li { position: relative; padding-left: 1.5rem; }
+.prosa ul > li::before {
+  content: ""; position: absolute; left: .25rem; top: .62em;
+  width: .4rem; height: .4rem; border-radius: 50%; background: var(--acento);
+}
+.prosa ol { list-style: decimal; }
+.prosa a { color: var(--acento); text-underline-offset: .18em; }
+.prosa strong { color: var(--tinta); font-weight: 600; }
+.prosa img { max-width: 100%; height: auto; border-radius: var(--r-sm); }
+.prosa table {
+  width: 100%; border-collapse: collapse; margin: 0 0 1.05rem;
+  font-size: var(--t-sm); display: block; overflow-x: auto;
+}
+.prosa th, .prosa td { padding: .6rem .8rem; border: 1px solid var(--borde); text-align: left; }
+.prosa th { background: var(--fondo-2); font-weight: 600; color: var(--tinta); }
+.prosa blockquote {
+  margin: 0 0 1.05rem; padding: .9rem 1.25rem;
+  border-left: 3px solid var(--acento); background: var(--fondo-2);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0; color: var(--texto);
+}
+.prosa iframe, .prosa video { max-width: 100%; border-radius: var(--r-sm); }
+
+/* --- Adaptación a pantallas menores -------------------------------------- */
+@media (max-width: 900px) {
+  .ficha__grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .galeria { position: static; }
+  .galeria__marco { max-width: 32rem; margin-inline: auto; }
+  .galeria__tiras { max-width: 32rem; margin-inline: auto; }
+}
+@media (max-width: 560px) {
+  .rejilla--prod { grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: .75rem; }
+  .prod__cuerpo { padding: .8rem .85rem .95rem; }
+  .galeria__marco img { padding: 1rem; }
+  .ficha__acciones .btn { width: 100%; justify-content: center; }
+  .migas ol { font-size: .72rem; }
+}
+
+/* --- Botón secundario sobre fondo claro ---------------------------------- */
+.btn--linea {
+  background: var(--blanco); color: var(--azul);
+  box-shadow: inset 0 0 0 1.5px var(--borde);
+}
+.btn--linea:hover {
+  background: var(--fondo-2); color: var(--azul-900);
+  box-shadow: inset 0 0 0 1.5px var(--acento); transform: translateY(-2px);
+}
+
+/* --- Formulario de cotización -------------------------------------------- */
+.cotiza {
+  background: var(--blanco); border: 1px solid var(--borde);
+  border-radius: var(--r-lg); padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  box-shadow: var(--suave);
+}
+.cotiza__intro { margin: -1rem 0 1.6rem; color: var(--tenue); font-size: var(--t-sm); }
+.cotiza__campos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.cotiza__ancho { grid-column: 1 / -1; }
+.cotiza label {
+  display: flex; flex-direction: column; gap: .4rem;
+  font-size: var(--t-xs); font-weight: 600; color: var(--tinta);
+  letter-spacing: .02em; text-transform: uppercase;
+}
+.cotiza input, .cotiza textarea {
+  font: inherit; font-size: var(--t-sm); font-weight: 400;
+  text-transform: none; letter-spacing: normal; color: var(--texto);
+  padding: .7rem .85rem; background: var(--fondo);
+  border: 1px solid var(--borde); border-radius: var(--r-sm);
+  transition: border-color .16s var(--ease), box-shadow .16s var(--ease), background .16s var(--ease);
+}
+.cotiza textarea { resize: vertical; min-height: 5.5rem; }
+.cotiza input::placeholder, .cotiza textarea::placeholder { color: #9aa6b6; }
+.cotiza input:focus, .cotiza textarea:focus {
+  outline: none; background: var(--blanco);
+  border-color: var(--acento); box-shadow: 0 0 0 3px var(--acento-claro);
+}
+.cotiza__pie { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+.cotiza__aviso { margin: 0; font-size: var(--t-sm); color: var(--tenue); }
+.cotiza__aviso--ok { color: #167a3d; font-weight: 600; }
+.cotiza__aviso--error { color: #b4232a; font-weight: 600; }
+.cotiza button[disabled] { opacity: .6; cursor: progress; }
+
+@media (max-width: 560px) {
+  .cotiza__campos { grid-template-columns: 1fr; }
+  .cotiza__pie .btn { width: 100%; justify-content: center; }
+}
+
+/* --- Rejillas auxiliares de páginas interiores --------------------------- */
+.rejilla--dos { grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
+.rejilla--tres { grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
+.rejilla--cuatro { grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+
+.panel {
+  background: var(--blanco); border: 1px solid var(--borde);
+  border-top: 3px solid var(--acento); border-radius: var(--r);
+  padding: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+}
+.panel h2 { margin: 0 0 .8rem; font-size: 1.3rem; color: var(--tinta); letter-spacing: -.01em; }
+.panel p { margin: 0; color: var(--texto); line-height: 1.7; }
+
+/* --- Página de contacto -------------------------------------------------- */
+.contacto__grid {
+  display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 1rem + 3vw, 3.5rem); align-items: start;
+}
+.contacto__lista { list-style: none; margin: 0 0 2rem; padding: 0; display: grid; gap: 1.1rem; }
+.contacto__lista li { display: flex; flex-direction: column; gap: .2rem; }
+.contacto__et {
+  font-size: var(--t-xs); font-weight: 700; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--tenue);
+}
+.contacto__lista a {
+  font-size: 1.05rem; font-weight: 600; color: var(--tinta);
+  text-decoration: none; width: fit-content;
+  transition: color .18s var(--ease);
+}
+.contacto__lista a:hover { color: var(--acento); text-decoration: underline; }
+.contacto__datos .ficha__garantias { margin-top: 0; }
+.contacto__datos .btn--wa { margin-top: 1.8rem; }
+
+@media (max-width: 900px) {
+  .contacto__grid { grid-template-columns: minmax(0, 1fr); }
+}

@@ -2,9 +2,11 @@
 // congeladas (páginas/posts/otros 200 del inventario) + catálogo regenerado desde datos
 // + páginas de sistema nuevas. Endpoint .html.ts = control byte a byte del HTML.
 import type { APIRoute } from 'astro';
-import { productos, categorias, etiquetas, marcas, congeladas, refHtml, hayRef, urlKey, urls200, overridesPagina, overridesGlobal } from '../../lib/contenido.ts';
+import { productos, categorias, etiquetas, marcas, congeladas, refHtml, hayRef, urlKey, urls200, overridesPagina, overridesGlobal, type Listado } from '../../lib/contenido.ts';
 import * as T from '../../lib/transformar.ts';
 import * as SIS from '../../lib/sistema-paginas.ts';
+import { paginaCatalogo, paginaProducto } from '../../lib/plantillas.ts';
+import { INTERIORES } from '../../lib/interiores.ts';
 
 type Ruta = { params: { slug: string | undefined }; props: Record<string, unknown> };
 
@@ -21,6 +23,7 @@ export function getStaticPaths(): Ruta[] {
   // La portada tiene su propia página rediseñada (src/pages/index.html.ts)
   for (const c of congeladas()) {
     if (c.slug === '/') continue;
+    if (INTERIORES[c.slug]) { add(c.slug, { tipo: 'interior', slug: c.slug }); continue; }
     add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef, seo: c.seo, key: claveDe(c.slug) });
   }
 
@@ -47,25 +50,37 @@ export function getStaticPaths(): Ruta[] {
   return rutas;
 }
 
-const porSlugProducto = () => new Map(productos().map((p) => [p.slug, p]));
 
 export const GET: APIRoute = ({ props }) => {
   let html = '';
   if (props.tipo === 'congelada') {
     html = T.congelada(refHtml(props.htmlRef as string), props.seo as { title?: string; description?: string | null } | undefined,
       { pagina: overridesPagina(props.key as string), global: overridesGlobal() });
+  } else if (props.tipo === 'interior') {
+    html = INTERIORES[props.slug as string]();
   } else if (props.tipo === 'producto') {
-    const p = porSlugProducto().get(props.slug as string)!;
-    const ref = p.tieneReferencia ? refHtml(`producto__${p.slug}.html`) : refHtml('producto__silla-operativa-modelo-lituania-ofitodo.html');
-    html = T.producto(ref, p);
+    const todos = productos();
+    const p = todos.find((x) => x.slug === props.slug)!;
+    const cats = categorias();
+    // Categoría más específica del producto (la de mayor profundidad con menos productos)
+    const suyas = p.categorias.map((s) => cats.find((c) => c.slug === s)).filter(Boolean) as Listado[];
+    const cat = suyas.sort((a, b) => a.conteo - b.conteo)[0] ?? null;
+    const rel = cat
+      ? todos.filter((x) => x.slug !== p.slug && x.categorias.includes(cat.slug) && x.imagen).slice(0, 8)
+      : [];
+    html = paginaProducto({ p, categoria: cat, relacionados: rel });
   } else if (props.tipo === 'categoria' || props.tipo === 'etiqueta' || props.tipo === 'marca') {
     const col = props.tipo === 'categoria' ? categorias() : props.tipo === 'etiqueta' ? etiquetas() : marcas();
     const l = col.find((x) => x.slug === props.slug)!;
-    const base = props.tipo === 'categoria' ? `categoria-producto__${(l.ruta ?? l.slug).replace(/\//g, '__')}` : props.tipo === 'etiqueta' ? `product-tag__${l.slug}` : `marca__${l.slug}`;
     const prods = productos().filter((p) =>
       props.tipo === 'categoria' ? p.categorias.includes(l.slug) : props.tipo === 'etiqueta' ? p.etiquetas.includes(l.slug) : p.marcas.includes(l.slug));
-    const subcats = props.tipo === 'categoria' ? categorias().filter((c) => c.parentSlug === l.slug) : [];
-    html = T.listado(refHtml(`${base}.html`), l, { productos: prods, subcategorias: subcats });
+    const subcats = props.tipo === 'categoria' ? categorias().filter((c) => c.parentSlug === l.slug && c.tieneReferencia) : [];
+    const hermanas = props.tipo === 'categoria'
+      ? categorias().filter((c) => c.slug !== l.slug && c.parentSlug === (l.parentSlug ?? null) && c.conteo > 0 && c.tieneReferencia).slice(0, 12)
+      : [];
+    const ruta = props.tipo === 'categoria' ? `/categoria-producto/${l.ruta ?? l.slug}/`
+      : props.tipo === 'etiqueta' ? `/product-tag/${l.slug}/` : `/marca/${l.slug}/`;
+    html = paginaCatalogo({ l, ruta, tipo: props.tipo, productos: prods, subcategorias: subcats, hermanas });
   } else if (props.tipo === 'sistema') {
     const donor = refHtml('contactanos.html');
     const cual = props.cual as string;
