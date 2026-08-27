@@ -105,3 +105,37 @@ Solo si el negocio lo pide: rehacer plantilla por plantilla con componentes prop
 ## Mi recomendación
 
 Empezar **hoy por la Fase 1**: es invisible para el usuario, no toca el diseño aprobado, no requiere decisiones de negocio y convierte al sitio en uno de los más rápidos de su sector. La Fase 2 la revisamos junto con propuestas visuales concretas antes de tocar nada.
+
+---
+
+## Contenido de prueba heredado del original (2026-08-27)
+
+Detectado durante el rediseño. **No se ha tocado**: los sitemaps deben ser
+idénticos al original (regla dura #1) y borrar URLs es decisión de Cristian.
+
+| Qué | URL | Estado |
+|---|---|---|
+| Página de pruebas | `/test/` | HTTP 200, **en `page-sitemap.xml`**, sin `noindex` |
+| Producto de prueba | `/producto/test-1/` | En `product-sitemap.xml`, categoría `uncategorized` |
+| Producto de prueba | `/producto/test-2/` | Ídem |
+| Producto de prueba | `/producto/test-3/` | Ídem |
+
+No están enlazados desde ninguna página del sitio (solo desde
+`/categoria-producto/uncategorized/`), pero **sí se envían a Google**.
+
+**Propuesta:** retirarlos de los sitemaps y devolver 410 en esas 4 URLs, con su
+entrada en `excepciones.md`. Requiere tu visto bueno porque cambia el
+inventario de URLs respecto al original.
+
+## Otros hallazgos del rediseño
+
+- **Horario de atención**: no aparece en ninguna parte del sitio original, así
+  que no se inventó. Si se proporciona, va en `/contactanos/` y en los datos
+  estructurados `LocalBusiness` de la portada.
+- **7 páginas conservan el diseño anterior** porque reconstruirlas perdería
+  contenido (la salvaguarda de `extraer-blog.mjs` / `extraer-paginas.mjs` las
+  rechaza y nombra las palabras que se perderían): `estaciones-de-trabajo-para-oficina`,
+  `mobiliario-escolar-guia-espacios-educativos`, `proveedor-confiable-mobiliario-oficina`,
+  `proyectos-destacados`, `sala-espera-recepcion`, `stand-madrid-fnsm-2026` y `test`.
+  Son artículos maquetados a mano, uno a uno; convertirlos requiere revisarlos
+  individualmente contigo.
