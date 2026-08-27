@@ -9,6 +9,7 @@ import path from 'node:path';
 const AQUI = path.resolve(import.meta.dirname, '..');
 const ASSETS = path.join(AQUI, 'public', 'assets');
 const ORIGEN = path.join(ASSETS, 'refinamiento.css');
+const ORIGEN2 = path.join(ASSETS, 'ofitodo.css');
 
 const css = readFileSync(ORIGEN, 'utf8');
 const hash = createHash('sha1').update(css).digest('hex').slice(0, 8);
@@ -22,5 +23,13 @@ writeFileSync(path.join(ASSETS, nombre), css);
 
 // el build lo lee para enlazarlo en cada página
 mkdirSync(path.join(AQUI, 'src', 'generado'), { recursive: true });
-writeFileSync(path.join(AQUI, 'src', 'generado', 'assets.json'), JSON.stringify({ refinamiento: `/assets/${nombre}` }, null, 1));
+const css2 = readFileSync(ORIGEN2, 'utf8');
+const hash2 = createHash('sha1').update(css2).digest('hex').slice(0, 8);
+const nombre2 = `ofitodo.${hash2}.css`;
+for (const f of readdirSync(ASSETS)) {
+  if (/^ofitodo.[0-9a-f]{8}.css$/.test(f) && f !== nombre2) unlinkSync(path.join(ASSETS, f));
+}
+writeFileSync(path.join(ASSETS, nombre2), css2);
+writeFileSync(path.join(AQUI, 'src', 'generado', 'assets.json'), JSON.stringify({ refinamiento: `/assets/${nombre}`, ofitodo: `/assets/${nombre2}` }, null, 1));
+console.log(`portada versionada → ${nombre2}`);
 console.log(`refinamiento versionado → ${nombre}`);

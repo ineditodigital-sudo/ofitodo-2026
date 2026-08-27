@@ -18,7 +18,11 @@ export function getStaticPaths(): Ruta[] {
   };
 
   const claveDe = (slug: string) => (slug === '/' ? 'home' : slug.replace(/^\/|\/$/g, '').replace(/\//g, '__'));
-  for (const c of congeladas()) add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef, seo: c.seo, key: claveDe(c.slug) });
+  // La portada tiene su propia página rediseñada (src/pages/index.html.ts)
+  for (const c of congeladas()) {
+    if (c.slug === '/') continue;
+    add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef, seo: c.seo, key: claveDe(c.slug) });
+  }
 
   const prods = productos();
   for (const p of prods) add(`/producto/${p.slug}/`, { tipo: 'producto', slug: p.slug });

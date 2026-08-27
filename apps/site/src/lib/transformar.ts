@@ -144,6 +144,17 @@ function repararIconoWhatsApp($: any): void {
   });
 }
 
+/** Peso muerto de WordPress: el script de emojis (~15 KB) sustituye emojis por
+ *  imágenes de un servicio externo; el sitio no lo necesita y bloquea el render. */
+function quitarPesoMuerto($: any): void {
+  $('script[src*="wp-emoji"], script[id*="emoji"], style[id*="emoji"], link[id*="emoji"]').remove();
+  $('script').each((_: number, el: unknown) => {
+    const t = $(el).html() || '';
+    if (t.includes('wpemojiSettings') || t.includes('_wpemojiSettings')) $(el).remove();
+  });
+  $('link[href*="wp-emoji"]').remove();
+}
+
 const KEEP_ABS = /^https:\/\/ofitodo\.com\/(wp-content|wp-includes|wp-json|xmlrpc|wp-login|wp-admin|feed|comments\/feed|\?)/;
 const PAGO_RE = /paypal\.com|paypalobjects\.com|mlstatic\.com|mercadopago|mercadolibre|woocommerce-paypal-payments/;
 
@@ -173,6 +184,7 @@ function base(html: string) {
   $('link[href]').each((_: number, el: unknown) => { if (PAGO_RE.test($(el).attr('href') ?? '')) $(el).remove(); });
   // DOM muerto de botones de pago ya renderizados en la referencia
   $('.ppc-button-wrapper, #ppc-button-ppcp-gateway, .paypal-buttons, #ppcp-messages, [id^="zoid-paypal"]').remove();
+  quitarPesoMuerto($);
   repararIconoWhatsApp($);
   asegurarH1($);
   optimizarImagenes($);

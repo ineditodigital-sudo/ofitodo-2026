@@ -83,3 +83,21 @@ export function urls200(): string[] {
   }
   return out;
 }
+
+/* --- Selección de variante REAL de una imagen ---------------------------------
+ * WordPress solo generó ciertos tamaños; pedir "-600x400" a ciegas da un 404.
+ * Aquí se elige la variante existente más cercana al ancho deseado.            */
+let _VAR: Record<string, { w: number; h: number; v: [string, number][] }> | null = null;
+function catalogoVariantes() {
+  if (!_VAR) { try { _VAR = JSON.parse(readFileSync(C('imagenes-variantes.json'), 'utf8')); } catch { _VAR = {}; } }
+  return _VAR!;
+}
+export function imagenVariante(url: string | null | undefined, anchoDeseado: number): string {
+  if (!url) return '';
+  const base = 'https://ofitodo.com/wp-content/uploads/';
+  const k = (url.split('/uploads/')[1] || '').replace(/-\d+x\d+(\.\w+)$/, '$1');
+  const info = catalogoVariantes()[k];
+  if (!info || !info.v?.length) return url;
+  const exacta = info.v.find(([, w]) => w >= anchoDeseado) || info.v[info.v.length - 1];
+  return base + exacta[0];
+}

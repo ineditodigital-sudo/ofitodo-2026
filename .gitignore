@@ -31,3 +31,4 @@ dist-staging/
 .env.prod
 dist-prod/
 backups/
+claves ftp ofitodo raiz.txt
