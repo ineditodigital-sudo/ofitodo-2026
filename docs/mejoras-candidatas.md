@@ -26,7 +26,26 @@ Una miniatura de 173 px debería pesar ~15 KB. Se están enviando archivos de **
 
 ---
 
-## Fase 1 — Rendimiento (invisible, sin tocar el diseño) · **recomiendo empezar aquí**
+## ✅ Fase 1 — EN EJECUCIÓN (2026-08-27)
+
+**Hallazgo que lo cambió todo:** no hizo falta generar ni subir una sola imagen. WordPress ya había creado **12 variantes de cada foto** que estaban en el servidor sin usarse (`archivero-300x300.webp` = 15 KB frente a los 962 KB del original que se enviaba).
+
+Lo implementado:
+- Catálogo de **2,086 imágenes con 16,294 tamaños disponibles** (`content/imagenes-variantes.json`).
+- **Medición real** del ancho al que se muestra cada imagen en escritorio y móvil (`imagenes-medidas.json`).
+- El build inyecta `srcset` + `sizes` exactos, `loading="lazy"` y prioridad alta a la primera imagen visible; para imágenes sin medida aplica un tope de 1024 px.
+- **Fondos de sección** (`background-image` en CSS y atributos `style`): tope de 1600 px — algunos originales llegaban a 2560 px y 700 KB.
+
+| Medición | Antes | Después |
+|---|---|---|
+| Home escritorio | 20.6 MB | **8.3 MB** (−60 %) |
+| Home móvil | 20.6 MB | **6.9 MB** (−66 %) |
+
+Paridad verificada tras cada cambio: **99.6 %** — el diseño no cambió ni un píxel.
+
+**Pendiente de la fase:** podar los 67 CSS y ~100 JS de plugins desaparecidos (Elementor, WPBakery, jQuery), que son el grueso de lo que queda. Es el siguiente paso y el de mayor cuidado, porque hay que conservar las 4 piezas que sí funcionan (menú móvil, galería, carrusel, WhatsApp).
+
+## Fase 1 — plan original (referencia)
 
 Nada cambia visualmente. Cero riesgo de paridad. Máximo impacto.
 

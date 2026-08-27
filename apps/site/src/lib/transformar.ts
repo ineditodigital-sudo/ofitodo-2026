@@ -2,6 +2,7 @@
 // estructura; los datos de content/ parchan lo que cambia. Paridad por construcción.
 import { createRequire } from 'node:module';
 import path from 'node:path';
+import { readFileSync } from 'node:fs';
 import type { Producto, Listado } from './contenido.ts';
 // cheerio vive en scripts/.deps (instalación standalone por el disco exFAT).
 // Resolución absoluta desde cwd (= apps/site): el bundler reubica este módulo en dist/.
@@ -11,6 +12,78 @@ const requireScripts = createRequire(path.resolve(process.cwd(), '..', '..', 'sc
 const core = requireScripts('./editables-core.cjs');
 
 export interface Editables { pagina?: Record<string, Record<string, string>>; global?: Record<string, Record<string, string>>; }
+
+/* ---------- Optimización de imágenes (Fase 1 de rendimiento) ----------
+ * El sitio servía el archivo original (1-1.7 MB) para mostrarlo a 173 px.
+ * WordPress ya generó variantes de cada imagen: aquí se elige la correcta y se
+ * construye srcset/sizes para que cada dispositivo baje solo lo que necesita.  */
+const RUTA = (p: string) => path.resolve(process.cwd(), '..', '..', 'content', p);
+let VARIANTES: Record<string, { w: number; h: number; v: [string, number][] }> = {};
+let MEDIDAS: Record<string, number> = {};
+try { VARIANTES = JSON.parse(readFileSync(RUTA('imagenes-variantes.json'), 'utf8')); } catch { /* sin catálogo: no se optimiza */ }
+try { MEDIDAS = JSON.parse(readFileSync(RUTA('imagenes-medidas.json'), 'utf8')); } catch { /* sin medidas */ }
+
+const BASE_UPLOADS = 'https://ofitodo.com/wp-content/uploads/';
+const clave = (src: string) => (src.split('/uploads/')[1] || '').replace(/-\d+x\d+(\.\w+)$/, '$1');
+
+function optimizarImagenes($: any): void {
+  if (!Object.keys(VARIANTES).length) return;
+  $('img').each((_: number, el: unknown) => {
+    const $img = $(el);
+    const src = $img.attr('src') || '';
+    if (!src.includes('/uploads/')) return;
+    const k = clave(src);
+    const info = VARIANTES[k];
+    if (!info || info.v.length < 2) return;
+
+    const anchoCss = MEDIDAS[k] || 0;
+    // objetivo: cubrir pantallas de alta densidad (2x) sin pasarse del original.
+    // Sin medida (imágenes ocultas en carruseles, etc.) se aplica un tope prudente:
+    // ninguna imagen del sitio se muestra a más de 1024 px de ancho real.
+    const TOPE_SIN_MEDIDA = 1024;
+    const objetivo = anchoCss ? Math.min(anchoCss * 2, info.w) : Math.min(TOPE_SIN_MEDIDA, info.w);
+    const elegida = info.v.find(([, w]) => w >= objetivo) || info.v[info.v.length - 1];
+
+    // srcset solo con las variantes útiles (hasta la elegida)
+    const utiles = info.v.filter(([, w]) => w <= elegida[1]);
+    if (utiles.length > 1) {
+      $img.attr('srcset', utiles.map(([f, w]) => `${BASE_UPLOADS}${f} ${w}w`).join(', '));
+      $img.attr('sizes', anchoCss ? `(max-width: 600px) ${Math.min(anchoCss, 600)}px, ${anchoCss}px` : '100vw');
+    } else {
+      $img.removeAttr('srcset');
+    }
+    $img.attr('src', BASE_UPLOADS + elegida[0]);
+    if (!$img.attr('width') && anchoCss) $img.attr('width', String(anchoCss));
+    if (!$img.attr('loading')) $img.attr('loading', 'lazy');
+    if (!$img.attr('decoding')) $img.attr('decoding', 'async');
+  });
+  // la primera imagen visible no debe diferirse (afecta la velocidad percibida)
+  const primera = $('img[loading="lazy"]').first();
+  if (primera.length) { primera.attr('loading', 'eager'); primera.attr('fetchpriority', 'high'); }
+  optimizarFondos($);
+}
+
+/** Fondos de sección (background-image en CSS y atributos style): un fondo a pantalla
+ *  completa no necesita más de 1600 px; los originales llegan a 2560 px y 700 KB. */
+function optimizarFondos($: any): void {
+  const TOPE_FONDO = 1600;
+  const reemplazar = (css: string): string =>
+    css.replace(/url\((['"]?)(https:\/\/ofitodo\.com\/wp-content\/uploads\/[^'")]+)\1\)/g, (todo: string, comilla: string, url: string) => {
+      const k = clave(url);
+      const info = VARIANTES[k];
+      if (!info || info.w <= TOPE_FONDO) return todo;
+      const elegida = info.v.find(([, w]) => w >= TOPE_FONDO) || info.v[info.v.length - 1];
+      return `url(${comilla}${BASE_UPLOADS}${elegida[0]}${comilla})`;
+    });
+  $('style').each((_: number, el: unknown) => {
+    const t = $(el).html();
+    if (t && t.includes('/uploads/')) $(el).html(reemplazar(t));
+  });
+  $('[style*="/uploads/"]').each((_: number, el: unknown) => {
+    const s = $(el).attr('style');
+    if (s) $(el).attr('style', reemplazar(s));
+  });
+}
 
 const KEEP_ABS = /^https:\/\/ofitodo\.com\/(wp-content|wp-includes|wp-json|xmlrpc|wp-login|wp-admin|feed|comments\/feed|\?)/;
 const PAGO_RE = /paypal\.com|paypalobjects\.com|mlstatic\.com|mercadopago|mercadolibre|woocommerce-paypal-payments/;
@@ -41,6 +114,7 @@ function base(html: string) {
   $('link[href]').each((_: number, el: unknown) => { if (PAGO_RE.test($(el).attr('href') ?? '')) $(el).remove(); });
   // DOM muerto de botones de pago ya renderizados en la referencia
   $('.ppc-button-wrapper, #ppc-button-ppcp-gateway, .paypal-buttons, #ppcp-messages, [id^="zoid-paypal"]').remove();
+  optimizarImagenes($);
   // Islas propias (búsqueda, carrito, formularios)
   $('body').append('<script defer src="/assets/islas.js"></script>');
   return $;
