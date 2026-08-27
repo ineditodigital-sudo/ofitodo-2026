@@ -65,11 +65,26 @@ RewriteRule ^$ /? [R=301,L]
 </IfModule>
 <IfModule mod_expires.c>
 ExpiresActive On
+# El HTML NO se cachea: el nginx del hosting guardaba las páginas por URL y
+# seguía sirviendo la versión anterior tras cada publicación (por eso "borré
+# la caché y no veo cambios"). Las hojas y scripts llevan hash en el nombre,
+# así que pueden cachearse durante mucho tiempo sin riesgo.
+ExpiresByType text/html "access plus 0 seconds"
 ExpiresByType image/webp "access plus 1 year"
 ExpiresByType image/jpeg "access plus 1 year"
 ExpiresByType image/png "access plus 1 year"
-ExpiresByType text/css "access plus 1 month"
-ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+<FilesMatch "\\.html$">
+Header set Cache-Control "public, max-age=0, must-revalidate"
+Header unset Pragma
+</FilesMatch>
+# Los archivos versionados por hash son inmutables
+<FilesMatch "\\.[0-9a-f]{8}\\.(css|js)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
 </IfModule>
 <IfModule mod_headers.c>
 Header set X-Content-Type-Options "nosniff"
