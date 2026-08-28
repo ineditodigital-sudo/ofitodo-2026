@@ -1,0 +1,118 @@
+{
+ "pagina": "/proyecto-farmacias-del-ahorro/",
+ "titulo": "Proyecto Farmacias del Ahorro",
+ "key": "proyecto-farmacias-del-ahorro",
+ "tipo": "post",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "valor": "Proyecto Farmacias del Ahorro"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "valor": "Espacios de trabajo"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/pixelcut-export-6.webp",
+   "alt": "pixelcut-export (6)"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/pixelcut-export-7.webp",
+   "alt": "pixelcut-export (7)"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/pixelcut-export-8.webp",
+   "alt": "pixelcut-export (8)"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/180cd0a9-8ec3-4301-9c67-88a460de8a55-1.webp",
+   "alt": "180cd0a9-8ec3-4301-9c67-88a460de8a55 (1)"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/74ea5816-fcdb-41bc-be24-fc65417d39b7.webp",
+   "alt": "74ea5816-fcdb-41bc-be24-fc65417d39b7"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/41656307532.webp",
+   "alt": "41656307532"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/pixelcut-export-6.webp",
+   "alt": "pixelcut-export (6)"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/pixelcut-export-7.webp",
+   "alt": "pixelcut-export (7)"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/pixelcut-export-8.webp",
+   "alt": "pixelcut-export (8)"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/180cd0a9-8ec3-4301-9c67-88a460de8a55-1.webp",
+   "alt": "180cd0a9-8ec3-4301-9c67-88a460de8a55 (1)"
+  },
+  {
+   "id": "i10",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/74ea5816-fcdb-41bc-be24-fc65417d39b7.webp",
+   "alt": "74ea5816-fcdb-41bc-be24-fc65417d39b7"
+  },
+  {
+   "id": "i11",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Farmacias del Ahorro",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/41656307532.webp",
+   "alt": "41656307532"
+  }
+ ]
+}

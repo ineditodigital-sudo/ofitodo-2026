@@ -1,0 +1,291 @@
+{
+ "pagina": "/muebles-para-escuelas/",
+ "titulo": "Muebles para Escuelas",
+ "key": "muebles-para-escuelas",
+ "tipo": "page",
+ "campos": [
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Inicio",
+   "href": "https://ofitodo.com",
+   "target": ""
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "Muebles para Escuelas"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "MUEBLES PARA ESCUELAS",
+   "valor": "MUEBLES PARA ESCUELAS"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MUEBLES PARA ESCUELAS",
+   "valor": "Mobiliario educativo diseñado para crear ambientes de aprendizaje óptimos. Nuestros productos son duraderos, seguros y ergonómicos, pensados para estudiantes y profesores"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "MUEBLES PARA ESCUELAS",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/AmbientadaKYOS-2-_1_-1024x683.webp",
+   "alt": ""
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Ofitodo: Tu Solución Integral de Mobiliario",
+   "valor": "Ofitodo: Tu Solución Integral de Mobiliario"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Ofitodo: Tu Solución Integral de Mobiliario",
+   "valor": "En Ofitodo creemos que un espacio educativo bien equipado es fundamental para el aprendizaje. Nuestro mobiliario escolar está diseñado pensando en la comodidad, seguridad y ergonomía de estudiantes y profesores. Desde pupitres y bancas hasta mobiliario para bibliotecas y laboratorios, ofrecemos soluciones duraderas y funcionales que crean entornos educativos inspiradores."
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Productos Relacionados",
+   "valor": "Productos Relacionados"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/2-11-convertido-de-png-1024x1024.webp",
+   "alt": "Pupitre escolar"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Pupitre modelo 360",
+   "href": "https://ofitodo.com/producto/pupitre-escolar-con-paleta-giratoria-360/",
+   "target": ""
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/pupitre-escolar-con-paleta-giratoria-360/",
+   "target": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/2_1_-2-1024x1024.webp",
+   "alt": "Silla Tec"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Pupitre modelo think",
+   "href": "https://ofitodo.com/producto/pupitre-escolar-con-paleta-giratoria-think/",
+   "target": ""
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/pupitre-escolar-con-paleta-giratoria-think/",
+   "target": ""
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/imagenes-para-categorias-2023-10-03T154106.051-1024x1024.png",
+   "alt": "Escritorio Ofitodo Comercializadora"
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "ESCRITORIO 1 PEDESTAL 120CM",
+   "href": "https://ofitodo.com/producto/escritorio-1-pedestal-120cm/",
+   "target": ""
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/escritorio-1-pedestal-120cm/",
+   "target": ""
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/10/imagenes-para-categorias-2023-10-03T140842.458-1024x1024.png",
+   "alt": "Escritorio Ofitodo Comercializadora"
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "ESCRITORIO 1 PEDESTAL 150 CM",
+   "href": "https://ofitodo.com/producto/escritorio-secretarial-1-pedestal-150-cm/",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/escritorio-secretarial-1-pedestal-150-cm/",
+   "target": ""
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Load More",
+   "href": "#load_next_page",
+   "target": ""
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Productos Relacionados",
+   "valor": "Cargar más"
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Catálogo Completo",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/CATALOGO-ESCOLAR.pdf-2_compressed.pdf",
+   "target": ""
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Por Qué Elegir OFITODO?",
+   "valor": "¿Por Qué Elegir OFITODO?"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Experiencia Comprobada"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Años de experiencia equipando espacios"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Calidad Garantizada"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Mobiliario de alta calidad con garantía y soporte"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Asesoría Personalizada"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Expertos que te ayudan a elegir las mejores soluciones"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Entrega e Instalación"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Servicio completo de entrega e instalación profesional"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "¿Listo para Transformar tu Espacio de Trabajo?"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "Contacta con nuestros expertos en mobiliario para oficina y recibe una cotización personalizada sin compromiso. Estamos aquí para ayudarte a crear el espacio perfecto."
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Cotizar por WhatsApp",
+   "href": "https://wa.me/524493419403?",
+   "target": ""
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Email",
+   "href": "mailto:ventasofitodo@hotmail.com",
+   "target": ""
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "slug": "/contactanos/",
+ "locale": "es",
+ "title": "Contáctanos",
+ "template": "frozen",
+ "htmlRef": "contactanos.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 1871,
+ "date": "2018-01-22 15:35:41",
+ "modified": "2025-09-01 22:21:29",
+ "seo": {
+  "title": "Contáctanos | Ofitodo",
+  "description": "Contáctanos para soluciones personalizadas en mobiliario y equipamiento de oficina. Diseño, calidad y servicio a tu alcance. ¡Hagamos realidad tus proyectos!"
+ }
+}

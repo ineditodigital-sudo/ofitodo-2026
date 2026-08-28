@@ -1,0 +1,291 @@
+{
+ "pagina": "/muebles-para-industria/",
+ "titulo": "Muebles para Industria",
+ "key": "muebles-para-industria",
+ "tipo": "page",
+ "campos": [
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Inicio",
+   "href": "https://ofitodo.com",
+   "target": ""
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "Muebles para Industria"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "MUEBLES PARA INDUSTRIA",
+   "valor": "MUEBLES PARA INDUSTRIA"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MUEBLES PARA INDUSTRIA",
+   "valor": "Mobiliario robusto y funcional para entornos industriales. Diseñado para resistir condiciones exigentes y optimizar la productividad."
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "MUEBLES PARA INDUSTRIA",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/industrial-1024x1024.webp",
+   "alt": ""
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Ofitodo: Tu Solución Integral de Mobiliario",
+   "valor": "Ofitodo: Tu Solución Integral de Mobiliario"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Ofitodo: Tu Solución Integral de Mobiliario",
+   "valor": "Ofitodo es tu proveedor de confianza para mobiliario industrial en Aguascalientes. Nuestros productos están diseñados para resistir las condiciones más exigentes del entorno industrial. Desde mesas de trabajo robustas hasta lockers metálicos y sistemas de almacenamiento, ofrecemos soluciones duraderas que optimizan la productividad y garantizan la seguridad de tu personal."
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Productos Relacionados",
+   "valor": "Productos Relacionados"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/08/Post-de-Instagram-de-venta-de-electrodomesticos-audaz-morado-y-amarillo-_10_-1024x1024.webp",
+   "alt": "RACK PARA TARIMAS Y CARGA PESADA INR1000"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "RACK PARA TARIMAS Y CARGA PESADA INR1000",
+   "href": "https://ofitodo.com/producto/rack-para-tarimas-y-carga-pesada-inr1000/",
+   "target": ""
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/rack-para-tarimas-y-carga-pesada-inr1000/",
+   "target": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/08/Post-de-Instagram-de-venta-de-electrodomesticos-audaz-morado-y-amarillo-_8_-1-1024x1024.webp",
+   "alt": "MESA DE TRABAJO INDUSTRIAL MODELO MTI1003"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "MESA DE TRABAJO INDUSTRIAL MODELO MTI1003",
+   "href": "https://ofitodo.com/producto/mesa-de-trabajo-industrial-modelo-mti1003/",
+   "target": ""
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/mesa-de-trabajo-industrial-modelo-mti1003/",
+   "target": ""
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/08/Post-de-Instagram-de-venta-de-electrodomesticos-audaz-morado-y-amarillo-_7_-1-1-1024x1024.webp",
+   "alt": "CARRITO INDUSTRIAL PARA HERRAMIENTAS Y MATERIALES"
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "CARRITO INDUSTRIAL PARA HERRAMIENTAS Y MATERIALES",
+   "href": "https://ofitodo.com/producto/carrito-industrial-metalico/",
+   "target": ""
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/carrito-industrial-metalico/",
+   "target": ""
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/07/banco-cajero-ergonomico-industrial-1.webp",
+   "alt": "BANCO ERGONÓMICO CAJERO-INDUSTRIAL"
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "BANCO ERGONÓMICO CAJERO-INDUSTRIAL",
+   "href": "https://ofitodo.com/producto/banco-ergonomico-cajero-industrial/",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/banco-ergonomico-cajero-industrial/",
+   "target": ""
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Load More",
+   "href": "#load_next_page",
+   "target": ""
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Productos Relacionados",
+   "valor": "Cargar más"
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Catálogo Completo",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/Catalogo-Industrial-2026_compressed.pdf",
+   "target": ""
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Por Qué Elegir OFITODO?",
+   "valor": "¿Por Qué Elegir OFITODO?"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Experiencia Comprobada"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Años de experiencia equipando espacios"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Calidad Garantizada"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Mobiliario de alta calidad con garantía y soporte"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Asesoría Personalizada"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Expertos que te ayudan a elegir las mejores soluciones"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Entrega e Instalación"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Servicio completo de entrega e instalación profesional"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "¿Listo para Transformar tu Espacio de Trabajo?"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "Contacta con nuestros expertos en mobiliario para oficina y recibe una cotización personalizada sin compromiso. Estamos aquí para ayudarte a crear el espacio perfecto."
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Cotizar por WhatsApp",
+   "href": "https://wa.me/524493419403?",
+   "target": ""
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Email",
+   "href": "mailto:ventasofitodo@hotmail.com",
+   "target": ""
+  }
+ ]
+}

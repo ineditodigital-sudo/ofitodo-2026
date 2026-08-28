@@ -1,0 +1,16 @@
+{
+ "slug": "/sala-de-juntas/",
+ "locale": "es",
+ "title": "Sala de Juntas",
+ "template": "frozen",
+ "htmlRef": "sala-de-juntas.html",
+ "tipo": "post",
+ "status": "publish",
+ "legacyId": 12850,
+ "date": "2026-05-29 19:51:21",
+ "modified": "2026-07-07 19:17:24",
+ "seo": {
+  "title": "Sala de Juntas | Ofitodo",
+  "description": "Una sala de juntas bien diseñada mejora la comunicación, la productividad y la imagen profesional de tu empresa. En OFITODO creamos mobiliario a medida para cada espacio."
+ }
+}

@@ -1,0 +1,22 @@
+{
+  "colores": {
+    "primario": "#153a67",
+    "primarioOscuro": "#0b4163",
+    "primarioClaro": "#114a84",
+    "acento": "#186fa5",
+    "acentoAlterno": "#186e7a",
+    "textoFuerte": "#383838",
+    "texto": "#474747",
+    "textoSuave": "#5b5b5b",
+    "fondo": "#ffffff",
+    "borde": "#d6d6d6"
+  },
+  "tipografias": {
+    "titulos": "Josefin Sans",
+    "decorativa": "Bellefair",
+    "cuerpo": "Lato",
+    "alternativa": "Biryani"
+  },
+  "breakpoints": [480, 680, 768, 1024, 1200, 1280, 1440],
+  "nota": "Extraído del tema Entre (Mikado) en C2. Ajuste fino de escala/pesos durante la Fase S contra reference/screenshots/."
+}

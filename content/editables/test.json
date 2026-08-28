@@ -1,0 +1,23 @@
+{
+ "pagina": "/test/",
+ "titulo": "TEST",
+ "key": "test",
+ "tipo": "page",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/banner-productos-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "TEST",
+   "valor": "TEST"
+  }
+ ]
+}

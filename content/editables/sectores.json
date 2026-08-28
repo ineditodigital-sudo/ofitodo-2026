@@ -1,0 +1,108 @@
+{
+ "pagina": "/sectores/",
+ "titulo": "Sectores",
+ "key": "sectores",
+ "tipo": "page",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Sectores que Atendemos",
+   "valor": "Sectores que Atendemos"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sectores que Atendemos",
+   "valor": "Soluciones especializadas de mobiliario para cada industria y necesidad específica"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Sectores que Atendemos",
+   "texto": "MUEBLES PARA OFICINA",
+   "href": "/muebles-para-oficina/",
+   "target": "_blank"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Sectores que Atendemos",
+   "texto": "MUEBLES PARA BANCOS",
+   "href": "/muebles-para-bancos/",
+   "target": "_blank"
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Sectores que Atendemos",
+   "texto": "MUEBLES PARA ESCUELAS",
+   "href": "/muebles-para-escuelas/",
+   "target": "_blank"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Sectores que Atendemos",
+   "texto": "MUEBLES PARA CONSULTORIOS",
+   "href": "/muebles-para-consultorios/",
+   "target": "_blank"
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Sectores que Atendemos",
+   "texto": "MUEBLES PARA HOSPITAL",
+   "href": "/muebles-para-hospital/",
+   "target": "_blank"
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Sectores que Atendemos",
+   "texto": "MUEBLES PARA INDUSTRIA",
+   "href": "/muebles-para-industria/",
+   "target": "_blank"
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Sectores que Atendemos",
+   "texto": "MUEBLES PARA RESTAURANTE",
+   "href": "/muebles-para-restaurante/",
+   "target": "_blank"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿No Encuentras Tu Sector?",
+   "valor": "¿No Encuentras Tu Sector?"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿No Encuentras Tu Sector?",
+   "valor": "También trabajamos con otros sectores e industrias. Contáctanos y cuéntanos sobre tu proyecto específico. Nuestro equipo está listo para crear una solución personalizada para ti."
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿No Encuentras Tu Sector?",
+   "texto": "Contactar a un Asesor",
+   "href": "https://wa.me/524493419403",
+   "target": ""
+  }
+ ]
+}

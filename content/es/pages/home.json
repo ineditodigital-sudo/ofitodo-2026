@@ -1,0 +1,16 @@
+{
+ "slug": "/",
+ "locale": "es",
+ "title": "Inicio",
+ "template": "frozen",
+ "htmlRef": "__home.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 10551,
+ "date": "2025-12-01 18:49:08",
+ "modified": "2026-05-18 17:59:07",
+ "seo": {
+  "title": "Mobiliario para Oficina en Aguascalientes | Ofitodo",
+  "description": "Mobiliario para oficina de calidad, confort y diseño. Fabricantes en Aguascalientes con envíos a todo México."
+ }
+}

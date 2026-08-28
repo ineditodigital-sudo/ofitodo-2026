@@ -1,0 +1,827 @@
+{
+ "pagina": "/mobiliario-de-oficina-en-aguascalientes/",
+ "titulo": "Muebles de oficina en Aguascalientes",
+ "key": "mobiliario-de-oficina-en-aguascalientes",
+ "tipo": "post",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/banner-productos-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Ofitodo",
+   "valor": "Ofitodo"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Ofitodo",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_26_42.png.webp",
+   "alt": "Mobiliario personalizado de consultorios médicos"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Ofitodo",
+   "texto": "05/08/2026",
+   "href": "https://ofitodo.com/2026/08/",
+   "target": ""
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Ofitodo",
+   "valor": "By"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Ofitodo",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Muebles de oficina en Aguascalientes",
+   "valor": "Muebles de oficina en Aguascalientes"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Muebles de oficina en Aguascalientes",
+   "valor": "Fabricante · Aguascalientes"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "Diseño, asesoría y fabricación propia en un solo lugar. Descubre cómo elegir el mobiliario de oficina correcto para tu empresa sin pagar de más por intermediarios."
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "texto": "Cotiza tu proyecto por WhatsApp",
+   "href": "https://wa.me/524493419403?text=Hola%2C%20me%20interesa%20desarrollar%20un%20proyecto%20de%20mobiliario%20con%20OFITODO.%20Quiero%20recibir%20asesor%C3%ADa%20y%20conocer%20las%20opciones%20que%20pueden%20ofrecerme.",
+   "target": "_blank"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "Elegir el"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "mobiliario de oficina"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "correcto no es solo cuestión de estética: afecta la productividad de tu equipo, la salud postural de tus colaboradores y hasta la primera impresión que se llevan tus clientes al entrar a tu empresa. En Aguascalientes, donde conviven desde despachos corporativos hasta oficinas de manufactura y gobierno, la pregunta más común que recibimos en"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "Ofitodo"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "es la misma: ¿comprar con un revendedor o directamente con el fabricante?"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "En esta guía te explicamos qué tipos de mobiliario de oficina existen, qué ventajas reales tiene trabajar con un fabricante local con diseño y asesoría incluida, y cómo elegir sin equivocarte, sin importar el tamaño o giro de tu empresa."
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "¿Ya sabes lo que necesitas?"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "Cotiza tu proyecto en menos de 5 minutos."
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "texto": "Escribir por WhatsApp",
+   "href": "https://wa.me/524493419403?text=Hola%2C%20me%20interesa%20desarrollar%20un%20proyecto%20de%20mobiliario%20con%20OFITODO.%20Quiero%20recibir%20asesor%C3%ADa%20y%20conocer%20las%20opciones%20que%20pueden%20ofrecerme.",
+   "target": "_blank"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-03-03-at-11.29.21-AM-_1_.jpeg.webp",
+   "alt": "Mobiliario de oficina en Aguascalientes fabricado por Ofitodo, área de trabajo corporativa"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de Oficina: Ventajas de Comprar al Fabricante",
+   "valor": "Proyecto de mobiliario de oficina fabricado a medida — Ofitodo, Aguascalientes."
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "Tipos de mobiliario de oficina para cada tipo de empresa"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "No existe un mobiliario de oficina \"universal\": una notaría necesita algo distinto a una planta industrial o a un despacho de abogados. En Ofitodo fabricamos línea completa, pensada para adaptarse a cualquier sector:"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "Estaciones de trabajo y escritorios"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "individuales, en línea o en islas para equipos colaborativos."
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "Sillería ejecutiva, gerencial y operativa"
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": ", con opciones ergonómicas para jornadas largas."
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "Recepciones y salas de espera"
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "que definen la primera impresión de tu marca."
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "Salas de juntas"
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "con mesas a medida según capacidad y equipo audiovisual."
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "Archiveros, credenzas y mobiliario de guardado"
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "para documentación y expedientes."
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "Divisiones y paneles modulares"
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "para optimizar espacio en oficinas abiertas."
+  },
+  {
+   "id": "t29",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "Nota técnica"
+  },
+  {
+   "id": "t30",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "Al ser"
+  },
+  {
+   "id": "t31",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": "fabricantes"
+  },
+  {
+   "id": "t32",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tipos de mobiliario de oficina para cada tipo de empresa",
+   "valor": ", podemos ajustar medidas, acabados y materiales de cualquiera de estas líneas a las dimensiones exactas de tu espacio: algo que casi ningún revendedor de catálogo puede ofrecer."
+  },
+  {
+   "id": "t33",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Fabricante vs. revendedor: la diferencia real en tu inversió",
+   "valor": "Fabricante vs. revendedor: la diferencia real en tu inversión"
+  },
+  {
+   "id": "t34",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Fabricante vs. revendedor: la diferencia real en tu inversió",
+   "valor": "La mayoría de las tiendas de mobiliario de oficina en Aguascalientes son revendedoras: compran catálogo a terceros y lo entregan tal cual. Trabajar con un fabricante directo cambia por completo lo que puedes negociar y personalizar."
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Fabricante vs. revendedor: la diferencia real en tu inversió",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/ChatGPT-Image-29-may-2026_-13_12_14.webp",
+   "alt": "Sala de juntas con mobiliario de oficina fabricado a medida en Aguascalientes"
+  },
+  {
+   "id": "t35",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Fabricante vs. revendedor: la diferencia real en tu inversió",
+   "valor": "Sala de juntas fabricada a medida para empresa en Aguascalientes."
+  },
+  {
+   "id": "t36",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Cómo elegir el mobiliario de oficina ideal para tu empresa"
+  },
+  {
+   "id": "t37",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Sigue estos pasos antes de pedir tu primera cotización de mobiliario de oficina:"
+  },
+  {
+   "id": "t38",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Mide tu espacio real"
+  },
+  {
+   "id": "t39",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Toma dimensiones de largo, ancho y altura de cada área que vas a amueblar, incluyendo pasillos de circulación."
+  },
+  {
+   "id": "t40",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Define el número de estaciones de trabajo"
+  },
+  {
+   "id": "t41",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Considera crecimiento a 12–24 meses, no solo tu plantilla actual."
+  },
+  {
+   "id": "t42",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Elige el estilo según tu imagen de marca"
+  },
+  {
+   "id": "t43",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Corporativo, industrial, cálido o minimalista: el mobiliario comunica quién eres antes que tu discurso."
+  },
+  {
+   "id": "t44",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Prioriza ergonomía en sillería"
+  },
+  {
+   "id": "t45",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Jornadas de 8 horas requieren soporte lumbar y ajuste de altura real, no solo estética."
+  },
+  {
+   "id": "t46",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Pide asesoría de diseño, no solo un catálogo"
+  },
+  {
+   "id": "t47",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Un buen fabricante te propone una distribución (layout), no solo una lista de precios."
+  },
+  {
+   "id": "t48",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "¿Quieres que diseñemos el layout de tu oficina?"
+  },
+  {
+   "id": "t49",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "valor": "Envíanos tu plano o medidas."
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cómo elegir el mobiliario de oficina ideal para tu empresa",
+   "texto": "Solicita asesoría de mobiliario",
+   "href": "https://wa.me/524493419403?text=Hola%2C%20quiero%20recibir%20asesor%C3%ADa%20para%20elegir%20el%20mobiliario%20adecuado%20para%20mi%20espacio.%20Me%20gustar%C3%ADa%20conocer%20las%20opciones%20que%20OFITODO%20puede%20ofrecerme.",
+   "target": "_blank"
+  },
+  {
+   "id": "t50",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "Mobiliario de oficina en Aguascalientes"
+  },
+  {
+   "id": "t51",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "En Ofitodo hemos equipado oficinas de sectores muy distintos, y cada uno tiene necesidades particulares de mobiliario de oficina:"
+  },
+  {
+   "id": "t52",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "Manufactura y automotriz:"
+  },
+  {
+   "id": "t53",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "áreas administrativas dentro de plantas industriales."
+  },
+  {
+   "id": "t54",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "Despachos legales y contables:"
+  },
+  {
+   "id": "t55",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "imagen formal, privacidad y guardado de expedientes."
+  },
+  {
+   "id": "t56",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "Salud:"
+  },
+  {
+   "id": "t57",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "recepciones y muebles para consultorios médicos de fácil limpieza."
+  },
+  {
+   "id": "t58",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "Instituciones educativas y gobierno:"
+  },
+  {
+   "id": "t59",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "mobiliario funcional bajo procesos de licitación."
+  },
+  {
+   "id": "t60",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "Startups y oficinas creativas:"
+  },
+  {
+   "id": "t61",
+   "tipo": "texto",
+   "etiqueta": "Elemento de lista",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "espacios colaborativos y flexibles."
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_13_41.webp",
+   "alt": "Recepción con mobiliario de oficina moderno fabricado en Aguascalientes por Ofitodo"
+  },
+  {
+   "id": "t62",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Mobiliario de oficina en Aguascalientes",
+   "valor": "Recepción corporativa — diseño y fabricación Ofitodo."
+  },
+  {
+   "id": "t63",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Preguntas frecuentes sobre mobiliario de oficina en Aguascal",
+   "valor": "Preguntas frecuentes sobre mobiliario de oficina en Aguascalientes"
+  },
+  {
+   "id": "t64",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Preguntas frecuentes sobre mobiliario de oficina en Aguascal",
+   "valor": "¿Cuánto tarda la fabricación de mobiliario de oficina a medida?"
+  },
+  {
+   "id": "t65",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Preguntas frecuentes sobre mobiliario de oficina en Aguascal",
+   "valor": "El tiempo depende del volumen y tipo de pieza, pero al fabricar directamente en Aguascalientes controlamos el proceso de producción y te damos una fecha de entrega realista desde la cotización, sin depender de terceros."
+  },
+  {
+   "id": "t66",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Preguntas frecuentes sobre mobiliario de oficina en Aguascal",
+   "valor": "¿El diseño y la asesoría tienen costo adicional?"
+  },
+  {
+   "id": "t67",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Preguntas frecuentes sobre mobiliario de oficina en Aguascal",
+   "valor": "No. En Ofitodo la asesoría de diseño y distribución de espacio va incluida en el proceso de cotización de tu mobiliario de oficina."
+  },
+  {
+   "id": "t68",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Preguntas frecuentes sobre mobiliario de oficina en Aguascal",
+   "valor": "¿Atienden proyectos pequeños o solo empresas grandes?"
+  },
+  {
+   "id": "t69",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Preguntas frecuentes sobre mobiliario de oficina en Aguascal",
+   "valor": "Atendemos todo tipo de sectores y tamaños: desde una sola estación de trabajo hasta proyectos corporativos completos."
+  },
+  {
+   "id": "t70",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Preguntas frecuentes sobre mobiliario de oficina en Aguascal",
+   "valor": "¿Puedo pedir muestras de material o acabados antes de comprar?"
+  },
+  {
+   "id": "t71",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Preguntas frecuentes sobre mobiliario de oficina en Aguascal",
+   "valor": "Sí, al ser fabricantes podemos mostrarte muestras físicas de acabados antes de confirmar tu pedido de mobiliario de oficina."
+  },
+  {
+   "id": "t72",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "valor": "Cotiza tu mobiliario de oficina directo con el fabricante"
+  },
+  {
+   "id": "t73",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "valor": "Diseño, asesoría y fabricación propia en Aguascalientes. Cuéntanos tu proyecto y te respondemos el mismo día por WhatsApp."
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "Cotiza tu proyecto por WhatsApp",
+   "href": "https://wa.me/524493419403?text=Hola%2C%20me%20interesa%20desarrollar%20un%20proyecto%20de%20mobiliario%20con%20OFITODO.%20Quiero%20recibir%20asesor%C3%ADa%20y%20conocer%20las%20opciones%20que%20pueden%20ofrecerme.",
+   "target": "_blank"
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "Uncategorized",
+   "href": "https://ofitodo.com/tipo/uncategorized/",
+   "target": ""
+  },
+  {
+   "id": "t74",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "valor": "RELATED POSTS"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-30-jul-2026_-13_47_48.webp",
+   "alt": "Taller de fabricación de mobiliario OFITODO con maquinaria industrial y área de producción organizada"
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "¿Cómo elegir un buen proveedor de mobiliario?",
+   "href": "https://ofitodo.com/proveedor-confiable-mobiliario-oficina/",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "30/07/2026",
+   "href": "https://ofitodo.com/2026/07/",
+   "target": ""
+  },
+  {
+   "id": "t75",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "valor": "By"
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-15_01_03.webp",
+   "alt": "Salón de clases moderno con mesas modulares, sillas ergonómicas, paneles acústicos, lambrines de madera y mobiliario de almacenamiento."
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "El mobiliario correcto cambia la forma de aprender",
+   "href": "https://ofitodo.com/mobiliario-escolar-guia-espacios-educativos/",
+   "target": ""
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "10/07/2026",
+   "href": "https://ofitodo.com/2026/07/",
+   "target": ""
+  },
+  {
+   "id": "t76",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "valor": "By"
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-18-130259.webp",
+   "alt": "Stand de Madrid en la FNSM 2026 diseñado por OFITODO con mobiliario contemporáneo"
+  },
+  {
+   "id": "l14",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "Stand Madrid FNSM 2026",
+   "href": "https://ofitodo.com/stand-madrid-fnsm-2026/",
+   "target": ""
+  },
+  {
+   "id": "l15",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "21/05/2026",
+   "href": "https://ofitodo.com/2026/05/",
+   "target": ""
+  },
+  {
+   "id": "t77",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "valor": "By"
+  },
+  {
+   "id": "l16",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/pexels-heyho-7195796-3.webp",
+   "alt": ""
+  },
+  {
+   "id": "l17",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "Proyecto a Empacadora San Francisco",
+   "href": "https://ofitodo.com/proyecto-a-empacadora-san-francisco/",
+   "target": ""
+  },
+  {
+   "id": "l18",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "26/01/2026",
+   "href": "https://ofitodo.com/2026/01/",
+   "target": ""
+  },
+  {
+   "id": "t78",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "valor": "By"
+  },
+  {
+   "id": "l19",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Cotiza tu mobiliario de oficina directo con el fabricante",
+   "texto": "developer",
+   "href": "https://ofitodo.com/author/developer/",
+   "target": ""
+  },
+  {
+   "id": "t79",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Post a Comment cancel reply",
+   "valor": "Post a Comment"
+  },
+  {
+   "id": "l20",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Post a Comment cancel reply",
+   "texto": "cancel reply",
+   "href": "/mobiliario-de-oficina-en-aguascalientes/#respond",
+   "target": ""
+  },
+  {
+   "id": "t80",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Post a Comment cancel reply",
+   "valor": "Save my name, email, and website in this browser for the next time I comment."
+  }
+ ]
+}

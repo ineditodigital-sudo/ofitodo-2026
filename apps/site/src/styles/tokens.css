@@ -1,0 +1,16 @@
+:root {
+  --color-primario: #153a67;
+  --color-primario-oscuro: #0b4163;
+  --color-primario-claro: #114a84;
+  --color-acento: #186fa5;
+  --color-acento-alterno: #186e7a;
+  --color-texto-fuerte: #383838;
+  --color-texto: #474747;
+  --color-texto-suave: #5b5b5b;
+  --color-fondo: #ffffff;
+  --color-borde: #d6d6d6;
+  --fuente-titulos: 'Josefin Sans';
+  --fuente-decorativa: 'Bellefair';
+  --fuente-cuerpo: 'Lato';
+  --fuente-alternativa: 'Biryani';
+}

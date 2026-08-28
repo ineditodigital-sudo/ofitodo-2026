@@ -1,0 +1,100 @@
+{
+ "pagina": "/descargar-catalogo/",
+ "titulo": "Descargar catálogo",
+ "key": "descargar-catalogo",
+ "tipo": "page",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Recibe nuestro catálogo Ofitodo",
+   "valor": "Recibe nuestro catálogo Ofitodo"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recibe nuestro catálogo Ofitodo",
+   "valor": "Conoce nuestra línea de muebles para oficina, escritorios, sillas, archiveros y soluciones para espacios de trabajo. Déjanos tus datos y recibe el catálogo de Ofitodo al instante."
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "FORMULARIO",
+   "valor": "FORMULARIO"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "FORMULARIO",
+   "valor": "Los campos marcados con"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "FORMULARIO",
+   "valor": "son obligatorios"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "FORMULARIO",
+   "valor": "Nombre"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "FORMULARIO",
+   "valor": "Apellidos"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "FORMULARIO",
+   "valor": "Empresa"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "FORMULARIO",
+   "valor": "Teléfono"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "FORMULARIO",
+   "valor": "Correo electrónico"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "FORMULARIO",
+   "valor": "Mensaje"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "FORMULARIO",
+   "valor": "Si eres un ser humano y estás viendo este campo, por favor déjalo vacío."
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "FORMULARIO",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/www.ofitodo.com-_12_-1024x1024.webp",
+   "alt": ""
+  }
+ ]
+}

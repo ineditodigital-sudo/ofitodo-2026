@@ -1,0 +1,16 @@
+{
+ "slug": "/blog/",
+ "locale": "es",
+ "title": "Blog",
+ "template": "frozen",
+ "htmlRef": "blog.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 10913,
+ "date": "2025-12-03 17:31:57",
+ "modified": "2026-01-13 18:41:35",
+ "seo": {
+  "title": "Blog | Ofitodo",
+  "description": null
+ }
+}

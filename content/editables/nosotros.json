@@ -1,0 +1,172 @@
+{
+ "pagina": "/nosotros/",
+ "titulo": "Nosotros",
+ "key": "nosotros",
+ "tipo": "page",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Sobre OFITODO",
+   "valor": "Sobre OFITODO"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sobre OFITODO",
+   "valor": "Una empresa mexicana con pasión por crear espacios de trabajo excepcionales."
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Quiénes Somos?",
+   "valor": "¿Quiénes Somos?"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Quiénes Somos?",
+   "valor": "OFITODO es una empresa 100% mexicana con sede en Aguascalientes, dedicada a la fabricación y comercialización de mobiliario para oficina de alta calidad. Con años de experiencia en el sector, nos hemos consolidado como líderes en la región, ofreciendo soluciones integrales para espacios de trabajo en todo México."
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Quiénes Somos?",
+   "valor": "Nuestra pasión por el diseño funcional y estético nos impulsa a crear mobiliario que no solo cumple con los más altos estándares de calidad, sino que también inspira productividad y bienestar en cada espacio de trabajo."
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Quiénes Somos?",
+   "valor": "Trabajamos con empresas de todos los tamaños y sectores, ofreciendo desde muebles estándar hasta soluciones completamente personalizadas que se adaptan a las necesidades específicas de cada cliente."
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "¿Quiénes Somos?",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/photo-1497366216548-37526070297c.webp",
+   "alt": ""
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Misión",
+   "valor": "Misión"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Misión",
+   "valor": "Proporcionar mobiliario para oficina de la más alta calidad, diseñado para optimizar espacios de trabajo y mejorar la productividad. Nos comprometemos a ofrecer soluciones personalizadas con un servicio excepcional que supere las expectativas de nuestros clientes."
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Visión",
+   "valor": "Visión"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Visión",
+   "valor": "Ser la empresa líder en México en la fabricación y comercialización de mobiliario para oficina, reconocida por nuestra innovación, calidad y compromiso con la satisfacción del cliente, expandiendo nuestra presencia a nivel nacional."
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Nuestros Valores",
+   "valor": "Nuestros Valores"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CALIDAD",
+   "valor": "CALIDAD"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "CALIDAD",
+   "valor": "Comprometidos con la excelencia en cada producto"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "SERVICIO",
+   "valor": "SERVICIO"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "SERVICIO",
+   "valor": "Atención personalizada y profesional"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Innovación",
+   "valor": "Innovación"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Innovación",
+   "valor": "Diseños modernos y funcionales"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Confianza",
+   "valor": "Confianza"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Confianza",
+   "valor": "Transparencia en cada proyecto"
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Quieres Conocer Más?",
+   "valor": "¿Quieres Conocer Más?"
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Quieres Conocer Más?",
+   "valor": "Estamos listos para ayudarte a crear el espacio de trabajo perfecto para tu empresa."
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Quieres Conocer Más?",
+   "texto": "Contáctanos ahora",
+   "href": "https://wa.me/524493419403?",
+   "target": ""
+  }
+ ]
+}

@@ -1,0 +1,1121 @@
+{
+ "pagina": "/tienda/",
+ "titulo": "Tienda",
+ "key": "tienda",
+ "tipo": "page",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/banner-productos-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Tienda",
+   "valor": "Tienda"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Filtros"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Buscar"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "SKU"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Tag"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "archiveros"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "16"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "bajo mesadas"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "bancas de espera"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "base de trineo"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "11"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "carritos industriales"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "credenzas"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "13"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "escritorios directivos"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "13"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "escritorios ejecutivos"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "12"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "escritorios home office"
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "13"
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "escritorios operativos"
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "escritorios secretariales"
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "11"
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "estaciones de trabajo"
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "10"
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Exhibidores"
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "gabinetes"
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "lavamanos"
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "libreros"
+  },
+  {
+   "id": "t29",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "locker"
+  },
+  {
+   "id": "t30",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "mesas"
+  },
+  {
+   "id": "t31",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "14"
+  },
+  {
+   "id": "t32",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "mesas de juntas"
+  },
+  {
+   "id": "t33",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "16"
+  },
+  {
+   "id": "t34",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "mesas de trabajo y estaciones industriales"
+  },
+  {
+   "id": "t35",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "mesas para restaurantes y negocios"
+  },
+  {
+   "id": "t36",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "14"
+  },
+  {
+   "id": "t37",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "mobiliario comercial"
+  },
+  {
+   "id": "t38",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "mobiliario escolar"
+  },
+  {
+   "id": "t39",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "20"
+  },
+  {
+   "id": "t40",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "mobiliario para consultorios médicos"
+  },
+  {
+   "id": "t41",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "11"
+  },
+  {
+   "id": "t42",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Mobiliario para consultorios y hospitales"
+  },
+  {
+   "id": "t43",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "11"
+  },
+  {
+   "id": "t44",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "muebles de guardado"
+  },
+  {
+   "id": "t45",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "38"
+  },
+  {
+   "id": "t46",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "paneles acústicos"
+  },
+  {
+   "id": "t47",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "pedestales"
+  },
+  {
+   "id": "t48",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "pizarrones"
+  },
+  {
+   "id": "t49",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Pupitres"
+  },
+  {
+   "id": "t50",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "10"
+  },
+  {
+   "id": "t51",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Pupitres para capacitación"
+  },
+  {
+   "id": "t52",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "racks y estantería"
+  },
+  {
+   "id": "t53",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Recepción"
+  },
+  {
+   "id": "t54",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "23"
+  },
+  {
+   "id": "t55",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Sala de espera"
+  },
+  {
+   "id": "t56",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "18"
+  },
+  {
+   "id": "t57",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "silla con cabecera"
+  },
+  {
+   "id": "t58",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "29"
+  },
+  {
+   "id": "t59",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "silla de oficina"
+  },
+  {
+   "id": "t60",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "127"
+  },
+  {
+   "id": "t61",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "silla de visita"
+  },
+  {
+   "id": "t62",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "37"
+  },
+  {
+   "id": "t63",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "silla directiva"
+  },
+  {
+   "id": "t64",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "29"
+  },
+  {
+   "id": "t65",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "silla ejecutiva"
+  },
+  {
+   "id": "t66",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "53"
+  },
+  {
+   "id": "t67",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Silla ergonómica"
+  },
+  {
+   "id": "t68",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "83"
+  },
+  {
+   "id": "t69",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Silla multiusos"
+  },
+  {
+   "id": "t70",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "25"
+  },
+  {
+   "id": "t71",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Silla operativa"
+  },
+  {
+   "id": "t72",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "38"
+  },
+  {
+   "id": "t73",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Silla para exteriores"
+  },
+  {
+   "id": "t74",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "14"
+  },
+  {
+   "id": "t75",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Sillas"
+  },
+  {
+   "id": "t76",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "166"
+  },
+  {
+   "id": "t77",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Sillas Industriales"
+  },
+  {
+   "id": "t78",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Sillones"
+  },
+  {
+   "id": "t79",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "20"
+  },
+  {
+   "id": "t80",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Travis Ohe-295"
+  },
+  {
+   "id": "t81",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Categorías"
+  },
+  {
+   "id": "t82",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Escritorios"
+  },
+  {
+   "id": "t83",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Alpha"
+  },
+  {
+   "id": "t84",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Altezza"
+  },
+  {
+   "id": "t85",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Chrome"
+  },
+  {
+   "id": "t86",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Conic"
+  },
+  {
+   "id": "t87",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Cristal"
+  },
+  {
+   "id": "t88",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Cubic"
+  },
+  {
+   "id": "t89",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Directiva"
+  },
+  {
+   "id": "t90",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Elegant"
+  },
+  {
+   "id": "t91",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Grap"
+  },
+  {
+   "id": "t92",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Home office"
+  },
+  {
+   "id": "t93",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Legna"
+  },
+  {
+   "id": "t94",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea llamara"
+  },
+  {
+   "id": "t95",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Línea Panel"
+  },
+  {
+   "id": "t96",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Mobiliario"
+  },
+  {
+   "id": "t97",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Mobiliario Industrial"
+  },
+  {
+   "id": "t98",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Mobiliario Para Consultorios Médicos"
+  },
+  {
+   "id": "t99",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Mobiliario para oficina"
+  },
+  {
+   "id": "t100",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "MRO"
+  },
+  {
+   "id": "t101",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Muebles para bancos"
+  },
+  {
+   "id": "t102",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Muebles para hospital"
+  },
+  {
+   "id": "t103",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Muebles para restaurantes"
+  },
+  {
+   "id": "t104",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Uncategorized"
+  },
+  {
+   "id": "t105",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "Precio"
+  },
+  {
+   "id": "t106",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "9510"
+  },
+  {
+   "id": "t107",
+   "tipo": "texto",
+   "etiqueta": "Botón",
+   "seccion": "Tienda",
+   "valor": "Buscar"
+  },
+  {
+   "id": "t108",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Tienda",
+   "valor": "No encontramos ningun producto con esas caracteristicas"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA TRAVIS OHE-293",
+   "href": "https://ofitodo.com/producto/silla-operativa-moderna-travis/",
+   "target": ""
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA EJECUTIVA CIANI OHE-303",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-ajustable-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA EJECUTIVA MODELO TRAVIS 295",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-para-oficina/",
+   "target": ""
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO FENIX OHE-163",
+   "href": "https://ofitodo.com/producto/silla-operativa-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA DIRECTIVA MODELO FENIX",
+   "href": "https://ofitodo.com/producto/silla-directiva-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA EJECUTIVA MODELO DRACO",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-modelo-dreco/",
+   "target": ""
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA EJECUTIVA MODELO ATHELIER",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-modelo-athelier/",
+   "target": ""
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA WIND OHE-55CR",
+   "href": "https://ofitodo.com/producto/silla-operativa-wind-ohe-55cr/",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO EVOLUTION OHE 99 GRIS",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-evolution-ohe-99-gris/",
+   "target": ""
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO ASPEN OHE 110",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-aspen-ohe-110/",
+   "target": ""
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO WHALE OHE 100 BLANCO",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-whale-ohe-100-blanco/",
+   "target": ""
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO MOUSE OHE 84",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-mouse-ohe-84/",
+   "target": ""
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA DE VISITA MODELO DOLPHIN OHV 111 GRIS",
+   "href": "https://ofitodo.com/producto/silla-de-visita-modelo-dolphin-ohv-111-gris/",
+   "target": ""
+  },
+  {
+   "id": "l14",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO DOLPHIN OHE 111",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-dolphin-ohe-111/",
+   "target": ""
+  },
+  {
+   "id": "l15",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO FLASH OHE 98 GRIS",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-flash-ohe-98-gris/",
+   "target": ""
+  },
+  {
+   "id": "l16",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA EJECUTIVA MODELO COZI OHE-175",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-modelo-cozi-ohe-175/",
+   "target": ""
+  },
+  {
+   "id": "l17",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO MODELO COZI OHE-173",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-modelo-cozi-ohe-173/",
+   "target": ""
+  },
+  {
+   "id": "l18",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO MORICO OHE-2003 NEGRO",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-morico-ohe-2003-negro/",
+   "target": ""
+  },
+  {
+   "id": "l19",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA PARA EXTERIOR SOLEI MODELO OHV-59",
+   "href": "https://ofitodo.com/producto/silla-para-exterior-solei-modelo-ohv-59/",
+   "target": ""
+  },
+  {
+   "id": "l20",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA PARA EXTERIOR MODELO GRACE OHV-7028",
+   "href": "https://ofitodo.com/producto/silla-para-exterior-modelo-grace-ohv-7028/",
+   "target": ""
+  },
+  {
+   "id": "l21",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA DE VISITA MODELO CROMA OHV-198",
+   "href": "https://ofitodo.com/producto/silla-de-visita-modelo-croma-ohv-198/",
+   "target": ""
+  },
+  {
+   "id": "l22",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA EJECUTIVA MODELO CROMA OHE-193",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-modelo-croma-ohe-193-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l23",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA EJECUTIVA MODELO CROMA OHE-195",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-modelo-croma-ohe-195/",
+   "target": ""
+  },
+  {
+   "id": "l24",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA DE VISITA MODELO GOETZ OHV-208",
+   "href": "https://ofitodo.com/producto/silla-de-visita-modelo-goetz-ohv-208-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l25",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLÓN OPERATIVO MODELO GOETZ OHE 203",
+   "href": "https://ofitodo.com/producto/sillon-operativo-modelo-goetz-ohe-203/",
+   "target": ""
+  },
+  {
+   "id": "l26",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "Silla Ejecutiva Modelo Goetz OHE-205",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-modelo-goetz-ohe-205/",
+   "target": ""
+  },
+  {
+   "id": "l27",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA MODELO KYOS OHT 320",
+   "href": "https://ofitodo.com/producto/silla-modelo-kyos-oht-320/",
+   "target": ""
+  },
+  {
+   "id": "l28",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "PUPITRE REVOLUTION OHP-85",
+   "href": "https://ofitodo.com/producto/pupitre-revolution-ohp-85-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l29",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "PUPITRE KYOS OHP-377",
+   "href": "https://ofitodo.com/producto/pupitre-kyos-ohp-377-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l30",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA OPERATIVA MODELO CONTEMPO OHS-10",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-contempo-ohs-10/",
+   "target": ""
+  },
+  {
+   "id": "l31",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA EJECUTIVA QUO OHE 805 CON CABECERA COLOR BLANCO",
+   "href": "https://ofitodo.com/producto/silla-ejecutiva-quo-ohe-805-blanco-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l32",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA DE VISITA MODELO ALUFSEN",
+   "href": "https://ofitodo.com/producto/silla-de-visita-modelo-alufsen-ohv-408-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l33",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA DIRECTIVA ALUFSEN",
+   "href": "https://ofitodo.com/producto/silla-directiva-alufsen-ahe-405/",
+   "target": ""
+  },
+  {
+   "id": "l34",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA VISITA MODELO CIANI OHV 308",
+   "href": "https://ofitodo.com/producto/silla-visita-modelo-ciani-ohv-308/",
+   "target": ""
+  },
+  {
+   "id": "l35",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA DIRECTIVA MODELO CIANI OHE 305",
+   "href": "https://ofitodo.com/producto/silla-directiva-ciani-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l36",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "SILLA VISITA KYOS OHV-312",
+   "href": "https://ofitodo.com/producto/silla-visita-kyos-ohv-312/",
+   "target": ""
+  },
+  {
+   "id": "l37",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "Silla operativa modelo lituania",
+   "href": "https://ofitodo.com/producto/silla-operativa-modelo-lituania-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l38",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Tienda",
+   "texto": "Load More",
+   "href": "#load_next_page",
+   "target": ""
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@ofitodo/site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/theme-tokens.mjs && node scripts/versionar-css.mjs && astro build",
+    "typecheck": "astro sync"
+  },
+  "dependencies": {
+    "astro": "^7.2.7",
+    "typescript": "^5.9.0",
+    "zod": "^4.1.0"
+  }
+}

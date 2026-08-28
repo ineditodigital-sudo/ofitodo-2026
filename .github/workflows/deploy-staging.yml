@@ -1,0 +1,17 @@
+name: Deploy staging (temporal.ofitodo.com)
+# El build del sitio requiere reference/ (HTML congelado, ~150 MB no versionado),
+# por lo que el deploy a staging se ejecuta desde la máquina de trabajo:
+#   npm run build --prefix apps/site && npm run build --prefix apps/admin
+#   node scripts/preparar-staging.mjs && node scripts/deploy-ftps.mjs dist-staging
+# Ver docs/09-operacion.md. Cuando reference/ se suba a un almacén (S3/LFS),
+# este workflow podrá construir y desplegar en CI con secrets FTP_*.
+on:
+  workflow_dispatch:
+
+jobs:
+  instrucciones:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Deploy de staging documentado en docs/09-operacion.md (se ejecuta local:"
+          echo "el build necesita reference/ que no está versionado)."

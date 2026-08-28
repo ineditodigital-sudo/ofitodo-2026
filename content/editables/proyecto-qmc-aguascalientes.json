@@ -1,0 +1,126 @@
+{
+ "pagina": "/proyecto-qmc-aguascalientes/",
+ "titulo": "Proyecto QMC Aguascalientes",
+ "key": "proyecto-qmc-aguascalientes",
+ "tipo": "post",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "valor": "Proyecto QMC Aguascalientes"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "valor": "Salas de capacitación, juntas y reuniones."
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.08-PM-1.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.08 PM"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.11-PM-1.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.11 PM (1)"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.10-PM-2.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.10 PM"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.11-PM.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.11 PM"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.10-PM-1.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.10 PM"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.09-PM.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.09 PM"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.10-PM-1-1.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.10 PM (1)"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.08-PM-1.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.08 PM"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.11-PM-1.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.11 PM (1)"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.10-PM-2.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.10 PM"
+  },
+  {
+   "id": "i10",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.11-PM.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.11 PM"
+  },
+  {
+   "id": "i11",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.10-PM-1.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.10 PM"
+  },
+  {
+   "id": "i12",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto QMC Aguascalientes",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-04-22-at-4.22.09-PM.webp",
+   "alt": "WhatsApp Image 2024-04-22 at 4.22.09 PM"
+  }
+ ]
+}

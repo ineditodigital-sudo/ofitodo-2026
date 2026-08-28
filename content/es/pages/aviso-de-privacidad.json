@@ -1,0 +1,16 @@
+{
+ "slug": "/aviso-de-privacidad/",
+ "locale": "es",
+ "title": "Aviso de privacidad",
+ "template": "frozen",
+ "htmlRef": "aviso-de-privacidad.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 10158,
+ "date": "2025-06-02 22:40:27",
+ "modified": "2025-09-01 22:21:22",
+ "seo": {
+  "title": "Aviso de privacidad | Ofitodo",
+  "description": "Ofitodo: Mobiliario para oficina, diseño y equipamiento. ¡Ofrecemos soluciones a gran número de mercados con diferentes líneas de negocio!"
+ }
+}

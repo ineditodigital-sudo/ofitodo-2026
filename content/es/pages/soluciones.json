@@ -1,0 +1,16 @@
+{
+ "slug": "/soluciones/",
+ "locale": "es",
+ "title": "Soluciones",
+ "template": "frozen",
+ "htmlRef": "soluciones.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 2544,
+ "date": "2018-01-25 12:01:51",
+ "modified": "2025-08-29 18:30:50",
+ "seo": {
+  "title": "Soluciones | Ofitodo",
+  "description": null
+ }
+}

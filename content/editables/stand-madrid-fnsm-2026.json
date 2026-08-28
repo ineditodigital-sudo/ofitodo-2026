@@ -1,0 +1,777 @@
+{
+ "pagina": "/stand-madrid-fnsm-2026/",
+ "titulo": "Stand Madrid FNSM 2026",
+ "key": "stand-madrid-fnsm-2026",
+ "tipo": "post",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2023/05/banner-productos-1.jpg",
+   "alt": "Image Alt"
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Ofitodo",
+   "valor": "Ofitodo"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Ofitodo",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-18-130259.webp",
+   "alt": "Stand de Madrid en la FNSM 2026 diseñado por OFITODO con mobiliario contemporáneo"
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Ofitodo",
+   "texto": "21/05/2026",
+   "href": "https://ofitodo.com/2026/05/",
+   "target": ""
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Ofitodo",
+   "valor": "By"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Ofitodo",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "Stand Madrid FNSM 2026",
+   "valor": "Stand Madrid FNSM 2026"
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Stand Madrid FNSM 2026",
+   "valor": "Stand Internacional Madrid — OFITODO"
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "OFITODO Comercializadora",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Inicio",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Proyectos",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Catálogo",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Blog",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Cotizar ahora",
+   "href": "#cotizar",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Inicio",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Proyectos",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Catálogo",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Blog",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Inicio",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "l14",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Stand Madrid FNSM 2026",
+   "texto": "Proyectos",
+   "href": "#",
+   "target": ""
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Stand Madrid FNSM 2026",
+   "valor": "Stand Internacional Madrid · FNSM 2026"
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Stand Madrid FNSM 2026",
+   "valor": "Proyecto destacado · FNSM 2026"
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Stand"
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Título principal",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Internacional"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Madrid"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Un espacio que no solo llamaba la atención visualmente, sino que transmitía una experiencia cálida, moderna y funcional — llevando la esencia de España a cada visitante del Foro del Lago."
+  },
+  {
+   "id": "l15",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "StandInternacionalMadrid",
+   "texto": "Ver galería",
+   "href": "#galeria",
+   "target": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "StandInternacionalMadrid",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/proyecto-madrid.webp",
+   "alt": "Stand Madrid FNSM"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Todo comenzó con una idea clara: crear un espacio que conectara diseño, confort y experiencia social."
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "El stand de Madrid — país invitado en esta edición — fue presentado en el Foro del Lago de la FNSM 2026. Partiendo de un render conceptual, el equipo de OFITODO desarrolló un proyecto donde cada detalle fue pensado estratégicamente para generar conexión entre el diseño, el confort y la interacción social."
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "El objetivo era claro: no solo exhibir mobiliario, sino crear una atmósfera donde los visitantes pudieran vivir la experiencia de un espacio bien diseñado — transmitiendo, al mismo tiempo, la calidez y sofisticación características de España."
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Galería del proyecto"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "StandInternacionalMadrid",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/madrid-sala-de-estar-_1_-e1779206217521.webp",
+   "alt": "Proyecto Madrid"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Proyecto Madrid"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "StandInternacionalMadrid",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/Captura-de-pantalla-2026-05-18-130259.webp",
+   "alt": "Sillas"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Sillas Alassia y Mesas Frank"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "StandInternacionalMadrid",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/sillon-comprimido.webp",
+   "alt": "Sillones"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Sillones"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "StandInternacionalMadrid",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/Post-_33__1.webp",
+   "alt": "Lambrín"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Lambrín iluminado"
+  },
+  {
+   "id": "t18",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "StandInternacionalMadrid",
+   "valor": "Mobiliario para el stand"
+  },
+  {
+   "id": "t19",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Silla Alassia &Mesa Frank",
+   "valor": "Silla Alassia &"
+  },
+  {
+   "id": "t20",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Silla Alassia &Mesa Frank",
+   "valor": "Mesa Frank"
+  },
+  {
+   "id": "t21",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Silla Alassia &Mesa Frank",
+   "valor": "El espacio integró sillas para visitante tapizadas en tela Alassia con estructura de patas negras, una combinación que logra elegancia sin renunciar a la versatilidad."
+  },
+  {
+   "id": "t22",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Silla Alassia &Mesa Frank",
+   "valor": "Acompañadas de la mesa Frank redonda, esta dupla demostró ser adaptable para ambientes sociales, restaurantes y áreas de recepción — exactamente el tipo de mobiliario que transforma un espacio ordinario en una experiencia."
+  },
+  {
+   "id": "t23",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Silla Alassia &Mesa Frank",
+   "valor": "Área social"
+  },
+  {
+   "id": "t24",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Sillones queinvitan a quedarse",
+   "valor": "Sillones que"
+  },
+  {
+   "id": "t25",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Sillones queinvitan a quedarse",
+   "valor": "invitan a quedarse"
+  },
+  {
+   "id": "t26",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sillones queinvitan a quedarse",
+   "valor": "Se incorporaron sillones comprimidos de alta calidad en el área social del stand, aportando comodidad, estilo y una atmósfera mucho más acogedora para los asistentes."
+  },
+  {
+   "id": "t27",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sillones queinvitan a quedarse",
+   "valor": "Estos elementos ayudaron a transformar el stand en un espacio donde las personas no solo observaban el diseño… también lo vivían. Ese es el diferencial de OFITODO: mobiliario que crea experiencias."
+  },
+  {
+   "id": "t28",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Sillones queinvitan a quedarse",
+   "valor": "El elemento protagonista"
+  },
+  {
+   "id": "t29",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Lambrín robleamericano",
+   "valor": "Lambrín roble"
+  },
+  {
+   "id": "t30",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Lambrín robleamericano",
+   "valor": "americano"
+  },
+  {
+   "id": "t31",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Lambrín robleamericano",
+   "valor": "El lambrín en acabado roble americano con iluminación integrada fue diseñado para envolver el entorno con calidez, profundidad y una identidad visual más sofisticada."
+  },
+  {
+   "id": "t32",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Lambrín robleamericano",
+   "valor": "Más que un acabado decorativo, junto con elementos de naturaleza, este recurso ayudó a definir la experiencia completa del espacio, creando un ambiente que equilibraba la modernidad del acero con la calidez orgánica de la madera."
+  },
+  {
+   "id": "t33",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Lambrín robleamericano",
+   "valor": "Mobiliario utilizado"
+  },
+  {
+   "id": "t34",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Las piezas del stand",
+   "valor": "Las piezas del stand"
+  },
+  {
+   "id": "t35",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Las piezas del stand",
+   "valor": "Cada mueble fue seleccionado y personalizado para crear una experiencia coherente, cómoda y visualmente impactante."
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Las piezas del stand",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/678776047_1595732732555379_6212947223484969767_n.webp",
+   "alt": ""
+  },
+  {
+   "id": "t36",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Las piezas del stand",
+   "valor": "Cotizar AHORA →"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Las piezas del stand",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/677817925_1595734102555242_5818876604867058065_n.webp",
+   "alt": ""
+  },
+  {
+   "id": "t37",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Las piezas del stand",
+   "valor": "Cotiza Ahora →"
+  },
+  {
+   "id": "t38",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Las piezas del stand",
+   "valor": "Personalización total"
+  },
+  {
+   "id": "t39",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "Recepción diseñada"
+  },
+  {
+   "id": "t40",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "para tu marca"
+  },
+  {
+   "id": "t41",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "Uno de los momentos más impactantes del stand fue la zona de recepción personalizada: cada elemento fue diseñado para reflejar la identidad del proyecto, desde el mostrador hasta los acabados."
+  },
+  {
+   "id": "t42",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "En OFITODO entendemos que la recepción es el primer punto de contacto con tu cliente — y ese primer segundo importa. Por eso trabajamos cada detalle para que transmita exactamente lo que tu negocio quiere comunicar."
+  },
+  {
+   "id": "t43",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "Mobiliario diseñado a medida según tus dimensiones"
+  },
+  {
+   "id": "t44",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "Acabados personalizados: madera, acero, tapizado"
+  },
+  {
+   "id": "t45",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "Iluminación integrada según concepto"
+  },
+  {
+   "id": "t46",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "Señalética y branding en mobiliario"
+  },
+  {
+   "id": "t47",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "Elementos naturales y decorativos coordinados"
+  },
+  {
+   "id": "t48",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "— Equipo OFITODO · Comercializadora"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Recepción diseñadapara tu marca",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-19-at-20.54.26-_1_.webp",
+   "alt": "Acabado personalizado"
+  },
+  {
+   "id": "l16",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "Ver más proyectos",
+   "href": "https://ofitodo.com/tipo/proyectos/",
+   "target": "_blank"
+  },
+  {
+   "id": "l17",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "Blog",
+   "href": "https://ofitodo.com/tipo/blog/",
+   "target": ""
+  },
+  {
+   "id": "l18",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "Proyectos",
+   "href": "https://ofitodo.com/tipo/proyectos/",
+   "target": ""
+  },
+  {
+   "id": "l19",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "Uncategorized",
+   "href": "https://ofitodo.com/tipo/uncategorized/",
+   "target": ""
+  },
+  {
+   "id": "t49",
+   "tipo": "texto",
+   "etiqueta": "Encabezado",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "RELATED POSTS"
+  },
+  {
+   "id": "i10",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Recepción diseñadapara tu marca",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-1-jun-2026_-11_26_42.png.webp",
+   "alt": "Mobiliario personalizado de consultorios médicos"
+  },
+  {
+   "id": "l20",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "Muebles de oficina en Aguascalientes",
+   "href": "https://ofitodo.com/mobiliario-de-oficina-en-aguascalientes/",
+   "target": ""
+  },
+  {
+   "id": "l21",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "05/08/2026",
+   "href": "https://ofitodo.com/2026/08/",
+   "target": ""
+  },
+  {
+   "id": "t50",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "By"
+  },
+  {
+   "id": "l22",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i11",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Recepción diseñadapara tu marca",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-30-jul-2026_-13_47_48.webp",
+   "alt": "Taller de fabricación de mobiliario OFITODO con maquinaria industrial y área de producción organizada"
+  },
+  {
+   "id": "l23",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "¿Cómo elegir un buen proveedor de mobiliario?",
+   "href": "https://ofitodo.com/proveedor-confiable-mobiliario-oficina/",
+   "target": ""
+  },
+  {
+   "id": "l24",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "30/07/2026",
+   "href": "https://ofitodo.com/2026/07/",
+   "target": ""
+  },
+  {
+   "id": "t51",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "By"
+  },
+  {
+   "id": "l25",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i12",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Recepción diseñadapara tu marca",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/07/ChatGPT-Image-10-jul-2026_-15_01_03.webp",
+   "alt": "Salón de clases moderno con mesas modulares, sillas ergonómicas, paneles acústicos, lambrines de madera y mobiliario de almacenamiento."
+  },
+  {
+   "id": "l26",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "El mobiliario correcto cambia la forma de aprender",
+   "href": "https://ofitodo.com/mobiliario-escolar-guia-espacios-educativos/",
+   "target": ""
+  },
+  {
+   "id": "l27",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "10/07/2026",
+   "href": "https://ofitodo.com/2026/07/",
+   "target": ""
+  },
+  {
+   "id": "t52",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "By"
+  },
+  {
+   "id": "l28",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  },
+  {
+   "id": "i13",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Recepción diseñadapara tu marca",
+   "src": "https://ofitodo.com/wp-content/uploads/2026/06/ChatGPT-Image-15-jun-2026_-09_47_36.webp",
+   "alt": "estaciones de trabajo para oficina con cubículos modernos y sillas ergonómicas."
+  },
+  {
+   "id": "l29",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "Estaciones de trabajo",
+   "href": "https://ofitodo.com/estaciones-de-trabajo-para-oficina/",
+   "target": ""
+  },
+  {
+   "id": "l30",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "17/06/2026",
+   "href": "https://ofitodo.com/2026/06/",
+   "target": ""
+  },
+  {
+   "id": "t53",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Recepción diseñadapara tu marca",
+   "valor": "By"
+  },
+  {
+   "id": "l31",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Recepción diseñadapara tu marca",
+   "texto": "marketing ofitodo",
+   "href": "https://ofitodo.com/author/marketing/",
+   "target": ""
+  }
+ ]
+}

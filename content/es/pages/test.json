@@ -1,0 +1,16 @@
+{
+ "slug": "/test/",
+ "locale": "es",
+ "title": "TEST",
+ "template": "frozen",
+ "htmlRef": "test.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 12179,
+ "date": "2026-01-27 20:10:44",
+ "modified": "2026-01-27 20:10:48",
+ "seo": {
+  "title": "TEST | Ofitodo",
+  "description": null
+ }
+}

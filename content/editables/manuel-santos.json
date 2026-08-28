@@ -1,0 +1,74 @@
+{
+ "pagina": "/manuel-santos/",
+ "titulo": "Manuel Santos",
+ "key": "manuel-santos",
+ "tipo": "post",
+ "campos": [
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/07/Ofitodo_logo-blanco_144-1-300x116.webp",
+   "alt": ""
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Manuel Santos",
+   "valor": "Manuel Santos"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Director General",
+   "valor": "Director General"
+  },
+  {
+   "id": "l0",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Director General",
+   "texto": "Contacto",
+   "href": "https://ofitodo.com//wp-content/uploads/vcards/manuel_santos.vcf",
+   "target": ""
+  },
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Director General",
+   "texto": "Whatsapp",
+   "href": "https://wa.me/4492240415",
+   "target": ""
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Director General",
+   "texto": "E-mail",
+   "href": "/cdn-cgi/l/email-protection#6c010d02190900421f0d0218031f42030a05180308032c0b010d0500420f0301",
+   "target": ""
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Director General",
+   "texto": "Ofitodo.com",
+   "href": "https://ofitodo.com/",
+   "target": ""
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Director General",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/09/icono-ofitodo-1024x1024.png",
+   "alt": ""
+  }
+ ]
+}

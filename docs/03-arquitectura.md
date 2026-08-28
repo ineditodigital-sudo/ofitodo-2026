@@ -1,6 +1,6 @@
-# 03 — Arquitectura (Fase R) — BORRADOR / PROPUESTA
+# 03 — Arquitectura (Fase R) — APROBADA
 
-> Estado: **borrador para inspección**. Se congela al aprobarse la compuerta R.
+> Estado: **APROBADA por Cristian (2026-08-26)** junto con la compuerta C2. Congelada; cambios solo por nuevo ADR.
 > Basado en los hallazgos de C1/C2: catálogo de cotización (368 productos, 37 con precio), sin clientes registrados, un idioma, pago solo contra entrega, Cloudflare activo, hosting cPanel GoDaddy vía FTPS.
 
 ## ADR-001 · Generador del sitio público: **Astro** (opción A del §5.1)

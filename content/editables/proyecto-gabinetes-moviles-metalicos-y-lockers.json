@@ -1,0 +1,102 @@
+{
+ "pagina": "/proyecto-gabinetes-moviles-metalicos-y-lockers/",
+ "titulo": "Proyecto Gábinetes móviles metálicos y lockers",
+ "key": "proyecto-gabinetes-moviles-metalicos-y-lockers",
+ "tipo": "post",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "valor": "Proyecto Gábinetes móviles metálicos y lockers"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "valor": "Espacios de trabajo"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-9.29.55-AM-_1_.webp",
+   "alt": "WhatsApp-Image-2024-10-18-at-9.29.55-AM-_1_"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_2_.webp",
+   "alt": "WhatsApp-Image-2024-07-09-at-12.59.48-PM-_2_"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_1_.webp",
+   "alt": "WhatsApp-Image-2024-07-09-at-12.59.48-PM-_1_"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_3_.webp",
+   "alt": "WhatsApp-Image-2024-07-09-at-12.59.48-PM-_3_"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-9.29.55-AM-_1_.webp",
+   "alt": "WhatsApp-Image-2024-10-18-at-9.29.55-AM-_1_"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_2_.webp",
+   "alt": "WhatsApp-Image-2024-07-09-at-12.59.48-PM-_2_"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_1_.webp",
+   "alt": "WhatsApp-Image-2024-07-09-at-12.59.48-PM-_1_"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_3_.webp",
+   "alt": "WhatsApp-Image-2024-07-09-at-12.59.48-PM-_3_"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-18-at-9.29.55-AM-_1_.webp",
+   "alt": "WhatsApp-Image-2024-10-18-at-9.29.55-AM-_1_"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto Gábinetes móviles metálicos y lockers",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-07-09-at-12.59.48-PM-_2_.webp",
+   "alt": "WhatsApp-Image-2024-07-09-at-12.59.48-PM-_2_"
+  }
+ ]
+}

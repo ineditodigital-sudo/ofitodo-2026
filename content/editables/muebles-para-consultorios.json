@@ -1,0 +1,291 @@
+{
+ "pagina": "/muebles-para-consultorios/",
+ "titulo": "Muebles para Consultorios",
+ "key": "muebles-para-consultorios",
+ "tipo": "page",
+ "campos": [
+  {
+   "id": "l1",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "",
+   "texto": "Inicio",
+   "href": "https://ofitodo.com",
+   "target": ""
+  },
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "",
+   "valor": "Muebles para Consultorios"
+  },
+  {
+   "id": "t1",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "MUEBLES PARA CONSULTORIOS",
+   "valor": "MUEBLES PARA CONSULTORIOS"
+  },
+  {
+   "id": "t2",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "MUEBLES PARA CONSULTORIOS",
+   "valor": "Mobiliario médico profesional para consultorios y clínicas. Creamos espacios funcionales que transmiten confianza y profesionalismo a tus pacientes."
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "MUEBLES PARA CONSULTORIOS",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/12/muebles-para-consultorio-1024x1024.webp",
+   "alt": ""
+  },
+  {
+   "id": "t3",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Ofitodo: Tu Solución Integral de Mobiliario",
+   "valor": "Ofitodo: Tu Solución Integral de Mobiliario"
+  },
+  {
+   "id": "t4",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Ofitodo: Tu Solución Integral de Mobiliario",
+   "valor": "Ofitodo ofrece soluciones de mobiliario para consultorios médicos que combinan funcionalidad, higiene y confort. Entendemos que tu consultorio debe ser un espacio que inspire confianza en tus pacientes. Por eso, ofrecemos escritorios médicos, sillas ergonómicas, áreas de espera confortables y soluciones de almacenamiento diseñadas específicamente para el sector salud, con materiales de fácil limpieza y desinfección."
+  },
+  {
+   "id": "t5",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Productos Relacionados",
+   "valor": "Productos Relacionados"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/03/Diseno-sin-titulo-_72_-1024x1024.webp",
+   "alt": "Credenza dos puertas"
+  },
+  {
+   "id": "l2",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "CREDENZA MODELO BASIC",
+   "href": "https://ofitodo.com/producto/credenza-de-melamina-ofitodo-2/",
+   "target": ""
+  },
+  {
+   "id": "l3",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/credenza-de-melamina-ofitodo-2/",
+   "target": ""
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/03/Diseno-sin-titulo-62-1-1024x1024.webp",
+   "alt": "Credenza de dos puertas"
+  },
+  {
+   "id": "l4",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "CREDENZA MODELO RICH",
+   "href": "https://ofitodo.com/producto/credenza-moderna-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l5",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/credenza-moderna-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/03/221e5498-e5b9-42ae-a695-592c51b494c6-1024x1024.webp",
+   "alt": "Credenza 2 cajones"
+  },
+  {
+   "id": "l6",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "CREDENZA MODELO ECUADOR",
+   "href": "https://ofitodo.com/producto/credenza-con-cajones/",
+   "target": ""
+  },
+  {
+   "id": "l7",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/credenza-con-cajones/",
+   "target": ""
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Productos Relacionados",
+   "src": "https://ofitodo.com/wp-content/uploads/2025/03/Diseno-sin-titulo-60-1024x1024.webp",
+   "alt": "Credenza de melamina"
+  },
+  {
+   "id": "l8",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "CREDENZA MODELO METTA",
+   "href": "https://ofitodo.com/producto/credenza-melamina-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l9",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Leer más",
+   "href": "https://ofitodo.com/producto/credenza-melamina-ofitodo/",
+   "target": ""
+  },
+  {
+   "id": "l10",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Load More",
+   "href": "#load_next_page",
+   "target": ""
+  },
+  {
+   "id": "t6",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Productos Relacionados",
+   "valor": "Cargar más"
+  },
+  {
+   "id": "l11",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "Productos Relacionados",
+   "texto": "Catálogo Completo",
+   "href": "https://ofitodo.com/wp-content/uploads/2026/05/Consultorios-medicos-y-Hospitales_compressed.pdf",
+   "target": ""
+  },
+  {
+   "id": "t7",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Por Qué Elegir OFITODO?",
+   "valor": "¿Por Qué Elegir OFITODO?"
+  },
+  {
+   "id": "t8",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Experiencia Comprobada"
+  },
+  {
+   "id": "t9",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Experiencia Comprobada",
+   "valor": "Años de experiencia equipando espacios"
+  },
+  {
+   "id": "t10",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Calidad Garantizada"
+  },
+  {
+   "id": "t11",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Calidad Garantizada",
+   "valor": "Mobiliario de alta calidad con garantía y soporte"
+  },
+  {
+   "id": "t12",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Asesoría Personalizada"
+  },
+  {
+   "id": "t13",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Asesoría Personalizada",
+   "valor": "Expertos que te ayudan a elegir las mejores soluciones"
+  },
+  {
+   "id": "t14",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Entrega e Instalación"
+  },
+  {
+   "id": "t15",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "Entrega e Instalación",
+   "valor": "Servicio completo de entrega e instalación profesional"
+  },
+  {
+   "id": "t16",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "¿Listo para Transformar tu Espacio de Trabajo?"
+  },
+  {
+   "id": "t17",
+   "tipo": "texto",
+   "etiqueta": "Texto",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "valor": "Contacta con nuestros expertos en mobiliario para oficina y recibe una cotización personalizada sin compromiso. Estamos aquí para ayudarte a crear el espacio perfecto."
+  },
+  {
+   "id": "l12",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Cotizar por WhatsApp",
+   "href": "https://wa.me/524493419403?",
+   "target": ""
+  },
+  {
+   "id": "l13",
+   "tipo": "enlace",
+   "etiqueta": "Botón/Enlace",
+   "seccion": "¿Listo para Transformar tu Espacio de Trabajo?",
+   "texto": "Email",
+   "href": "mailto:ventasofitodo@hotmail.com",
+   "target": ""
+  }
+ ]
+}

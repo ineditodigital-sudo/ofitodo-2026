@@ -1,0 +1,178 @@
+[
+ {
+  "numero": 9268,
+  "fecha": "2025-01-21 12:50:29",
+  "estado": "wc-failed",
+  "total": 1897.68,
+  "cliente": {
+   "billing_first_name": "Nicole",
+   "billing_last_name": "Vargas",
+   "billing_email": "nicolevargas930@gmail.com",
+   "billing_phone": "4493569258",
+   "billing_address_1": "Jorge reynoso 1703 int 15",
+   "billing_address_2": "",
+   "billing_city": "Aguascalientes",
+   "billing_state": "AG",
+   "billing_postcode": "20140",
+   "order_comments": ""
+  },
+  "items": [
+   {
+    "slug": "silla-operativa-modelo-irlanda-color-blanco-ofitodo",
+    "nombre": "SILLA OPERATIVA MODELO IRLANDA COLOR BLANCO",
+    "qty": 1,
+    "subtotal": 1447.68,
+    "precio": 1447.68
+   }
+  ]
+ },
+ {
+  "numero": 9269,
+  "fecha": "2025-01-22 18:49:41",
+  "estado": "wc-failed",
+  "total": 1361.84,
+  "cliente": {
+   "billing_first_name": "Nicole",
+   "billing_last_name": "Vargas",
+   "billing_email": "nicolevargas930@gmail.com",
+   "billing_phone": "4493569258",
+   "billing_address_1": "Jorge reynoso 1703 int 15",
+   "billing_address_2": "",
+   "billing_city": "Aguascalientes",
+   "billing_state": "AG",
+   "billing_postcode": "20140",
+   "order_comments": ""
+  },
+  "items": [
+   {
+    "slug": "silla-operativa-modelo-lituania-ofitodo",
+    "nombre": "Silla operativa modelo lituania",
+    "qty": 1,
+    "subtotal": 1361.84,
+    "precio": 1361.84
+   }
+  ]
+ },
+ {
+  "numero": 9270,
+  "fecha": "2025-01-22 18:58:12",
+  "estado": "wc-failed",
+  "total": 5362.52,
+  "cliente": {
+   "billing_first_name": "Nicole",
+   "billing_last_name": "Vargas",
+   "billing_email": "nicolevargas930@gmail.com",
+   "billing_phone": "4493569258",
+   "billing_address_1": "Jorge reynoso 1703 int 15",
+   "billing_address_2": "",
+   "billing_city": "Aguascalientes",
+   "billing_state": "AG",
+   "billing_postcode": "20140",
+   "order_comments": ""
+  },
+  "items": [
+   {
+    "slug": "silla-operativa-modelo-lituania-ofitodo",
+    "nombre": "Silla operativa modelo lituania",
+    "qty": 1,
+    "subtotal": 1361.84,
+    "precio": 1361.84
+   },
+   {
+    "slug": "silla-ejecutiva-modelo-habana",
+    "nombre": "Silla ejecutiva modelo habana",
+    "qty": 1,
+    "subtotal": 2553,
+    "precio": 2553
+   },
+   {
+    "slug": "silla-operativa-modelo-irlanda-color-blanco-ofitodo",
+    "nombre": "SILLA OPERATIVA MODELO IRLANDA COLOR BLANCO",
+    "qty": 1,
+    "subtotal": 1447.68,
+    "precio": 1447.68
+   }
+  ]
+ },
+ {
+  "numero": 9271,
+  "fecha": "2025-01-24 15:38:47",
+  "estado": "wc-processing",
+  "total": 0,
+  "cliente": {
+   "billing_first_name": "Andrea",
+   "billing_last_name": "Prueba",
+   "billing_email": "andrea@inedito.digital",
+   "billing_phone": "4492887313",
+   "billing_address_1": "Montes himalaya 743",
+   "billing_address_2": "Casa",
+   "billing_city": "Aguascalientes",
+   "billing_state": "AG",
+   "billing_postcode": "20120",
+   "order_comments": ""
+  },
+  "items": [
+   {
+    "slug": "silla-operativa-modelo-lituania-ofitodo",
+    "nombre": "Silla operativa modelo lituania",
+    "qty": 1,
+    "subtotal": 0,
+    "precio": 0
+   }
+  ]
+ },
+ {
+  "numero": 10052,
+  "fecha": "2025-04-14 18:04:32",
+  "estado": "wc-processing",
+  "total": 0,
+  "cliente": {
+   "billing_first_name": "Andrea",
+   "billing_last_name": "de la Cruz",
+   "billing_email": "andrea@maindsoft.net",
+   "billing_phone": "4492887313",
+   "billing_address_1": "Cerrada de los Milagros 119 Canteras de San Agustín",
+   "billing_address_2": "Casa",
+   "billing_city": "Aguascalientes",
+   "billing_state": "AG",
+   "billing_postcode": "20218",
+   "order_comments": ""
+  },
+  "items": [
+   {
+    "slug": "silla-ejecutiva-para-oficina",
+    "nombre": "SILLA EJECUTIVA MODELO TRAVIS 295",
+    "qty": 1,
+    "subtotal": 0,
+    "precio": 0
+   }
+  ]
+ },
+ {
+  "numero": 10053,
+  "fecha": "2025-04-14 18:08:56",
+  "estado": "wc-failed",
+  "total": 4505,
+  "cliente": {
+   "billing_first_name": "Andrea",
+   "billing_last_name": "de la Cruz",
+   "billing_email": "andrea@maindsoft.net",
+   "billing_phone": "4492887313",
+   "billing_address_1": "Cerrada de los Milagros 119 Canteras de San Agustín",
+   "billing_address_2": "Casa",
+   "billing_city": "Aguascalientes",
+   "billing_state": "AG",
+   "billing_postcode": "20218",
+   "order_comments": ""
+  },
+  "items": [
+   {
+    "slug": "silla-de-visita-negra-ofitodo",
+    "nombre": "SILLA DE VISITA MODELO VANTO",
+    "qty": 1,
+    "subtotal": 4055,
+    "precio": 4055
+   }
+  ]
+ }
+]

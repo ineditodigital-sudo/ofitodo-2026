@@ -1,0 +1,182 @@
+[
+ {
+  "legacyId": 417,
+  "slug": "kindemex",
+  "nombre": "KINDEMEX",
+  "conteo": 3,
+  "seo": {
+   "title": "KINDEMEX archivos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-multiusos-para-comedor-creta"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-origami"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-para-exterior-modelo-velar"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 418,
+  "slug": "mobiliario-en-movimiento",
+  "nombre": "Mobiliario en Movimiento",
+  "conteo": 3,
+  "seo": {
+   "title": "Mobiliario en Movimiento archivos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-ergonomica-modelo-black-jack"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-think"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-londres-para-oficina"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 419,
+  "slug": "technochairs",
+  "nombre": "Technochairs",
+  "conteo": 3,
+  "seo": {
+   "title": "Technochairs archivos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-directiva-modelo-dream-respaldo-alto"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-fly-rb"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-spirit"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 420,
+  "slug": "mobiliario-en-movimeinto",
+  "nombre": "MOBILIARIO EN MOVIMIENTO",
+  "conteo": 24,
+  "seo": {
+   "title": "MOBILIARIO EN MOVIMIENTO archivos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina"
+    },
+    {
+     "tipo": "producto",
+     "slug": "pupitre-escolar-con-paleta-giratoria-360"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-comoda-para-oficina-modelo-map"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-modelo-kolbe"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 421,
+  "slug": "offiho",
+  "nombre": "OFFIHO",
+  "conteo": 11,
+  "seo": {
+   "title": "OFFIHO archivos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-operativa-modelo-roly-ergonomica"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-ejecutiva-modelo-economalla"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-modelo-sensilla-ohv-97"
+    },
+    {
+     "tipo": "producto",
+     "slug": "silla-de-visita-de-oficina-modelo-vanto-ohv-78"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 422,
+  "slug": "grupo-albar",
+  "nombre": "GRUPO ALBAR",
+  "conteo": 1,
+  "seo": {
+   "title": "GRUPO ALBAR archivos | Ofitodo",
+   "description": null
+  },
+  "grid": {
+   "modo": "productos",
+   "items": [
+    {
+     "tipo": "producto",
+     "slug": "silla-multiusos-para-exteriores"
+    }
+   ]
+  },
+  "tieneReferencia": true
+ },
+ {
+  "legacyId": 423,
+  "slug": "mobliario-en-movimiento",
+  "nombre": "MOBLIARIO EN MOVIMIENTO",
+  "conteo": 0,
+  "seo": {
+   "title": "MOBLIARIO EN MOVIMIENTO",
+   "description": null
+  },
+  "grid": null,
+  "tieneReferencia": false
+ }
+]

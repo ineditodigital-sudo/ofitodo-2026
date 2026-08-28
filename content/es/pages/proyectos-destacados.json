@@ -1,0 +1,16 @@
+{
+ "slug": "/proyectos-destacados/",
+ "locale": "es",
+ "title": "Proyectos destacados",
+ "template": "frozen",
+ "htmlRef": "proyectos-destacados.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 8840,
+ "date": "2024-10-21 18:31:46",
+ "modified": "2025-11-21 19:38:44",
+ "seo": {
+  "title": "Proyectos destacados | Ofitodo",
+  "description": null
+ }
+}

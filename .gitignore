@@ -11,13 +11,24 @@ SITIO WEB OLD OFITODO/
 reference/screenshots/
 reference/assets/
 reference/html/
+reference/meta/
+reference/db-export/
 reference/flows/**/*.png
+scripts/.deps/node_modules/
 
 # Dependencias y builds
 node_modules/
 dist/
+dist-static/
 .astro/
+.wrangler/
 *.log
+created.tmp
 
 # Reportes generados
 reports/
+dist-staging/
+.env.prod
+dist-prod/
+backups/
+claves ftp ofitodo raiz.txt

@@ -1,0 +1,16 @@
+{
+ "slug": "/productos/",
+ "locale": "es",
+ "title": "Productos",
+ "template": "frozen",
+ "htmlRef": "productos.html",
+ "tipo": "page",
+ "status": "publish",
+ "legacyId": 10788,
+ "date": "2025-12-03 14:45:16",
+ "modified": "2026-01-29 16:05:20",
+ "seo": {
+  "title": "Productos | Ofitodo",
+  "description": null
+ }
+}

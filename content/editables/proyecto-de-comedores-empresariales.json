@@ -1,0 +1,95 @@
+{
+ "pagina": "/proyecto-de-comedores-empresariales/",
+ "titulo": "Proyecto de comedores empresariales",
+ "key": "proyecto-de-comedores-empresariales",
+ "tipo": "post",
+ "campos": [
+  {
+   "id": "t0",
+   "tipo": "texto",
+   "etiqueta": "Subtítulo",
+   "seccion": "Proyecto de comedores empresariales",
+   "valor": "Proyecto de comedores empresariales"
+  },
+  {
+   "id": "i0",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-3.59.58-PM.webp",
+   "alt": "WhatsApp Image 2024-08-07 at 3.59.58 PM"
+  },
+  {
+   "id": "i1",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-3.59.54-PM.webp",
+   "alt": "WhatsApp Image 2024-08-07 at 3.59.54 PM"
+  },
+  {
+   "id": "i2",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/image-4-scaled.webp",
+   "alt": "image (4)"
+  },
+  {
+   "id": "i3",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-4.00.28-PM.webp",
+   "alt": "WhatsApp Image 2024-08-07 at 4.00.28 PM"
+  },
+  {
+   "id": "i4",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-3.59.58-PM.webp",
+   "alt": "WhatsApp Image 2024-08-07 at 3.59.58 PM"
+  },
+  {
+   "id": "i5",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-3.59.54-PM.webp",
+   "alt": "WhatsApp Image 2024-08-07 at 3.59.54 PM"
+  },
+  {
+   "id": "i6",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/image-4-scaled.webp",
+   "alt": "image (4)"
+  },
+  {
+   "id": "i7",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-4.00.28-PM.webp",
+   "alt": "WhatsApp Image 2024-08-07 at 4.00.28 PM"
+  },
+  {
+   "id": "i8",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-3.59.58-PM.webp",
+   "alt": "WhatsApp Image 2024-08-07 at 3.59.58 PM"
+  },
+  {
+   "id": "i9",
+   "tipo": "imagen",
+   "etiqueta": "Imagen",
+   "seccion": "Proyecto de comedores empresariales",
+   "src": "https://ofitodo.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-08-07-at-3.59.54-PM.webp",
+   "alt": "WhatsApp Image 2024-08-07 at 3.59.54 PM"
+  }
+ ]
+}

@@ -1,0 +1,474 @@
+/* ============================================================
+   OFITODO — Capa de refinamiento visual
+   Mejora la estética del sitio SIN tocar la estructura HTML:
+   tipografía, ritmo, tarjetas, botones e interacciones.
+   Se carga después del CSS del tema, por lo que solo ajusta.
+   ============================================================ */
+
+:root {
+  --of-azul: #233465;
+  --of-azul-claro: #2f4a8f;
+  --of-acento: #1e73be;
+  --of-texto: #3f4654;
+  --of-suave: #6b7280;
+  --of-linea: #e6e9f0;
+  --of-radio: 14px;
+  --of-sombra-sm: 0 1px 2px rgb(35 52 101 / .05), 0 2px 8px rgb(35 52 101 / .05);
+  --of-sombra: 0 4px 12px rgb(35 52 101 / .07), 0 12px 32px rgb(35 52 101 / .08);
+  --of-transicion: .25s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* ---------- 1. Tipografía: aire y jerarquía ---------- */
+/* Los títulos venían con interlineado igual al tamaño (40px/40px): las dos líneas
+   se pegaban. Se les da respiración y un tracking más natural. */
+h1, h2, h3, h4, h5, h6,
+.elementor-heading-title {
+  line-height: 1.22 !important;
+  letter-spacing: -.01em !important;
+  text-wrap: balance;
+}
+h1, .elementor-widget-heading h1.elementor-heading-title { line-height: 1.14 !important; }
+h5, h6 { line-height: 1.35 !important; letter-spacing: 0 !important; }
+
+/* Párrafos: más legibles y con mejor color */
+p, .elementor-widget-text-editor {
+  line-height: 1.72;
+  color: var(--of-texto);
+}
+.elementor-widget-text-editor p:last-child { margin-bottom: 0; }
+
+/* Longitud de línea cómoda en textos introductorios centrados */
+.elementor-widget-text-editor[class*="align-center"] p,
+.e-con > .elementor-widget-text-editor p { max-width: 76ch; }
+.elementor-widget-text-editor[class*="align-center"] p { margin-inline: auto; }
+
+/* ---------- 2. Botones: presencia y respuesta ---------- */
+.elementor-button,
+.wpr-button,
+button[type="submit"],
+input[type="submit"] {
+  border-radius: 10px;
+  font-weight: 600 !important;
+  letter-spacing: .01em;
+  transition: transform var(--of-transicion), box-shadow var(--of-transicion), background-color var(--of-transicion);
+  box-shadow: 0 2px 6px rgb(35 52 101 / .14) !important;
+}
+.elementor-button:hover,
+.wpr-button:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgb(35 52 101 / .24) !important;
+}
+.elementor-button:active { transform: translateY(0); }
+
+/* ---------- 3. Imágenes: uniformidad y calidez ---------- */
+.elementor-widget-image img,
+.wpr-grid-image-wrap img,
+ul.products img {
+  border-radius: 12px;
+  transition: transform var(--of-transicion), box-shadow var(--of-transicion);
+}
+/* Un enlace sobre una imagen se comporta como tarjeta clicable */
+.elementor-widget-image a:hover img {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: var(--of-sombra);
+}
+
+/* ---------- 4. Tarjetas clicables (Productos, Sectores, Soluciones) ----------
+   Cada tarjeta es un <a class="e-con"> que envuelve la imagen y su etiqueta.
+   Se les da cuerpo para que la cuadrícula se lea como un conjunto ordenado. */
+/* Solo aplica a enlaces-contenedor que llevan imagen Y etiqueta de texto (las tarjetas
+   reales de las cuadrículas). Así se excluyen el logo del encabezado y otros enlaces. */
+a.e-con:has(> .elementor-widget-text-editor):has(img) {
+  background: #fff;
+  border: 1px solid var(--of-linea);
+  border-radius: var(--of-radio);
+  overflow: hidden;
+  box-shadow: var(--of-sombra-sm);
+  transition: transform var(--of-transicion), box-shadow var(--of-transicion), border-color var(--of-transicion);
+}
+a.e-con:has(> .elementor-widget-text-editor):has(img):hover {
+  transform: translateY(-4px);
+  box-shadow: var(--of-sombra);
+  border-color: transparent;
+}
+/* la imagen ocupa el ancho completo de la tarjeta y respeta sus esquinas */
+a.e-con:has(> .elementor-widget-text-editor):has(img) > *:first-child { margin: 0; }
+a.e-con:has(> .elementor-widget-text-editor):has(img) img {
+  border-radius: 0;
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+a.e-con:hover .elementor-widget-image img { transform: none; box-shadow: none; }
+/* etiqueta inferior: legible, centrada y con aire */
+a.e-con:has(img) > .elementor-widget-text-editor { padding: .1rem .7rem .2rem; }
+a.e-con .texto,
+a.e-con:has(img) > .elementor-widget-text-editor p {
+  line-height: 1.35;
+  letter-spacing: .01em;
+  color: var(--of-azul);
+  font-weight: 600;
+}
+
+/* Blindaje: el encabezado, el pie y los logos nunca se convierten en tarjeta */
+header a.e-con, footer a.e-con,
+a.e-con:has(img[src*="logo"]), a.e-con:has(.elementor-widget-theme-site-logo) {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  transform: none !important;
+}
+header a.e-con img, footer a.e-con img,
+a.e-con:has(img[src*="logo"]) img {
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  width: auto !important;
+}
+
+/* ---------- 5. Cajas de icono (proceso de compra, ventajas) ---------- */
+.elementor-widget-icon-box .elementor-icon-box-wrapper {
+  transition: transform var(--of-transicion);
+}
+.elementor-widget-icon-box:hover .elementor-icon-box-wrapper { transform: translateY(-3px); }
+.elementor-icon-box-title { line-height: 1.35 !important; letter-spacing: 0 !important; }
+.elementor-icon-box-description { line-height: 1.6; }
+
+/* ---------- 5b. Tarjetas del blog (Notas relevantes) ---------- */
+.eael-grid-post .eael-grid-post-holder {
+  border-radius: var(--of-radio);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--of-linea);
+  box-shadow: var(--of-sombra-sm);
+  transition: transform var(--of-transicion), box-shadow var(--of-transicion), border-color var(--of-transicion);
+  height: 100%;
+}
+.eael-grid-post:hover .eael-grid-post-holder {
+  transform: translateY(-4px);
+  box-shadow: var(--of-sombra);
+  border-color: transparent;
+}
+.eael-grid-post .eael-entry-media,
+.eael-grid-post .eael-entry-thumbnail { overflow: hidden; }
+.eael-grid-post .eael-entry-media img,
+.eael-grid-post .eael-entry-thumbnail img {
+  border-radius: 0;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform var(--of-transicion);
+}
+.eael-grid-post:hover .eael-entry-media img { transform: scale(1.04); }
+.eael-grid-post .eael-entry-title,
+.eael-grid-post .eael-entry-title a {
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+  color: var(--of-azul);
+}
+.eael-grid-post .eael-grid-post-excerpt p { font-size: 13.5px; line-height: 1.6; color: var(--of-suave); }
+.eael-grid-post .eael-post-elements-readmore-btn {
+  font-weight: 600;
+  color: var(--of-acento);
+  transition: gap var(--of-transicion);
+}
+
+/* ---------- 5c. Ficha de producto: jerarquía y respiro ---------- */
+.mkd-single-product-summary .mkd-single-product-title {
+  line-height: 1.18 !important;
+  letter-spacing: -.01em !important;
+}
+.mkd-single-product-summary .price {
+  font-weight: 700;
+  color: var(--of-azul);
+}
+/* tabla de atributos legible */
+.woocommerce-product-attributes { border-radius: 10px; overflow: hidden; }
+.woocommerce-product-attributes th { background: #f6f8fc; color: var(--of-azul); font-weight: 600; }
+.woocommerce-product-attributes th, .woocommerce-product-attributes td { padding: 10px 14px !important; line-height: 1.5; }
+/* galería con esquinas suaves */
+.woocommerce-product-gallery__image img { border-radius: 12px; }
+/* pestañas de descripción */
+.woocommerce-tabs .wc-tabs li a { font-weight: 600; letter-spacing: .01em; }
+.woocommerce-Tabs-panel { line-height: 1.75; }
+
+/* ---------- 6. Fichas y cuadrículas de producto (WooCommerce) ---------- */
+ul.products li.product,
+ul.products li.ofitodo-product-card,
+ul.products li.ofitodo-category-card {
+  border-radius: var(--of-radio);
+  background: #fff;
+  box-shadow: var(--of-sombra-sm);
+  overflow: hidden;
+  transition: transform var(--of-transicion), box-shadow var(--of-transicion);
+}
+ul.products li.product:hover,
+ul.products li.ofitodo-product-card:hover,
+ul.products li.ofitodo-category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--of-sombra);
+}
+ul.products li img { border-radius: 0; display: block; width: 100%; }
+.ofitodo-title,
+ul.products li.product h3,
+ul.products li.product .woocommerce-loop-product__title {
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+  padding: 0 14px;
+  color: var(--of-azul);
+  font-weight: 600;
+}
+ul.products li .price { padding: 0 14px 14px; display: block; color: var(--of-azul); font-weight: 700; }
+
+/* ---------- 7. Formularios: campos claros ---------- */
+input[type="text"], input[type="email"], input[type="tel"], input[type="search"],
+input[type="number"], textarea, select, .nf-form-content input, .nf-form-content textarea {
+  border-radius: 9px !important;
+  transition: border-color var(--of-transicion), box-shadow var(--of-transicion);
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus,
+textarea:focus, select:focus {
+  outline: 0;
+  border-color: var(--of-acento) !important;
+  box-shadow: 0 0 0 3px rgb(30 115 190 / .14) !important;
+}
+
+/* ---------- 8. Enlaces y transiciones generales ---------- */
+a { transition: color var(--of-transicion), opacity var(--of-transicion); }
+
+/* ---------- 9. Ritmo vertical entre secciones ---------- */
+/* Se corrigen los huecos desiguales que dejaba el constructor. */
+.e-con.e-flex > .e-con-inner { row-gap: clamp(1rem, 2.2vw, 2rem); }
+
+/* ---------- 10. Accesibilidad y detalles finos ---------- */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--of-acento);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+img { max-width: 100%; height: auto; }
+::selection { background: rgb(35 52 101 / .16); }
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* ---------- 11. Móvil: títulos y ritmo proporcionados ---------- */
+@media (max-width: 767px) {
+  h1, .elementor-widget-heading h1.elementor-heading-title { font-size: clamp(26px, 7vw, 34px) !important; }
+  h2, .elementor-widget-heading h2.elementor-heading-title { font-size: clamp(22px, 6vw, 30px) !important; }
+  h3 { font-size: clamp(19px, 5vw, 24px) !important; }
+  p, .elementor-widget-text-editor { font-size: 15.5px; line-height: 1.7; }
+  .elementor-button { width: auto; }
+}
+
+/* ============================================================
+   CAPA 2 — Presencia visual (jerarquía, ritmo y contraste)
+   El diseño original tenía títulos de sección de 24 px, hero de
+   40 px y secciones sin respiración: se veía tímido y desordenado.
+   ============================================================ */
+
+/* ---------- Hero: que domine la primera pantalla ---------- */
+.mkd-title-holder h1,
+.elementor-location-header + * h1,
+.e-con.e-parent:first-of-type h1.elementor-heading-title,
+h1.elementor-heading-title {
+  font-size: clamp(2.4rem, 4.6vw, 4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.02em !important;
+}
+
+/* ---------- Títulos de sección: presencia y acento de marca ---------- */
+/* Antes: 24 px sin separación del contenido. Ahora: escala mayor,
+   aire debajo y una línea de acento que ordena visualmente la página. */
+.e-con-inner > .elementor-widget-heading h2.elementor-heading-title,
+.e-con > .elementor-widget-heading h2.elementor-heading-title,
+.elementor-widget-heading h2.elementor-heading-title {
+  font-size: clamp(1.75rem, 2.9vw, 2.5rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.16 !important;
+  letter-spacing: -.015em !important;
+}
+/* subrayado de acento bajo los títulos de sección centrados */
+.elementor-widget-heading:has(h2) .elementor-heading-title[style*="center"]::after,
+.elementor-widget-heading.elementor-widget-heading--center h2::after,
+.e-con .elementor-widget-heading h2.elementor-heading-title::after {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 4px;
+  border-radius: 99px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, var(--of-azul), var(--of-acento));
+}
+/* títulos alineados a la izquierda: el acento también se alinea */
+.elementor-widget-heading[class*="align-left"] h2.elementor-heading-title::after,
+.e-con[class*="text-left"] .elementor-widget-heading h2.elementor-heading-title::after { margin-inline: 0 auto; }
+
+/* subtítulos internos con jerarquía clara */
+.elementor-widget-heading h3.elementor-heading-title {
+  font-size: clamp(1.2rem, 1.7vw, 1.55rem) !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- Ritmo vertical: aire consistente entre secciones ---------- */
+/* Muchas secciones venían con padding 0 y otras con 50 px: de ahí los
+   huecos irregulares. Se unifica el pulso vertical de la página. */
+.e-con.e-parent { padding-block: clamp(2.75rem, 5vw, 4.5rem); }
+.e-con.e-parent:first-of-type { padding-block: 0; }        /* el hero conserva su altura */
+.e-con.e-parent:has(> .e-con-inner > .elementor-widget-image:only-child) { padding-block: 0; }
+
+/* espacio entre el título de sección y su contenido */
+.e-con-inner > .elementor-widget-heading { margin-bottom: clamp(1.1rem, 2vw, 2rem); }
+
+/* ---------- Botones: tamaño de acción real ---------- */
+.elementor-button {
+  font-size: 15.5px !important;
+  padding: 15px 32px !important;
+  border-radius: 11px !important;
+}
+.elementor-button-icon svg, .elementor-button-icon i { transition: transform var(--of-transicion); }
+.elementor-button:hover .elementor-button-icon svg { transform: translateX(3px); }
+
+/* ---------- Franja de llamada a la acción: profundidad ---------- */
+/* La banda final "¿Listo para transformar tu espacio?" era un azul plano. */
+.e-con.e-parent:has(.elementor-widget-button):has(h2)[class*="dark"],
+footer + .e-con,
+.e-con.e-parent[style*="233465"], .e-con.e-parent[style*="23,52,101"] {
+  background-image: linear-gradient(135deg, #1b2b57 0%, #233465 45%, #2f4a8f 100%) !important;
+}
+
+/* ---------- Cuadrículas: separación más generosa ---------- */
+.e-con-inner:has(> a.e-con) { gap: clamp(.9rem, 1.6vw, 1.4rem); }
+
+/* ---------- Pie de página: jerarquía y legibilidad ---------- */
+footer .elementor-heading-title { letter-spacing: .04em !important; font-size: .95rem !important; }
+footer a { opacity: .92; }
+footer a:hover { opacity: 1; }
+
+/* ---------- Móvil: que la jerarquía siga leyéndose ---------- */
+@media (max-width: 767px) {
+  .e-con.e-parent { padding-block: clamp(2rem, 8vw, 3rem); }
+  .elementor-widget-heading h2.elementor-heading-title::after { margin-top: 14px; width: 52px; height: 3px; }
+  .elementor-button { padding: 14px 26px !important; width: auto; }
+}
+
+/* ---------- Correcciones de la capa 2 ---------- */
+/* El pie no es una sección de contenido: sus encabezados deben ser discretos
+   (la regla general de títulos los había agrandado). */
+footer .e-con-inner .elementor-widget-heading h2.elementor-heading-title,
+footer .e-con-inner .elementor-widget-heading h3.elementor-heading-title,
+footer .e-con .elementor-widget-heading .elementor-heading-title,
+footer .elementor-heading-title.elementor-size-default,
+.elementor-location-footer .e-con .elementor-heading-title {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  line-height: 1.4 !important;
+}
+footer .elementor-heading-title::after,
+.elementor-location-footer .elementor-heading-title::after { display: none !important; }
+
+/* El encabezado tampoco lleva acento ni escala de sección */
+header .elementor-heading-title::after { display: none !important; }
+
+/* Ritmo vertical: generoso pero sin exagerar */
+.e-con.e-parent { padding-block: clamp(2.25rem, 3.6vw, 3.25rem); }
+footer .e-con.e-parent, .elementor-location-footer .e-con.e-parent { padding-block: revert; }
+
+/* El acento solo bajo títulos de sección reales (no en tarjetas ni cajas de icono) */
+a.e-con .elementor-heading-title::after,
+.elementor-widget-icon-box .elementor-heading-title::after,
+.eael-grid-post .elementor-heading-title::after { display: none !important; }
+
+/* ---------- Hero promovido a h1: peso de portada ---------- */
+/* El encabezado principal de cada página (antes un h2 de 40 px) ahora domina
+   la primera pantalla y no lleva el acento de las secciones interiores. */
+h1.of-h1-promovido,
+.e-con.e-parent:nth-of-type(-n+2) h1.elementor-heading-title {
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.02em !important;
+}
+h1.of-h1-promovido::after { display: none !important; }
+/* en la barra de título interior el h1 mantiene su escala propia */
+.mkd-title-holder h1.of-h1-promovido { font-size: clamp(1.9rem, 3.4vw, 2.9rem) !important; }
+
+/* ============================================================
+   CAPA 3 — Secciones con tratamiento propio
+   ============================================================ */
+
+/* ---------- Proceso de compra: pasos legibles sobre la foto ---------- */
+/* Las cajas tenían fondo blanco al 49 %: el texto competía con la imagen. */
+.elementor-widget-icon-box .elementor-icon-box-wrapper,
+.e-con:has(> .elementor-widget-icon-box) {
+  border-radius: 12px;
+}
+.elementor-widget-icon-box {
+  background-color: rgb(255 255 255 / .93) !important;
+  border-radius: 12px;
+  padding: 18px 16px !important;
+  box-shadow: 0 2px 6px rgb(16 35 58 / .08), 0 10px 26px rgb(16 35 58 / .10);
+  backdrop-filter: blur(6px);
+  transition: transform var(--of-transicion), box-shadow var(--of-transicion);
+}
+.elementor-widget-icon-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgb(16 35 58 / .12), 0 18px 40px rgb(16 35 58 / .16);
+}
+.elementor-icon-box-title, .elementor-icon-box-title a {
+  color: var(--of-azul) !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: .01em !important;
+}
+.elementor-widget-icon-box .elementor-icon { color: var(--of-acento) !important; }
+
+/* ---------- Logos de clientes: presencia uniforme ---------- */
+/* Venían con tamaños y contrastes dispares; en gris se leen como un conjunto
+   y recuperan su color al pasar el cursor. */
+.elementor-widget-image-carousel .swiper-slide img {
+  filter: grayscale(1);
+  opacity: .62;
+  transition: filter var(--of-transicion), opacity var(--of-transicion);
+  max-height: 52px;
+  width: auto !important;
+  object-fit: contain;
+  margin-inline: auto;
+}
+.elementor-widget-image-carousel .swiper-slide:hover img { filter: none; opacity: 1; }
+
+/* ---------- Hero: contraste y foco ---------- */
+/* La caja del hero era muy translúcida y el texto perdía fuerza sobre la foto. */
+.e-con.e-parent:first-of-type .e-con:has(h1),
+.e-con.e-parent:nth-of-type(2) .e-con:has(h1) {
+  backdrop-filter: blur(3px) saturate(1.05);
+}
+h1.of-h1-promovido { text-shadow: 0 1px 2px rgb(16 35 58 / .08); }
+
+/* ---------- Franja final de contacto: profundidad ---------- */
+/* Última sección con botones antes del pie: el azul plano gana volumen. */
+.hfeed > .e-con.e-parent:nth-last-of-type(-n+2):has(.elementor-widget-button):has(.elementor-widget-heading) {
+  background-image: linear-gradient(135deg, #1b2b57 0%, #233465 50%, #31508f 100%) !important;
+}
+
+/* ---------- Separadores del tema: más discretos ---------- */
+.elementor-widget-divider .elementor-divider-separator { border-top-width: 2px; opacity: .5; }
+
+/* ---------- Móvil: proceso de compra en columna cómoda ---------- */
+@media (max-width: 767px) {
+  .elementor-widget-icon-box { padding: 16px 14px !important; }
+  .elementor-icon-box-title { font-size: 14px !important; }
+  .elementor-widget-image-carousel .swiper-slide img { max-height: 44px; }
+}
+
+/* ---------- Botón de WhatsApp con icono propio ---------- */
+.of-wa-ico { display: inline-block; vertical-align: -4px; margin-left: .45rem; }

@@ -1,0 +1,13 @@
+# API de ofitodo.com — Cloudflare Workers (Hono). Rutas /api/* y /admin/* del mismo dominio.
+# El deploy real requiere la cuenta/zona de Cloudflare de Ofitodo (pendiente: token de Cristian).
+name = "ofitodo-api"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+
+# Producción (se activa cuando haya acceso a la zona):
+# routes = [
+#   { pattern = "ofitodo.com/api/*", zone_name = "ofitodo.com" },
+#   { pattern = "ofitodo.com/admin*", zone_name = "ofitodo.com" }
+# ]
+
+# Secrets (wrangler secret put): DATABASE_URL, SMTP_HOST, SMTP_USER, SMTP_PASS, SESSION_SECRET
