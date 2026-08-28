@@ -13,6 +13,7 @@
   "htmlRef": "mobiliario-de-oficina-en-aguascalientes.html",
   "conserva": 1,
   "imagenes": 3,
+  "propio": true,
   "reconstruible": true,
   "perdidas": []
  },
@@ -30,6 +31,7 @@
   "htmlRef": "proveedor-confiable-mobiliario-oficina.html",
   "conserva": 0.857,
   "imagenes": 3,
+  "propio": true,
   "reconstruible": false,
   "perdidas": [
    "ofitodo",
@@ -58,23 +60,11 @@
    "description": "Descubre cómo elegir mobiliario escolar ergonómico y duradero. Conoce nuestras soluciones para aulas, bibliotecas y laboratorios. Cotiza con OFITODO."
   },
   "htmlRef": "mobiliario-escolar-guia-espacios-educativos.html",
-  "conserva": 0.882,
+  "conserva": 1,
   "imagenes": 7,
-  "reconstruible": false,
-  "perdidas": [
-   "galería",
-   "proyectos",
-   "algunas",
-   "recomendadas",
-   "pupitres",
-   "individuales",
-   "infantil",
-   "bibliotecas",
-   "laboratorio",
-   "oficina",
-   "butacas",
-   "auditorio"
-  ]
+  "propio": true,
+  "reconstruible": true,
+  "perdidas": []
  },
  {
   "slug": "/estaciones-de-trabajo-para-oficina/",
@@ -90,6 +80,7 @@
   "htmlRef": "estaciones-de-trabajo-para-oficina.html",
   "conserva": 0,
   "imagenes": 0,
+  "propio": false,
   "reconstruible": false
  },
  {
@@ -104,13 +95,11 @@
    "description": "Un consultorio médico bien diseñado mejora la atención, la comodidad y la confianza del paciente. En OFITODO y ESSENTO creamos espacios médicos a medida."
   },
   "htmlRef": "consultorios-medicos-a-medida.html",
-  "conserva": 0.975,
+  "conserva": 1,
   "imagenes": 3,
+  "propio": true,
   "reconstruible": true,
-  "perdidas": [
-   "galería",
-   "imágenes"
-  ]
+  "perdidas": []
  },
  {
   "slug": "/sala-de-juntas/",
@@ -124,13 +113,11 @@
    "description": "Una sala de juntas bien diseñada mejora la comunicación, la productividad y la imagen profesional de tu empresa. En OFITODO creamos mobiliario a medida para cada espacio."
   },
   "htmlRef": "sala-de-juntas.html",
-  "conserva": 0.976,
+  "conserva": 1,
   "imagenes": 3,
+  "propio": true,
   "reconstruible": true,
-  "perdidas": [
-   "imágenes",
-   "del"
-  ]
+  "perdidas": []
  },
  {
   "slug": "/bancas-personalizadas-wwl/",
@@ -144,14 +131,11 @@
    "description": "Conoce el proyecto de bancas personalizadas para WWL desarrollado por OFITODO con estructura metálica, plastimadera y distribución en diferentes estados de México."
   },
   "htmlRef": "bancas-personalizadas-wwl.html",
-  "conserva": 0.957,
+  "conserva": 1,
   "imagenes": 3,
+  "propio": true,
   "reconstruible": true,
-  "perdidas": [
-   "galería",
-   "imágenes",
-   "del"
-  ]
+  "perdidas": []
  },
  {
   "slug": "/stand-madrid-fnsm-2026/",
@@ -167,6 +151,7 @@
   "htmlRef": "stand-madrid-fnsm-2026.html",
   "conserva": 0,
   "imagenes": 0,
+  "propio": false,
   "reconstruible": false
  },
  {
@@ -182,7 +167,8 @@
   },
   "htmlRef": "mobiliario-para-restaurantes-y-bares-world-cup.html",
   "conserva": 0.997,
-  "imagenes": 6,
+  "imagenes": 5,
+  "propio": true,
   "reconstruible": true,
   "perdidas": [
    "solicitar"
@@ -202,6 +188,7 @@
   "htmlRef": "manuel-santos.html",
   "conserva": 1,
   "imagenes": 2,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -219,6 +206,7 @@
   "htmlRef": "proyecto-a-empacadora-san-francisco.html",
   "conserva": 1,
   "imagenes": 10,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -236,6 +224,7 @@
   "htmlRef": "proyecto-de-comedores-empresariales.html",
   "conserva": 1,
   "imagenes": 10,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -253,6 +242,7 @@
   "htmlRef": "proyecto-ddf-mexico-recepciones.html",
   "conserva": 1,
   "imagenes": 9,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -270,6 +260,7 @@
   "htmlRef": "proyecto-mobiliario-escolar.html",
   "conserva": 1,
   "imagenes": 12,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -287,6 +278,7 @@
   "htmlRef": "proyecto-empresa-japonesa-zapatero.html",
   "conserva": 1,
   "imagenes": 10,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -304,6 +296,7 @@
   "htmlRef": "proyecto-farmacias-del-ahorro.html",
   "conserva": 1,
   "imagenes": 12,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -321,6 +314,7 @@
   "htmlRef": "proyecto-gabinetes-moviles-metalicos-y-lockers.html",
   "conserva": 1,
   "imagenes": 10,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -338,6 +332,7 @@
   "htmlRef": "proyecto-nissan-rfmn.html",
   "conserva": 1,
   "imagenes": 9,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -355,6 +350,7 @@
   "htmlRef": "proyecto-qmc-aguascalientes.html",
   "conserva": 1,
   "imagenes": 13,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  },
@@ -372,6 +368,7 @@
   "htmlRef": "proyecto-adient.html",
   "conserva": 1,
   "imagenes": 15,
+  "propio": false,
   "reconstruible": true,
   "perdidas": []
  }

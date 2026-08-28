@@ -140,8 +140,8 @@
 .ficha__resumen { margin: 1.1rem 0 0; color: var(--texto); line-height: 1.65; }
 .ficha__precio {
   display: flex; flex-direction: column; gap: .15rem; margin-top: 1.6rem;
-  padding: 1.05rem 1.25rem; background: var(--fondo-2);
-  border: 1px solid var(--borde); border-left: 3px solid var(--acento); border-radius: var(--r-sm);
+  padding: 1.1rem 1.35rem; background: var(--fondo-2);
+  border: 1px solid var(--borde); border-radius: var(--r);
 }
 .ficha__precio strong { font-size: 1.4rem; color: var(--tinta); letter-spacing: -.01em; }
 .ficha__precio span { font-size: var(--t-xs); color: var(--tenue); }
@@ -260,13 +260,25 @@
 .rejilla--tres { grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
 .rejilla--cuatro { grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
 
+/* Panel limpio: sin franja de color arriba. La jerarquía la da un rótulo
+   discreto sobre el título y una sombra suave que responde al puntero. */
 .panel {
-  background: var(--blanco); border: 1px solid var(--borde);
-  border-top: 3px solid var(--acento); border-radius: var(--r);
-  padding: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+  position: relative; background: var(--blanco);
+  border: 1px solid var(--borde); border-radius: var(--r-lg);
+  padding: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+  box-shadow: 0 1px 2px rgb(16 32 58 / .04);
+  transition: box-shadow .28s var(--ease), transform .28s var(--ease), border-color .28s var(--ease);
 }
-.panel h2 { margin: 0 0 .8rem; font-size: 1.3rem; color: var(--tinta); letter-spacing: -.01em; }
-.panel p { margin: 0; color: var(--texto); line-height: 1.7; }
+.panel:hover { box-shadow: 0 12px 32px -12px rgb(16 32 58 / .18); transform: translateY(-2px); border-color: #d8e0ea; }
+.panel h2 {
+  margin: 0 0 .9rem; font-size: 1.35rem; color: var(--tinta); letter-spacing: -.015em;
+  display: flex; align-items: center; gap: .7rem;
+}
+.panel h2::before {
+  content: ""; width: .5rem; height: .5rem; border-radius: 50%;
+  background: var(--acento); flex: none;
+}
+.panel p { margin: 0; color: var(--texto); line-height: 1.75; }
 
 /* --- Página de contacto -------------------------------------------------- */
 .contacto__grid {
@@ -343,3 +355,54 @@
   width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
   border-radius: var(--r-sm); border: 1px solid var(--borde);
 }
+
+/* --- Visor de imágenes a pantalla completa (lightbox) --------------------
+   Propio, sin librerías: usa <dialog>, cierra con Esc o clic fuera y
+   permite avanzar con las flechas del teclado.                            */
+.visor { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100%; height: 100%; }
+.visor::backdrop { background: rgb(8 18 35 / .92); backdrop-filter: blur(3px); }
+.visor__caja { position: relative; width: 100%; height: 100%; display: grid; place-items: center; padding: clamp(1rem, 4vw, 3rem); }
+.visor__img {
+  max-width: 100%; max-height: 100%; object-fit: contain;
+  border-radius: var(--r-sm); box-shadow: 0 24px 60px -20px rgb(0 0 0 / .6);
+  animation: visor-entra .22s cubic-bezier(.2,.8,.3,1);
+}
+@keyframes visor-entra { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: none; } }
+.visor__btn {
+  position: absolute; display: grid; place-items: center;
+  width: 2.9rem; height: 2.9rem; border-radius: 50%; cursor: pointer;
+  background: rgb(255 255 255 / .12); color: #fff; border: 1px solid rgb(255 255 255 / .22);
+  transition: background .18s var(--ease), transform .18s var(--ease);
+}
+.visor__btn:hover { background: rgb(255 255 255 / .22); transform: scale(1.06); }
+.visor__btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.visor__btn svg { width: 1.35rem; height: 1.35rem; }
+.visor__cerrar { top: clamp(.75rem, 2vw, 1.5rem); right: clamp(.75rem, 2vw, 1.5rem); }
+.visor__ant { left: clamp(.5rem, 2vw, 1.5rem); top: 50%; transform: translateY(-50%); }
+.visor__sig { right: clamp(.5rem, 2vw, 1.5rem); top: 50%; transform: translateY(-50%); }
+.visor__ant:hover, .visor__sig:hover { transform: translateY(-50%) scale(1.06); }
+.visor__pos {
+  position: absolute; bottom: clamp(.75rem, 2vw, 1.5rem); left: 50%; transform: translateX(-50%);
+  color: rgb(255 255 255 / .75); font-size: var(--t-xs); font-weight: 600; letter-spacing: .06em;
+  background: rgb(0 0 0 / .35); padding: .35rem .8rem; border-radius: var(--r-full);
+}
+.visor[hidden] { display: none; }
+/* Señal de que la imagen se puede ampliar */
+.galeria__marco { cursor: zoom-in; }
+.galeria-nota img { cursor: zoom-in; }
+@media (max-width: 560px) { .visor__ant, .visor__sig { display: none; } }
+
+/* --- Artículo con maquetación propia -------------------------------------
+   El CSS del autor va acotado a este contenedor (scripts/css-acotar.mjs), así
+   que no puede afectar al encabezado, al pie ni al resto del sitio. Aquí solo
+   se aísla del entorno y se le da un ancho de página completo.             */
+.articulo-propio {
+  display: block;
+  /* corta cualquier herencia tipográfica del sitio: manda el CSS del autor */
+  font-size: 16px; line-height: normal; color: var(--texto);
+  contain: layout style;
+}
+.articulo-propio img, .articulo-propio video, .articulo-propio iframe { max-width: 100%; }
+.articulo-propio table { max-width: 100%; }
+/* La página del artículo propio no necesita el margen superior de sección */
+.pag-nota--propia main > .articulo-propio { margin: 0; }

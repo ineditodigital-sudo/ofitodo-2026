@@ -6,6 +6,8 @@ export const HERO = {
   ctaPrimario: { texto: 'Cotizar ahora', href: 'https://wa.me/524493419403' },
   ctaSecundario: { texto: 'Explorar catálogo', href: '/descargar-catalogo/' },
   imagen: 'https://ofitodo.com/wp-content/uploads/2026/01/studio-arrangement-work-1-1536x838.webp',
+  // Vídeo de fondo del hero original (Elementor lo servía en bucle, sin sonido)
+  video: 'https://ofitodo.com/wp-content/uploads/2026/01/Generacion-De-Video-De-Oficina-En-Paneo.mp4',
 };
 
 export const INTRO = {

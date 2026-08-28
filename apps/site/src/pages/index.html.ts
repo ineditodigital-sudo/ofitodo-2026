@@ -34,6 +34,10 @@ export const GET: APIRoute = () => {
   <section class="hero">
     <div class="hero__media">
       <img src="${esc(imagenVariante(HERO.imagen, 1600))}" alt="" fetchpriority="high" decoding="async" width="1536" height="838">
+      ${HERO.video ? `<video class="hero__video" autoplay muted loop playsinline preload="metadata"
+        poster="${esc(imagenVariante(HERO.imagen, 1600))}" aria-hidden="true" tabindex="-1">
+        <source src="${esc(HERO.video)}" type="video/mp4">
+      </video>` : ''}
     </div>
     <div class="contenedor hero__inner">
       <span class="etiqueta">${esc(HERO.entrada)}</span>

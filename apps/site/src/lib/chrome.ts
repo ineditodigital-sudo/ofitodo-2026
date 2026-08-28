@@ -1,41 +1,55 @@
 // Encabezado y pie propios: HTML limpio, sin Elementor ni jQuery.
 // Resuelve el logo cortado (se sirve a su proporción real) y el menú móvil.
-import { sitio } from './contenido.ts';
+import { sitio, categorias } from './contenido.ts';
 
 const LOGO = 'https://ofitodo.com/wp-content/uploads/2025/12/logo-azul-3.webp';
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-export const MENU: { t: string; h: string; sub?: { t: string; h: string }[] }[] = [
-  { t: 'Inicio', h: '/' },
-  { t: 'Nosotros', h: '/nosotros/' },
-  {
-    t: 'Productos', h: '/productos/', sub: [
-      { t: 'Escritorios', h: '/categoria-producto/escritorios/' },
-      { t: 'Sillas y sillones de oficina', h: '/categoria-producto/sillas/' },
-      { t: 'Comedores y restaurantes', h: '/categoria-producto/restaurantes/' },
-      { t: 'Exhibidores', h: '/categoria-producto/exhibidores/' },
-      { t: 'Estaciones de trabajo', h: '/categoria-producto/estaciones-de-trabajo/' },
-      { t: 'Libreros y archiveros', h: '/categoria-producto/libreros-y-archiveros/' },
-      { t: 'Lockers y vestidores', h: '/categoria-producto/lockers-y-vestidores/' },
-      { t: 'Mesas de juntas', h: '/categoria-producto/mesas-de-juntas/' },
-      { t: 'Paneles acústicos', h: '/categoria-producto/paneles-acusticos/' },
-      { t: 'Salas de espera y recepción', h: '/categoria-producto/recepcion/' },
-    ],
-  },
-  { t: 'Tienda', h: '/tienda/', sub: [{ t: 'Mobiliario', h: '/mobiliario/' }, { t: 'MRO', h: '/categoria-producto/mro/' }] },
-  {
-    t: 'Sectores', h: '/sectores/', sub: [
-      { t: 'Muebles para Oficina', h: '/muebles-para-oficina/' },
-      { t: 'Muebles para Bancos', h: '/muebles-para-bancos/' },
-      { t: 'Muebles para Escuelas', h: '/muebles-para-escuelas/' },
-      { t: 'Muebles para Consultorios', h: '/muebles-para-consultorios/' },
-      { t: 'Muebles para Hospital', h: '/muebles-para-hospital/' },
-      { t: 'Muebles para Industria', h: '/muebles-para-industria/' },
-      { t: 'Muebles para Restaurante', h: '/muebles-para-restaurante/' },
-    ],
-  },
-  { t: 'Blog', h: '/blog/' },
-];
+// Ruta real de una categoría (algunas están anidadas: sillas vive bajo restaurantes)
+function rutaCat(slug: string): string | null {
+  const c = categorias().find((x) => x.slug === slug);
+  return c && c.tieneReferencia ? `/categoria-producto/${c.ruta ?? c.slug}/` : null;
+}
+function sub(pares: [string, string][]): { t: string; h: string }[] {
+  return pares.map(([t, slug]) => ({ t, h: rutaCat(slug) })).filter((x): x is { t: string; h: string } => !!x.h);
+}
+
+let _MENU: { t: string; h: string; sub?: { t: string; h: string }[] }[] | null = null;
+export function menu(): { t: string; h: string; sub?: { t: string; h: string }[] }[] {
+  if (_MENU) return _MENU;
+  _MENU = [
+    { t: 'Inicio', h: '/' },
+    { t: 'Nosotros', h: '/nosotros/' },
+    {
+      t: 'Productos', h: '/productos/', sub: sub([
+        ['Escritorios', 'escritorios'],
+        ['Sillas y sillones de oficina', 'sillas'],
+        ['Comedores y restaurantes', 'restaurantes'],
+        ['Exhibidores', 'exhibidores'],
+        ['Estaciones de trabajo', 'estaciones-de-trabajo'],
+        ['Libreros y archiveros', 'libreros-y-archiveros'],
+        ['Lockers y vestidores', 'lockers-y-vestidores'],
+        ['Mesas de juntas', 'mesas-de-juntas'],
+        ['Paneles acústicos', 'paneles-acusticos'],
+        ['Salas de espera y recepción', 'recepcion'],
+      ]),
+    },
+    { t: 'Tienda', h: '/tienda/', sub: sub([['Mobiliario', 'mobiliario'], ['MRO', 'mro']]) },
+    {
+      t: 'Sectores', h: '/sectores/', sub: [
+        { t: 'Muebles para Oficina', h: '/muebles-para-oficina/' },
+        { t: 'Muebles para Bancos', h: '/muebles-para-bancos/' },
+        { t: 'Muebles para Escuelas', h: '/muebles-para-escuelas/' },
+        { t: 'Muebles para Consultorios', h: '/muebles-para-consultorios/' },
+        { t: 'Muebles para Hospital', h: '/muebles-para-hospital/' },
+        { t: 'Muebles para Industria', h: '/muebles-para-industria/' },
+        { t: 'Muebles para Restaurante', h: '/muebles-para-restaurante/' },
+      ],
+    },
+    { t: 'Blog', h: '/blog/' },
+  ];
+  return _MENU;
+}
 
 const ICO_BUSCAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>';
 const ICO_MENU = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
@@ -43,7 +57,7 @@ const ICO_CERRAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 const CARET = '<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
 
 export function encabezado(actual = '/'): string {
-  const item = (m: typeof MENU[number]) => {
+  const item = (m: ReturnType<typeof menu>[number]) => {
     const activo = m.h === actual ? ' aria-current="page"' : '';
     if (!m.sub) return `<li><a href="${m.h}"${activo}>${esc(m.t)}</a></li>`;
     return `<li class="tiene-sub">
@@ -58,7 +72,7 @@ export function encabezado(actual = '/'): string {
       <img src="${LOGO}" alt="Ofitodo" width="170" height="35" fetchpriority="high" decoding="async">
     </a>
     <nav class="cab__nav" aria-label="Menú principal">
-      <ul class="menu">${MENU.map(item).join('')}</ul>
+      <ul class="menu">${menu().map(item).join('')}</ul>
     </nav>
     <div class="cab__acciones">
       <form class="buscador" role="search" action="/tienda/" method="get">
@@ -77,7 +91,7 @@ export function encabezado(actual = '/'): string {
     </div>
     <nav aria-label="Menú móvil">
       <ul class="movil__menu">
-        ${MENU.map((m) => m.sub
+        ${menu().map((m) => m.sub
           ? `<li><details><summary>${esc(m.t)} ${CARET}</summary><ul>${m.sub.map((s) => `<li><a href="${s.h}">${esc(s.t)}</a></li>`).join('')}</ul></details></li>`
           : `<li><a href="${m.h}">${esc(m.t)}</a></li>`).join('')}
       </ul>
@@ -85,6 +99,23 @@ export function encabezado(actual = '/'): string {
     <a class="btn btn--primario" href="/contactanos/">Contacto</a>
   </div>
 </header>`;
+}
+
+const ICO_X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+const ICO_IZQ = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
+const ICO_DER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+
+// Visor de imágenes a pantalla completa (se activa solo si la página tiene galería)
+export function visor(): string {
+  return `<dialog class="visor" id="visor" aria-label="Imagen ampliada">
+  <div class="visor__caja">
+    <img class="visor__img" id="visor-img" alt="" hidden>
+    <button class="visor__btn visor__cerrar" type="button" data-visor="cerrar" aria-label="Cerrar">${ICO_X}</button>
+    <button class="visor__btn visor__ant" type="button" data-visor="ant" aria-label="Imagen anterior">${ICO_IZQ}</button>
+    <button class="visor__btn visor__sig" type="button" data-visor="sig" aria-label="Imagen siguiente">${ICO_DER}</button>
+    <p class="visor__pos" id="visor-pos"></p>
+  </div>
+</dialog>`;
 }
 
 export function pie(): string {
@@ -105,11 +136,11 @@ export function pie(): string {
     </div>
     <div>
       <h3>Mapa del sitio</h3>
-      <ul class="pie__lista">${MENU.map((m) => `<li><a href="${m.h}">${esc(m.t)}</a></li>`).join('')}</ul>
+      <ul class="pie__lista">${menu().map((m) => `<li><a href="${m.h}">${esc(m.t)}</a></li>`).join('')}</ul>
     </div>
     <div>
       <h3>Productos</h3>
-      <ul class="pie__lista">${(MENU[2].sub ?? []).slice(0, 6).map((x) => `<li><a href="${x.h}">${esc(x.t)}</a></li>`).join('')}</ul>
+      <ul class="pie__lista">${(menu()[2].sub ?? []).slice(0, 6).map((x) => `<li><a href="${x.h}">${esc(x.t)}</a></li>`).join('')}</ul>
     </div>
     <div>
       <h3>Contacto</h3>
@@ -138,6 +169,72 @@ export const SCRIPT_CHROME = `
   cerrar&&cerrar.addEventListener('click',function(){abrir(false)});
   mov&&mov.addEventListener('click',function(e){ if(e.target.tagName==='A') abrir(false); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&mov&&!mov.hidden) abrir(false); });
+  // El vídeo del hero solo se muestra cuando ya puede reproducirse
+  var v=document.querySelector('.hero__video');
+  if(v){
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){ v.remove(); }
+    else {
+      var quitar=function(){ if(v&&v.parentNode) v.remove(); };
+      v.addEventListener('canplay',function(){ v.classList.add('listo'); },{once:true});
+      v.addEventListener('error',quitar,{once:true});
+      var src=v.querySelector('source'); if(src) src.addEventListener('error',quitar,{once:true});
+      var pr=v.play(); if(pr&&pr.catch) pr.catch(quitar);
+      // Si a los 6 s no hay imagen decodificada (códec ausente, red lenta),
+      // se retira y la foto de portada se queda: nunca un hueco negro.
+      setTimeout(function(){ if(v&&v.parentNode&&v.readyState<2) quitar(); },6000);
+    }
+  }
+  // --- Visor de imágenes ---------------------------------------------------
+  (function(){
+    var dlg=document.getElementById('visor'); if(!dlg||!dlg.showModal) return;
+    var img=document.getElementById('visor-img'), pos=document.getElementById('visor-pos');
+    // Fuentes de imágenes ampliables: galería de producto y galerías de artículo
+    var lista=[], indice=0;
+    function recoger(){
+      var minis=[].slice.call(document.querySelectorAll('.galeria__mini'));
+      if(minis.length) return minis.map(function(b){ return {src:b.dataset.grande, alt:b.querySelector('img')?b.querySelector('img').alt:''}; });
+      var principal=document.getElementById('gal-principal');
+      if(principal) return [{src:principal.src, alt:principal.alt}];
+      return [];
+    }
+    function abrir(l,i){ lista=l; indice=i; pintar(); if(!dlg.open) dlg.showModal(); }
+    function pintar(){
+      if(!lista.length) return;
+      indice=(indice+lista.length)%lista.length;
+      img.src=lista[indice].src; img.alt=lista[indice].alt||''; img.hidden=false;
+      pos.textContent=lista.length>1? (indice+1)+' / '+lista.length : '';
+      var multi=lista.length>1;
+      dlg.querySelector('.visor__ant').hidden=!multi;
+      dlg.querySelector('.visor__sig').hidden=!multi;
+    }
+    // Ficha de producto
+    var marco=document.querySelector('.galeria__marco');
+    if(marco) marco.addEventListener('click',function(){
+      var l=recoger(); if(!l.length) return;
+      var actual=document.getElementById('gal-principal');
+      var i=Math.max(0,l.findIndex(function(x){return x.src===(actual&&actual.src);}));
+      abrir(l,i);
+    });
+    // Galerías dentro de artículos
+    document.querySelectorAll('.galeria-nota').forEach(function(g){
+      var fotos=[].slice.call(g.querySelectorAll('img')).map(function(im){ return {src:im.currentSrc||im.src, alt:im.alt}; });
+      g.querySelectorAll('img').forEach(function(im,i){
+        im.style.cursor='zoom-in';
+        im.addEventListener('click',function(){ abrir(fotos,i); });
+      });
+    });
+    dlg.addEventListener('click',function(e){
+      var b=e.target.closest('[data-visor]');
+      if(b){ var a=b.dataset.visor; if(a==='cerrar') dlg.close(); else { indice+=(a==='sig'?1:-1); pintar(); } return; }
+      if(e.target===dlg||e.target.classList.contains('visor__caja')) dlg.close();
+    });
+    document.addEventListener('keydown',function(e){
+      if(!dlg.open) return;
+      if(e.key==='ArrowRight'){ indice++; pintar(); }
+      else if(e.key==='ArrowLeft'){ indice--; pintar(); }
+    });
+  })();
+
   var y=0; addEventListener('scroll',function(){ var s=scrollY; if(cab){ cab.classList.toggle('cab--fija', s>10); } y=s; },{passive:true});
 })();`;
 
@@ -203,6 +300,7 @@ ${d.jsonLd ? `<script type="application/ld+json">${d.jsonLd}</script>` : ''}
 <body class="ofitodo ${d.clase ?? ''}">
 ${encabezado(d.activo ?? d.ruta)}
 ${d.cuerpo}
+${visor()}
 ${pie()}
 <script>
 ${SCRIPT_CHROME}

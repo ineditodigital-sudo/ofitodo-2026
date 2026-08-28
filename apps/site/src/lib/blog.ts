@@ -15,7 +15,8 @@ export interface Entrada {
 }
 
 export const entradas = (): Entrada[] => leer('blog.json') ?? [];
-export const cuerpos = (): Record<string, string> => leer('blog-cuerpos.json') ?? {};
+export interface Cuerpo { html: string; css: string; propio: boolean }
+export const cuerpos = (): Record<string, Cuerpo> => leer('blog-cuerpos.json') ?? {};
 
 const esc = (s: unknown) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const WHATSAPP = '5214493419403';
@@ -96,33 +97,40 @@ ${migas([{ t: 'Blog' }])}
 }
 
 /* --- Artículo ------------------------------------------------------------- */
-export function paginaEntrada(e: Entrada, html: string): string {
+export function paginaEntrada(e: Entrada, c: Cuerpo): string {
   const lista = entradas();
   const otras = lista.filter((x) => x.slug !== e.slug).slice(0, 3);
   const portada = imagenVariante(e.imagen, 1600);
 
+  // Los artículos con maquetación propia se muestran tal cual los diseñó su
+  // autor (su CSS va acotado al contenedor). Los demás los viste el sitio.
+  const articulo = c.propio
+    ? `<article class="articulo-propio">
+        ${c.css ? `<style>${c.css}</style>` : ''}
+        ${c.html}
+      </article>`
+    : `<article class="nota-completa">
+        <header class="nota-completa__cab">
+          <div class="contenedor contenedor--texto">
+            <span class="etiqueta">Blog</span>
+            <h1>${esc(e.titulo)}</h1>
+            ${e.fecha ? `<time class="nota__fecha" datetime="${esc(e.fecha)}">${fechaLarga(e.fecha)}</time>` : ''}
+          </div>
+        </header>
+        ${portada ? `<div class="contenedor nota-completa__portada">
+          <img src="${esc(portada)}" alt="" fetchpriority="high" decoding="async">
+        </div>` : ''}
+        <div class="seccion">
+          <div class="contenedor contenedor--texto">
+            <div class="prosa">${c.html}</div>
+          </div>
+        </div>
+      </article>`;
+
   const cuerpo = `
 ${migas([{ t: 'Blog', h: '/blog/' }, { t: e.titulo }])}
 <main id="contenido">
-  <article class="nota-completa">
-    <header class="nota-completa__cab">
-      <div class="contenedor contenedor--texto">
-        <span class="etiqueta">Blog</span>
-        <h1>${esc(e.titulo)}</h1>
-        ${e.fecha ? `<time class="nota__fecha" datetime="${esc(e.fecha)}">${fechaLarga(e.fecha)}</time>` : ''}
-      </div>
-    </header>
-
-    ${portada ? `<div class="contenedor nota-completa__portada">
-      <img src="${esc(portada)}" alt="" fetchpriority="high" decoding="async">
-    </div>` : ''}
-
-    <div class="seccion">
-      <div class="contenedor contenedor--texto">
-        <div class="prosa">${html}</div>
-      </div>
-    </div>
-  </article>
+  ${articulo}
 
   ${otras.length ? `<section class="seccion seccion--alt">
     <div class="contenedor">
@@ -147,7 +155,7 @@ ${migas([{ t: 'Blog', h: '/blog/' }, { t: e.titulo }])}
     titulo: e.seo?.title || `${e.titulo} | Ofitodo`,
     descripcion: e.seo?.description || e.resumen || `${e.titulo}. Proyecto de mobiliario para oficina realizado por Ofitodo.`,
     ruta: e.slug, activo: '/blog/', ogImagen: e.imagen, tipoOg: 'article',
-    clase: 'pag-nota', cuerpo,
+    clase: c.propio ? 'pag-nota pag-nota--propia' : 'pag-nota', cuerpo,
     jsonLd: JSON.stringify({
       '@context': 'https://schema.org', '@type': 'BlogPosting',
       headline: e.titulo, url: `https://ofitodo.com${e.slug}`,

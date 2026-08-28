@@ -1,9 +1,37 @@
 {
   "comentario": "Fuente única de redirecciones. Genera .htaccess en build. El panel y redirect:add escriben aquí.",
   "redirects": [
-    { "de": "/inicio/", "a": "/", "codigo": 301 },
-    { "de": "/wp-login.php", "a": "/admin/", "codigo": 301 },
-    { "de": "/wp-admin/", "a": "/admin/", "codigo": 301 }
+    {
+      "de": "/inicio/",
+      "a": "/",
+      "codigo": 301
+    },
+    {
+      "de": "/wp-login.php",
+      "a": "/admin/",
+      "codigo": 301
+    },
+    {
+      "de": "/wp-admin/",
+      "a": "/admin/",
+      "codigo": 301
+    },
+    {
+      "de": "/mobiliario/",
+      "a": "/categoria-producto/mobiliario/",
+      "codigo": 301,
+      "motivo": "enlace roto heredado del original (nunca respondió 200)"
+    },
+    {
+      "de": "/categoria-producto/sillas/",
+      "a": "/categoria-producto/restaurantes/sillas-restaurantes/sillas/",
+      "codigo": 301,
+      "motivo": "enlace roto heredado del original (la categoría vive anidada)"
+    }
   ],
-  "gone410": ["/wp-json/*", "/xmlrpc.php", "/wp-cron.php"]
+  "gone410": [
+    "/wp-json/*",
+    "/xmlrpc.php",
+    "/wp-cron.php"
+  ]
 }

@@ -113,7 +113,26 @@ ul { margin: 0; padding: 0; list-style: none; }
 .rejilla { display: grid; gap: clamp(1rem, 1.6vw, 1.5rem); }
 .rejilla--4 { grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); }
 .rejilla--3 { grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); }
-.rejilla--sectores { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.rejilla--sectores {
+  /* 7 sectores repartidos sin huérfanos: 3 arriba (grandes) + 4 abajo.
+     12 columnas → 3x4 y 4x3. Debajo de 1080px pasa a 2 por fila, y a 1 en móvil. */
+  grid-template-columns: repeat(12, 1fr);
+}
+.rejilla--sectores > * { grid-column: span 3; }
+.rejilla--sectores > :nth-child(-n+3) { grid-column: span 4; }
+.rejilla--sectores > :nth-child(-n+3) .sector__nombre { font-size: 1.15rem; }
+@media (max-width: 1080px) {
+  .rejilla--sectores { grid-template-columns: repeat(6, 1fr); }
+  .rejilla--sectores > *, .rejilla--sectores > :nth-child(-n+3) { grid-column: span 3; }
+  /* 7 impar: el último ocupa la fila completa para no quedar suelto */
+  .rejilla--sectores > :last-child { grid-column: span 6; }
+  .rejilla--sectores > :last-child.sector { aspect-ratio: 16 / 7; }
+}
+@media (max-width: 560px) {
+  .rejilla--sectores { grid-template-columns: 1fr; }
+  .rejilla--sectores > *, .rejilla--sectores > :nth-child(-n+3), .rejilla--sectores > :last-child { grid-column: 1 / -1; }
+  .rejilla--sectores > .sector { aspect-ratio: 4 / 3; }
+}
 
 .tarjeta {
   display: flex; flex-direction: column; background: var(--blanco);
@@ -132,7 +151,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .tarjeta:hover .tarjeta__ir svg { transform: translateX(4px); }
 
 /* --- Sectores --- */
-.sector { position: relative; display: block; border-radius: var(--r); overflow: hidden; aspect-ratio: 3 / 4; box-shadow: var(--s-1); }
+.sector { position: relative; display: block; border-radius: var(--r); overflow: hidden; aspect-ratio: 4 / 3; box-shadow: var(--s-1); }
+.rejilla--sectores > :nth-child(-n+3).sector { aspect-ratio: 5 / 4; }
 .sector img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.4,0,.2,1); }
 .sector::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(11 26 51 / .88) 8%, rgb(11 26 51 / .25) 55%, transparent 80%); }
 .sector:hover img { transform: scale(1.07); }
@@ -152,12 +172,46 @@ ul { margin: 0; padding: 0; list-style: none; }
 .lista-check svg { flex: none; width: 22px; height: 22px; color: var(--acento); margin-top: 1px; }
 
 /* --- Proceso --- */
-.pasos { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: clamp(1rem, 1.8vw, 1.5rem); }
-.paso { background: var(--blanco); border: 1px solid var(--linea); border-radius: var(--r); padding: 1.6rem 1.5rem; transition: transform var(--ease), box-shadow var(--ease); }
-.paso:hover { transform: translateY(-4px); box-shadow: var(--s-2); }
-.paso__n { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--r-sm); background: var(--fondo-2); color: var(--acento); font-weight: 800; font-size: .95rem; margin-bottom: 1rem; }
+/* Proceso de compra: línea de tiempo que se dibuja sola al hacer scroll.
+   Todo es CSS (una transformación y una opacidad por tarjeta), sin JS. */
+.pasos {
+  position: relative; display: grid; gap: clamp(1rem, 1.8vw, 1.5rem);
+  grid-template-columns: repeat(auto-fill, minmax(min(15.5rem, 100%), 1fr));
+}
+.paso {
+  position: relative; background: var(--blanco); border: 1px solid var(--linea);
+  border-radius: var(--r); padding: 1.75rem 1.5rem 1.6rem;
+  transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease);
+}
+.paso::before {
+  /* hilo que conecta un paso con el siguiente */
+  content: ""; position: absolute; top: 2.35rem; left: 100%; width: clamp(1rem, 1.8vw, 1.5rem);
+  height: 2px; background: linear-gradient(90deg, var(--acento-claro), transparent);
+}
+.paso:last-child::before { display: none; }
+.paso:hover { transform: translateY(-5px); box-shadow: var(--s-2); border-color: #d3dbe6; }
+.paso__n {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--fondo-2); color: var(--acento);
+  font-weight: 800; font-size: .95rem; margin-bottom: 1rem;
+  box-shadow: 0 0 0 0 var(--acento-claro);
+  transition: background .3s var(--ease), color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.paso:hover .paso__n { background: var(--acento); color: #fff; box-shadow: 0 0 0 6px var(--acento-claro); }
 .paso h3 { font-size: 1.0625rem; margin-bottom: .4rem; }
 .paso p { font-size: var(--t-sm); color: var(--suave); }
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .paso { animation: paso-entra linear both; animation-timeline: view(); animation-range: entry 5% entry 60%; }
+    .paso::before { animation: hilo-crece linear both; animation-timeline: view(); animation-range: entry 15% entry 70%; }
+  }
+}
+@keyframes paso-entra { from { transform: translateY(26px) scale(.985); } to { transform: none; } }
+@keyframes hilo-crece { from { transform: scaleX(0); } to { transform: none; } }
+.paso::before { transform-origin: left center; }
+@media (max-width: 560px) { .paso::before { display: none; } }
 
 /* --- Clientes --- */
 .clientes { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: clamp(1.75rem, 5vw, 4rem); }
@@ -285,3 +339,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   .pie__grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) { .pie__grid { grid-template-columns: 1fr; } }
+
+/* --- Vídeo de fondo del hero --------------------------------------------
+   La imagen pinta al instante y el vídeo aparece encima cuando puede
+   reproducirse. Si el visitante prefiere menos movimiento, no se muestra.  */
+.hero__video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; opacity: 0; transition: opacity .8s ease;
+}
+.hero__video.listo { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .hero__video { display: none; } }
