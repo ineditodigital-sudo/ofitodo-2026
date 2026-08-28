@@ -15,6 +15,11 @@ jobs:
       # Sin npm workspaces (ver CLAUDE.md): cada app instala por separado
       - run: npm install --no-audit --no-fund
       - run: npm install --no-audit --no-fund --prefix scripts/.deps
+      # packages/schema aporta los esquemas zod que usa content:validate.
+      # Se instala desde dentro de la carpeta: con --prefix, npm intenta
+      # enlazar el paquete raíz dentro de su node_modules.
+      - run: npm install --no-audit --no-fund
+        working-directory: packages/schema
       - run: npm install --no-audit --no-fund --prefix apps/site
       - run: npm install --no-audit --no-fund --prefix apps/admin
       - run: npm install --no-audit --no-fund --prefix apps/api
