@@ -39,7 +39,7 @@ FTP_PASS=<contraseña>
 FTP_PATH=/public_html           # docroot de ofitodo.com (confirmar en cPanel)
 ```
 
-> Nota verificada 2026-08-26: la cuenta FTP `inedito@ofitodo.com` está **enjaulada en el docroot de `temporal`** y NO alcanza producción. Se necesita la cuenta FTP del docroot principal (o el usuario cPanel).
+> Nota verificada 2026-08-26: la cuenta FTP de staging (usuario en `.env`, nunca aquí) está **enjaulada en el docroot de `temporal`** y NO alcanza producción. Se necesita la cuenta FTP del docroot principal (o el usuario cPanel).
 
 Luego, en orden:
 ```
