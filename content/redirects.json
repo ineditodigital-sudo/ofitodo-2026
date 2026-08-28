@@ -27,6 +27,24 @@
       "a": "/categoria-producto/restaurantes/sillas-restaurantes/sillas/",
       "codigo": 301,
       "motivo": "enlace roto heredado del original (la categoría vive anidada)"
+    },
+    {
+      "de": "/carrito/",
+      "a": "/producto/carrito-industrial-metalico/",
+      "codigo": 301,
+      "motivo": "el original redirigía aquí (rastreo: urlFinal)"
+    },
+    {
+      "de": "/elementor-hf/header/",
+      "a": "/",
+      "codigo": 301,
+      "motivo": "plantilla del tema; el original redirigía a la portada"
+    },
+    {
+      "de": "/elementor-hf/footer/",
+      "a": "/",
+      "codigo": 301,
+      "motivo": "plantilla del tema; el original redirigía a la portada"
     }
   ],
   "gone410": [

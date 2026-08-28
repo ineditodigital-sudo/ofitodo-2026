@@ -469,3 +469,22 @@ ${migas([{ t: titulo }])}
     noIndex: true,
   });
 }
+
+/* --- Páginas heredadas (maquetación de Elementor, ya sin WordPress) -------
+ * Su CSS viene depurado y acotado por scripts/extraer-elementor.mjs y se
+ * sirve como archivo aparte (versionado por hash) para que el navegador lo
+ * cachee. La página no pide un solo archivo a /wp-content ni /wp-includes.  */
+export function paginaHeredada(ruta: string, d: { titulo: string; seo: { title: string; description: string | null }; html: string }, hojaCss: string): string {
+  const cuerpo = `
+${migas([{ t: d.titulo }])}
+<main id="contenido">
+  <link rel="stylesheet" href="${esc(hojaCss)}">
+  <div class="pagina-heredada">${d.html}</div>
+</main>`;
+
+  return documento({
+    titulo: d.seo?.title || `${d.titulo} | Ofitodo`,
+    descripcion: d.seo?.description || `${d.titulo}. Ofitodo, mobiliario para oficina en Aguascalientes.`,
+    ruta, clase: 'pag-heredada', cuerpo,
+  });
+}

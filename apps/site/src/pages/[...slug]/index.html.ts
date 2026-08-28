@@ -6,7 +6,7 @@ import { productos, categorias, etiquetas, marcas, congeladas, refHtml, hayRef, 
 import * as T from '../../lib/transformar.ts';
 import * as SIS from '../../lib/sistema-paginas.ts';
 import { paginaCatalogo, paginaProducto } from '../../lib/plantillas.ts';
-import { INTERIORES, paginaContenido, paginaTienda, paginaSistema } from '../../lib/interiores.ts';
+import { INTERIORES, paginaContenido, paginaTienda, paginaSistema, paginaHeredada } from '../../lib/interiores.ts';
 import { readFileSync as leerArchivo, existsSync as hayArchivo } from 'node:fs';
 import pathMod from 'node:path';
 import { entradas, cuerpos, paginaBlog, paginaEntrada, paginaArchivo } from '../../lib/blog.ts';
@@ -27,6 +27,13 @@ const ARCHIVOS: Record<string, { titulo: string; descripcion: string; filtro: (s
 };
 
 // Páginas simples (legales e informativas) con su contenido ya extraído
+// Páginas que conservan su maquetación de Elementor pero ya sin WordPress
+const RUTA_HERED = pathMod.resolve(process.cwd(), '..', '..', 'content', 'paginas-elementor.json');
+const heredadas: Record<string, { titulo: string; seo: { title: string; description: string | null }; html: string }> =
+  hayArchivo(RUTA_HERED) ? JSON.parse(leerArchivo(RUTA_HERED, 'utf8')) : {};
+const RUTA_HOJAS = pathMod.resolve(process.cwd(), 'src', 'generado', 'heredadas.json');
+const hojasHeredadas: Record<string, string> = hayArchivo(RUTA_HOJAS) ? JSON.parse(leerArchivo(RUTA_HOJAS, 'utf8')) : {};
+
 const RUTA_PAGS = pathMod.resolve(process.cwd(), '..', '..', 'content', 'paginas-cuerpos.json');
 const paginasCuerpos: Record<string, { titulo: string; seo: { title: string; description: string | null }; html: string }> =
   hayArchivo(RUTA_PAGS) ? JSON.parse(leerArchivo(RUTA_PAGS, 'utf8')) : {};
@@ -47,6 +54,7 @@ export function getStaticPaths(): Ruta[] {
     if (INTERIORES[c.slug]) { add(c.slug, { tipo: 'interior', slug: c.slug }); continue; }
     if (c.slug === '/blog/') { add(c.slug, { tipo: 'blog' }); continue; }
     if (c.slug === '/tienda/' || c.slug === '/shop/') { add(c.slug, { tipo: 'tienda', slug: c.slug }); continue; }
+    if (heredadas[c.slug]) { add(c.slug, { tipo: 'heredada', slug: c.slug }); continue; }
     if (paginasCuerpos[c.slug]) { add(c.slug, { tipo: 'contenido', slug: c.slug }); continue; }
     if (reconstruibles.has(c.slug)) { add(c.slug, { tipo: 'entrada', slug: c.slug }); continue; }
     add(c.slug, { tipo: 'congelada', htmlRef: c.htmlRef, seo: c.seo, key: claveDe(c.slug) });
@@ -90,6 +98,9 @@ export const GET: APIRoute = ({ props }) => {
     html = paginaArchivo(props.slug as string, a.titulo, a.descripcion, a.filtro);
   } else if (props.tipo === 'tienda') {
     html = paginaTienda(props.slug as string);
+  } else if (props.tipo === 'heredada') {
+    const r = props.slug as string;
+    html = paginaHeredada(r, heredadas[r], hojasHeredadas[r] ?? '');
   } else if (props.tipo === 'contenido') {
     html = paginaContenido(props.slug as string, paginasCuerpos[props.slug as string]);
   } else if (props.tipo === 'blog') {

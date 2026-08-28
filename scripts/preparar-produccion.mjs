@@ -90,21 +90,64 @@ Header set Cache-Control "public, max-age=31536000, immutable"
 <Files ".deploy-manifest.json">
 Require all denied
 </Files>
+
+# =========================================================================
+#  BLINDAJE
+#  El sitio es estático. Lo único que ejecuta código es /cgi-bin/api.cgi,
+#  que lanza php-cgi como subproceso (no pasa por el manejador de Apache).
+#  Por eso se puede cerrar PHP por completo sin tocar la API.
+# =========================================================================
+
+# Sin listados de directorio. (No se toca FollowSymLinks: algunos hosts
+# compartidos lo necesitan para mod_rewrite y quitarlo provoca un 500.)
+Options -Indexes
+
+# --- Ningún archivo ejecutable es accesible por HTTP ---------------------
+# Cubre wp-config.php, cualquier .php de WordPress y cualquier puerta trasera
+# que alguien deje caer: ni se ejecuta ni se lee su código fuente.
+# api.cgi queda fuera por el paréntesis negativo: es el puente de la API.
+<FilesMatch "^(?!api\\.cgi$).*\\.(php|php[0-9]|phtml|pht|phps|phar|shtml|cgi|pl|py|sh|asp|aspx|jsp)$">
+Require all denied
+</FilesMatch>
+
+# --- Archivos que nunca deben servirse -----------------------------------
+# .well-known queda fuera: lo usan la validación de certificados y otros
+# servicios; bloquearlo rompería la renovación del SSL.
+<FilesMatch "\\.(env|ini|log|sql|sqlite|db|bak|old|orig|save|swp|tar|gz|zip|rar|7z|cnf|lock|pem|key|crt)$|~$">
+Require all denied
+</FilesMatch>
+<FilesMatch "^(wp-config|wp-config-sample|readme|license|changelog|error_log|debug)\\.">
+Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+# --- Nada ejecutable sale de la carpeta de medios (vector clásico) -------
+RewriteRule ^wp-content/uploads/.*\\.(php|phtml|pht|phar|cgi|pl|py|sh)$ - [F,L]
+
+# --- Puntos de entrada de WordPress ya sin uso ---------------------------
+RewriteRule ^wp-(content|includes)/.*\\.(php|phtml|phar)$ - [F,L]
+RewriteRule ^(wp-signup|wp-activate|wp-trackback|wp-links-opml|wp-mail|wp-comments-post|wp-load|wp-settings|wp-blog-header)\\.php$ - [F,L]
+RewriteRule ^wp-content/(plugins|themes|mu-plugins|upgrade)/?$ - [F,L]
+
+# --- Sondas típicas de escaneo automatizado ------------------------------
+RewriteRule ^(\\.git|\\.svn|vendor|node_modules)(/|$) - [F,L]
+RewriteRule ^(adminer|phpmyadmin|pma|myadmin|shell|c99|r57|wso|alfa|filemanager)(/|$) - [F,L]
+</IfModule>
+
+# --- Cabeceras de seguridad ----------------------------------------------
 <IfModule mod_headers.c>
 Header set X-Content-Type-Options "nosniff"
 Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+# HSTS sin includeSubDomains: los subdominios (temporal.*) van aparte
+Header always set Strict-Transport-Security "max-age=31536000"
+Header unset X-Powered-By
+Header unset X-Pingback
 </IfModule>
-# Handler PHP de cPanel (conservado del original para que /api ejecute PHP en el dominio principal)
-<IfModule php8_module>
-   php_value memory_limit 512M
-   php_value post_max_size 64M
-   php_value upload_max_filesize 64M
-</IfModule>
-# php -- BEGIN cPanel-generated handler, do not edit
-<IfModule mime_module>
-  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
-</IfModule>
-# php -- END cPanel-generated handler, do not edit
+
+# El manejador PHP de cPanel se retira a propósito: nada debe ejecutar PHP
+# por Apache. La API va por /cgi-bin/api.cgi → php-cgi (subproceso).
 `);
 // robots real ya viene de apps/site/public/robots.txt (copiado con dist)
 console.log('dist-prod listo para el cutover (docs/06-cutover.md).');
